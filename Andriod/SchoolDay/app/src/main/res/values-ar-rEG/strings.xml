@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="downloads">التنزيلات</string>
+    <string name="fees">المصاريف</string>
+    <string name="teacher">المدرس</string>
+    <string name="subject">المادة</string>
+    <string name="assignment">الواجبات</string>
+    <string name="notes">الملاحظات</string>
+    <string name="exams">الإمتحان</string>
+    <string name="attendance">الحضور</string>
+    <string name="bus">المواصلات</string>
+    <string name="library">المكتبة</string>
+    <string name="activity">النشاطات</string>
+    <string name="setting">الإعدادات</string>
+    <string name="logout">تسجيل الخروج</string>
+    <string name="timetable">الجدول الدراسي</string>
+    <string name="chat">المحادثات</string>
+    <string name="profile">الملف الشخصي</string>
+    <string name="feed">المنشورات</string>
+    <string name="online_learning">التعليم عند بعد</string>
+    <string name="notification">الإشعارات</string>
+    <string name="search">البحث</string>
+    <string name="create_group">إنشاء مجموعة</string>
+    <string name="online">متصل الآن</string>
+</resources>
