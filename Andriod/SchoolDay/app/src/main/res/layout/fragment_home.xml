@@ -5,8 +5,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:weightSum="20"
-
-    android:background="@drawable/background"
     android:id="@+id/fragment_container">
 
     <RelativeLayout
@@ -23,14 +21,13 @@
     android:layout_centerHorizontal="true"
     android:layout_marginBottom="20dp"
     android:layout_marginTop="20dp"
-    >
+    android:background="#000000">
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
         android:src="@drawable/profile"></ImageView>
 </androidx.cardview.widget.CardView>
-    
 
         <TextView
             android:layout_width="350dp"
@@ -39,7 +36,9 @@
             android:layout_centerHorizontal="true"
             android:background="@drawable/textview1"
             android:shadowColor="#15B5EA"
-            android:textColorHighlight="#15B5EA"></TextView>
+            android:textColorHighlight="#15B5EA"
+            ></TextView>
+
     </RelativeLayout>
     <GridLayout
         android:columnCount="3"
@@ -82,11 +81,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="teacher"
+                    android:text="@string/teacher"
                     android:textAlignment="center"
                     android:textColor="#000000"
                     android:textSize="16sp"
-                    android:textStyle="bold"
                     android:paddingStart="2dp"></TextView>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -120,11 +118,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="subject"
+                    android:text="@string/subject"
                     android:textAlignment="center"
                     android:textColor="#000000"
                     android:textSize="16sp"
-                    android:textStyle="bold"></TextView>
+                    ></TextView>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <!-- colaum 3  -->
@@ -152,17 +150,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/ic_menu_book_black_24dp"></ImageView>
+                    android:src="@drawable/ic_assignment"></ImageView>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="assignment"
+                    android:text="@string/assignment"
                     android:textAlignment="center"
                     android:textColor="#000000"
                     android:textSize="14sp"
-                    android:textStyle="bold"></TextView>
+                    ></TextView>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <!-- colaum 4  -->
@@ -190,15 +188,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/ic_assignment_black_24dp"></ImageView>
+                    android:src="@drawable/ic_notes"></ImageView>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="notes"
+                    android:text="@string/notes"
                     android:textAlignment="center"
                     android:textColor="#000000"
                     android:textSize="18sp"
-                    android:textStyle="bold"></TextView>
+                    ></TextView>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -230,15 +228,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/ic_cast_for_education_black_24dp"></ImageView>
+                    android:src="@drawable/ic_online"></ImageView>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="online"
+                    android:text="@string/online"
                     android:textAlignment="center"
                     android:textColor="#000000"
                     android:textSize="18sp"
-                    android:textStyle="bold"></TextView>
+                    ></TextView>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <!-- colaum 2  -->
@@ -265,16 +263,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/ic_assignment_black_24dp"></ImageView>
+                    android:src="@drawable/ic_exam"></ImageView>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="exams"
+                    android:text="@string/exams"
                     android:textAlignment="center"
                     android:textColor="#000000"
                     android:textSize="16sp"
-                    android:textStyle="bold"></TextView>
+                    ></TextView>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <!-- colaum 3  -->
@@ -302,15 +300,15 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/ic_local_library_black_24dp"></ImageView>
+                    android:src="@drawable/ic_library"></ImageView>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="liberary"
+                    android:text="@string/library"
                     android:textAlignment="center"
                     android:textColor="#000000"
                     android:textSize="18sp"
-                    android:textStyle="bold"></TextView>
+                    ></TextView>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <!-- colaum 4  -->
@@ -337,16 +335,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/ic_study_material"></ImageView>
+                    android:src="@drawable/ic_activity"></ImageView>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="material"
+                    android:text="@string/activity"
                     android:textAlignment="center"
                     android:textColor="#000000"
                     android:textSize="14sp"
-                    android:textStyle="bold"></TextView>
+                    ></TextView>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <!-- row 3  -->
@@ -382,11 +380,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:text="attendance"
+                    android:text="@string/attendance"
                     android:textAlignment="center"
                     android:textColor="#000000"
                     android:textSize="12sp"
-                    android:textStyle="bold"></TextView>
+                    ></TextView>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <!-- colaum 2  -->
@@ -411,17 +409,17 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_bus_alt_solid"
+                    android:src="@drawable/ic_bus"
                     android:layout_gravity="center_horizontal"
                     ></ImageView>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="bus"
+                    android:text="@string/bus"
                     android:textAlignment="center"
                     android:textColor="#000000"
                     android:textSize="18sp"
-                    android:textStyle="bold"></TextView>
+                    ></TextView>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -448,7 +446,7 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_money_check_alt_solid"
+                    android:src="@drawable/ic_fees"
                     android:layout_gravity="center_horizontal"
                     ></ImageView>
                 <TextView
@@ -458,7 +456,7 @@
                     android:textAlignment="center"
                     android:textColor="#000000"
                     android:textSize="18sp"
-                    android:textStyle="bold"></TextView>
+                    ></TextView>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -487,7 +485,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/ic_clipboard_regular"></ImageView>
+                    android:src="@drawable/ic_download"></ImageView>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -495,7 +493,7 @@
                     android:textAlignment="center"
                     android:textColor="#000000"
                     android:textSize="12sp"
-                    android:textStyle="bold"></TextView>
+                    ></TextView>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 

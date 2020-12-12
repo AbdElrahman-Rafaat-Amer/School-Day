@@ -2,14 +2,63 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#9C27B0"
- >
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <TextView
+
+    !--  the next design to student's time table of today   -->
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:gravity="center"
-        android:text="time table"
-        android:textSize="40dp" />
+        app:cardCornerRadius="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#532AD1">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image_of_datelec"
+                android:layout_width="50sp"
+                android:layout_height="70sp"
+                android:src="@drawable/myimage"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                ></de.hdodenhof.circleimageview.CircleImageView>
+
+            <TextView
+                android:id="@+id/name_of_subject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="AI"
+                android:textSize="25sp"
+                android:textColor="#ffffff"
+                android:layout_toRightOf="@id/image_of_datelec"
+                ></TextView>
+
+            <TextView
+                android:id="@+id/date_of_subject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8:30 AM"
+                android:textSize="25sp"
+                android:textColor="#ffffff"
+                android:layout_below="@id/name_of_subject"
+                android:layout_toRightOf="@id/image_of_datelec"
+                ></TextView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/ic_forward_notes"></ImageView>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
 </RelativeLayout>

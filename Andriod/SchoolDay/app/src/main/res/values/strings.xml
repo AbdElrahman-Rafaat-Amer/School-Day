@@ -1,5 +1,32 @@
 <resources>
-    <string name="app_name">School Day</string>
+    <string name="app_name" translatable="false">School Day</string>
     <string name="downloads">Downloads</string>
     <string name="fees">Fees</string>
+    <string name="teacher">Teacher</string>
+    <string name="subject">Subject</string>
+    <string name="notes">Notes</string>
+    <string name="online_learning">Online Learning</string>
+    <string name="exams">Exam</string>
+    <string name="library">Library</string>
+    <string name="activity">Activity</string>
+    <string name="attendance">Attendance</string>
+    <string name="bus">Bus</string>
+    <string name="assignment">Assignment</string>
+    <string name="setting">Setting</string>
+    <string name="logout">Logout</string>
+    <string name="navigation_drawer_open" translatable="false">open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">close navigation drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="timetable">Timetable</string>
+    <string name="chat">Chat</string>
+    <string name="profile">Profile</string>
+    <string name="feed">Feed</string>
+    <string name="notification">Notification</string>
+    <string name="search">Search</string>
+    <string name="create_group">Create Group</string>
+    <string name="online">onlie</string>
+    <string name="chat_with_friends">Chat with friends</string>
+    <string name="go_back">Go back</string>
+
 </resources>

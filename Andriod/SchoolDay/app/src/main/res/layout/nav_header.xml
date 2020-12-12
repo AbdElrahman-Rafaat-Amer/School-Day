@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="#41B619"
+    android:padding="14dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image_nav_header"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_teacher"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        ></de.hdodenhof.circleimageview.CircleImageView>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/change_mode"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:src="@drawable/ic_dark_mode"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10sp"
+        ></de.hdodenhof.circleimageview.CircleImageView>
+
+    <TextView
+        android:id="@+id/name_nav_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:text="Hambozzzzoooo"
+        android:layout_below="@id/image_nav_header"
+        android:textStyle="bold"></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:text="team@gmail.com"
+        android:layout_below="@id/name_nav_header"
+        android:textStyle="bold"></TextView>
+
+
+</RelativeLayout>
