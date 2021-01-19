@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/drawer_layout"
-    android:fitsSystemWindows="true"
 
     tools:context=".MainActivity">
 
@@ -57,15 +55,9 @@
             android:visibility="invisible"
             ></ImageView>
 
-        <androidx.appcompat.widget.Toolbar
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:id="@+id/toolbar"
-            android:elevation="4dp"
-            android:background="#00FF0C0C"
-            ></androidx.appcompat.widget.Toolbar>
 
-        <com.google.android.material.tabs.TabLayout
+
+       <!-- <com.google.android.material.tabs.TabLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tab"
@@ -77,30 +69,20 @@
             android:layout_height="wrap_content"
             android:id="@+id/view"
             android:layout_below="@+id/tab"
-            ></androidx.viewpager.widget.ViewPager>
+            ></androidx.viewpager.widget.ViewPager>  -->
 
         <FrameLayout
             android:id="@+id/fragment_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/tab"
             ></FrameLayout>
     </RelativeLayout>
 
 
 
-    <com.google.android.material.navigation.NavigationView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:id="@+id/nav_view"
-        app:headerLayout="@layout/nav_header"
-        app:menu="@menu/drawer_menu"
-        ></com.google.android.material.navigation.NavigationView>
-<!--
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+
+
+
         <com.etebarian.meowbottomnavigation.MeowBottomNavigation
             android:id="@+id/bottom_nav"
             android:layout_width="match_parent"
@@ -112,6 +94,5 @@
             app:mbn_selectedIconColor="#fff"
             app:mbn_circleColor="#B92F40"
             ></com.etebarian.meowbottomnavigation.MeowBottomNavigation>
-    </RelativeLayout>
--->
-</androidx.drawerlayout.widget.DrawerLayout>
+
+</RelativeLayout>

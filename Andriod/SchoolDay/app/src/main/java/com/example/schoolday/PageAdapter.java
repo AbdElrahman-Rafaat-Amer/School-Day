@@ -1,4 +1,4 @@
-package com.example.schoolday;
+/*package com.example.schoolday;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -39,4 +39,4 @@ public class PageAdapter extends FragmentPagerAdapter {
     public int getCount() {
         return 5;
     }
-}
+}*/

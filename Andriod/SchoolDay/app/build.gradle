@@ -32,6 +32,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation 'com.etebarian:meow-bottom-navigation-java:1.2.0'
+    implementation 'com.vivekkaushik.datepicker:datePickerTimeline:0.0.4'
 
 
     //library for navigation view

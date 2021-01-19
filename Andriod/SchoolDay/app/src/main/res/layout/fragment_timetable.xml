@@ -1,64 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
 
-
-    !--  the next design to student's time table of today   -->
-    <androidx.cardview.widget.CardView
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="20dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp">
+        android:text="Time Table"
+        android:fontFamily="@font/bauhaus93"
+        android:textSize="28sp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="10dp">
+    </TextView>
+    //weklly time table
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#532AD1">
+   <com.vivekkaushik.datepicker.DatePickerTimeline
+       android:id="@+id/dateTimeline"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+       app:dateTextColor="#000"
+       app:dayTextColor="#000"
+       app:monthTextColor="#000"
+       app:disabledColor="#424141" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fid">
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/image_of_datelec"
-                android:layout_width="50sp"
-                android:layout_height="70sp"
-                android:src="@drawable/myimage"
-                android:layout_centerVertical="true"
-                android:layout_margin="10dp"
-                ></de.hdodenhof.circleimageview.CircleImageView>
+    </FrameLayout>
 
-            <TextView
-                android:id="@+id/name_of_subject"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="AI"
-                android:textSize="25sp"
-                android:textColor="#ffffff"
-                android:layout_toRightOf="@id/image_of_datelec"
-                ></TextView>
 
-            <TextView
-                android:id="@+id/date_of_subject"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="8:30 AM"
-                android:textSize="25sp"
-                android:textColor="#ffffff"
-                android:layout_below="@id/name_of_subject"
-                android:layout_toRightOf="@id/image_of_datelec"
-                ></TextView>
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="20dp"
-                android:src="@drawable/ic_forward_notes"></ImageView>
-
-        </RelativeLayout>
-    </androidx.cardview.widget.CardView>
-
-</RelativeLayout>
+</LinearLayout>
