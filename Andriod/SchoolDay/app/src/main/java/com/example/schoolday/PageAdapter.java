@@ -1,35 +1,35 @@
-/*package com.example.schoolday;
+package com.example.schoolday;
 
-import androidx.annotation.NonNull;
+
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 public class PageAdapter extends FragmentPagerAdapter {
-    public PageAdapter(@NonNull FragmentManager fm) {
+    public PageAdapter(FragmentManager fm) {
         super(fm);
     }
 
-    @NonNull
+
     @Override
     public Fragment getItem(int position) {
 
-        switch (position){
-            case 0: FragmentMessage  fragmentMessage = new FragmentMessage();
-                return fragmentMessage;
+        switch (position) {
+            case 0:
+                ProfileStudentInfoFragment infoStudent = new ProfileStudentInfoFragment();
+                return infoStudent;
 
-            case 1: FragmentTimetable fragmentTimetable = new FragmentTimetable();
-                return fragmentTimetable;
+            case 1:
+                ProfileParentInfoFragment infoParent = new ProfileParentInfoFragment();
+                return infoParent;
 
-            case 2: FragmentHome fragmentHome = new FragmentHome();
-                return fragmentHome;
+            case 2:
+                ProfilePersonalInfoFragment infoPersonal = new ProfilePersonalInfoFragment();
+                return infoPersonal;
 
-            case 3: FragmentInformation fragmentInformation = new FragmentInformation();
-                return fragmentInformation;
-
-            case 4: FragmentFeed fragmentFeed = new FragmentFeed();
-                return fragmentFeed;
-
+            case 3:
+                ProfileOtherInfoFragment infoOther = new ProfileOtherInfoFragment();
+                return infoOther;
         }
 
         return null;
@@ -37,6 +37,6 @@ public class PageAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 5;
+        return 4;
     }
-}*/
+}

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileEditOtherFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20sp">
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/blood_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:hint="Blood Group"
+            android:inputType="text"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelTextColor="#B92F40"
+            app:met_primaryColor="#B92F40"
+            app:met_underlineColor="#B92F40"></com.rengwuxian.materialedittext.MaterialEditText>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/height"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:hint="Height"
+            android:inputType="number"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelTextColor="#B92F40"
+            app:met_primaryColor="#B92F40"
+            app:met_underlineColor="#B92F40"></com.rengwuxian.materialedittext.MaterialEditText>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:hint="Weight"
+            android:inputType="number"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelTextColor="#B92F40"
+            app:met_primaryColor="#B92F40"
+            app:met_underlineColor="#B92F40"></com.rengwuxian.materialedittext.MaterialEditText>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/pervious_school_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:hint="Previous School Details"
+            android:inputType="text"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelTextColor="#B92F40"
+            app:met_primaryColor="#B92F40"
+            app:met_underlineColor="#B92F40"></com.rengwuxian.materialedittext.MaterialEditText>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/national_identity_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:hint="National Identity Number"
+            android:inputType="number"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelTextColor="#B92F40"
+            app:met_primaryColor="#B92F40"
+            app:met_underlineColor="#B92F40"></com.rengwuxian.materialedittext.MaterialEditText>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/local_identity_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:hint="Local Identity Number"
+            android:inputType="number"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelTextColor="#B92F40"
+            app:met_primaryColor="#B92F40"
+            app:met_underlineColor="#B92F40"></com.rengwuxian.materialedittext.MaterialEditText>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/bank_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:hint="Bank Account"
+            android:inputType="textEmailAddress"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelTextColor="#B92F40"
+            app:met_primaryColor="#B92F40"
+            app:met_underlineColor="#B92F40"></com.rengwuxian.materialedittext.MaterialEditText>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/bank_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Bank Name"
+            android:inputType="text"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelTextColor="#B92F40"
+            app:met_primaryColor="#B92F40"
+            app:met_underlineColor="#B92F40"></com.rengwuxian.materialedittext.MaterialEditText>
+
+    </LinearLayout>
+</ScrollView>
+

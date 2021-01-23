@@ -40,8 +40,10 @@ dependencies {
     //library to make image circle
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
-//library for floating action menu
+    //library for floating action menu
     implementation 'com.getbase:floatingactionbutton:1.10.1'
 
+    //library for anmiation edit tex
+    implementation 'com.rengwuxian.materialedittext:library:2.1.4'
 
 }

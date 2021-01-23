@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileEditParentFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20sp">
+
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/father_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:hint="Father Name"
+            android:inputType="textPersonName"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelTextColor="#B92F40"
+            app:met_primaryColor="#B92F40"
+            app:met_underlineColor="#B92F40"></com.rengwuxian.materialedittext.MaterialEditText>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/father_job"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:hint="Job"
+            android:inputType="text"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelTextColor="#B92F40"
+            app:met_primaryColor="#B92F40"
+            app:met_underlineColor="#B92F40"></com.rengwuxian.materialedittext.MaterialEditText>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/father_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelTextColor="#B92F40"
+            app:met_primaryColor="#B92F40"
+            app:met_underlineColor="#B92F40"></com.rengwuxian.materialedittext.MaterialEditText>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/mother_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:hint="Mother Name"
+            android:inputType="textPersonName"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelTextColor="#B92F40"
+            app:met_primaryColor="#B92F40"
+            app:met_underlineColor="#B92F40"></com.rengwuxian.materialedittext.MaterialEditText>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/mother_job"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:hint="job"
+            android:inputType="text"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelTextColor="#B92F40"
+            app:met_primaryColor="#B92F40"
+            app:met_underlineColor="#B92F40"></com.rengwuxian.materialedittext.MaterialEditText>
+
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/mother_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelTextColor="#B92F40"
+            app:met_primaryColor="#B92F40"
+            app:met_underlineColor="#B92F40"></com.rengwuxian.materialedittext.MaterialEditText>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/parent_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:hint="Email Address"
+            android:inputType="textEmailAddress"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelTextColor="#B92F40"
+            app:met_primaryColor="#B92F40"
+            app:met_underlineColor="#B92F40"></com.rengwuxian.materialedittext.MaterialEditText>
+
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/relation_with_guardian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:hint="Relation With Guardian"
+            android:inputType="text"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelTextColor="#B92F40"
+            app:met_primaryColor="#B92F40"
+            app:met_underlineColor="#B92F40"></com.rengwuxian.materialedittext.MaterialEditText>
+
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/guardin_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:hint="Guardian Address"
+            android:inputType="text"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelTextColor="#B92F40"
+            app:met_primaryColor="#B92F40"
+            app:met_underlineColor="#B92F40"></com.rengwuxian.materialedittext.MaterialEditText>
+
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/guardin_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Guardian Name"
+            android:inputType="text"
+            app:met_floatingLabel="highlight"
+            app:met_floatingLabelTextColor="#B92F40"
+            app:met_primaryColor="#B92F40"
+            app:met_underlineColor="#B92F40"></com.rengwuxian.materialedittext.MaterialEditText>
+
+
+    </LinearLayout>
+</ScrollView>
+

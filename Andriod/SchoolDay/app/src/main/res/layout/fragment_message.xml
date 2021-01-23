@@ -1,35 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/above_relative_chat"
-        android:background="#cceeddff"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="60dp"
         android:layout_marginBottom="100dp"
+        android:background="#cceeddff"
         android:padding="15dp">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/image_of_person_chating"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            app:cardCornerRadius="40dp"
             android:layout_centerVertical="true"
-            android:layout_marginRight="10dp">
+            android:layout_marginRight="10dp"
+            app:cardCornerRadius="40dp">
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#53B1A2">
+
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:src="@drawable/ic_user_regular"
                     android:layout_centerInParent="true"
-                    ></ImageView>
+                    android:src="@drawable/ic_user_regular"></ImageView>
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -37,64 +38,59 @@
             android:id="@+id/name_of_person_chating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Dr.Amena"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:textColor="#000000"
-            android:gravity="center"
-            android:layout_toRightOf="@id/image_of_person_chating"
             android:layout_marginBottom="10dp"
-            ></TextView>
+            android:layout_toRightOf="@id/image_of_person_chating"
+            android:gravity="center"
+            android:text="Dr.Amena"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:textStyle="bold"></TextView>
 
         <TextView
             android:id="@+id/last_massege_chating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello this this the last massege sent in this chat"
-            android:textSize="20dp"
-            android:layout_toRightOf="@id/image_of_person_chating"
             android:layout_below="@id/name_of_person_chating"
-            ></TextView>
+            android:layout_toRightOf="@id/image_of_person_chating"
+            android:text="Hello this this the last massege sent in this chat"
+            android:textSize="20dp"></TextView>
 
         <TextView
             android:id="@+id/last_seen_chating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2h"
-            android:textSize="20dp"
             android:layout_alignParentRight="true"
-            ></TextView>
+            android:text="2h"
+            android:textSize="20dp"></TextView>
     </RelativeLayout>
-
 
     <com.getbase.floatingactionbutton.FloatingActionsMenu
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_margin="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="40dp"
         app:fab_addButtonColorNormal="#B92F40"
-       app:fab_labelStyle="@style/custom_fab">
+        app:fab_labelStyle="@style/custom_fab">
 
         <com.getbase.floatingactionbutton.FloatingActionButton
             android:id="@+id/floatingbuttononline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:fab_colorNormal="#ffffff"
-            app:fab_title="@string/online"
             app:fabSize="mini"
+            app:fab_colorNormal="#B92F40"
             app:fab_icon="@drawable/ic_add"
-            ></com.getbase.floatingactionbutton.FloatingActionButton>
+            app:fab_title="@string/online"></com.getbase.floatingactionbutton.FloatingActionButton>
 
         <com.getbase.floatingactionbutton.FloatingActionButton
             android:id="@+id/floatingbuttoncreategroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:fab_colorNormal="#ffffff"
-            app:fab_title="@string/create_group"
             app:fabSize="mini"
+            app:fab_colorNormal="#B92F40"
             app:fab_icon="@drawable/ic_add"
-            ></com.getbase.floatingactionbutton.FloatingActionButton>
+            app:fab_title="@string/create_group"></com.getbase.floatingactionbutton.FloatingActionButton>
 
     </com.getbase.floatingactionbutton.FloatingActionsMenu>
 
