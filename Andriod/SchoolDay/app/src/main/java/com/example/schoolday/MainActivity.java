@@ -82,7 +82,6 @@ public class MainActivity extends AppCompatActivity  {
                         break;
                     case ID_MESSAGES:
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new FragmentMessage()).commit();
-                        currentFragment.setText(R.string.chat);
                         searchImage.setVisibility(View.VISIBLE);
                         break;
                     case ID_TIMETABLE:
