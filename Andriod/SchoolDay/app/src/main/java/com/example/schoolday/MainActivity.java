@@ -3,31 +3,34 @@ package com.example.schoolday;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.PopupMenu;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 
 
-public class MainActivity extends AppCompatActivity  {
+public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
     MeowBottomNavigation meo;
-    private final static int ID_HOME=3;
-    private final static int ID_FEEDS=5;
-    private  final static int ID_MESSAGES=2;
-    private  final static int ID_TIMETABLE=1;
-    private final static int ID_INFORMATION=4;
-    ImageView notificationImage, searchImage, goBackChat;
-    TextView currentFragment;
+    private final static int ID_HOME = 3;
+    private final static int ID_FEEDS = 5;
+    private final static int ID_MESSAGES = 2;
+    private final static int ID_TIMETABLE = 1;
+    private final static int ID_INFORMATION = 4;
+    ImageView notificationImage, searchImage, goBackChat, editImage, optionMenu;
 
 
     @Override
@@ -39,11 +42,26 @@ public class MainActivity extends AppCompatActivity  {
         goBackChat = findViewById(R.id.go_back_chat);
         notificationImage = findViewById(R.id.image_notification);
         searchImage = findViewById(R.id.image_search);
-        currentFragment = findViewById(R.id.name_of_current_fragment);
         meo = findViewById(R.id.bottom_nav);
+        editImage = findViewById(R.id.image_edit);
+        optionMenu = findViewById(R.id.option_menu);
 
 
+        editImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, EditActivity.class);
+                startActivity(intent);
+            }
+        });
 
+        optionMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                popupMenuShow(v);
+            }
+        });
 
 
         // land scape
@@ -53,11 +71,11 @@ public class MainActivity extends AppCompatActivity  {
 
 
         //code for bottom nav bar
-       meo.add(new MeowBottomNavigation.Model(1,R.drawable.ic_timetable));
-        meo.add(new MeowBottomNavigation.Model(2,R.drawable.ic_messgaes));
-        meo.add(new MeowBottomNavigation.Model(3,R.drawable.ic_home));
-        meo.add(new MeowBottomNavigation.Model(4,R.drawable.ic_user_regular));
-        meo.add(new MeowBottomNavigation.Model(5,R.drawable.ic_feeds));
+        meo.add(new MeowBottomNavigation.Model(1, R.drawable.ic_timetable));
+        meo.add(new MeowBottomNavigation.Model(2, R.drawable.ic_messgaes));
+        meo.add(new MeowBottomNavigation.Model(3, R.drawable.ic_home));
+        meo.add(new MeowBottomNavigation.Model(4, R.drawable.ic_user_regular));
+        meo.add(new MeowBottomNavigation.Model(5, R.drawable.ic_feeds));
         meo.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {
             @Override
             public void onClickItem(MeowBottomNavigation.Model item) {
@@ -69,29 +87,44 @@ public class MainActivity extends AppCompatActivity  {
             @Override
             public void onShowItem(MeowBottomNavigation.Model item) {
 
-                switch (item.getId()){
+                switch (item.getId()) {
                     case ID_HOME:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new FragmentHome()).commit();
-                        currentFragment.setText("");
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentHome()).commit();
                         searchImage.setVisibility(View.INVISIBLE);
+                        editImage.setVisibility(View.INVISIBLE);
+                        optionMenu.setVisibility(View.INVISIBLE);
+                        goBackChat.setVisibility(View.INVISIBLE);
+
                         break;
                     case ID_FEEDS:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new FragmentFeed()).commit();
-                        currentFragment.setText(R.string.feed);
-                        searchImage.setVisibility(View.INVISIBLE);
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentFeed()).commit();
+                        searchImage.setVisibility(View.VISIBLE);
+                        editImage.setVisibility(View.INVISIBLE);
+                        optionMenu.setVisibility(View.INVISIBLE);
+                        goBackChat.setVisibility(View.INVISIBLE);
+
                         break;
                     case ID_MESSAGES:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new FragmentMessage()).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentMessage()).commit();
                         searchImage.setVisibility(View.VISIBLE);
+                        editImage.setVisibility(View.INVISIBLE);
+                        optionMenu.setVisibility(View.INVISIBLE);
+                        goBackChat.setVisibility(View.INVISIBLE);
                         break;
                     case ID_TIMETABLE:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new FragmentTimetable()).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentTimetable()).commit();
                         searchImage.setVisibility(View.INVISIBLE);
+                        editImage.setVisibility(View.INVISIBLE);
+                        optionMenu.setVisibility(View.INVISIBLE);
+                        goBackChat.setVisibility(View.INVISIBLE);
+
                         break;
                     case ID_INFORMATION:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new FragmentInformation()).commit();
-                        currentFragment.setText(R.string.profile);
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentInformation()).commit();
                         searchImage.setVisibility(View.INVISIBLE);
+                        editImage.setVisibility(View.VISIBLE);
+                        optionMenu.setVisibility(View.VISIBLE);
+                        goBackChat.setVisibility(View.INVISIBLE);
                         break;
                 }
             }
@@ -104,6 +137,37 @@ public class MainActivity extends AppCompatActivity  {
             }
         });
 
+    }
+
+
+    private void popupMenuShow(View v) {
+        PopupMenu popupMenu = new PopupMenu(MainActivity.this, v);
+        popupMenu.setOnMenuItemClickListener(this);
+        popupMenu.inflate(R.menu.more_actions);
+        popupMenu.show();
+    }
+
+
+    @Override
+    public boolean onMenuItemClick(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.log_out:
+                Toast.makeText(MainActivity.this, "you pressed logout", Toast.LENGTH_SHORT).show();
+                return true;
+
+
+            case R.id.dark_mode:
+
+                if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+                } else {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+
+                }
+                return true;
+
+        }
+        return true;
     }
 
 

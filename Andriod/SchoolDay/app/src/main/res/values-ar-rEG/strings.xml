@@ -22,4 +22,6 @@
     <string name="search">البحث</string>
     <string name="create_group">إنشاء مجموعة</string>
     <string name="online">متصل الآن</string>
+    <string name="chat_with_friends">المحادثات</string>
+    <string name="go_back">رجوع</string>
 </resources>

@@ -18,7 +18,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
 
-public class FragmentInformation extends Fragment  implements PopupMenu.OnMenuItemClickListener{
+public class FragmentInformation extends Fragment  {
 
     ImageView notification, edit, moreOption;
     TabLayout tabLayout;
@@ -30,9 +30,6 @@ public class FragmentInformation extends Fragment  implements PopupMenu.OnMenuIt
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_information, container, false);
 
-        notification = view.findViewById(R.id.notification);
-        edit = view.findViewById(R.id.edit);
-        moreOption = view.findViewById(R.id.more_setting);
         tabLayout = view.findViewById(R.id.tab_page);
         viewPager = view.findViewById(R.id.view_page);
 
@@ -63,6 +60,7 @@ public class FragmentInformation extends Fragment  implements PopupMenu.OnMenuIt
             }
         });
 
+        /*
         edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,10 +76,11 @@ public class FragmentInformation extends Fragment  implements PopupMenu.OnMenuIt
                 popupMenuShow(v);
             }
         });
-
+*/
         return view;
     }
 
+    /*
     private void popupMenuShow(View v) {
         PopupMenu popupMenu = new PopupMenu(getContext() , v);
         popupMenu.setOnMenuItemClickListener(this);
@@ -111,4 +110,5 @@ public class FragmentInformation extends Fragment  implements PopupMenu.OnMenuIt
         }
         return true;
     }
+    */
 }

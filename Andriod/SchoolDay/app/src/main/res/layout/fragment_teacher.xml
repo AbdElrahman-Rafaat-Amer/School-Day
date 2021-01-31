@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:gravity="center"
-        android:text="library"
+        android:text="Teacher"
         android:textColor="#636363"
         android:fontFamily="@font/bauhaus93"
         android:textSize="40sp"

@@ -5,50 +5,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:layout_marginBottom="70dp">
+    android:layout_marginBottom="70dp"
+    android:orientation="vertical">
 
-    <!-- this relative layout for toolbar -->
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <androidx.appcompat.widget.Toolbar
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#00FFFFFF"></androidx.appcompat.widget.Toolbar>
-
-        <ImageView
-            android:id="@+id/more_setting"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:contentDescription="More Option"
-            android:src="@drawable/ic_more_stting"></ImageView>
-
-        <ImageView
-            android:id="@+id/notification"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:contentDescription="Notification"
-            android:src="@drawable/ic_notification"></ImageView>
-
-        <ImageView
-            android:id="@+id/edit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toLeftOf="@+id/notification"
-            android:contentDescription="Edit"
-            android:src="@drawable/ic_edit"></ImageView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="Profile"
-            android:textSize="40sp"></TextView>
-    </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/bauhaus93"
+        android:text="@string/profile"
+        android:textSize="40sp"></TextView>
 
     <!-- this for tab layout and view pager -->
     <com.google.android.material.tabs.TabLayout

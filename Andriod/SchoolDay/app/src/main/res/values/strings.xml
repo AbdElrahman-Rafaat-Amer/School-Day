@@ -28,5 +28,7 @@
     <string name="online">online</string>
     <string name="chat_with_friends">Chat with friends</string>
     <string name="go_back">Go back</string>
+    <string name="edit">Edit</string>
+    <string name="moresetting">More Setting</string>
 
 </resources>
