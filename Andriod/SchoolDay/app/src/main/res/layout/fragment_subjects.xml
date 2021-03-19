@@ -141,7 +141,15 @@
         android:shadowColor="#000000"
         android:text="Chapters"
         ></TextView>
-    //
+    // <FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fid">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="70dp"
@@ -251,4 +259,6 @@
                 android:background="#"></ImageView>
         </RelativeLayout>
     </LinearLayout>
+</LinearLayout>
+</FrameLayout>
 </LinearLayout>
