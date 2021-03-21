@@ -201,7 +201,7 @@
                 android:layout_centerInParent="true"
                 android:layout_marginRight="14dp"
                 android:src="@drawable/ic_baseline_arrow_forward_ios_24"
-                android:background="#"></ImageView>
+                ></ImageView>
         </RelativeLayout>
     </LinearLayout>
 
@@ -256,7 +256,7 @@
                 android:layout_centerInParent="true"
                 android:layout_marginRight="14dp"
                 android:src="@drawable/ic_baseline_arrow_forward_ios_24"
-                android:background="#"></ImageView>
+                ></ImageView>
         </RelativeLayout>
     </LinearLayout>
 </LinearLayout>

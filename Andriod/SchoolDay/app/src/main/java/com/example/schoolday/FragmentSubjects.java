@@ -16,7 +16,6 @@ public class FragmentSubjects extends androidx.fragment.app.Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
        View view=inflater.inflate(R.layout.fragment_subjects,container,false);
         final FrameLayout frameLayout = view.findViewById(R.id.fid);
-        CardView
         return view;
     }
 }
