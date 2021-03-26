@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
-public class FragmentTimetable extends Fragment {
+public class    FragmentTimetable extends Fragment {
     private static final String TAG = "MainActivity";
     @Nullable
     @Override
