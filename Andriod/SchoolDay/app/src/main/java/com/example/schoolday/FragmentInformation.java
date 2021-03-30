@@ -1,18 +1,13 @@
 package com.example.schoolday;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.PopupMenu;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatDelegate;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
@@ -23,7 +18,7 @@ public class FragmentInformation extends Fragment  {
     ImageView notification, edit, moreOption;
     TabLayout tabLayout;
     ViewPager viewPager;
-    PageAdapter pageAdapter;
+    PageAdapterProfStudent pageAdapter;
 
     @Nullable
     @Override
@@ -33,7 +28,7 @@ public class FragmentInformation extends Fragment  {
         tabLayout = view.findViewById(R.id.tab_page);
         viewPager = view.findViewById(R.id.view_page);
 
-        pageAdapter = new PageAdapter(getFragmentManager());
+        pageAdapter = new PageAdapterProfStudent(getFragmentManager());
         viewPager.setAdapter(pageAdapter);
 
         tabLayout.addTab(tabLayout.newTab().setText("student info"));

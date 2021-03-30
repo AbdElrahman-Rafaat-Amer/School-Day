@@ -1,102 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
 
     >
     //head
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:fontFamily="@font/bauhaus93"
         android:gravity="center"
         android:text="library"
         android:textColor="#636363"
-        android:fontFamily="@font/bauhaus93"
         android:textSize="40dp" />
     //First card view
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="130dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginLeft="30dp"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="0dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="30dp"
             android:layout_marginTop="20dp"
-            >
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp">
             //secound cardview
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:background="@drawable/library_text">
+                android:background="@drawable/library_text"
+                android:orientation="vertical">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Book Issued"
-                    android:textSize="20sp"
-                    android:layout_marginTop="18dp"
                     android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="18dp"
+                    android:text="Book Issued"
                     android:textColor="#fff"
-                    ></TextView>
+                    android:textSize="20sp"></TextView>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
                     android:text="0"
                     android:textColor="#fff"
-                    android:layout_marginTop="20dp"
-                    android:layout_gravity="center_horizontal"
-                    android:textSize="30sp"
-                    ></TextView>
+                    android:textSize="30sp"></TextView>
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="130dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginLeft="30dp"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="0dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="30dp"
             android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
             android:background="@drawable/library_text"
-            >
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:background="@drawable/library_text">
+                android:background="@drawable/library_text"
+                android:orientation="vertical">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Library Books"
-                    android:textSize="20sp"
-                    android:textColor="#fff"
-                    android:layout_marginTop="18dp"
                     android:layout_gravity="center_horizontal"
-                    ></TextView>
+                    android:layout_marginTop="18dp"
+                    android:text="Library Books"
+                    android:textColor="#fff"
+                    android:textSize="20sp"></TextView>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
                     android:text="0"
                     android:textColor="#fff"
-                    android:layout_marginTop="20dp"
-                    android:layout_gravity="center_horizontal"
-                    android:textSize="30sp"
-                    ></TextView>
+                    android:textSize="30sp"></TextView>
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
@@ -105,141 +109,154 @@
     </LinearLayout>
 
     // textview ctegoures
+
     <TextView
         android:layout_width="200dp"
         android:layout_height="40dp"
-        android:textAlignment="center"
-        android:paddingTop="10dp"
-        android:textSize="18sp"
         android:layout_marginLeft="10dp"
         android:background="@drawable/librarytextview1"
-        android:textColor="#fff"
+        android:paddingTop="10dp"
         android:shadowColor="#000000"
-        android:text="categires"></TextView>
+        android:text="categires"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="18sp"></TextView>
     //categories scroll
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_marginTop="15dp">
+
         <HorizontalScrollView
             android:layout_width="wrap_content"
             android:layout_height="match_parent">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="140dp"
-                android:orientation="horizontal"
-                >
+                android:orientation="horizontal">
+
                 <androidx.cardview.widget.CardView
                     android:layout_width="120dp"
                     android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     app:cardCornerRadius="50dp"
                     app:cardElevation="0dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
 
                     >
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:background="#5854C7"
+                        android:gravity="center_horizontal"
                         android:text="History"
                         android:textColor="#fff"
-                        android:gravity="center_horizontal"
-                        android:textSize="20sp"
-                        android:background="#5854C7"></TextView>
+                        android:textSize="20sp"></TextView>
                 </androidx.cardview.widget.CardView>
+
                 <androidx.cardview.widget.CardView
                     android:layout_width="120dp"
                     android:layout_height="match_parent"
-                    app:cardCornerRadius="20dp"
-                    app:cardElevation="0dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp"
 
                     >
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:background="#BD4F87"
+                        android:gravity="center_horizontal"
                         android:text="Math"
                         android:textColor="#fff"
-                        android:gravity="center_horizontal"
-                        android:textSize="20sp"
-                        android:background="#BD4F87"></TextView>
+                        android:textSize="20sp"></TextView>
                 </androidx.cardview.widget.CardView>
+
                 <androidx.cardview.widget.CardView
                     android:layout_width="120dp"
                     android:layout_height="match_parent"
-                    app:cardCornerRadius="20dp"
-                    app:cardElevation="0dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp"
 
                     >
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:background="#5854C7"
+                        android:gravity="center_horizontal"
                         android:text="Sciance"
                         android:textColor="#fff"
-                        android:gravity="center_horizontal"
-                        android:textSize="20sp"
-                        android:background="#5854C7"></TextView>
+                        android:textSize="20sp"></TextView>
                 </androidx.cardview.widget.CardView>
+
                 <androidx.cardview.widget.CardView
                     android:layout_width="120dp"
                     android:layout_height="match_parent"
-                    app:cardCornerRadius="20dp"
-                    app:cardElevation="0dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp"
 
                     >
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:background="#BD4F87"
+                        android:gravity="center_horizontal"
                         android:text="arabic"
                         android:textColor="#fff"
-                        android:gravity="center_horizontal"
-                        android:textSize="20sp"
-                        android:background="#BD4F87"></TextView>
+                        android:textSize="20sp"></TextView>
                 </androidx.cardview.widget.CardView>
+
                 <androidx.cardview.widget.CardView
                     android:layout_width="120dp"
                     android:layout_height="match_parent"
-                    app:cardCornerRadius="20dp"
-                    app:cardElevation="0dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp"
 
                     >
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:background="#5854C7"
+                        android:gravity="center_horizontal"
                         android:text="english"
                         android:textColor="#fff"
-                        android:gravity="center_horizontal"
-                        android:textSize="20sp"
-                        android:background="#5854C7"></TextView>
+                        android:textSize="20sp"></TextView>
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
         </HorizontalScrollView>
     </ScrollView>
     // textview top rate
+
     <TextView
         android:layout_width="200dp"
         android:layout_height="40dp"
-        android:textAlignment="center"
-        android:paddingTop="10dp"
-        android:textSize="18sp"
         android:layout_marginLeft="10dp"
         android:background="@drawable/librarytextview1"
-        android:textColor="#fff"
+        android:paddingTop="10dp"
         android:shadowColor="#000000"
-        android:text="Top rate"></TextView>
+        android:text="Top rate"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="18sp"></TextView>
 
 
     //top rate scroll
@@ -248,84 +265,95 @@
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_marginTop="15dp">
+
         <HorizontalScrollView
             android:layout_width="wrap_content"
             android:layout_height="match_parent">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="140dp"
-                android:orientation="horizontal"
-                >
+                android:orientation="horizontal">
+
                 <androidx.cardview.widget.CardView
                     android:layout_width="120dp"
                     android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     app:cardCornerRadius="50dp"
                     app:cardElevation="0dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
 
                     >
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="#5854C7"></ImageView>
                 </androidx.cardview.widget.CardView>
+
                 <androidx.cardview.widget.CardView
                     android:layout_width="120dp"
                     android:layout_height="match_parent"
-                    app:cardCornerRadius="20dp"
-                    app:cardElevation="0dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp"
 
                     >
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="#BD4F87"></ImageView>
                 </androidx.cardview.widget.CardView>
+
                 <androidx.cardview.widget.CardView
                     android:layout_width="120dp"
                     android:layout_height="match_parent"
-                    app:cardCornerRadius="20dp"
-                    app:cardElevation="0dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp"
 
                     >
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="#5854C7"></ImageView>
                 </androidx.cardview.widget.CardView>
+
                 <androidx.cardview.widget.CardView
                     android:layout_width="120dp"
                     android:layout_height="match_parent"
-                    app:cardCornerRadius="20dp"
-                    app:cardElevation="0dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp"
 
                     >
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="#BD4F87"></ImageView>
                 </androidx.cardview.widget.CardView>
+
                 <androidx.cardview.widget.CardView
                     android:layout_width="120dp"
                     android:layout_height="match_parent"
-                    app:cardCornerRadius="20dp"
-                    app:cardElevation="0dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp"
 
                     >
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -334,7 +362,6 @@
             </LinearLayout>
         </HorizontalScrollView>
     </ScrollView>
-
 
 
 </LinearLayout>

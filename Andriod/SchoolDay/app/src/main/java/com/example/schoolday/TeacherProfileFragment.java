@@ -16,7 +16,7 @@ public class TeacherProfileFragment extends Fragment {
 
     TabLayout tabLayout;
     ViewPager viewPager;
-    PageAdapter pageAdapter;
+    PageAdapterProfTeachear pageAdapter;
 
 
     @Override
@@ -28,7 +28,7 @@ public class TeacherProfileFragment extends Fragment {
         tabLayout = view.findViewById(R.id.tabslayoutteacher);
         viewPager = view.findViewById(R.id.viewpagerTeacher);
 
-        pageAdapter = new PageAdapter(getFragmentManager());
+        pageAdapter = new PageAdapterProfTeachear(getFragmentManager());
         viewPager.setAdapter(pageAdapter);
 
         tabLayout.addTab(tabLayout.newTab().setText("Assignment"));

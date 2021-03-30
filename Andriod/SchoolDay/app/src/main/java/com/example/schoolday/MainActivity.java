@@ -7,12 +7,14 @@ import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentManager;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
@@ -31,7 +33,6 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
     private final static int ID_TIMETABLE = 1;
     private final static int ID_INFORMATION = 4;
     ImageView notificationImage, searchImage, goBackChat, editImage, optionMenu;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -170,5 +171,8 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         return true;
     }
 
-
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
 }

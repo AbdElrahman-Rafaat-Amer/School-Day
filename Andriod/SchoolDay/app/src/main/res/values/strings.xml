@@ -30,5 +30,9 @@
     <string name="go_back">Go back</string>
     <string name="edit">Edit</string>
     <string name="moresetting">More Setting</string>
+    <string name="title">Title</string>
+    <string name="noteDescription">Note Description</string>
+    <string name="save">Save</string>
+    <string name="update">Update</string>
 
 </resources>
