@@ -4,13 +4,14 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/lms"
         android:label="School Day"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/lms"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".OnlineFriendsActivity"></activity>
-        <activity android:name=".EditActivity"></activity>
+        <activity android:name=".NotesEditAddActivity"></activity>
+        <activity android:name=".OnlineFriendsActivity" />
+        <activity android:name=".EditActivity" />
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">

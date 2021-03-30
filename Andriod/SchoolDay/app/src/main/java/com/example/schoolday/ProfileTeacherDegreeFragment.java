@@ -33,8 +33,8 @@ public class ProfileTeacherDegreeFragment extends Fragment {
         subjectContainer = view.findViewById(R.id.assignment_container);
         progressBar = view.findViewById(R.id.progrssbar_profteacher);
 
-        rateValue = progressBar.getProgress();
-        rate.setText(rateValue);
+       // rateValue = progressBar.getProgress();
+        //rate.setText(rateValue);
 
 
         return view;

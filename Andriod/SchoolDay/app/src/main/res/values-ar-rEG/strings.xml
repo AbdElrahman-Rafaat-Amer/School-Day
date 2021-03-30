@@ -24,4 +24,10 @@
     <string name="online">متصل الآن</string>
     <string name="chat_with_friends">المحادثات</string>
     <string name="go_back">رجوع</string>
+    <string name="edit">تعديل</string>
+    <string name="moresetting">اعدادت اضافية</string>
+    <string name="title">العنوان</string>
+    <string name="noteDescription">الوصف</string>
+    <string name="save">حفظ</string>
+    <string name="update">تاكيد</string>
 </resources>
