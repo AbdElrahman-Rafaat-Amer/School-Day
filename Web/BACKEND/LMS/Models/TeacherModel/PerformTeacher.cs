@@ -11,13 +11,14 @@ namespace LMS.Models.TeacherModel
         public PerformTeacher()
         {
 
+            //<message from:Abdelrahman> You should delete these after my update on models
 
-            _TeacherList = new List<Teacher>()
-            {
-                new Teacher(){Id=1,Fname="Ahmed",AddmitionDate=DateTime.Now,Height=80},
-                new Teacher(){Id=2,Fname="Mostafa",AddmitionDate=DateTime.Now,Height=50},
-                new Teacher(){Id=3,Fname="Saleh",AddmitionDate=DateTime.Now,Height=70}
-            };
+            //_TeacherList = new List<Teacher>()
+            //{
+            //    new Teacher(){Id=1,Fname="Ahmed",AddmitionDate=DateTime.Now,Height=80},
+            //    new Teacher(){Id=2,Fname="Mostafa",AddmitionDate=DateTime.Now,Height=50},
+            //    new Teacher(){Id=3,Fname="Saleh",AddmitionDate=DateTime.Now,Height=70}
+            //};
         }
 
         public IEnumerable<Teacher> GetAllTeatcher()
@@ -26,7 +27,7 @@ namespace LMS.Models.TeacherModel
         }
         public Teacher GetTeatcher(int Id)
         {
-            return _TeacherList.FirstOrDefault(s => s.Id == Id);
+            return _TeacherList.FirstOrDefault(s => s.AccountId == Id);
         }
     }
 }

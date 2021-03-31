@@ -1,14 +1,12 @@
-﻿using LMS.Models.RefreshTokenModel;
-using LMS.Models.RoleModel;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace LMS.Models.TeacherModel
+namespace LMS.Models.AdminModel
 {
-    public class Teacher
+    public class Admin
     {
         [Key]
         public int AccountId { get; set; }
@@ -21,12 +19,5 @@ namespace LMS.Models.TeacherModel
         public string PDF_1 { get; set; }
         public string PDF_2 { get; set; }
         public int AddmitionNum { get; set; }
-        public ICollection<ZoomModel.Zoom> Zooms { get; set; }
-        public ICollection<GroupModel.Group> Groups { get; set; }
-        public ICollection<NoteBordModel.NoteBoard> NoteBoards { get; set; }
-        public ICollection<PostModel.Post> Posts { get; set; }
-        public ICollection<LibraryModel.BorrowModel.Borrow> Borrows { get; set; }
-        public ICollection<YearModel.Year> Years { get; set; }
-
     }
 }

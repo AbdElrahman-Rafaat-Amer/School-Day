@@ -1,5 +1,8 @@
-﻿using System;
+﻿using LMS.Models.RefreshTokenModel;
+using LMS.Models.RoleModel;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -14,26 +17,16 @@ namespace LMS.Models.StudentModel
     }
     public class Student
     {
-        public int Id { get; set; }
-        public string Fname { get; set; }
-        public string Mname { get; set; }
-        public string Lname { get; set; }
-        public string Email { get; set; }
-        public string Gender { get; set; }
-        public string Phone_1 { get; set; }
-        public string Phone_2 { get; set; }
-        public string Relegion { get; set; }
+        [Key]
+        public int AccountId { get; set; }
         public DateTime AddmitionDate { get; set; }
         public double Height { get; set; }
         public double Weight { get; set; }
         public string BloodGroup { get; set; }
-        public string CurrentAddress { get; set; }
-        public string PermanentAddress { get; set; }
         public string Nationality { get; set; }
         public string Photo { get; set; }
         public string PDF_1 { get; set; }
         public string PDF_2 { get; set; }
-        public int NatinaliID { get; set; }
         public int AddmitionNum { get; set; }
         public ICollection<FeesModel.Fees> Fees { get; set; }
         public ICollection<AttendanceModel.Attendance> Attendances { get; set; }
