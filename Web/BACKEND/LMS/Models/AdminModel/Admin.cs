@@ -18,6 +18,6 @@ namespace LMS.Models.AdminModel
         public string Photo { get; set; }
         public string PDF_1 { get; set; }
         public string PDF_2 { get; set; }
-        public int AddmitionNum { get; set; }
+        public string AddmitionNum { get; set; }
     }
 }

@@ -191,3 +191,9 @@ C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Swa
 C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\AME\source\repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\AME\source\repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\AME\source\repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\BCrypt.Net-Next.dll
+C:\Users\AME\source\repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\MailKit.dll
+C:\Users\AME\source\repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\MimeKit.dll
+C:\Users\AME\source\repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll

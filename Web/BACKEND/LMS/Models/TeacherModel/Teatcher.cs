@@ -17,10 +17,9 @@ namespace LMS.Models.TeacherModel
         public double Weight { get; set; }
         public string BloodGroup { get; set; }
         public string Natinality { get; set; }
-        public string Photo { get; set; }
         public string PDF_1 { get; set; }
         public string PDF_2 { get; set; }
-        public int AddmitionNum { get; set; }
+        public string AddmitionNum { get; set; }
         public ICollection<ZoomModel.Zoom> Zooms { get; set; }
         public ICollection<GroupModel.Group> Groups { get; set; }
         public ICollection<NoteBordModel.NoteBoard> NoteBoards { get; set; }

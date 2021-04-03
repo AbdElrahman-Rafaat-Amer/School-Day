@@ -13,7 +13,6 @@ namespace LMS.Models.ParentModel
         [Key]
         public int AccountId { get; set; }
         public string Natinality { get; set; }
-        public string Photo { get; set; }
         public string PDF_1 { get; set; }
         public string PDF_2 { get; set; }
         public string RelationWithStudent { get; set; }

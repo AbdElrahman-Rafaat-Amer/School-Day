@@ -24,10 +24,9 @@ namespace LMS.Models.StudentModel
         public double Weight { get; set; }
         public string BloodGroup { get; set; }
         public string Nationality { get; set; }
-        public string Photo { get; set; }
         public string PDF_1 { get; set; }
         public string PDF_2 { get; set; }
-        public int AddmitionNum { get; set; }
+        public string AddmitionNum { get; set; }
         public ICollection<FeesModel.Fees> Fees { get; set; }
         public ICollection<AttendanceModel.Attendance> Attendances { get; set; }
         public ICollection<GroupModel.Group> Groups { get; set; }

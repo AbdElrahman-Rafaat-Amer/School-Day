@@ -40,6 +40,8 @@ namespace LMS.Models
         public DbSet<TrueFalseModel.TrueFalse> TrueFalses { get; set; }
         public DbSet<YearModel.Year> Years { get; set; }
         public DbSet<ZoomModel.Zoom> Zooms { get; set; }
+        public DbSet<AccountModel.Account> Accounts { get; set; }
+        public DbSet<AdminModel.Admin> Admin { get; set; }
 
     }
 }

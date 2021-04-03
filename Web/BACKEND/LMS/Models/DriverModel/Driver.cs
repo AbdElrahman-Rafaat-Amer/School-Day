@@ -12,9 +12,6 @@ namespace LMS.Models.DriverModel
     {
         [Key]
         public int AccountId { get; set; }
-        public int DateOfBirth { get; set; }
-        public string Photo { get; set; }
-        public string Address { get; set; }
         public string LicenseID { get; set; }
         public ICollection<BusModel.Bus> Buses { get; set; }
 

@@ -1,4 +1,5 @@
 ﻿using LMS.Models.AccountModel;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -7,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace LMS.Models.RefreshTokenModel
 {
+    [Owned]
     public class RefreshToken
     {
         [Key]
