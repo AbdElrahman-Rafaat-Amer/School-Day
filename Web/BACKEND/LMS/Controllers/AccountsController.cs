@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using LMS.ViewModels.Accounts;
-using LMS.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -16,11 +15,11 @@ namespace LMS.Controllers
     [Route("[controller]")]
     public class AccountsController : BaseController
     {
-        private readonly IAccountService _accountService;
+        private readonly IAccountRepasitory _accountService;
         private readonly IMapper _mapper;
 
         public AccountsController(
-            IAccountService accountService,
+            IAccountRepasitory accountService,
             IMapper mapper)
         {
             _accountService = accountService;
@@ -43,10 +42,10 @@ namespace LMS.Controllers
         }
 
         [HttpPost("refresh-token")]
-        public ActionResult<AuthenticateResponse> RefreshToken()
+        public  ActionResult<AuthenticateResponse> RefreshToken()
         {
             var refreshToken = Request.Cookies["refreshToken"];
-            var response = _accountService.RefreshToken(refreshToken, ipAddress());
+            var response =_accountService.RefreshToken(refreshToken, ipAddress());
             setTokenCookie(response.RefreshToken);
             return Ok(response);
         }
