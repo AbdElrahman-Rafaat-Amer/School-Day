@@ -1,7 +1,7 @@
 using ELearningAPI.Middleware;
 using LMS.Helpers;
 using LMS.Models;
-using LMS.Models.AccountModel;
+using LMS.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -45,7 +45,7 @@ namespace LMS
             services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
             services.AddCors();
             // configure DI for application services
-            services.AddScoped<IAccountRepasitory, PerformAccount>();
+            services.AddScoped<IAccountService, AccountService>();
             services.AddScoped<IEmailService, EmailService>();
             services.AddSwaggerGen(c =>
             {
