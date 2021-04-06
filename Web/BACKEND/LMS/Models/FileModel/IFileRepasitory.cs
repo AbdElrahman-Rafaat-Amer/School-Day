@@ -5,9 +5,12 @@ using System.Threading.Tasks;
 
 namespace LMS.Models.FileModel
 {
-    public interface IfilesRepasitory
+    public interface IFileRepasitory<T>
     {
-        File GetFile(int Id);
-        public IEnumerable<File> GetAllFiles();
+        void CreateFile(T File);
+        void UpdateFile(T File);
+        void DeleteFile(int Id);
+        Task<File> File(int Id);
+        List<File> Files();
     }
 }

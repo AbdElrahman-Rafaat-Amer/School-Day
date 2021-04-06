@@ -5,9 +5,12 @@ using System.Threading.Tasks;
 
 namespace LMS.Models.QuestionModel
 {
-   public interface IQuestionRepasitory
+   public interface IQuestionRepasitory<T>
     {
-        Question GetQuestion(int Id);
-        public IEnumerable<Question> GetAllQuestion();
+        void CreateQuestion(T question);
+        void UpdateQuestion(T question);
+        void DeleteQuestion(int Id);
+        Task<Question> Question(int Id);
+        List<Question> Questions();
     }
 }

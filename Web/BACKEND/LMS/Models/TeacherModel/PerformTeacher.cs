@@ -5,29 +5,53 @@ using System.Threading.Tasks;
 
 namespace LMS.Models.TeacherModel
 {
-    public class PerformTeacher
+    public class PerformTeacher : ITeacherRepasitory<Teacher>
     {
-        private List<Teacher> _TeacherList;
-        public PerformTeacher()
+        private readonly AppDbContext context;
+
+        public PerformTeacher(AppDbContext context)
         {
-
-            //<message from:Abdelrahman> You should delete these after my update on models
-
-            //_TeacherList = new List<Teacher>()
-            //{
-            //    new Teacher(){Id=1,Fname="Ahmed",AddmitionDate=DateTime.Now,Height=80},
-            //    new Teacher(){Id=2,Fname="Mostafa",AddmitionDate=DateTime.Now,Height=50},
-            //    new Teacher(){Id=3,Fname="Saleh",AddmitionDate=DateTime.Now,Height=70}
-            //};
+            this.context = context;
         }
 
-        public IEnumerable<Teacher> GetAllTeatcher()
+        
+        public void CreateTeacher(Teacher Teacher)
         {
-            return _TeacherList;
+            context.Teachers.Add(Teacher);
+            context.SaveChanges();
         }
-        public Teacher GetTeatcher(int Id)
+
+       
+        public void DeleteTeacher(int Id)
         {
-            return _TeacherList.FirstOrDefault(s => s.AccountId == Id);
+            var t = context.Teachers.Find(Id);
+            if (t!=null)
+            {
+                context.Teachers.Remove(t);
+                context.SaveChanges();
+            }
+
+
+        }
+
+        public async Task<Teacher> Teatcher(int Id)
+        {
+            var t = await context.Teachers.FindAsync(Id);
+            return t;
+        }
+
+        public List<Teacher> Teatchers()
+        {
+            var t = context.Teachers.ToList();
+            return t;
+        }
+
+        public void UpdateTeacher(Teacher Teacher)
+        {
+            context.Teachers.Update(Teacher);
+            context.SaveChanges();
         }
     }
+
+
 }

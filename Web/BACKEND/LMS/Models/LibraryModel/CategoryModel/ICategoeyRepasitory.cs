@@ -5,7 +5,12 @@ using System.Threading.Tasks;
 
 namespace LMS.Models.LibraryModel.CategoryModel
 {
-   public interface ICategoeyRepasitory
+   public interface ICategoeyRepasitory<T>
     {
+        void CreateCategory(T category);
+        void UpdateCategory(T category);
+        void DeleteCategory(int Id);
+        Task<Category> Category(int Id);
+        List<Category> Categorys();
     }
 }

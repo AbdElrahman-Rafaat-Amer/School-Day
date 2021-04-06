@@ -111,7 +111,6 @@ E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\runtimes\win-x86\nati
 E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-E:\work\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.csprojAssemblyReference.cache
 E:\work\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.AssemblyInfoInputs.cache
 E:\work\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.AssemblyInfo.cs
 E:\work\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.csproj.CoreCompileInputs.cache
@@ -197,3 +196,14 @@ C:\Users\AME\source\repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\BCr
 C:\Users\AME\source\repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\MailKit.dll
 C:\Users\AME\source\repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\MimeKit.dll
 C:\Users\AME\source\repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\AutoMapper.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\BCrypt.Net-Next.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\MailKit.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\MimeKit.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\work\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.MvcApplicationPartsAssemblyInfo.cs

@@ -5,7 +5,12 @@ using System.Threading.Tasks;
 
 namespace LMS.Models.PostModel
 {
-  public interface IPostRepasitory
+  public interface IPostRepasitory<T>
     {
+        void CreatePost(T post);
+        void UpdatePost(T post);
+        void DeletePost(int Id);
+        Task<Post> Post(int Id);
+        List<Post> Posts();
     }
 }

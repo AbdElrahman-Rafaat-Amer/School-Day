@@ -5,7 +5,12 @@ using System.Threading.Tasks;
 
 namespace LMS.Models.CommentModel
 {
-  public interface ICommentRepasirory
+  public interface ICommentRepasirory<T>
     {
+        void CreateComment(T Comment);
+        void UpdateComment(T Comment);
+        void DeleteComment(int Id);
+        Task<Comment> Comment(int Id);
+        List<Comment> Comments();
     }
 }

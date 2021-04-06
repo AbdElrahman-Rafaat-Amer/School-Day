@@ -5,9 +5,13 @@ using System.Threading.Tasks;
 
 namespace LMS.Models.StudentModel
 {
-  public interface IStudentRepasitory
+  public interface IStudentRepasitory<T>
     {
-        Student GetStudent(int Id);
-        public IEnumerable<Student> GetAllStudents();
+        void CreateStudent(T student);
+        void UpdateStudent(T student);
+        void DeleteStudent(int Id);
+        Task<Student> Student(int Id);
+        List<Student> Students();
+
     }
 }

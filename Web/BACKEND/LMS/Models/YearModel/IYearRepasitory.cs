@@ -7,5 +7,6 @@ namespace LMS.Models.YearModel
 {
  public interface IYearRepasitory
     {
+   
     }
 }

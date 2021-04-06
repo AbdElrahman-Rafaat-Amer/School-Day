@@ -7,5 +7,6 @@ namespace LMS.Models.ZoomModel
 {
    public interface IZoomRepasitory
     {
+    
     }
 }

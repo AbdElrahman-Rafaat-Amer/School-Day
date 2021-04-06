@@ -5,7 +5,12 @@ using System.Threading.Tasks;
 
 namespace LMS.Models.PhotoModel
 {
-   public interface IPhotoRepasitory
+   public interface IPhotoRepasitory<T>
     {
+        void CreatePhoto(T photo);
+        void UpdatePhoto(T photo);
+        void DeletePhoto(int Id);
+        Task<Photo> Photo(int Id);
+        List<Photo> Photos();
     }
 }
