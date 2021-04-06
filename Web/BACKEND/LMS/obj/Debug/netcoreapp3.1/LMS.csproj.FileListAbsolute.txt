@@ -1,0 +1,209 @@
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\appsettings.Development.json
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\appsettings.json
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\LMS.exe
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\LMS.deps.json
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\LMS.runtimeconfig.json
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\LMS.runtimeconfig.dev.json
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\LMS.dll
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\LMS.pdb
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\Humanizer.dll
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+E:\School Day\LMS\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+E:\School Day\LMS\obj\Debug\netcoreapp3.1\LMS.csprojAssemblyReference.cache
+E:\School Day\LMS\obj\Debug\netcoreapp3.1\LMS.AssemblyInfoInputs.cache
+E:\School Day\LMS\obj\Debug\netcoreapp3.1\LMS.AssemblyInfo.cs
+E:\School Day\LMS\obj\Debug\netcoreapp3.1\LMS.csproj.CoreCompileInputs.cache
+E:\School Day\LMS\obj\Debug\netcoreapp3.1\LMS.MvcApplicationPartsAssemblyInfo.cache
+E:\School Day\LMS\obj\Debug\netcoreapp3.1\staticwebassets\LMS.StaticWebAssets.Manifest.cache
+E:\School Day\LMS\obj\Debug\netcoreapp3.1\staticwebassets\LMS.StaticWebAssets.xml
+E:\School Day\LMS\obj\Debug\netcoreapp3.1\scopedcss\bundle\LMS.styles.css
+E:\School Day\LMS\obj\Debug\netcoreapp3.1\LMS.RazorTargetAssemblyInfo.cache
+E:\School Day\LMS\obj\Debug\netcoreapp3.1\LMS.csproj.CopyComplete
+E:\School Day\LMS\obj\Debug\netcoreapp3.1\LMS.dll
+E:\School Day\LMS\obj\Debug\netcoreapp3.1\LMS.pdb
+E:\School Day\LMS\obj\Debug\netcoreapp3.1\LMS.genruntimeconfig.cache
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\appsettings.Development.json
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\appsettings.json
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\LMS.exe
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\LMS.deps.json
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\LMS.runtimeconfig.json
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\LMS.runtimeconfig.dev.json
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\LMS.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\LMS.pdb
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Humanizer.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+E:\work\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.AssemblyInfoInputs.cache
+E:\work\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.AssemblyInfo.cs
+E:\work\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.csproj.CoreCompileInputs.cache
+E:\work\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.MvcApplicationPartsAssemblyInfo.cache
+E:\work\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\staticwebassets\LMS.StaticWebAssets.Manifest.cache
+E:\work\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\staticwebassets\LMS.StaticWebAssets.xml
+E:\work\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\scopedcss\bundle\LMS.styles.css
+E:\work\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.RazorTargetAssemblyInfo.cache
+E:\work\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.csproj.CopyComplete
+E:\work\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.dll
+E:\work\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.pdb
+E:\work\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.genruntimeconfig.cache
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\LMS.exe
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\LMS.deps.json
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\LMS.runtimeconfig.json
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\LMS.runtimeconfig.dev.json
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\LMS.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\LMS.pdb
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Humanizer.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\System.ComponentModel.Annotations.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.AssemblyInfoInputs.cache
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.AssemblyInfo.cs
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.csproj.CoreCompileInputs.cache
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\staticwebassets\LMS.StaticWebAssets.Manifest.cache
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\staticwebassets\LMS.StaticWebAssets.xml
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\scopedcss\bundle\LMS.styles.css
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.RazorTargetAssemblyInfo.cache
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.csproj.CopyComplete
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.pdb
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.genruntimeconfig.cache
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\AME\Source\Repos\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\AME\source\repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\AME\source\repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\AME\source\repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\BCrypt.Net-Next.dll
+C:\Users\AME\source\repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\MailKit.dll
+C:\Users\AME\source\repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\MimeKit.dll
+C:\Users\AME\source\repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\AutoMapper.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\BCrypt.Net-Next.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\MailKit.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\MimeKit.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\work\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.MvcApplicationPartsAssemblyInfo.cs

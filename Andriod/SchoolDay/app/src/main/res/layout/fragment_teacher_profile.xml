@@ -5,16 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".TeacherProfileFragment">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="30dp"
-        android:text="Profile"
-        android:textSize="20dp"
-        android:fontFamily="@font/bauhaus93"></TextView>
+        android:fontFamily="@font/bauhaus93"
+        android:text="@string/profile"
+        android:textSize="40sp"
+        android:layout_marginBottom="20dp"></TextView>
 
 
     <de.hdodenhof.circleimageview.CircleImageView

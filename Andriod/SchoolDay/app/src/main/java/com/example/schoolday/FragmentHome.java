@@ -62,7 +62,7 @@ public class FragmentHome extends Fragment {
         notesCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // startActivity(new Intent(getContext(),TeacherFragment.class));
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new NotesFragment()).commit();
             }
         });
         onlineCard.setOnClickListener(new View.OnClickListener() {
