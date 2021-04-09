@@ -208,6 +208,7 @@ E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCor
 E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
 E:\work\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.MvcApplicationPartsAssemblyInfo.cs
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 C:\Users\AME\Documents\GitHub\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\AME\Documents\GitHub\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\AME\Documents\GitHub\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\LMS.exe
@@ -281,6 +282,9 @@ C:\Users\AME\Documents\GitHub\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1
 C:\Users\AME\Documents\GitHub\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.dll
 C:\Users\AME\Documents\GitHub\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.pdb
 C:\Users\AME\Documents\GitHub\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.genruntimeconfig.cache
+=======
+E:\work\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.csprojAssemblyReference.cache
+>>>>>>> Stashed changes
 =======
 E:\work\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.csprojAssemblyReference.cache
 >>>>>>> Stashed changes

@@ -7,12 +7,15 @@ using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 using System.Threading.Tasks;
 using AutoMapper;
 using BC = BCrypt.Net.BCrypt;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 using System.Security.Claims;
@@ -29,11 +32,19 @@ using LMS.Models.StudentModel;
 using LMS.Models.TeacherModel;
 using LMS.Models.DriverModel;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 namespace LMS.Models.AccountModel
 {
     public class PerformAccount : IAccountRepasitory
     {
+=======
+namespace LMS.Models.AccountModel
+{
+    public class PerformAccount:IAccountRepasitory
+    {
+
+>>>>>>> Stashed changes
 =======
 namespace LMS.Models.AccountModel
 {
@@ -63,7 +74,11 @@ namespace LMS.Models.AccountModel
             var account = _context.Accounts.SingleOrDefault(x => x.Email == model.Email);
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             if (account == null || !account.IsVerified || model.Password != account.PasswordHash /*!BC.Verify(model.Password, account.PasswordHash)*/)
+=======
+            if (account == null || !account.IsVerified || !BC.Verify(model.Password, account.PasswordHash))
+>>>>>>> Stashed changes
 =======
             if (account == null || !account.IsVerified || !BC.Verify(model.Password, account.PasswordHash))
 >>>>>>> Stashed changes
@@ -113,7 +128,11 @@ namespace LMS.Models.AccountModel
 
             // hash password
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             account.PasswordHash = model.Password;//BC.HashPassword(model.Password);
+=======
+            account.PasswordHash = BC.HashPassword(model.Password);
+>>>>>>> Stashed changes
 =======
             account.PasswordHash = BC.HashPassword(model.Password);
 >>>>>>> Stashed changes
@@ -123,7 +142,11 @@ namespace LMS.Models.AccountModel
             _context.SaveChanges();
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             if (model.Role == Role.Admin || isFirstAccount)
+=======
+            if (model.Role == Role.Admin)
+>>>>>>> Stashed changes
 =======
             if (model.Role == Role.Admin)
 >>>>>>> Stashed changes
@@ -251,7 +274,11 @@ namespace LMS.Models.AccountModel
 
             // update password and remove reset token
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             account.PasswordHash = model.Password;//BC.HashPassword(model.Password);
+=======
+            account.PasswordHash = BC.HashPassword(model.Password);
+>>>>>>> Stashed changes
 =======
             account.PasswordHash = BC.HashPassword(model.Password);
 >>>>>>> Stashed changes
@@ -291,7 +318,11 @@ namespace LMS.Models.AccountModel
 
             // hash password
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             account.PasswordHash = model.Password;//BC.HashPassword(model.Password);
+=======
+            account.PasswordHash = BC.HashPassword(model.Password);
+>>>>>>> Stashed changes
 =======
             account.PasswordHash = BC.HashPassword(model.Password);
 >>>>>>> Stashed changes
@@ -314,7 +345,11 @@ namespace LMS.Models.AccountModel
             // hash password if it was entered
             if (!string.IsNullOrEmpty(model.Password))
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 account.PasswordHash = model.Password;//BC.HashPassword(model.Password);
+=======
+                account.PasswordHash = BC.HashPassword(model.Password);
+>>>>>>> Stashed changes
 =======
                 account.PasswordHash = BC.HashPassword(model.Password);
 >>>>>>> Stashed changes
@@ -460,6 +495,10 @@ namespace LMS.Models.AccountModel
             );
         }
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 =======
 
 >>>>>>> Stashed changes
