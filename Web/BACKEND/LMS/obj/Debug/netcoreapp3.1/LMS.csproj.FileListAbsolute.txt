@@ -207,6 +207,7 @@ E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCor
 E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
 E:\work\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.MvcApplicationPartsAssemblyInfo.cs
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 C:\Users\AME\Documents\GitHub\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\appsettings.Development.json
@@ -288,3 +289,5 @@ E:\work\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.csprojAssemblyRef
 =======
 E:\work\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.csprojAssemblyReference.cache
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of 98e6a8c (Account works by Repository Pattern)

@@ -9,6 +9,7 @@ using System.Linq;
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 using System.Threading.Tasks;
+<<<<<<< HEAD
 using AutoMapper;
 using BC = BCrypt.Net.BCrypt;
 using Microsoft.Extensions.Options;
@@ -33,11 +34,14 @@ using LMS.Models.TeacherModel;
 using LMS.Models.DriverModel;
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+=======
+>>>>>>> parent of 98e6a8c (Account works by Repository Pattern)
 
 namespace LMS.Models.AccountModel
 {
-    public class PerformAccount : IAccountRepasitory
+    public class PerformAccount
     {
+<<<<<<< HEAD
 =======
 namespace LMS.Models.AccountModel
 {
@@ -502,5 +506,7 @@ namespace LMS.Models.AccountModel
 =======
 
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of 98e6a8c (Account works by Repository Pattern)
     }
 }
