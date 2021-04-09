@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace LMS.Models.DriverModel
 {
-    interface IDriverRepasitory<T>
+    public  interface IDriverRepasitory<T>
     {
         void CreateDriver(T Driver);
         void UpdateDriver(T Driver);

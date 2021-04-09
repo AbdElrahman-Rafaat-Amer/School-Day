@@ -11,6 +11,7 @@ namespace LMS.Models.NoteBordModel
         void UpdateNote(T note);
         void DeleteNote(int Id);
         Task<NoteBoard> Note(int Id);
-        List<NoteBoard> Note();
+        List<NoteBoard> Notes();
+        List<NoteBoard> NotesByFiltter(Func<T, bool> lamda);
     }
 }

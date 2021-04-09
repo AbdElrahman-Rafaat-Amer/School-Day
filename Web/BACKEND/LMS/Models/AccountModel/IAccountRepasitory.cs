@@ -16,7 +16,10 @@ namespace LMS.Models.AccountModel
         void ForgotPassword(ForgotPasswordRequest model, string origin);
         void ValidateResetToken(ValidateResetTokenRequest model);
         void ResetPassword(ResetPasswordRequest model);
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
         IEnumerable<AccountResponse> GetAll();
         AccountResponse GetById(int id);
         AccountResponse Create(CreateRequest model);

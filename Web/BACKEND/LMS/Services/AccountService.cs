@@ -1,4 +1,4 @@
-﻿using AutoMapper;
+using AutoMapper;
 using BC = BCrypt.Net.BCrypt;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
@@ -6,15 +6,6 @@ using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
-<<<<<<< Updated upstream
-using System.Threading.Tasks;
-using AutoMapper;
-using BC = BCrypt.Net.BCrypt;
-using Microsoft.Extensions.Options;
-using Microsoft.IdentityModel.Tokens;
-using System.IdentityModel.Tokens.Jwt;
-=======
->>>>>>> Stashed changes
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
@@ -28,25 +19,18 @@ using LMS.Models.AdminModel;
 using LMS.Models.StudentModel;
 using LMS.Models.TeacherModel;
 using LMS.Models.DriverModel;
-<<<<<<< Updated upstream
 
-namespace LMS.Models.AccountModel
+namespace LMS.Services
 {
-    public class PerformAccount : IAccountRepasitory
-    {
-=======
-namespace LMS.Models.AccountModel
-{
-    public class PerformAccount:IAccountRepasitory
-    {
 
->>>>>>> Stashed changes
+    public class AccountService : IAccountService
+    {
         private readonly AppDbContext _context;
         private readonly IMapper _mapper;
         private readonly AppSettings _appSettings;
         private readonly IEmailService _emailService;
 
-        public PerformAccount(
+        public AccountService(
             AppDbContext context,
             IMapper mapper,
             IOptions<AppSettings> appSettings,
@@ -62,11 +46,7 @@ namespace LMS.Models.AccountModel
         {
             var account = _context.Accounts.SingleOrDefault(x => x.Email == model.Email);
 
-<<<<<<< Updated upstream
-            if (account == null || !account.IsVerified || model.Password != account.PasswordHash /*!BC.Verify(model.Password, account.PasswordHash)*/)
-=======
-            if (account == null || !account.IsVerified || !BC.Verify(model.Password, account.PasswordHash))
->>>>>>> Stashed changes
+            if (account == null || !account.IsVerified || account.PasswordHash!=model.Password)
                 throw new AppException("Email or password is incorrect");
 
             // authentication successful so generate jwt and refresh tokens
@@ -100,11 +80,11 @@ namespace LMS.Models.AccountModel
                 sendAlreadyRegisteredEmail(model.Email, origin);
                 return;
             }
-
+            
 
             // map model to new account object
             var account = _mapper.Map<Account>(model);
-
+            
             // first registered account is an admin
             var isFirstAccount = _context.Accounts.Count() == 0;
             account.Role = isFirstAccount ? Role.Admin : model.Role;
@@ -112,21 +92,13 @@ namespace LMS.Models.AccountModel
             account.VerificationToken = randomTokenString();
 
             // hash password
-<<<<<<< Updated upstream
-            account.PasswordHash = model.Password;//BC.HashPassword(model.Password);
-=======
             account.PasswordHash = BC.HashPassword(model.Password);
->>>>>>> Stashed changes
 
             // save account
             _context.Accounts.Add(account);
             _context.SaveChanges();
 
-<<<<<<< Updated upstream
-            if (model.Role == Role.Admin || isFirstAccount)
-=======
             if (model.Role == Role.Admin)
->>>>>>> Stashed changes
             {
                 var adminAccount = _mapper.Map<Admin>(model);
                 adminAccount.AccountId = account.Id;
@@ -205,7 +177,7 @@ namespace LMS.Models.AccountModel
             if (account == null) throw new AppException("Verification failed");
 
             account.Verified = DateTime.UtcNow;
-
+            
             account.VerificationToken = null;
 
             _context.Accounts.Update(account);
@@ -250,11 +222,7 @@ namespace LMS.Models.AccountModel
                 throw new AppException("Invalid token");
 
             // update password and remove reset token
-<<<<<<< Updated upstream
-            account.PasswordHash = model.Password;//BC.HashPassword(model.Password);
-=======
             account.PasswordHash = BC.HashPassword(model.Password);
->>>>>>> Stashed changes
             account.PasswordReset = DateTime.UtcNow;
             account.ResetToken = null;
             account.ResetTokenExpires = null;
@@ -290,11 +258,7 @@ namespace LMS.Models.AccountModel
             account.Verified = DateTime.UtcNow;
 
             // hash password
-<<<<<<< Updated upstream
-            account.PasswordHash = model.Password;//BC.HashPassword(model.Password);
-=======
             account.PasswordHash = BC.HashPassword(model.Password);
->>>>>>> Stashed changes
 
             // save account
             _context.Accounts.Add(account);
@@ -313,11 +277,7 @@ namespace LMS.Models.AccountModel
 
             // hash password if it was entered
             if (!string.IsNullOrEmpty(model.Password))
-<<<<<<< Updated upstream
-                account.PasswordHash = model.Password;//BC.HashPassword(model.Password);
-=======
                 account.PasswordHash = BC.HashPassword(model.Password);
->>>>>>> Stashed changes
 
             // copy model to account and save
             _mapper.Map(model, account);
@@ -380,7 +340,7 @@ namespace LMS.Models.AccountModel
 
         private void removeOldRefreshTokens(Account account)
         {
-            account.RefreshTokens.RemoveAll(x =>
+            account.RefreshTokens.RemoveAll(x => 
                 !x.IsActive &&
                 x.Created.AddDays(_appSettings.RefreshTokenTTL) >= DateTime.UtcNow);
         }
@@ -459,9 +419,5 @@ namespace LMS.Models.AccountModel
                          {message}"
             );
         }
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
     }
 }
