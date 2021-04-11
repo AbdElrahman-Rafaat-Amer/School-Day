@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using BC = BCrypt.Net.BCrypt;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System;
@@ -19,6 +18,8 @@ using LMS.Models.AdminModel;
 using LMS.Models.StudentModel;
 using LMS.Models.TeacherModel;
 using LMS.Models.DriverModel;
+using Microsoft.EntityFrameworkCore;
+
 namespace LMS.Models.AccountModel
 {
 
@@ -88,13 +89,14 @@ namespace LMS.Models.AccountModel
             var account = _mapper.Map<Account>(model);
 
             // first registered account is an admin
-            var isFirstAccount = _context.Accounts.Count() == 0;
+            var isFirstAccount = _context.Accounts.Any();
+
             account.Role = isFirstAccount ? Role.Admin : model.Role;
             account.Created = DateTime.UtcNow;
             account.VerificationToken = randomTokenString();
 
             // hash password
-            account.PasswordHash = BC.HashPassword(model.Password);
+            account.PasswordHash = model.Password;
 
             // save account
             _context.Accounts.Add(account);
@@ -204,10 +206,10 @@ namespace LMS.Models.AccountModel
             sendPasswordResetEmail(account, origin);
         }
 
-        public void ValidateResetToken(ValidateResetTokenRequest model)
+        public void ValidateResetToken(string Token)
         {
             var account = _context.Accounts.SingleOrDefault(x =>
-                x.ResetToken == model.Token &&
+                x.ResetToken == Token &&
                 x.ResetTokenExpires > DateTime.UtcNow);
 
             if (account == null)
@@ -224,7 +226,7 @@ namespace LMS.Models.AccountModel
                 throw new AppException("Invalid token");
 
             // update password and remove reset token
-            account.PasswordHash = BC.HashPassword(model.Password);
+            account.PasswordHash = model.Password;
             account.PasswordReset = DateTime.UtcNow;
             account.ResetToken = null;
             account.ResetTokenExpires = null;
@@ -260,7 +262,7 @@ namespace LMS.Models.AccountModel
             account.Verified = DateTime.UtcNow;
 
             // hash password
-            account.PasswordHash = BC.HashPassword(model.Password);
+            account.PasswordHash = model.Password;
 
             // save account
             _context.Accounts.Add(account);
@@ -279,7 +281,7 @@ namespace LMS.Models.AccountModel
 
             // hash password if it was entered
             if (!string.IsNullOrEmpty(model.Password))
-                account.PasswordHash = BC.HashPassword(model.Password);
+                account.PasswordHash = model.Password;
 
             // copy model to account and save
             _mapper.Map(model, account);

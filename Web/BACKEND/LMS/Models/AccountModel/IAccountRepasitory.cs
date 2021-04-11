@@ -14,7 +14,7 @@ namespace LMS.Models.AccountModel
         void Register(RegisterRequest model, string origin);
         void VerifyEmail(string token);
         void ForgotPassword(ForgotPasswordRequest model, string origin);
-        void ValidateResetToken(ValidateResetTokenRequest model);
+        void ValidateResetToken(string token);
         void ResetPassword(ResetPasswordRequest model);
 
         IEnumerable<AccountResponse> GetAll();

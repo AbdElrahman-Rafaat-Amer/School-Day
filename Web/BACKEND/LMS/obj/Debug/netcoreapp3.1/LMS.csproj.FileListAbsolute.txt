@@ -217,7 +217,6 @@ C:\Users\AME\Documents\GitHub\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1
 C:\Users\AME\Documents\GitHub\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\LMS.pdb
 C:\Users\AME\Documents\GitHub\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\AutoMapper.dll
 C:\Users\AME\Documents\GitHub\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
-C:\Users\AME\Documents\GitHub\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\BCrypt.Net-Next.dll
 C:\Users\AME\Documents\GitHub\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Humanizer.dll
 C:\Users\AME\Documents\GitHub\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\MailKit.dll
 C:\Users\AME\Documents\GitHub\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
@@ -281,3 +280,4 @@ C:\Users\AME\Documents\GitHub\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1
 C:\Users\AME\Documents\GitHub\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.pdb
 C:\Users\AME\Documents\GitHub\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.genruntimeconfig.cache
 E:\work\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.csprojAssemblyReference.cache
+C:\Users\AME\Documents\GitHub\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.csprojAssemblyReference.cache
