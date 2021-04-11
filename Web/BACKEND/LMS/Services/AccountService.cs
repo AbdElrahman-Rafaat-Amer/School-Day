@@ -46,11 +46,9 @@ namespace LMS.Services
         {
             var account = _context.Accounts.SingleOrDefault(x => x.Email == model.Email);
 
-<<<<<<< HEAD
             if (account == null || !account.IsVerified || account.PasswordHash!=model.Password)
-=======
             if (account == null || !account.IsVerified || !BC.Verify(model.Password, account.PasswordHash))
->>>>>>> parent of 98e6a8c (Account works by Repository Pattern)
+            if (account == null || !account.IsVerified || !BC.Verify(model.Password, account.PasswordHash))
                 throw new AppException("Email or password is incorrect");
 
             // authentication successful so generate jwt and refresh tokens

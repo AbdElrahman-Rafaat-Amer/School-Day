@@ -1,4 +1,5 @@
 ﻿using LMS.Models.NoteBordModel;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace LMS.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class NoteController : ControllerBase
     {
@@ -23,7 +24,10 @@ namespace LMS.Controllers
         {
             return Ok(note.Notes());
         }
-        [HttpPost]
+
+        [HttpPost("CreateNote")]
+        [Authorize]
+
         public IActionResult CreateNote(NoteBoard n)
         {
             if (n != null)
