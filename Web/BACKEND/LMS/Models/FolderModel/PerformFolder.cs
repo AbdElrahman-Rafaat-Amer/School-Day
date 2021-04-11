@@ -42,6 +42,12 @@ namespace LMS.Models.FolderModel
             return t;
         }
 
+        public List<Folder> FoldersByFilter(Func<Folder, bool> lamda)
+        {
+            var f = context.Folders.Where(lamda).ToList();
+            return f;
+        }
+
         public void UpdateFolder(Folder Folder)
         {
             context.Folders.Update(Folder);

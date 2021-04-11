@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace LMS.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class FolderController : ControllerBase
     {
@@ -18,11 +18,38 @@ namespace LMS.Controllers
         {
             this.folder = folder;
         }
-        [HttpPost]
+        [HttpGet("ShowFolder")]
+        public ActionResult<List<Folder>> ShowFolder()
+        {
+            var x = folder.Folders();
+            return Ok(x);
+
+        }
+        [HttpPost("AddFolder")]
         public IActionResult AddFolder(Folder f)
         {
             folder.CreateFolder(f);
             return Ok("Folder Created Successfully");
+        }
+        [HttpPut("UpdateFolder")]
+        public IActionResult UpdateFolder(Folder f)
+        {
+            if (f != null)
+            {
+                folder.UpdateFolder(f);
+                return Ok();
+            }
+            return NotFound();
+        }
+        [HttpDelete("DeleteFolder/{id}")]
+        public IActionResult DeleteFolder(int id)
+        {
+            if (id!=0)
+            {
+                folder.DeleteFolder(id);
+                return Ok(); 
+            }
+            return NotFound();
         }
     }
 }

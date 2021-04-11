@@ -2,7 +2,9 @@ using ELearningAPI.Middleware;
 using LMS.Helpers;
 using LMS.Models;
 using LMS.Models.AccountModel;
+using LMS.Models.FolderModel;
 using LMS.Models.NoteBordModel;
+using LMS.Models.StudentModel;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -49,6 +51,8 @@ namespace LMS
             services.AddScoped<IAccountRepasitory, PerformAccount>();
             services.AddScoped<IEmailService, EmailService>();
             services.AddScoped<INoteRepasitory<NoteBoard>, PerformNoteBoard>();
+            services.AddScoped<IStudentRepasitory<Student>, PerformStudent>();
+            services.AddScoped<IFolderRepasitory<Folder>, PerformFolder>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "LMS", Version = "v1" });
