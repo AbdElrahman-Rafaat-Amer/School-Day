@@ -12,6 +12,6 @@ namespace LMS.Models.FolderModel
         public DateTime DateOfUpload { get; set; }
         public ICollection<FileModel.File> Files { get; set; }
         public SubjectModel.Subject Subject { get; set; }
-            
+
     }
 }

@@ -1,11 +1,12 @@
-﻿using System;
+﻿using LMS.Controllers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace LMS.Models.NoteBordModel
 {
-    public class PerformNoteBoard : INoteRepasitory<NoteBoard>
+    public class PerformNoteBoard :  INoteRepasitory<NoteBoard>
     {
         private readonly AppDbContext context;
 
@@ -15,6 +16,7 @@ namespace LMS.Models.NoteBordModel
         }
         public void CreateNote(NoteBoard note)
         {
+            
             context.Add(note);
             context.SaveChanges();
         }

@@ -12,8 +12,10 @@ namespace LMS.Models.NoteBordModel
         public string Title { get; set; }
         public DateTime Date { get; set; }
         public TaskModel.Task Task { get; set; }
-        public TeacherModel.Teacher Teacher { get; set; }
-        public StudentModel.Student Student { get; set; }
+        //public TeacherModel.Teacher Teacher { get; set; }
+        //public StudentModel.Student Student { get; set; }
+        public AccountModel.Account Account { get; set; }
+        public SubjectModel.Subject Subject { get; set; }
 
     }
 }

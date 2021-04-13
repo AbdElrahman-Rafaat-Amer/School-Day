@@ -12,6 +12,7 @@ namespace LMS.Models.CommentModel
         public DateTime Date { get; set; }
         public string Photo { get; set; }
         public PostModel.Post Post { get; set; }
+        public AccountModel.Account Account { get; set; }
 
     }
 }

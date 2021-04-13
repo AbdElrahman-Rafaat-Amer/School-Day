@@ -1,5 +1,4 @@
 ﻿using LMS.Models.RefreshTokenModel;
-using LMS.Models.RoleModel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;

@@ -11,5 +11,7 @@ namespace LMS.Models.AttendanceModel
         public DateTime Date { get; set; }
         public string Status { get; set; }
         public string QRCode { get; set; }
+        public AccountModel.Account Account { get; set; }
+
     }
 }
