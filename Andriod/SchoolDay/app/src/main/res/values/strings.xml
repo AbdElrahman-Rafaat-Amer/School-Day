@@ -34,5 +34,18 @@
     <string name="noteDescription">Note Description</string>
     <string name="save">Save</string>
     <string name="update">Update</string>
+    <string name="student">Student</string>
+    <string name="payroll">Payroll</string>
+    <string name="acadimic_year">Acadmic Year </string>
+    <string name="selectClass">SelectClass</string>
+    <string name="attendanceDate">Attendance Date</string>
+    <string name="uploadchapter">Upload Chapter</string>
+    <string name="Chapter_Number">Chapter Namber</string>
+    <string name="uploadphoto">Upload Photo</string>
+    <string name="searchByName">Search By Name</string>
+    <string name="searchById">Search By Id</string>
+    <string name="name">Name</string>
+    <string name="attendcestatus">Attendance Status</string>
+    <string name="rate">Rate</string>
 
 </resources>
