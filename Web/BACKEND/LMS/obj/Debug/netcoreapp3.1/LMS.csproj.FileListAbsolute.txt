@@ -198,7 +198,6 @@ C:\Users\AME\source\repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Mim
 C:\Users\AME\source\repos\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
 E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\AutoMapper.dll
 E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
-E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\BCrypt.Net-Next.dll
 E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\MailKit.dll
 E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
 E:\work\School-Day\Web\BACKEND\LMS\bin\Debug\netcoreapp3.1\MimeKit.dll

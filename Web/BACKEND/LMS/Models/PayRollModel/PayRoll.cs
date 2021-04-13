@@ -11,7 +11,7 @@ namespace LMS.Models.PayRollModel
         public string Name { get; set; }
         public string Status { get; set; }
         public double Salary { get; set; }
-        public TeacherModel.Teacher Teacher { get; set; }
+        public AccountModel.Account Account { get; set; }
 
     }
 }

@@ -13,7 +13,7 @@ namespace LMS.Models.Activity
         public string Link { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime DateEnd { get; set; }
-        public StudentModel.Student Student { get; set; }
+        public AccountModel.Account Account{ get; set; }
         
 
     }

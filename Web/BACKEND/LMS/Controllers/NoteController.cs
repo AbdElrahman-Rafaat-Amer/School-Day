@@ -6,12 +6,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using LMS.Models.AccountModel;
 
 namespace LMS.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class NoteController : ControllerBase
+    [Authorize(Role.Student, Role.Teacher, Role.Admin)]
+
+    public class NoteController : BaseController
     {
         private readonly INoteRepasitory<NoteBoard> note;
 
@@ -22,11 +25,10 @@ namespace LMS.Controllers
         [HttpGet]
         public ActionResult<List<NoteBoard>> ListNote()
         {
-            return Ok(note.Notes());
+            return Ok(note.NotesByFiltter(n=>n.Account==Account));
         }
 
         [HttpPost("CreateNote")]
-        [Authorize]
 
         public IActionResult CreateNote(NoteBoard n)
         {
