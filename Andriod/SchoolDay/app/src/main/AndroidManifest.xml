@@ -9,11 +9,11 @@
         android:roundIcon="@drawable/lms"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NotesEditAddActivity"></activity>
-        <activity android:name=".OnlineFriendsActivity" />
-        <activity android:name=".EditActivity" />
+        <activity android:name=".student.NotesEditAddActivity"></activity>
+        <activity android:name=".student.OnlineFriendsActivity" />
+        <activity android:name=".student.EditActivity" />
         <activity
-            android:name=".MainActivity"
+            android:name=".student.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
