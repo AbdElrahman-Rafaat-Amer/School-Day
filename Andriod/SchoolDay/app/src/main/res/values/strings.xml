@@ -47,5 +47,12 @@
     <string name="name">Name</string>
     <string name="attendcestatus">Attendance Status</string>
     <string name="rate">Rate</string>
+    <string name="uploadexam">Upload Exam</string>
+    <string name="nameofexam">Exam Name</string>
+    <string name="opened">Opened</string>
+    <string name="online_assignmet">Online Assignment</string>
+    <string name="PDFAssignmet">PDF Assignment</string>
+    <string name="nameofAssignemt">Name of Assignmet</string>
+    <string name="grade">Grade</string>
 
 </resources>
