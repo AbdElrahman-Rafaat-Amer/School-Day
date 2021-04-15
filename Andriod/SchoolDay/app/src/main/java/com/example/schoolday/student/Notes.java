@@ -1,41 +1,60 @@
 package com.example.schoolday.student;
 
-import android.widget.ImageView;
-
 public class Notes {
-
-    String title, description, dateAndTime;
-    ImageView edit;
+/*
+    private String title, text, dateAndTime;
+    private int id;
 
     public String getTitle() {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
+    public String getText() {
+        return text;
     }
 
     public String getDateAndTime() {
         return dateAndTime;
     }
 
-    public void setDateAndTime(String dateAndTime) {
-        this.dateAndTime = dateAndTime;
+    public int getId() {
+        return id;
+    }
+    */
+
+    private String name, team, bio, imageurl;
+
+    public String getBio() {
+        return bio;
     }
 
-    public ImageView getEdit() {
-        return edit;
+    public void setBio(String bio) {
+        this.bio = bio;
     }
 
-    public void setEdit(ImageView edit) {
-        this.edit = edit;
+    public String getImageurl() {
+        return imageurl;
     }
+
+    public void setImageurl(String imageurl) {
+        this.imageurl = imageurl;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getTeam() {
+        return team;
+    }
+
+    public void setTeam(String team) {
+        this.team = team;
+    }
+
+
 }

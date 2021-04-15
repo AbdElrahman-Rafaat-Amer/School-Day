@@ -1,12 +1,12 @@
 package com.example.schoolday.student;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,42 +16,44 @@ import com.example.schoolday.R;
 import java.util.ArrayList;
 
 public class NotesRecyclerViewAdapter extends RecyclerView.Adapter<NotesRecyclerViewAdapter.NoteViewHolder> {
+
     Context context;
-    ArrayList<Notes> notes = new ArrayList<>();
-    static final String click = "Activity Name";
+    ArrayList<Notes> notes;
 
     public NotesRecyclerViewAdapter(Context context, ArrayList<Notes> notes) {
         this.context = context;
         this.notes = notes;
     }
 
+
     @NonNull
     @Override
     public NoteViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new NoteViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.custom_row_notes,parent,false));
+        View view = LayoutInflater.from(context).inflate(R.layout.custom_row_notes, parent, false);
+        NoteViewHolder noteViewHolder = new NoteViewHolder(view);
+        return noteViewHolder;
     }
 
     @Override
     public void onBindViewHolder(@NonNull final NoteViewHolder holder, int position) {
 
         final Notes note = notes.get(position);
-        holder.noteTitle.setText(note.getTitle());
-        holder.noteDescription.setText(note.getDescription());
-        holder.date.setText(note.getDateAndTime());
+        holder.noteTitle.setText(note.getName());
+        holder.noteDescription.setText(note.getTeam());
+        holder.date.setText(note.getBio());
         holder.editNote.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                String title = note.getTitle();
-                String description = note.getDescription();
-
-                Intent intent = new Intent(context, NotesEditAddActivity.class);
-                intent.putExtra("TITLE", title);
-                intent.putExtra("DESCRIPTION", description);
-
-                context.startActivity(intent);
+                String date = note.getName();
+                String title = note.getTeam();
+                String desc = note.getBio();
+              //  int id = note.getId();
+                Toast.makeText(context, "id = "  + "\ntitle = " + title + "\ndesc = " + desc +
+                        "\ndate = " + date, Toast.LENGTH_SHORT).show();
             }
         });
+
     }
 
     @Override
@@ -61,7 +63,8 @@ public class NotesRecyclerViewAdapter extends RecyclerView.Adapter<NotesRecycler
 
     public class NoteViewHolder extends RecyclerView.ViewHolder {
         TextView noteTitle, noteDescription, date;
-        ImageView   editNote;
+        ImageView editNote;
+
         public NoteViewHolder(@NonNull View itemView) {
             super(itemView);
 
