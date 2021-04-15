@@ -1,11 +1,12 @@
-﻿using System;
+﻿using LMS.Controllers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace LMS.Models.FeesModel
 {
-    public class PerformFees : IFeesRepasitory<Fees>
+    public class PerformFees : BaseController , IFeesRepasitory<Fees>
     {
         private readonly AppDbContext context;
 
@@ -13,6 +14,7 @@ namespace LMS.Models.FeesModel
         {
             this.context = context;
         }
+
         public void CreateFees(Fees Fees)
         {
             context.Fees.Add(Fees);
@@ -29,6 +31,7 @@ namespace LMS.Models.FeesModel
             }
         }
 
+        
         public async Task<Fees> Fees(int Id)
         {
             var t = await context.Fees.FindAsync(Id);

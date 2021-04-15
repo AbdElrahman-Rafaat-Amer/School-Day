@@ -55,8 +55,8 @@ namespace LMS.Models.AccountModel
             // authentication successful so generate jwt and refresh tokens
             var jwtToken = generateJwtToken(account);
             var refreshToken = generateRefreshToken(ipAddress);
-            refreshToken.Id = account.Id;
-            //refreshToken.Account = account;
+            //refreshToken.Id = account.Id;
+            refreshToken.Account = account;
             account.RefreshTokens.Add(refreshToken);
 
             // remove old refresh tokens from account
