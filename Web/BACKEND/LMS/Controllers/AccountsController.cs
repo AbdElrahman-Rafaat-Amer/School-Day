@@ -1,13 +1,11 @@
 ﻿using AutoMapper;
 using LMS.ViewModels.Accounts;
-using LMS.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using LMS.Helpers;
 using LMS.Models.AccountModel;
 
 namespace LMS.Controllers
@@ -16,18 +14,18 @@ namespace LMS.Controllers
     [Route("[controller]")]
     public class AccountsController : BaseController
     {
-        private readonly IAccountService _accountService;
+        private readonly IAccountRepasitory _accountService;
         private readonly IMapper _mapper;
 
         public AccountsController(
-            IAccountService accountService,
+            IAccountRepasitory accountService,
             IMapper mapper)
         {
             _accountService = accountService;
             _mapper = mapper;
         }
 
-        [HttpPost("authenticate")]
+        [HttpPost("login")]
         public ActionResult<AuthenticateResponse> Authenticate(AuthenticateRequest model)
         {
             var response = _accountService.Authenticate(model, ipAddress());
@@ -38,7 +36,7 @@ namespace LMS.Controllers
         [HttpPost("register")]
         public IActionResult Register(RegisterRequest model)
         {
-            _accountService.Register(model, Request.Headers["origin"]);
+           _accountService.Register(model, Request.Headers["origin"]);
             return Ok(new { message = "Registration successful, please check your email for verification instructions" });
         }
 
@@ -69,12 +67,12 @@ namespace LMS.Controllers
             return Ok(new { message = "Token revoked" });
         }
 
-       
 
-        [HttpPost("verify-email")]
-        public IActionResult VerifyEmail(VerifyEmailRequest model)
+
+        [HttpGet("verify-email")]
+        public IActionResult VerifyEmail(string token)/*VerifyEmailRequest model*/
         {
-            _accountService.VerifyEmail(model.Token);
+            _accountService.VerifyEmail(token);
             return Ok(new { message = "Verification successful, you can now login" });
         }
 
@@ -85,10 +83,10 @@ namespace LMS.Controllers
             return Ok(new { message = "Please check your email for password reset instructions" });
         }
 
-        [HttpPost("validate-reset-token")]
-        public IActionResult ValidateResetToken(ValidateResetTokenRequest model)
+        [HttpGet("validate-reset-token")]
+        public IActionResult ValidateResetToken(string token)
         {
-            _accountService.ValidateResetToken(model);
+            _accountService.ValidateResetToken(token);
             return Ok(new { message = "Token is valid" });
         }
 
@@ -149,7 +147,7 @@ namespace LMS.Controllers
         {
             // users can delete their own account and admins can delete any account
             if (id != Account.Id && Account.Role != Role.Admin)
-                return Unauthorized(new { message = "Unauthorized" });
+                return Unauthorized(new { message = "Unau thorized" });
 
             _accountService.Delete(id);
             return Ok(new { message = "Account deleted successfully" });

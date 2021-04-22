@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace LMS.Models.FeesModel
@@ -16,8 +17,8 @@ namespace LMS.Models.FeesModel
         public DateTime Date { get; set; }
         public double Paid { get; set; }
         public double Fine { get; set; }
-        public StudentModel.Student Student{ get; set; }
-        public ParentModel.Parent Parent { get; set; }
+        [JsonIgnore]
+        public AccountModel.Account Account { get; set; }
 
 
 

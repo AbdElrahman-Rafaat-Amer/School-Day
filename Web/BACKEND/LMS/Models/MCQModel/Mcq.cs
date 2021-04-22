@@ -13,5 +13,6 @@ namespace LMS.Models.MCQModel
         public string AnswerC{ get; set; }
         public string AnswerD { get; set; }
         public string CorrectAnswer { get; set; }
+        public AnswerModel.Answer Answer { get; set; }
     }
 }

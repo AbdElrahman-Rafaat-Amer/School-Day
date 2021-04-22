@@ -29,7 +29,7 @@ namespace WebApi.Services
             // send email
             
             using var smtp = new SmtpClient();
-            smtp.Connect(_appSettings.SmtpHost,_appSettings.SmtpPort,SecureSocketOptions.StartTls);
+            smtp.Connect(_appSettings.SmtpHost,_appSettings.SmtpPort,false);
             smtp.Authenticate(_appSettings.SmtpUser, _appSettings.SmtpPass);
             smtp.Send(email);
             smtp.Disconnect(true);

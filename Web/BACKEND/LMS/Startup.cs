@@ -1,7 +1,11 @@
 using ELearningAPI.Middleware;
 using LMS.Helpers;
 using LMS.Models;
-using LMS.Services;
+using LMS.Models.AccountModel;
+using LMS.Models.FeesModel;
+using LMS.Models.FolderModel;
+using LMS.Models.NoteBordModel;
+using LMS.Models.StudentModel;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -40,13 +44,18 @@ namespace LMS
             services.AddControllers().AddJsonOptions(x => x.JsonSerializerOptions.IgnoreNullValues = true);
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
+            
 
             // configure strongly typed settings object
             services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
             services.AddCors();
             // configure DI for application services
-            services.AddScoped<IAccountService, AccountService>();
+            services.AddScoped<IAccountRepasitory, PerformAccount>();
             services.AddScoped<IEmailService, EmailService>();
+            services.AddScoped<INoteRepasitory<NoteBoard>, PerformNoteBoard>();
+            services.AddScoped<IStudentRepasitory<Student>, PerformStudent>();
+            services.AddScoped<IFolderRepasitory<Folder>, PerformFolder>();
+            services.AddScoped<IFeesRepasitory<Fees>,PerformFees>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "LMS", Version = "v1" });

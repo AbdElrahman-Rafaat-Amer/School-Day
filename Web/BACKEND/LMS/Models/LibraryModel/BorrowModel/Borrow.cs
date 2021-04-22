@@ -12,5 +12,6 @@ namespace LMS.Models.LibraryModel.BorrowModel
         public DateTime EndDate { get; set; }
         public string Status { get; set; }
         public BookModel.Book Book { get; set; }
+        public AccountModel.Account Account { get; set; }
     }
 }

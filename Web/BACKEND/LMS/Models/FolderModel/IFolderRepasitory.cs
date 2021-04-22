@@ -12,5 +12,6 @@ namespace LMS.Models.FolderModel
         void DeleteFolder(int Id);
         Task<Folder> Folder(int Id);
         List<Folder> Folders();
+        List<Folder> FoldersByFilter(Func<T, bool> lamda);
     }
 }

@@ -1,5 +1,4 @@
 ﻿using LMS.Models.RefreshTokenModel;
-using LMS.Models.RoleModel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -22,7 +21,7 @@ namespace LMS.Models.TeacherModel
         public string AddmitionNum { get; set; }
         public ICollection<ZoomModel.Zoom> Zooms { get; set; }
         public ICollection<GroupModel.Group> Groups { get; set; }
-        public ICollection<NoteBordModel.NoteBoard> NoteBoards { get; set; }
+        //public ICollection<NoteBordModel.NoteBoard> NoteBoards { get; set; }
         public ICollection<PostModel.Post> Posts { get; set; }
         public ICollection<LibraryModel.BorrowModel.Borrow> Borrows { get; set; }
         public ICollection<YearModel.Year> Years { get; set; }

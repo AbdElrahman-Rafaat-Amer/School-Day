@@ -11,8 +11,7 @@ namespace LMS.Models.ZoomModel
         public string Link { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public TeacherModel.Teacher Teacher { get; set; }
-        public StudentModel.Student Student { get; set; }
+        public AccountModel.Account Account { get; set; }
 
 
 

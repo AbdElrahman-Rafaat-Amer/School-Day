@@ -17,8 +17,12 @@ namespace LMS.Models.DriverModel
 
         public void CreateDriver(Driver Driver)
         {
-            context.Drivers.Add(Driver);
-            context.SaveChanges();
+            if (Driver!=null)
+            {
+                context.Drivers.Add(Driver);
+                context.SaveChanges();
+            }
+            
         }
 
         public void DeleteDriver(int Id)

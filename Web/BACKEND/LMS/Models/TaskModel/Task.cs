@@ -17,6 +17,8 @@ namespace LMS.Models.TaskModel
         public double Degree { get; set; }
         public string Note { get; set; }
         public string UploadFile { get; set; }
+        public AccountModel.Account Account { get; set; }
+        public SubjectModel.Subject Subject { get; set; }
         public ICollection<QuestionModel.Question> Questions { get; set; }
 
     }

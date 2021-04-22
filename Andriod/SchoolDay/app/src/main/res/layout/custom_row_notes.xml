@@ -52,6 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:text="note text"
+        android:inputType="textMultiLine"
         android:textSize="30sp"></TextView>
 
 

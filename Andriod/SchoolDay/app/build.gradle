@@ -1,3 +1,4 @@
+
 apply plugin: 'com.android.application'
 
 android {
@@ -27,7 +28,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    testImplementation 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.13.2'
     implementation "androidx.cardview:cardview:1.0.0"
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
@@ -36,7 +37,7 @@ dependencies {
 
 
     //library for navigation view
-    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'com.google.android.material:material:1.3.0'
     //library to make image circle
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
@@ -45,5 +46,14 @@ dependencies {
 
     //library for anmiation edit tex
     implementation 'com.rengwuxian.materialedittext:library:2.1.4'
+
+    //library for retrofit
+    //implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    //implementation 'com.google.code.gson:gson:2.8.6'
+   // implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
 
 }

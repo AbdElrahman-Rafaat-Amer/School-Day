@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Online"
-        android:fontFamily="@font/bauhaus93"
-        android:textSize="32sp"
-        android:gravity="center_horizontal"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="20dp">
-    </TextView>
-
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/bauhaus93"
+        android:gravity="center_horizontal"
+        android:text="Online"
+        android:textSize="32sp"></TextView>
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/events5"
         android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
         android:layout_marginRight="30dp"
+        android:background="@drawable/events5"
         android:orientation="vertical">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="History Meeting "
-            android:textSize="25dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
+            android:text="History Meeting "
             android:textColor="#fff"
-            android:layout_marginLeft="20dp"></TextView>
+            android:textSize="25dp"></TextView>
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -61,25 +61,24 @@
                 android:textSize="25dp"></TextView>
 
             <TextView
+                android:id="@+id/txtLink"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Link:"
-                android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
-                android:textColor="#fff"
-                android:textSize="25sp"
+                android:layout_alignParentBottom="true"
                 android:layout_marginBottom="20dp"
-                android:id="@+id/txtLink"
-                ></TextView>
+                android:text="Link:"
+                android:textColor="#fff"
+                android:textSize="25sp"></TextView>
 
             <ImageView
                 android:layout_width="43dp"
                 android:layout_height="40dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
                 android:layout_marginRight="10dp"
-                android:src="@drawable/ic_logout"
-                android:layout_marginTop="30dp"></ImageView>
+                android:src="@drawable/ic_logout"></ImageView>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -97,22 +96,24 @@
         </RelativeLayout>
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/events5"
         android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
         android:layout_marginRight="30dp"
+        android:background="@drawable/events5"
         android:orientation="vertical">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Math Meeting "
-            android:textSize="25dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
+            android:text="Math Meeting "
             android:textColor="#fff"
-            android:layout_marginLeft="20dp"></TextView>
+            android:textSize="25dp"></TextView>
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -141,25 +142,24 @@
                 android:textSize="25dp"></TextView>
 
             <TextView
+                android:id="@+id/txtLink2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Link:"
-                android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
-                android:textColor="#fff"
-                android:textSize="25sp"
+                android:layout_alignParentBottom="true"
                 android:layout_marginBottom="20dp"
-                android:id="@+id/txtLink2"
-                ></TextView>
+                android:text="Link:"
+                android:textColor="#fff"
+                android:textSize="25sp"></TextView>
 
             <ImageView
                 android:layout_width="43dp"
                 android:layout_height="40dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
                 android:layout_marginRight="10dp"
-                android:src="@drawable/ic_logout"
-                android:layout_marginTop="30dp"></ImageView>
+                android:src="@drawable/ic_logout"></ImageView>
 
             <TextView
                 android:layout_width="wrap_content"

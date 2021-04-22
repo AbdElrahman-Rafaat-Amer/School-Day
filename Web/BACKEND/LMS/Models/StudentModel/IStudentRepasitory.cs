@@ -12,6 +12,6 @@ namespace LMS.Models.StudentModel
         void DeleteStudent(int Id);
         Task<Student> Student(int Id);
         List<Student> Students();
-
+        List<Student> StudentsByFilter(Func<T, bool> lamda);
     }
 }

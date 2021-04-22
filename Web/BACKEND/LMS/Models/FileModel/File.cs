@@ -12,5 +12,6 @@ namespace LMS.Models.FileModel
         public DateTime DateOfUPload { get; set; }
         public string FileName { get; set; }
         public string FilePath { get; set; }
+        public FolderModel.Folder Folder { get; set; }
     }
 }
