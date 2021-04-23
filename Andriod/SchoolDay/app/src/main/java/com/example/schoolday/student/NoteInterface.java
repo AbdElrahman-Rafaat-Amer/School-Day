@@ -7,7 +7,7 @@ import retrofit2.http.GET;
 
 public interface NoteInterface {
 
-    @GET("marvel")
+    @GET("Note")
     Call<ArrayList<Notes>>getNote();
 
 

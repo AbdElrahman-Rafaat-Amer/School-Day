@@ -1,7 +1,7 @@
 package com.example.schoolday.student;
 
 public class Notes {
-/*
+
     private String title, text, dateAndTime;
     private int id;
 
@@ -20,8 +20,8 @@ public class Notes {
     public int getId() {
         return id;
     }
-    */
 
+/*
     private String name, team, bio, imageurl;
 
     public String getBio() {
@@ -56,5 +56,5 @@ public class Notes {
         this.team = team;
     }
 
-
+*/
 }

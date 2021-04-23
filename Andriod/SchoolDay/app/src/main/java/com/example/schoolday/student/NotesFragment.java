@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -36,7 +35,7 @@ public class NotesFragment extends Fragment {
         recyclerView = view.findViewById(R.id.recyclerView_notes);
         addNote = view.findViewById(R.id.add_notes);
 
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("https://www.simplifiedcoding.net/demos/")
+        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://nabilhelmy313-001-site2.htempurl.com/")
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
         NoteInterface noteInterface = retrofit.create(NoteInterface.class);
@@ -53,7 +52,7 @@ public class NotesFragment extends Fragment {
             @Override
             public void onFailure(Call<ArrayList<Notes>> call, Throwable t) {
 
-                Toast.makeText(getContext(), "There is problem", Toast.LENGTH_SHORT).show();
+             //   Toast.makeText(getContext(), "There is problem", Toast.LENGTH_SHORT).show();
             }
         });
 

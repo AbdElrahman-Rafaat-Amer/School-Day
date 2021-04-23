@@ -38,16 +38,16 @@ public class NotesRecyclerViewAdapter extends RecyclerView.Adapter<NotesRecycler
     public void onBindViewHolder(@NonNull final NoteViewHolder holder, int position) {
 
         final Notes note = notes.get(position);
-        holder.noteTitle.setText(note.getName());
-        holder.noteDescription.setText(note.getTeam());
-        holder.date.setText(note.getBio());
+        holder.noteTitle.setText(note.getTitle());
+        holder.noteDescription.setText(note.getText());
+        holder.date.setText(note.getDateAndTime());
         holder.editNote.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                String date = note.getName();
-                String title = note.getTeam();
-                String desc = note.getBio();
+                String date = note.getDateAndTime();
+                String title = note.getTitle();
+                String desc = note.getText();
               //  int id = note.getId();
                 Toast.makeText(context, "id = "  + "\ntitle = " + title + "\ndesc = " + desc +
                         "\ndate = " + date, Toast.LENGTH_SHORT).show();
