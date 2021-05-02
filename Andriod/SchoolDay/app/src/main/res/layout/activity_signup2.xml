@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Signup2Activity"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="100dp"
+        android:src="@drawable/lms"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        ></ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Complete Signup"
+        android:textSize="40sp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#000"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/bauhaus93">
+    </TextView>
+
+    <EditText
+        android:layout_width="300dp"
+        android:hint="First Phone Number"
+        android:textColorHint="#000"
+        android:textSize="20sp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/custom_input"
+        android:drawableLeft="@drawable/ic_baseline_phone_24"
+        android:inputType="phone"
+        android:drawablePadding="10dp"
+        android:paddingLeft="5dp"
+        android:paddingStart="10dp"
+        ></EditText>
+
+    <EditText
+        android:layout_width="300dp"
+        android:hint="Second Phone Number"
+        android:textColorHint="#000"
+        android:textSize="20sp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/custom_input"
+        android:drawableLeft="@drawable/ic_baseline_phone_24"
+        android:inputType="phone"
+        android:drawablePadding="10dp"
+        android:paddingLeft="5dp"
+        android:paddingStart="10dp"></EditText>
+    <EditText
+        android:layout_width="300dp"
+        android:hint="National ID"
+        android:textColorHint="#000"
+        android:textSize="20sp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/custom_input"
+        android:drawableLeft="@drawable/ic_baseline_call_to_action_24"
+        android:inputType="textPassword"
+        android:drawablePadding="10dp"
+        android:paddingLeft="5dp"
+        android:paddingStart="10dp"></EditText>
+    <EditText
+        android:layout_width="300dp"
+        android:hint="Address"
+        android:textColorHint="#000"
+        android:textSize="20sp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/custom_input"
+        android:drawableLeft="@drawable/ic_baseline_directions_24"
+        android:inputType="textPostalAddress"
+        android:drawablePadding="10dp"
+        android:paddingLeft="5dp"
+        android:paddingStart="10dp"></EditText>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+        <RadioButton
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:text="Male"
+            android:textSize="16sp"
+            android:button="@color/transparent"
+            android:background="@drawable/radio_selector"
+            android:textColor="#000"
+            android:layout_marginLeft="10dp"
+            android:textAlignment="center"></RadioButton>
+        <RadioButton
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:text="Female"
+            android:textSize="16sp"
+            android:layout_marginLeft="20dp"
+            android:button="@color/transparent"
+            android:background="@drawable/radio_selector"
+            android:textColor="#000"
+            android:textAlignment="center"
+            ></RadioButton>
+    </RadioGroup>
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/custom_button_signup"
+        android:text="Complete"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center_horizontal"></Button>
+</LinearLayout>
