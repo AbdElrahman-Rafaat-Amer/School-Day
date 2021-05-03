@@ -1,0 +1,33 @@
+footer {
+    background-color: lightblue;
+    height: 6vh;
+}
+
+.copy-write {
+    padding-top: 7px;
+    margin-top: 5px;
+    text-align: left;
+}
+
+footer a {
+    margin-left: 15px;
+    border-radius: 50%;
+}
+
+@media (max-width:1024px) {
+    footer {
+        height: 7vh;
+    }
+}
+
+@media (max-width:425px) {
+    footer {
+        height: auto;
+    }
+    footer a {
+        font-size: x-small;
+    }
+    section {
+        margin-top: 10px;
+    }
+}

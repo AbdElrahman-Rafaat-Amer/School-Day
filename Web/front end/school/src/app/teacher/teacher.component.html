@@ -1,0 +1,30 @@
+<div class="contaner teacher">
+    <div class="row">
+        <div class="col-sm-5 col-md-4 col-lg-3  ">
+            <div class="listgroup sticky-top">
+                <a *ngFor="let t of teachers$ |async" class="list-group-item list-group-item-action" routerLink="/teacher" [queryParams]="{teacher:t.title}" [class.active]=" teacher===t.title ">
+                    {{t.title}}
+                    <br>
+                    <br>
+
+                    {{t.id}}
+                </a>
+
+
+            </div>
+        </div>
+        <div class="col col-md-8">
+            <mat-tab-group mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4">
+                <mat-tab label="Time Table">
+                    <teacher-timetable></teacher-timetable>
+                    <teacher-timetable></teacher-timetable>
+                    <teacher-timetable></teacher-timetable>
+                </mat-tab>
+                <mat-tab label="Assginments"> Assginments </mat-tab>
+                <mat-tab label="Degree"> Degree </mat-tab>
+                <mat-tab label="Personal Info"> Personal Info </mat-tab>
+            </mat-tab-group>
+        </div>
+
+    </div>
+</div>

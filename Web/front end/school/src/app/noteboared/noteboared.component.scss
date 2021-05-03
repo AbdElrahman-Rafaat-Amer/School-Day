@@ -1,0 +1,83 @@
+.container-fluid {
+    padding: 0;
+}
+
+.creat-new {
+    margin: 0 auto;
+}
+
+.creat-new .btn {
+    color: white;
+    margin: 20px 0 20px 50px;
+    width: 100px;
+}
+
+.wmd-left,
+.wmd-center,
+.wmd-right {
+    display: flex;
+}
+
+.wmd-left {
+    border-right: 1px solid #ddd;
+    padding: 0;
+}
+
+.wmd-center {
+    border-right: 1px solid #ddd;
+    padding: 0;
+    margin-left: 10px;
+}
+
+.wmd-right {
+    border-right: 1px solid #ddd;
+    padding: 0;
+    margin-left: 10px;
+}
+
+.wmd-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: large;
+    margin: auto 20px auto 0;
+    padding: 0;
+}
+
+.note-area {
+    width: 100%;
+    height: 64vh;
+    border: 1px solid lightblue;
+    border-top: none;
+    background-color: white;
+}
+
+.header {
+    width: 100%;
+    height: 5vh;
+    border: 1px solid lightblue;
+    border-bottom: none;
+    background-color: white;
+    margin: 0%;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.header:focus {
+    outline: none;
+    color: black;
+}
+
+.note-area:focus {
+    outline: none;
+}
+
+.creat-new .note {
+    border-bottom: 1px solid rgb(73, 72, 72);
+    width: 70%;
+    margin: auto;
+    p {
+        font-size: small;
+        opacity: .5;
+    }
+    cursor: pointer;
+}

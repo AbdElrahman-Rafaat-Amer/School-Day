@@ -1,0 +1,42 @@
+.activity {
+    margin: 30px auto;
+    width: 50%;
+}
+
+.activity img {
+    border-radius: 50%;
+    height: 15vh;
+    width: 15vh;
+}
+
+.activity mat-card-title,
+mat-card-content {
+    color: #b92f40;
+    font-size: large;
+    margin-left: 30px;
+}
+
+.activity mat-card-title {
+    text-align: center;
+}
+
+.activity .action {
+    background-color: #b92f40;
+    color: white;
+    height: 50px;
+    width: 100px;
+    border-radius: 20px;
+    font-size: large;
+}
+
+@media (max-width: 768px) {
+    .activity {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .img-col {
+        display: none;
+    }
+}
