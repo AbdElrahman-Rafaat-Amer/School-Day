@@ -1,0 +1,36 @@
+.cont-post {
+    background-color: #f1f1f1;
+    width: 100vh;
+    height: 50vh;
+    background-color: #bd4f87;
+    border-radius: 20px;
+    margin: 50px auto;
+}
+
+.cont-post .post {
+    color: white;
+}
+
+.personal-img img {
+    width: 15%;
+    height: 15%;
+    border-radius: 25px;
+    position: absolute;
+    top: -5px;
+    margin: 30px;
+}
+
+.cont-post .post h5 {
+    margin-top: 10px;
+    margin-left: 230px;
+}
+
+.cont-post .content {
+    margin-left: 70px;
+    height: 30vh;
+}
+
+.cont-post .content img {
+    max-height: 30vh;
+    width: max-content;
+}

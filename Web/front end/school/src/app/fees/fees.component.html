@@ -1,0 +1,14 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th *ngFor="let d of displayedColumns ">
+                {{d}}
+            </th>
+        </tr>
+        <tr *ngFor="let f of fees$ |async">
+            <td *ngFor="let col of index">
+                {{f[col]}}
+            </td>
+        </tr>
+    </thead>
+</table>
