@@ -24,37 +24,11 @@ namespace LMS.ViewModels.Accounts
         [MinLength(6)]
         public string Password { get; set; }
         [Required]
-        [Compare("Password")]
         public string ConfirmPassword { get; set; }
         [Required]
-        public Role Role { get; set; }
-        public string UserRoleValidation
-        {
-            get => (Role.Admin == Role ? "Admin"
-                : (Role == Role.Student ? "Student"
-                : Role == Role.Teacher ? "Teacher"
-                : (Role == Role.Parent ? "Parent" : "Driver")));
-        }
+        public string Role { get; set; }
         [Required]
         public string Phone_1 { get; set; }
-        [Required]
-        public string Phone_2 { get; set; }
-        [Required]
-        public string Relegion { get; set; }
-        [Required]
-        public string CurrentAddress { get; set; }
-        [Required]
-        public string PermanentAddress { get; set; }
-
-        [RequiredIf(new string[] { "UserRoleValidation,Student,Admin,Teacher" })]
-        public string AddmitionNum { get; set; }
-        public float Height { get; set; }
-        public float Weight { get; set; }
-
-        //[RequiredIf(new string[] { "UserRoleValidation,Student" })]
-        //public Year Year { get; set; }
-
-        [RequiredIf(new string[] { "UserRoleValidation,Driver" })]
         public string LicenseID { get; set; }
 
     }

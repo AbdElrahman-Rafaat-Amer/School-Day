@@ -5,14 +5,24 @@ namespace LMS.ViewModels.Accounts
 {
     public class UpdateRequest
     {
+
         private string _password;
         private string _confirmPassword;
         private string _role;
         private string _email;
-        
-        public string Title { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+
+        public string Fname { get; set; }
+        public string Mname { get; set; }
+        public string Lname { get; set; }
+        public string NationalID { get; set; }
+        public string Phone_1 { get; set; }
+        public string Phone_2 { get; set; }
+        public string Gender { get; set; }
+        public string Relegion { get; set; }
+        public string CurrentAddress { get; set; }
+        public string PermanentAddress { get; set; }
+
+       
 
         [EnumDataType(typeof(Role))]
         public string Role
@@ -20,6 +30,7 @@ namespace LMS.ViewModels.Accounts
             get => _role;
             set => _role = replaceEmptyWithNull(value);
         }
+
 
         [EmailAddress]
         public string Email

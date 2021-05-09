@@ -72,6 +72,7 @@ namespace LMS.Models.AccountModel
             return response;
         }
 
+        
 
         public void Register(RegisterRequest model, string origin)
         {
@@ -91,7 +92,16 @@ namespace LMS.Models.AccountModel
             // first registered account is an admin
             var isFirstAccount = _context.Accounts.Any();
 
-            account.Role = isFirstAccount ? Role.Admin : model.Role;
+            Role registerRole = new Role(); 
+            foreach (Role role in Enum.GetValues(typeof(Role)))
+            {
+                if (model.Role.Equals(role))
+                {
+                    registerRole = role;
+                }
+            }
+
+            account.Role = isFirstAccount ? Role.Admin : registerRole;
             account.Created = DateTime.UtcNow;
             account.VerificationToken = randomTokenString();
 
@@ -102,14 +112,14 @@ namespace LMS.Models.AccountModel
             _context.Accounts.Add(account);
             _context.SaveChanges();
 
-            if (model.Role == Role.Admin)
+            if (Role.Admin == registerRole)
             {
                 var adminAccount = _mapper.Map<Admin>(model);
                 adminAccount.AccountId = account.Id;
                 _context.Admin.Add(adminAccount);
                 _context.SaveChanges();
             }
-            else if (model.Role == Role.Student)
+            else if (Role.Student == registerRole)
             {
                 var studentAccount = _mapper.Map<Student>(model);
                 studentAccount.AccountId = account.Id;
@@ -117,14 +127,14 @@ namespace LMS.Models.AccountModel
                 _context.Students.Add(studentAccount);
                 _context.SaveChanges();
             }
-            else if (model.Role == Role.Teacher)
+            else if (Role.Teacher == registerRole)
             {
                 var teacherAccount = _mapper.Map<Teacher>(model);
                 teacherAccount.AccountId = account.Id;
                 _context.Teachers.Add(teacherAccount);
                 _context.SaveChanges();
             }
-            else if (model.Role == Role.Driver)
+            else if (Role.Driver == registerRole)
             {
                 var driverAccount = _mapper.Map<Driver>(model);
                 driverAccount.AccountId = account.Id;
@@ -206,10 +216,10 @@ namespace LMS.Models.AccountModel
             sendPasswordResetEmail(account, origin);
         }
 
-        public void ValidateResetToken(string Token)
+        public void ValidateResetToken(ValidateResetTokenRequest model)
         {
             var account = _context.Accounts.SingleOrDefault(x =>
-                x.ResetToken == Token &&
+                x.ResetToken == model.Token &&
                 x.ResetTokenExpires > DateTime.UtcNow);
 
             if (account == null)
