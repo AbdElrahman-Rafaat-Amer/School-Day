@@ -1,6 +1,7 @@
 package com.example.schoolday.student;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.schoolday.R;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 public class NotesRecyclerViewAdapter extends RecyclerView.Adapter<NotesRecyclerViewAdapter.NoteViewHolder> {
 
@@ -40,16 +42,22 @@ public class NotesRecyclerViewAdapter extends RecyclerView.Adapter<NotesRecycler
         final Notes note = notes.get(position);
         holder.noteTitle.setText(note.getTitle());
         holder.noteDescription.setText(note.getText());
-        holder.date.setText(note.getDateAndTime());
+        holder.date.setText((CharSequence) note.getDateAndTime());
         holder.editNote.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                String date = note.getDateAndTime();
+                Date date = note.getDateAndTime();
                 String title = note.getTitle();
                 String desc = note.getText();
-              //  int id = note.getId();
-                Toast.makeText(context, "id = "  + "\ntitle = " + title + "\ndesc = " + desc +
+                int id = note.getId();
+
+                Intent intent = new Intent();
+                intent.putExtra("note date", date);
+                intent.putExtra("note title", title);
+                intent.putExtra("note desc", desc);
+
+                Toast.makeText(context, "id = " + id + "\ntitle = " + title + "\ndesc = " + desc +
                         "\ndate = " + date, Toast.LENGTH_SHORT).show();
             }
         });

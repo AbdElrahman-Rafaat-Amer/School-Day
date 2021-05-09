@@ -14,12 +14,9 @@
         android:usesCleartextTraffic="true">
         <activity android:name=".WelcomeActivity"></activity>
         <activity android:name=".LoginActivity" />
-        <activity
-            android:name=".ui.login.LoginActivity"
-            android:label="@string/title_activity_login" />
         <activity android:name=".Signup2Activity" />
         <activity android:name=".student.MainActivity" />
-        <activity android:name=".student.NotesEditAddActivity" />
+        <activity android:name=".student.NotesEditActivity" />
         <activity android:name=".student.OnlineFriendsActivity" />
         <activity android:name=".student.EditActivity" />
         <activity

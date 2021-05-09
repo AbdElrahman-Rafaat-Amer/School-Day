@@ -8,7 +8,7 @@ import retrofit2.http.GET;
 public interface NoteInterface {
 
     @GET("Note")
-    Call<ArrayList<Notes>>getNote();
+    Call<ArrayList<Notes>> getNote();
 
 
 }

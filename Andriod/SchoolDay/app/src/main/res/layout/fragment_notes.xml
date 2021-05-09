@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginBottom="75dp"
+    android:layout_marginTop="40dp"
     tools:context=".student.NotesFragment">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -16,7 +18,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_margin="30dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="30dp"
         android:backgroundTint="#B92F40"
         android:src="@drawable/ic_add"></com.google.android.material.floatingactionbutton.FloatingActionButton>
 

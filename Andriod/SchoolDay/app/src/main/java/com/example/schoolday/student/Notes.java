@@ -1,9 +1,12 @@
 package com.example.schoolday.student;
 
+import java.util.Date;
+
 public class Notes {
 
-    private String title, text, dateAndTime;
+    private String title, text;//, dateAndTime;
     private int id;
+    private Date dateAndTime;
 
     public String getTitle() {
         return title;
@@ -13,48 +16,11 @@ public class Notes {
         return text;
     }
 
-    public String getDateAndTime() {
+    public Date getDateAndTime() {
         return dateAndTime;
     }
 
     public int getId() {
         return id;
     }
-
-/*
-    private String name, team, bio, imageurl;
-
-    public String getBio() {
-        return bio;
-    }
-
-    public void setBio(String bio) {
-        this.bio = bio;
-    }
-
-    public String getImageurl() {
-        return imageurl;
-    }
-
-    public void setImageurl(String imageurl) {
-        this.imageurl = imageurl;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getTeam() {
-        return team;
-    }
-
-    public void setTeam(String team) {
-        this.team = team;
-    }
-
-*/
 }

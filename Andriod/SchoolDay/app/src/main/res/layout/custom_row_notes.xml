@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginLeft="30dp"
-    android:layout_marginTop="40dp"
+    android:layout_marginTop="20dp"
     android:layout_marginRight="30dp"
     android:background="@drawable/events5"
     android:orientation="vertical">
@@ -18,7 +18,7 @@
             android:layout_width="43dp"
             android:layout_height="40dp"
             android:layout_alignParentRight="true"
-            android:layout_margin="30dp"
+            android:layout_margin="20dp"
             android:src="@drawable/ic_baseline_pen"></ImageView>
 
         <TextView
@@ -29,7 +29,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginBottom="5dp"
             android:text="Note Title"
-            android:textSize="40sp"
+            android:textSize="30sp"
             android:textStyle="bold"></TextView>
 
 
@@ -42,17 +42,14 @@
             android:layout_marginLeft="40dp"
             android:text="date and time"
             android:textSize="30sp"></TextView>
-
-
     </RelativeLayout>
 
     <TextView
         android:id="@+id/note_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_margin="15dp"
         android:text="note text"
-        android:inputType="textMultiLine"
         android:textSize="30sp"></TextView>
 
 
