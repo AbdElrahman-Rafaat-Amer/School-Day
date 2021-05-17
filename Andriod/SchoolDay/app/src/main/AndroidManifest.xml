@@ -14,13 +14,20 @@
         android:usesCleartextTraffic="true">
         <activity android:name=".WelcomeActivity"></activity>
         <activity android:name=".LoginActivity" />
+<<<<<<< Updated upstream
         <activity android:name=".Signup2Activity" />
         <activity android:name=".student.MainActivity" />
         <activity android:name=".student.NotesEditActivity" />
+=======
+
+        <activity android:name=".Signup2Activity" />
+        <activity android:name=".SignupActivity" />
+        <activity android:name=".student.NotesEditAddActivity" />
+>>>>>>> Stashed changes
         <activity android:name=".student.OnlineFriendsActivity" />
         <activity android:name=".student.EditActivity" />
         <activity
-            android:name=".SignupActivity"
+            android:name=".student.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
