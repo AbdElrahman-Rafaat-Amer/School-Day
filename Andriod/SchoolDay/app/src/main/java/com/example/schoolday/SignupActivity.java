@@ -9,9 +9,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class SignupActivity extends AppCompatActivity {
 
@@ -71,6 +76,7 @@ public class SignupActivity extends AppCompatActivity {
                 if (isContinue == true) {
                     if (passwordValue.equals(confirmPassValue) && passwordValue.length() > 7) {
                         if (Patterns.EMAIL_ADDRESS.matcher(emailValue).matches()) {
+                           // saveUser(createRequest());
                             startActivity(new Intent(SignupActivity.this, Signup2Activity.class));
                         } else {
                             AlertDialog.Builder builder = new AlertDialog.Builder(SignupActivity.this);
@@ -108,9 +114,44 @@ public class SignupActivity extends AppCompatActivity {
                     AlertDialog dialog = builder.create();
                     dialog.show();
                 }
+
+
             }
         });
 
+    }
+    public UserRequest createRequest() {
+        UserRequest userRequest = new UserRequest();
+        userRequest.setName(name.getText().toString());
+        userRequest.setEmail(email.getText().toString());
+        userRequest.setPassword(password.getText().toString());
+        userRequest.setConfirmPassword(confirmPassword.getText().toString());
+        if (isParent==true){
+            userRequest.setGender(radioButtonParent);
+        }else if (isStudent==true){
+            userRequest.setGender(radioButtonStudent);
+        }else if (isTeacher==true){
+            userRequest.setGender(radioButtonTeacher);
+        }
 
+        return userRequest;
+    }
+    public void saveUser(UserRequest userRequest){
+        Call<UserResponse> userResponseCall = APIClient.getUserService().saveUser(userRequest);
+        userResponseCall.enqueue(new Callback<UserResponse>() {
+            @Override
+            public void onResponse(Call<UserResponse> call, Response<UserResponse> response) {
+                if (response.isSuccessful()){
+                    Toast.makeText(SignupActivity.this, "Successful", Toast.LENGTH_SHORT).show();
+                }else {
+                    Toast.makeText(SignupActivity.this, "Failed", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<UserResponse> call, Throwable t) {
+
+            }
+        });
     }
 }

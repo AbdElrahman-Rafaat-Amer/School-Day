@@ -12,10 +12,18 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.schoolday.APIClient;
 import com.example.schoolday.R;
+import com.example.schoolday.SignupActivity;
+import com.example.schoolday.UserRequest;
+import com.example.schoolday.UserResponse;
 
 import java.util.ArrayList;
 import java.util.Date;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class NotesRecyclerViewAdapter extends RecyclerView.Adapter<NotesRecyclerViewAdapter.NoteViewHolder> {
 
@@ -46,20 +54,24 @@ public class NotesRecyclerViewAdapter extends RecyclerView.Adapter<NotesRecycler
         holder.editNote.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Date date = note.getDateAndTime();
                 String title = note.getTitle();
                 String desc = note.getText();
                 int id = note.getId();
 
-                Intent intent = new Intent();
+                Intent intent = new Intent(context,NotesEditActivity.class);
+
+
                 intent.putExtra("note date", date);
                 intent.putExtra("note title", title);
                 intent.putExtra("note desc", desc);
 
                 Toast.makeText(context, "id = " + id + "\ntitle = " + title + "\ndesc = " + desc +
                         "\ndate = " + date, Toast.LENGTH_SHORT).show();
+
+                    context.startActivity(intent);
             }
+
         });
 
     }
@@ -82,5 +94,7 @@ public class NotesRecyclerViewAdapter extends RecyclerView.Adapter<NotesRecycler
             editNote = itemView.findViewById(R.id.edit_note);
 
         }
-    }
-}
+
+
+
+}}

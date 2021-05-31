@@ -53,12 +53,7 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
             }
         });
 
-        String isHome = getIntent().getStringExtra("from welcome to main student");
-        if (isHome.equals("Home")){
-            getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, new FragmentHome()).commit();
-            Toast.makeText(this, "you are in home", Toast.LENGTH_SHORT).show();
-            isHome = " ";
-        }
+
 
         // land scape
         if (savedInstanceState == null) {

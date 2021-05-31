@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.schoolday.APIClient;
 import com.example.schoolday.R;
+import com.example.schoolday.UserRequest;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -58,4 +59,5 @@ public class NotesFragment extends Fragment {
 
         return view;
     }
+
 }
