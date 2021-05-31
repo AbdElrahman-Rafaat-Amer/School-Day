@@ -12,7 +12,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.schoolday.APIClient;
 import com.example.schoolday.R;
-import com.example.schoolday.SignupActivity;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -20,73 +19,40 @@ import retrofit2.Response;
 
 public class NotesEditActivity extends AppCompatActivity {
 
-    static String click;
-    //  LinearLayout linearAddNote, linearEditNote;
-    EditText editTitle, editDescription;//, addTitle, addDescription;
-    Button update; //,save;
+    EditText editTitle, editDescription;
+    Button update;
     String title, desc;
+    int id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notes_edit);
 
-     /*   linearAddNote = findViewById(R.id.linear_add_note);
-        linearEditNote = findViewById(R.id.linear_edit_note);
-
-        addTitle = findViewById(R.id.note_title_edit);
-        save = findViewById(R.id.save_note);
-        addDescription = findViewById(R.id.note_description_add);
-*/
         editDescription = findViewById(R.id.note_description_edit);
         editTitle = findViewById(R.id.note_title_edit);
         update = findViewById(R.id.update_note);
         Intent intent = getIntent();
         editDescription.setText(intent.getStringExtra("note desc"));
         editTitle.setText(intent.getStringExtra("note title"));
-
-
-      /*  Intent intent = getIntent();
-        click = "switch";
-        if (click.equals("switch")) {
-            linearEditNote.setVisibility(View.VISIBLE);
-            linearAddNote.setVisibility(View.INVISIBLE);
-            update.setVisibility(View.VISIBLE);
-            save.setVisibility(View.INVISIBLE);
-
-        }
-
-
-        save.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                title = addTitle.getText().toString();
-                desc = addDescription.getText().toString();
-
-
-            }
-        });
-
-        */
+        id = intent.getIntExtra("note id",0);
 
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 title = editTitle.getText().toString();
                 desc = editDescription.getText().toString();
-                saveNote(createRequest());
+                saveNote(createRequest(title, desc, id));
             }
         });
 
-
     }
 
-
-    public NoteRequest createRequest() {
+    public NoteRequest createRequest(String title, String desc, int id) {
         NoteRequest noteRequest = new NoteRequest();
-        noteRequest.setText(editDescription.getText().toString());
-        noteRequest.setTitle(editTitle.getText().toString());
+        noteRequest.setText(desc);
+        noteRequest.setTitle(title);
+        noteRequest.setId(id);
         return noteRequest;
     }
 
@@ -102,12 +68,14 @@ public class NotesEditActivity extends AppCompatActivity {
                     Log.e("failed",response.toString());
                     Toast.makeText(NotesEditActivity.this, "Failed", Toast.LENGTH_SHORT).show();
                 }
+
             }
 
             @Override
             public void onFailure(Call<NoteResponse> call, Throwable t) {
 
                 Toast.makeText(NotesEditActivity.this, "onFailure", Toast.LENGTH_SHORT).show();
+                finish();
             }
         });
     }

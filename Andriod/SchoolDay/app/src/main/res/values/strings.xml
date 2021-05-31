@@ -88,5 +88,9 @@
     <string name="empty_fields">You must fill all fields</string>
     <string name="phone_error">Phone Number is not correct</string>
     <string name="national_error">NationalID must be 18 number</string>
+    <string name="note_title">Title</string>
+    <string name="note_content">Take your note here....</string>
+    <string name="save_note">Save</string>
+    <string name="empty_erro">Title or Content can not be empty</string>
 
 </resources>

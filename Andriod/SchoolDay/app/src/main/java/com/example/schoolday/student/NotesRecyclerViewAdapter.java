@@ -12,18 +12,10 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.schoolday.APIClient;
 import com.example.schoolday.R;
-import com.example.schoolday.SignupActivity;
-import com.example.schoolday.UserRequest;
-import com.example.schoolday.UserResponse;
 
 import java.util.ArrayList;
 import java.util.Date;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class NotesRecyclerViewAdapter extends RecyclerView.Adapter<NotesRecyclerViewAdapter.NoteViewHolder> {
 
@@ -49,7 +41,6 @@ public class NotesRecyclerViewAdapter extends RecyclerView.Adapter<NotesRecycler
 
         final Notes note = notes.get(position);
         holder.noteTitle.setText(note.getTitle());
-        holder.noteDescription.setText(note.getText());
         holder.date.setText((CharSequence) note.getDateAndTime());
         holder.editNote.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,6 +56,7 @@ public class NotesRecyclerViewAdapter extends RecyclerView.Adapter<NotesRecycler
                 intent.putExtra("note date", date);
                 intent.putExtra("note title", title);
                 intent.putExtra("note desc", desc);
+                intent.putExtra("note id", id);
 
                 Toast.makeText(context, "id = " + id + "\ntitle = " + title + "\ndesc = " + desc +
                         "\ndate = " + date, Toast.LENGTH_SHORT).show();
@@ -82,13 +74,12 @@ public class NotesRecyclerViewAdapter extends RecyclerView.Adapter<NotesRecycler
     }
 
     public class NoteViewHolder extends RecyclerView.ViewHolder {
-        TextView noteTitle, noteDescription, date;
+        TextView noteTitle, date;
         ImageView editNote;
 
         public NoteViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            noteDescription = itemView.findViewById(R.id.note_description);
             noteTitle = itemView.findViewById(R.id.note_title);
             date = itemView.findViewById(R.id.note_date_time);
             editNote = itemView.findViewById(R.id.edit_note);
