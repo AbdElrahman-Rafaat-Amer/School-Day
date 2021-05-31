@@ -41,11 +41,11 @@ public class NotesRecyclerViewAdapter extends RecyclerView.Adapter<NotesRecycler
 
         final Notes note = notes.get(position);
         holder.noteTitle.setText(note.getTitle());
-        holder.date.setText((CharSequence) note.getDateAndTime());
+        holder.date.setText((CharSequence) note.getDate());
         holder.editNote.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Date date = note.getDateAndTime();
+                String date = note.getDate();
                 String title = note.getTitle();
                 String desc = note.getText();
                 int id = note.getId();

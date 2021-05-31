@@ -35,7 +35,7 @@ public class NotesEditActivity extends AppCompatActivity {
         Intent intent = getIntent();
         editDescription.setText(intent.getStringExtra("note desc"));
         editTitle.setText(intent.getStringExtra("note title"));
-        id = intent.getIntExtra("note id",0);
+        id = intent.getIntExtra("note id", 0);
 
         update.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,36 +48,40 @@ public class NotesEditActivity extends AppCompatActivity {
 
     }
 
-    public NoteRequest createRequest(String title, String desc, int id) {
-        NoteRequest noteRequest = new NoteRequest();
+    public Notes createRequest(String title, String desc, int id) {
+        Notes noteRequest = new Notes();
         noteRequest.setText(desc);
         noteRequest.setTitle(title);
         noteRequest.setId(id);
         return noteRequest;
     }
 
-    public void saveNote(NoteRequest noteRequest) {
+    public void saveNote(Notes note) {
 
-        Call<NoteResponse> noteResponseCall = APIClient.getNoteService().saveNote(noteRequest);
-        noteResponseCall.enqueue(new Callback<NoteResponse>() {
+
+        Call<Void> notesCall = APIClient.getNoteService().saveNote(note);
+
+        notesCall.enqueue(new Callback<Void>() {
             @Override
-            public void onResponse(Call<NoteResponse> call, Response<NoteResponse> response) {
-                if (response.isSuccessful()){
+            public void onResponse(Call<Void> call, Response<Void> response) {
+                if (response.isSuccessful()) {
+                    Log.e("success", response.toString());
                     Toast.makeText(NotesEditActivity.this, "Successful", Toast.LENGTH_SHORT).show();
-                }else {
-                    Log.e("failed",response.toString());
+                    finish();
+                } else {
+                    Log.e("failed", response.toString());
                     Toast.makeText(NotesEditActivity.this, "Failed", Toast.LENGTH_SHORT).show();
                 }
-
             }
 
             @Override
-            public void onFailure(Call<NoteResponse> call, Throwable t) {
-
+            public void onFailure(Call<Void> call, Throwable t) {
+                Log.e("this onFailure", t.toString());
                 Toast.makeText(NotesEditActivity.this, "onFailure", Toast.LENGTH_SHORT).show();
                 finish();
             }
         });
+
     }
 
 
