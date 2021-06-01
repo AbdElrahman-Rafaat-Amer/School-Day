@@ -27,13 +27,13 @@ namespace LMS.Models.StudentModel
         public string PDF_1 { get; set; }
         public string PDF_2 { get; set; }
         public string AddmitionNum { get; set; }
-        //public ICollection<FeesModel.Fees> Fees { get; set; }
-        //public ICollection<AttendanceModel.Attendance> Attendances { get; set; }
-        //public ICollection<GroupModel.Group> Groups { get; set; }
-        //public ICollection<Activity.Activity> Activities { get; set; }
-        //public ICollection<ZoomModel.Zoom> Zooms { get; set; }
-        //public ICollection<PostModel.Post> Posts { get; set; }
-        //public ICollection<NoteBordModel.NoteBoard> NoteBoards { get; set; }
+        public ICollection<FeesModel.Fees> Fees { get; set; }
+        public ICollection<AttendanceModel.Attendance> Attendances { get; set; }
+        public ICollection<GroupModel.Group> Groups { get; set; }
+        public ICollection<Activity.Activity> Activities { get; set; }
+        public ICollection<ZoomModel.Zoom> Zooms { get; set; }
+        public ICollection<PostModel.Post> Posts { get; set; }
+        public ICollection<NoteBordModel.NoteBoard> NoteBoards { get; set; }
         public YearModel.Year Year { get; set; }
         public ParentModel.Parent Parent { get; set; }
         public BusModel.Bus Bus { get; set; }

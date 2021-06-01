@@ -1,0 +1,71 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background-color: #eee;
+}
+.Login{
+    display: flex;
+    flex-direction: row;
+    box-shadow: 1px 6px 27px #444;
+}
+.Login .Left-Login{
+    width: 40%;
+    padding: 0px;
+}
+
+.Login .Left-Login img{
+    width: 100%;
+    height: 100%;
+}
+.Login .Right-Login{
+    padding: 0px;
+    width: 60%;
+}
+
+.Login .Right-Login .Login-button{
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 600px) {
+    .Left-Login {
+      visibility: hidden;
+      clear: both;
+      display: none;
+    }
+    .Login .Right-Login{
+        width: 100%;
+    }
+    .card-body{
+        width: 100%;
+    }
+}
+
+.Register{
+    display: flex;
+    flex-direction: row;
+    box-shadow: 1px 6px 27px #444;
+}
+.Register .Left-Register{
+    width:40%;
+}
+.Register .Left-Register img{
+    width:100%;
+    height: 100%;
+}
+.Register .Right-Register{
+    width:60%;
+}
+
+@media screen and (max-width: 768px) {
+    .Left-Register {
+      visibility: hidden;
+      clear: both;
+      display: none;
+    }
+    .Register .Right-Register{
+        width: 100%;
+    }
+    .card-body{
+        width: 100%;
+    }
+}
