@@ -1,90 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
 
     <ImageView
         android:layout_width="130dp"
         android:layout_height="100dp"
-        android:src="@drawable/lms"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="25dp"
-        ></ImageView>
+        android:src="@drawable/lms"></ImageView>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome Back"
-        android:textSize="40sp"
         android:layout_gravity="center_horizontal"
-        android:textColor="#000"
         android:layout_marginTop="10dp"
-        android:fontFamily="@font/bauhaus93">
-    </TextView>
+        android:fontFamily="@font/bauhaus93"
+        android:text="@string/welcome_back"
+        android:textColor="#000"
+        android:textSize="40sp"></TextView>
+
     <EditText
+        android:id="@+id/login_email"
         android:layout_width="300dp"
-        android:hint="E-mail"
-        android:textColorHint="#000"
-        android:textSize="20sp"
         android:layout_height="50dp"
-        android:layout_marginTop="20dp"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
         android:background="@drawable/custom_input"
         android:drawableLeft="@drawable/ic_baseline_email_24"
-        android:inputType="textEmailAddress"
         android:drawablePadding="10dp"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:paddingStart="10dp"
         android:paddingLeft="5dp"
-        android:paddingStart="10dp"></EditText>
-    <EditText
-        android:layout_width="300dp"
-        android:hint="Password"
         android:textColorHint="#000"
-        android:textSize="20sp"
+        android:textSize="20sp"></EditText>
+
+    <EditText
+        android:id="@+id/login_password"
+        android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginTop="20dp"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
         android:background="@drawable/custom_input"
         android:drawableLeft="@drawable/ic_padlock"
-        android:inputType="textPassword"
         android:drawablePadding="10dp"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:paddingStart="10dp"
         android:paddingLeft="5dp"
-        android:paddingStart="10dp"></EditText>
+        android:textColorHint="#000"
+        android:textSize="20sp"></EditText>
+
     <Button
+        android:id="@+id/login_button"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/custom_button_signup"
-        android:text="Login"
-        android:textSize="30sp"
+        android:text="@string/login"
         android:textColor="@android:color/white"
-        android:layout_gravity="center_horizontal"></Button>
+        android:textSize="30sp"></Button>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Create Account "
+            android:layout_marginLeft="60dp"
+            android:text="@string/create_account"
             android:textColor="#000"
-            android:textSize="25sp"
-            android:layout_marginLeft="60dp">
-        </TextView>
+            android:textSize="25sp"></TextView>
+
         <TextView
+            android:id="@+id/goto_signup"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Signup here"
             android:layout_marginLeft="5dp"
-            android:textSize="25sp"
+            android:text="@string/signup"
             android:textColor="#F86132"
-            ></TextView>
+            android:textSize="25sp"></TextView>
     </LinearLayout>
 
 </LinearLayout>

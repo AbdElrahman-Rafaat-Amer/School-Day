@@ -3,124 +3,132 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Signup2Activity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".Signup2Activity">
 
     <ImageView
         android:layout_width="130dp"
         android:layout_height="100dp"
-        android:src="@drawable/lms"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="25dp"
-        ></ImageView>
+        android:src="@drawable/lms"></ImageView>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Complete Signup"
-        android:textSize="40sp"
         android:layout_gravity="center_horizontal"
-        android:textColor="#000"
         android:layout_marginTop="10dp"
-        android:fontFamily="@font/bauhaus93">
-    </TextView>
+        android:fontFamily="@font/bauhaus93"
+        android:text="@string/complete_signUp"
+        android:textColor="#000"
+        android:textSize="40sp"></TextView>
 
     <EditText
+        android:id="@+id/first_phone_number_signup"
         android:layout_width="300dp"
-        android:hint="First Phone Number"
-        android:textColorHint="#000"
-        android:textSize="20sp"
         android:layout_height="50dp"
-        android:layout_marginTop="20dp"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
         android:background="@drawable/custom_input"
         android:drawableLeft="@drawable/ic_baseline_phone_24"
-        android:inputType="phone"
         android:drawablePadding="10dp"
-        android:paddingLeft="5dp"
+        android:hint="@string/first_phone_number"
+        android:inputType="phone"
         android:paddingStart="10dp"
-        ></EditText>
+        android:paddingLeft="5dp"
+        android:textColorHint="#000"
+        android:textSize="20sp"></EditText>
 
     <EditText
+        android:id="@+id/second_phone_number_signup"
         android:layout_width="300dp"
-        android:hint="Second Phone Number"
-        android:textColorHint="#000"
-        android:textSize="20sp"
         android:layout_height="50dp"
-        android:layout_marginTop="20dp"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
         android:background="@drawable/custom_input"
         android:drawableLeft="@drawable/ic_baseline_phone_24"
-        android:inputType="phone"
         android:drawablePadding="10dp"
+        android:hint="@string/second_phone_number"
+        android:inputType="phone"
+        android:paddingStart="10dp"
         android:paddingLeft="5dp"
-        android:paddingStart="10dp"></EditText>
-    <EditText
-        android:layout_width="300dp"
-        android:hint="National ID"
         android:textColorHint="#000"
-        android:textSize="20sp"
+        android:textSize="20sp"></EditText>
+
+    <EditText
+        android:id="@+id/national_identity_number_signUp"
+        android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginTop="20dp"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
         android:background="@drawable/custom_input"
         android:drawableLeft="@drawable/ic_baseline_call_to_action_24"
-        android:inputType="textPassword"
         android:drawablePadding="10dp"
+        android:hint="@string/national_id"
+        android:inputType="number"
+        android:paddingStart="10dp"
         android:paddingLeft="5dp"
-        android:paddingStart="10dp"></EditText>
-    <EditText
-        android:layout_width="300dp"
-        android:hint="Address"
         android:textColorHint="#000"
-        android:textSize="20sp"
+        android:textSize="20sp"></EditText>
+
+    <EditText
+        android:id="@+id/address_signup"
+        android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginTop="20dp"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
         android:background="@drawable/custom_input"
         android:drawableLeft="@drawable/ic_baseline_directions_24"
-        android:inputType="textPostalAddress"
         android:drawablePadding="10dp"
+        android:hint="@string/address"
+        android:inputType="textPostalAddress"
+        android:paddingStart="10dp"
         android:paddingLeft="5dp"
-        android:paddingStart="10dp"></EditText>
+        android:textColorHint="#000"
+        android:textSize="20sp"></EditText>
 
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:orientation="horizontal"
-        android:gravity="center_horizontal">
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
         <RadioButton
+            android:id="@+id/radio_male"
             android:layout_width="70dp"
             android:layout_height="40dp"
-            android:text="Male"
-            android:textSize="16sp"
-            android:button="@color/transparent"
-            android:background="@drawable/radio_selector"
-            android:textColor="#000"
             android:layout_marginLeft="10dp"
-            android:textAlignment="center"></RadioButton>
+            android:background="@drawable/radio_selector"
+            android:button="@color/transparent"
+            android:text="@string/male"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="16sp"></RadioButton>
+
         <RadioButton
+            android:id="@+id/radio_female"
             android:layout_width="70dp"
             android:layout_height="40dp"
-            android:text="Female"
-            android:textSize="16sp"
             android:layout_marginLeft="20dp"
-            android:button="@color/transparent"
             android:background="@drawable/radio_selector"
-            android:textColor="#000"
+            android:button="@color/transparent"
+            android:text="@string/female"
             android:textAlignment="center"
-            ></RadioButton>
+            android:textColor="#000"
+            android:textSize="16sp"></RadioButton>
     </RadioGroup>
+
     <Button
+        android:id="@+id/signup_button"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/custom_button_signup"
-        android:text="Complete"
-        android:textSize="20sp"
+        android:text="@string/signup"
         android:textColor="@android:color/white"
-        android:layout_gravity="center_horizontal"></Button>
+        android:textSize="20sp"></Button>
 </LinearLayout>

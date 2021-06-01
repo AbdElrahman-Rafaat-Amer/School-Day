@@ -1,60 +1,73 @@
 package com.example.schoolday.student;
 
-public class Notes {
+import java.util.Date;
 
-    private String title, text, dateAndTime;
+public class Notes {
+    private String title, text;//, dateAndTime;
     private int id;
+    private String date;
+
+    public Notes() {
+        this.title = title;
+        this.text = text;
+        this.id = id;
+        this.date = date;
+    }
+
+    public Notes(String title, String text, int id, String date) {
+
+        this.title = title;
+        this.text = text;
+        this.id = id;
+        this.date = date;
+    }
+
+    public Notes(String title, String text, int id) {
+        this.title = title;
+        this.text = text;
+        this.id = id;
+    }
+
+    public Notes(String title, String text) {
+        this.title = title;
+        this.text = text;
+    }
+
+    public Notes(String title, String text, String date) {
+        this.title = title;
+        this.text = text;
+        this.date = date;
+    }
 
     public String getTitle() {
         return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getText() {
         return text;
     }
 
-    public String getDateAndTime() {
-        return dateAndTime;
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 
     public int getId() {
         return id;
     }
 
-/*
-    private String name, team, bio, imageurl;
-
-    public String getBio() {
-        return bio;
+    public void setId(int id) {
+        this.id = id;
     }
-
-    public void setBio(String bio) {
-        this.bio = bio;
-    }
-
-    public String getImageurl() {
-        return imageurl;
-    }
-
-    public void setImageurl(String imageurl) {
-        this.imageurl = imageurl;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getTeam() {
-        return team;
-    }
-
-    public void setTeam(String team) {
-        this.team = team;
-    }
-
-*/
 }

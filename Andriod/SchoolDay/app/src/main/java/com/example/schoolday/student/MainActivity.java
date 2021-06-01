@@ -1,8 +1,5 @@
 package com.example.schoolday.student;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -10,6 +7,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.example.schoolday.R;
@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
         goBackChat = findViewById(R.id.go_back_chat);
         notificationImage = findViewById(R.id.image_notification);
@@ -55,10 +54,13 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         });
 
 
+
         // land scape
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentHome()).commit();
         }
+
+
 
 
         //code for bottom nav bar

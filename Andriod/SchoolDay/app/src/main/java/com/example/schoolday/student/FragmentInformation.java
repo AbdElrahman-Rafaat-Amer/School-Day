@@ -29,7 +29,7 @@ public class FragmentInformation extends Fragment  {
         tabLayout = view.findViewById(R.id.tab_page);
         viewPager = view.findViewById(R.id.view_page);
 
-        pageAdapter = new PageAdapterProfStudent(getFragmentManager());
+        pageAdapter = new PageAdapterProfStudent(getChildFragmentManager());
         viewPager.setAdapter(pageAdapter);
 
         tabLayout.addTab(tabLayout.newTab().setText("student info"));

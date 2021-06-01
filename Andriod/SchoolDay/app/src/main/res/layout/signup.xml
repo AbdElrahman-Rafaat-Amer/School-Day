@@ -3,157 +3,170 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignupActivity"
     android:orientation="vertical"
-    >
+    tools:context=".SignupActivity">
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome"
-        android:textSize="50sp"
         android:layout_gravity="center_horizontal"
-        android:textColor="#000"
         android:layout_marginTop="10dp"
-        android:fontFamily="@font/bauhaus93">
-    </TextView>
+        android:fontFamily="@font/bauhaus93"
+        android:text="@string/welcome"
+        android:textColor="#000"
+        android:textSize="50sp"></TextView>
+
     <ImageView
         android:layout_width="130dp"
         android:layout_height="100dp"
-        android:src="@drawable/lms"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="25dp"
-        ></ImageView>
+        android:src="@drawable/lms"></ImageView>
 
 
     <EditText
+        android:id="@+id/signup_name"
         android:layout_width="300dp"
-        android:hint="Name"
-        android:textColorHint="#000"
-        android:textSize="20sp"
         android:layout_height="50dp"
-        android:layout_marginTop="20dp"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
         android:background="@drawable/custom_input"
         android:drawableLeft="@drawable/ic_user"
-        android:inputType="textPersonName"
         android:drawablePadding="10dp"
-        android:paddingLeft="5dp"
+        android:hint="@string/name"
+        android:inputType="textPersonName"
         android:paddingStart="10dp"
-        ></EditText>
+        android:paddingLeft="5dp"
+        android:textColorHint="#000"
+        android:textSize="20sp"></EditText>
 
     <EditText
+        android:id="@+id/signup_mail"
         android:layout_width="300dp"
-        android:hint="E-mail"
-        android:textColorHint="#000"
-        android:textSize="20sp"
         android:layout_height="50dp"
-        android:layout_marginTop="20dp"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
         android:background="@drawable/custom_input"
         android:drawableLeft="@drawable/ic_baseline_email_24"
+        android:drawablePadding="10dp"
+        android:hint="@string/email"
         android:inputType="textEmailAddress"
-        android:drawablePadding="10dp"
+        android:paddingStart="10dp"
         android:paddingLeft="5dp"
-        android:paddingStart="10dp"></EditText>
-    <EditText
-        android:layout_width="300dp"
-        android:hint="Password"
         android:textColorHint="#000"
-        android:textSize="20sp"
+        android:textSize="20sp"></EditText>
+
+    <EditText
+        android:id="@+id/signup_password"
+        android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginTop="20dp"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
         android:background="@drawable/custom_input"
         android:drawableLeft="@drawable/ic_padlock"
-        android:inputType="textPassword"
         android:drawablePadding="10dp"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:paddingStart="10dp"
         android:paddingLeft="5dp"
-        android:paddingStart="10dp"></EditText>
-    <EditText
-        android:layout_width="300dp"
-        android:hint="Confirm Password"
         android:textColorHint="#000"
-        android:textSize="20sp"
+        android:textSize="20sp"></EditText>
+
+    <EditText
+        android:id="@+id/signup_confirmpassword"
+        android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginTop="20dp"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
         android:background="@drawable/custom_input"
         android:drawableLeft="@drawable/ic_padlock"
-        android:inputType="textPassword"
         android:drawablePadding="10dp"
+        android:hint="@string/confirm_Password"
+        android:inputType="textPassword"
+        android:paddingStart="10dp"
         android:paddingLeft="5dp"
-        android:paddingStart="10dp"></EditText>
+        android:textColorHint="#000"
+        android:textSize="20sp"></EditText>
 
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:orientation="horizontal"
-        android:gravity="center_horizontal">
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
         <RadioButton
+            android:id="@+id/radio_student"
             android:layout_width="70dp"
             android:layout_height="40dp"
-            android:text="Student"
-            android:textSize="16sp"
-            android:button="@color/transparent"
-            android:background="@drawable/radio_selector"
-            android:textColor="#000"
             android:layout_marginLeft="10dp"
-            android:paddingLeft="5dp"></RadioButton>
+            android:background="@drawable/radio_selector"
+            android:button="@color/transparent"
+            android:paddingLeft="5dp"
+            android:text="@string/student"
+            android:textColor="#000"
+            android:textSize="16sp"></RadioButton>
+
         <RadioButton
+            android:id="@+id/radio_parent"
             android:layout_width="70dp"
             android:layout_height="40dp"
-            android:text="Parent"
-            android:textSize="16sp"
             android:layout_marginLeft="20dp"
-            android:button="@color/transparent"
             android:background="@drawable/radio_selector"
-            android:textColor="#000"
+            android:button="@color/transparent"
             android:paddingLeft="10dp"
-            ></RadioButton>
+            android:text="@string/parent"
+            android:textColor="#000"
+            android:textSize="16sp"></RadioButton>
+
         <RadioButton
+            android:id="@+id/radio_teacher"
             android:layout_width="70dp"
             android:layout_height="40dp"
-            android:text="Teacher"
-            android:textSize="16sp"
             android:layout_marginLeft="20dp"
-            android:button="@color/transparent"
             android:background="@drawable/radio_selector"
+            android:button="@color/transparent"
+            android:paddingLeft="5dp"
+            android:text="@string/teacher"
             android:textColor="#000"
-            android:paddingLeft="5dp"></RadioButton>
+            android:textSize="16sp"></RadioButton>
     </RadioGroup>
+
     <Button
+        android:id="@+id/signup_compliting_info"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/custom_button_signup"
-        android:text="signup"
-        android:textSize="20sp"
+        android:text="@string/completing"
         android:textColor="@android:color/white"
-        android:layout_gravity="center_horizontal"></Button>
+        android:textSize="20sp"></Button>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Already have an account."
+            android:layout_marginLeft="70dp"
+            android:text="@string/haveaccount"
             android:textColor="#000"
-            android:textSize="15sp"
-            android:layout_marginLeft="70dp">
-        </TextView>
+            android:textSize="15sp"></TextView>
+
         <TextView
+            android:id="@+id/moveto_login"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Login here"
             android:layout_marginLeft="5dp"
-            android:textSize="15sp"
+            android:text="@string/login"
             android:textColor="#F86132"
-            ></TextView>
+            android:textSize="15sp"></TextView>
     </LinearLayout>
 
 </LinearLayout>

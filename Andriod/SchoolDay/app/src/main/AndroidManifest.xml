@@ -14,20 +14,16 @@
         android:usesCleartextTraffic="true">
         <activity android:name=".WelcomeActivity"></activity>
         <activity android:name=".LoginActivity" />
-        <activity
-            android:name=".ui.login.LoginActivity"
-            android:label="@string/title_activity_login" />
         <activity android:name=".Signup2Activity" />
-        <activity android:name=".student.MainActivity" />
-        <activity android:name=".student.NotesEditAddActivity" />
+        <activity android:name=".student.NotesEditActivity" />
+        <activity android:name=".SignupActivity" />
         <activity android:name=".student.OnlineFriendsActivity" />
         <activity android:name=".student.EditActivity" />
         <activity
-            android:name=".SignupActivity"
+            android:name=".student.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

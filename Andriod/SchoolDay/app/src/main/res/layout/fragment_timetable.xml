@@ -30,7 +30,7 @@
        app:dateTextColor="#000"
        app:dayTextColor="#000"
        app:monthTextColor="#000"
-       app:disabledColor="#424141" />
+       app:disabledColor="@color/mainColor" />
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
