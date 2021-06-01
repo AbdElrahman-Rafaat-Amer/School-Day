@@ -6,6 +6,7 @@ using LMS.Models.FeesModel;
 using LMS.Models.FolderModel;
 using LMS.Models.NoteBordModel;
 using LMS.Models.StudentModel;
+using LMS.Models.SubjectModel;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -56,6 +57,7 @@ namespace LMS
             services.AddScoped<IStudentRepasitory<Student>, PerformStudent>();
             services.AddScoped<IFolderRepasitory<Folder>, PerformFolder>();
             services.AddScoped<IFeesRepasitory<Fees>,PerformFees>();
+            services.AddScoped<ISubjectRepasitory<Subject>, PerformSubject>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "LMS", Version = "v1" });

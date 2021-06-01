@@ -26,33 +26,42 @@ namespace LMS.Controllers
         }
 
         [HttpGet("{id}")]
-        public ActionResult<Subject> Get(int id)
+        public async Task<ActionResult<Subject>> Get(int id)
         {
-            return Ok(service.Subject(id));
+            var result =await service.Subject(id);
+            return Ok(result);
         }
 
         [HttpPost]
         [Authorize(Role.Admin)]
-        public void Post([FromBody] Subject value)
+        public ActionResult Post(Subject value)
         {
-            service.CreateSubject(value);
+            if (value != null)
+            {
+                service.CreateSubject(value);
+                return Ok();
+            }
+            return BadRequest();
         }
 
         [HttpPut("{id}")]
         [Authorize(Role.Admin)]
-        public void Put(int id, Subject value)
+        public ActionResult Put(int id, Subject value)
         {
             if (id == value.Id)
             {
                 service.UpdateSubject(value);
+                return Ok();
             }
+            return BadRequest();
         }
 
         [HttpDelete("{id}")]
         [Authorize(Role.Admin)]
-        public void Delete(int id)
+        public ActionResult Delete(int id)
         {
             service.DeleteSubject(id);
+            return Ok();
         }
     }
 }

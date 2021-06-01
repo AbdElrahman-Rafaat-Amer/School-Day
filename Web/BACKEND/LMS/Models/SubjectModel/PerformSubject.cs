@@ -32,7 +32,7 @@ namespace LMS.Models.SubjectModel
 
         public async Task<Subject> Subject(int Id)
         {
-            Subject subject = await context.Subjects.FindAsync(Id);
+            var subject =await context.Subjects.FindAsync(Id);
             return subject;
         }
 
