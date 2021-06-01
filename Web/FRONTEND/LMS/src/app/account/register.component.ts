@@ -1,16 +1,18 @@
 ﻿import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { ControlContainer, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 
 import { AccountService, AlertService } from '@app/_services';
 import { MustMatch } from '@app/_helpers';
+import { Role } from '@app/_models';
 
 @Component({ templateUrl: 'register.component.html' })
 export class RegisterComponent implements OnInit {
     form: FormGroup;
     loading = false;
     submitted = false;
+    driverLicense = false;
 
     constructor(
         private formBuilder: FormBuilder,
@@ -33,7 +35,7 @@ export class RegisterComponent implements OnInit {
             NationalID : ['', Validators.required],
             Gender: ['', Validators.required],
             role: ['', Validators.required],
-            LicenseID: ['',Validators.required],
+            LicenseID: [''],
             acceptTerms: [false, Validators.requiredTrue]
         }, {
             validator: MustMatch('Password', 'ConfirmPassword')
@@ -44,13 +46,15 @@ export class RegisterComponent implements OnInit {
     get f() { return this.form.controls; }
 
     onSubmit() {
+       
         this.submitted = true;
 
         // reset alerts on submit
         this.alertService.clear();
 
         // stop here if form is invalid
-        if (this.form.invalid) {
+        if(this.form.invalid || ( this.form.controls['role'].value == Role.Driver && this.form.controls['LicenseID'].value == '')){
+            this.form.controls['LicenseID'].setErrors(Validators.required);
             return;
         }
 
