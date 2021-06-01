@@ -1,10 +1,12 @@
 package com.example.schoolday.student;
 
+import java.util.Date;
+
 public class NoteRequest {
     private int id;
     private String text;
     private String title;
-    private String date;
+    private Date date;
 
     public int getId() {
         return id;
@@ -30,11 +32,11 @@ public class NoteRequest {
         this.title = title;
     }
 
-    public String getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 }

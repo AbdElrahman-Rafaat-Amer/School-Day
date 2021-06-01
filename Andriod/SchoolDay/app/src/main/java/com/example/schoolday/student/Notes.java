@@ -1,11 +1,8 @@
 package com.example.schoolday.student;
 
-import java.util.Date;
-
 public class Notes {
-    private String title, text;//, dateAndTime;
+    private String title, text, date;
     private int id;
-    private String date;
 
     public Notes() {
         this.title = title;

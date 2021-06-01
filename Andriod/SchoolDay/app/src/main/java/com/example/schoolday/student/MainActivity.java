@@ -16,12 +16,12 @@ import com.example.schoolday.R;
 
 
 public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
-    MeowBottomNavigation meo;
     private final static int ID_HOME = 3;
     private final static int ID_FEEDS = 5;
     private final static int ID_MESSAGES = 2;
     private final static int ID_TIMETABLE = 1;
     private final static int ID_INFORMATION = 4;
+    MeowBottomNavigation meo;
     ImageView notificationImage, searchImage, goBackChat, editImage, optionMenu;
 
     @Override
@@ -54,13 +54,10 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         });
 
 
-
         // land scape
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentHome()).commit();
         }
-
-
 
 
         //code for bottom nav bar
@@ -73,12 +70,14 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
             @Override
             public void onClickItem(MeowBottomNavigation.Model item) {
 
+
             }
         });
         meo.setOnShowListener(new MeowBottomNavigation.ShowListener() {
 
             @Override
             public void onShowItem(MeowBottomNavigation.Model item) {
+
 
                 switch (item.getId()) {
                     case ID_HOME:
@@ -127,8 +126,12 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
             @Override
             public void onReselectItem(MeowBottomNavigation.Model item) {
                 //this method for solving problem of double click on icon
+
+
             }
         });
+
+        meo.show(ID_HOME,true);
 
     }
 

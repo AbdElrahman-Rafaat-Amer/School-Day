@@ -13,16 +13,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.schoolday.APIClient;
 import com.example.schoolday.R;
 
+import java.util.Calendar;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
 public class NotesEditActivity extends AppCompatActivity {
 
-    EditText editTitle, editDescription;
-    Button update;
-    String title, desc;
-    int id;
+    private EditText editTitle, editDescription;
+    private Button update;
+    private String currentTitle, currentDesc, title, desc, date;
+    private int id;
+    private boolean isNew;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,35 +35,59 @@ public class NotesEditActivity extends AppCompatActivity {
         editDescription = findViewById(R.id.note_description_edit);
         editTitle = findViewById(R.id.note_title_edit);
         update = findViewById(R.id.update_note);
-        Intent intent = getIntent();
-        editDescription.setText(intent.getStringExtra("note desc"));
-        editTitle.setText(intent.getStringExtra("note title"));
-        id = intent.getIntExtra("note id", 0);
+        Calendar c = Calendar.getInstance();
+        date = c.toString();
 
-        update.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                title = editTitle.getText().toString();
-                desc = editDescription.getText().toString();
-                saveNote(createRequest(title, desc, id));
-            }
-        });
+        isNew = getIntent().getBooleanExtra("New Note", false);
+        if (isNew) {
+            update.setText(R.string.save);
+            update.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    title = editTitle.getText().toString();
+                    desc = editDescription.getText().toString();
+                    saveNote(createRequest());
+                }
+            });
+
+        } else {
+            Intent intent = getIntent();
+            editDescription.setText(intent.getStringExtra("note desc"));
+            editTitle.setText(intent.getStringExtra("note title"));
+            id = intent.getIntExtra("note id", 0);
+            update.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    currentTitle = editTitle.getText().toString();
+                    currentDesc = editDescription.getText().toString();
+                    saveNote(updateRequest(currentTitle, currentDesc, id/*, date*/));
+                }
+            });
+        }
+
 
     }
 
-    public Notes createRequest(String title, String desc, int id) {
+    public Notes updateRequest(String title, String desc, int id/*, String date*/) {
         Notes noteRequest = new Notes();
         noteRequest.setText(desc);
         noteRequest.setTitle(title);
         noteRequest.setId(id);
+        // noteRequest.setDate(date);
+        return noteRequest;
+    }
+
+    public Notes createRequest() {
+        Notes noteRequest = new Notes();
+        noteRequest.setText(desc);
+        noteRequest.setTitle(title);
+        //  noteRequest.setDate(date);
         return noteRequest;
     }
 
     public void saveNote(Notes note) {
 
-
         Call<Void> notesCall = APIClient.getNoteService().saveNote(note);
-
         notesCall.enqueue(new Callback<Void>() {
             @Override
             public void onResponse(Call<Void> call, Response<Void> response) {

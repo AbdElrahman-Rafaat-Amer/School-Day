@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -15,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.schoolday.R;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 public class NotesRecyclerViewAdapter extends RecyclerView.Adapter<NotesRecyclerViewAdapter.NoteViewHolder> {
 
@@ -50,20 +48,24 @@ public class NotesRecyclerViewAdapter extends RecyclerView.Adapter<NotesRecycler
                 String desc = note.getText();
                 int id = note.getId();
 
-                Intent intent = new Intent(context,NotesEditActivity.class);
-
+                Intent intent = new Intent(context, NotesEditActivity.class);
 
                 intent.putExtra("note date", date);
                 intent.putExtra("note title", title);
                 intent.putExtra("note desc", desc);
                 intent.putExtra("note id", id);
 
-                Toast.makeText(context, "id = " + id + "\ntitle = " + title + "\ndesc = " + desc +
-                        "\ndate = " + date, Toast.LENGTH_SHORT).show();
-
-                    context.startActivity(intent);
+                context.startActivity(intent);
             }
 
+        });
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int id = note.getId();
+
+            }
         });
 
     }
@@ -87,5 +89,5 @@ public class NotesRecyclerViewAdapter extends RecyclerView.Adapter<NotesRecycler
         }
 
 
-
-}}
+    }
+}
