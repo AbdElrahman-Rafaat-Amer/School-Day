@@ -70,7 +70,7 @@ public class NotesRecyclerViewAdapter extends RecyclerView.Adapter<NotesRecycler
             @Override
             public void onClick(View v) {
                 int id = note.getId();
-               deleteNote(deleteRequest(id));
+               deleteNote(id);
             }
         });
 
@@ -99,7 +99,7 @@ public class NotesRecyclerViewAdapter extends RecyclerView.Adapter<NotesRecycler
 
 
     }
-    private void deleteNote(Notes notes){
+    private void deleteNote(int id){
         Call<Void> call = APIClient.getNoteService().deleteNote();
         call.enqueue(new Callback<Void>() {
             @Override

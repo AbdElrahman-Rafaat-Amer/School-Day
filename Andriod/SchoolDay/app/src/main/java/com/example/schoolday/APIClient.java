@@ -20,10 +20,11 @@ public class APIClient {
         return retrofit;
     }
 
-    public static UserService getUserService() {
-        UserService userService = getRetrofit().create(UserService.class);
-        return userService;
+    public static LoginInterface getLoginService() {
+        LoginInterface loginInterface = getRetrofit().create(LoginInterface.class);
+        return loginInterface;
     }
+
 
     public static NoteInterface getNoteService() {
         NoteInterface noteInterface = getRetrofit().create(NoteInterface.class);

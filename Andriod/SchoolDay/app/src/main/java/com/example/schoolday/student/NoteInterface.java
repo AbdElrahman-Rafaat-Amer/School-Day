@@ -21,7 +21,7 @@ public interface NoteInterface {
     @PUT("Note/UpdateNote")
     Call<Void> saveNote(@Body Notes notes);
 
-    @DELETE("Note/{id}")
+    @DELETE("Note/id")
     Call<Void>deleteNote();
 
 }

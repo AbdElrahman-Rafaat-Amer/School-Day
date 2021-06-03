@@ -6,9 +6,11 @@
             </th>
         </tr>
         <tr *ngFor="let f of fees$ |async">
+
             <td *ngFor="let col of index">
                 {{f[col]}}
             </td>
+            <td><button class="btn primary">Select</button></td>
         </tr>
     </thead>
 </table>

@@ -1,99 +1,18 @@
-<div class="container-fluid cont-card">
-    <div class="row">
+<div class="row">
+    <ng-container *ngFor="let a of Tittle ; let i =index">
         <div class="col">
-            <div class="card w-100 ">
+            <div class="cards ">
                 <div class="card-body">
-                    <div class="title">
-                        <h5 class="card-title">Subject </h5>
-                        <span class="num"> 0 </span>
+                    <div class="content">
+                        <div class="title">
+                            <h5 class="card-title">{{a}}</h5>
+                            <span class="num"> 0 </span>
+                        </div>
+                        <p class="card-text">Total {{a}}</p>
                     </div>
-                    <p class="card-text">Total Subject</p>
                 </div>
             </div>
         </div>
-        <div class="col">
-            <div class="card w-100 ">
-                <div class="card-body">
-                    <div class="title">
-                        <h5 class="card-title">Notice </h5>
-                        <span class="num"> 0 </span>
-                    </div>
-                    <p class="card-text">Total Notice</p>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card w-100 ">
-                <div class="card-body">
-                    <div class="title">
-                        <h5 class="card-title">Exame </h5>
-                        <span class="num"> 0 </span>
-                    </div>
-                    <p class="card-text">Total Exame</p>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card w-100 ">
-                <div class="card-body">
-                    <div class="title">
-                        <h5 class="card-title">Online System </h5>
-                        <span class="num"> 0 </span>
-                    </div>
-                    <p class="card-text">Total Online System</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <div class="card w-100 ">
-                <div class="card-body">
-                    <div class="title">
-                        <h5 class="card-title">Teachers</h5>
-                        <span class="num"> 0 </span>
-                    </div>
-                    <p class="card-text">Total Teachers</p>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card w-100 ">
-                <div class="card-body">
-                    <div class="title">
-                        <h5 class="card-title">Issued Book</h5>
-                        <span class="num"> 0 </span>
-                    </div>
-                    <p class="card-text">Total Issued Book</p>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card w-100 ">
-                <div class="card-body">
-                    <div class="title">
-                        <h5 class="card-title">Pending Homework</h5>
-                        <span class="num"> 0 </span>
-                    </div>
-                    <p class="card-text">Total Pending Homework</p>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card w-100 ">
-                <div class="card-body">
-                    <div class="title">
-                        <h5 class="card-title">Attendance</h5>
-                        <span class="num"> 0 </span>
-                    </div>
-                    <p class="card-text">Total Attendance</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
+        <div *ngIf="(i+1)%4==0" class="w-100"></div>
+    </ng-container>
 </div>
-
-
-
-<calender></calender>

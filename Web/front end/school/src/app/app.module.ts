@@ -8,7 +8,7 @@ import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 import{ HttpClientModule} from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {ReactiveFormsModule} from '@angular/forms';
+import {ReactiveFormsModule,FormsModule} from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import { UpperBarComponent } from './upper-bar/upper-bar.component';
 import { BottomBarComponent } from './bottom-bar/bottom-bar.component';
@@ -33,15 +33,15 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatTableModule} from '@angular/material/table';
 import { NavbarModule } from 'angular-bootstrap-md'
+import {MatMenuModule} from '@angular/material/menu';
+
 
 import { MatInputModule }from '@angular/material/input';
-import { PostsComponent } from './posts/posts.component';
 import { FooterComponent } from './footer/footer.component';
 import { CalenderComponent } from './calender/calender.component';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 import { FlatpickrModule } from 'angularx-flatpickr';
 import { LikesComponent } from './likes/likes.component';
 import { SubjectComponent } from './subject/subject.component';
@@ -52,6 +52,12 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { FeesComponent } from './fees/fees.component';
 import { ActivityComponent } from './activity/activity.component';
 import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.component';
+import { PostsComponent } from './feeds/posts/posts/posts.component';
+import { AssignmentComponent } from './assignment/assignment.component';
+
+import { SearchfilterPipe } from './pipes/searchfilter.pipe';
+import { Ng2OrderModule } from 'ng2-order-pipe';
+import {NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -69,7 +75,6 @@ import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.compo
     DownloadsComponent,
     NoteboaredComponent,
     FeedsComponent,
-    PostsComponent,
     FooterComponent,
     CalenderComponent,
     LikesComponent,
@@ -78,8 +83,12 @@ import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.compo
     FeesComponent,
     ActivityComponent,
     UpcomingEventsComponent,
+    PostsComponent,
+    AssignmentComponent,
+    SearchfilterPipe,
   ],
   imports: [
+    NgxPaginationModule,
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
@@ -101,8 +110,10 @@ import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.compo
     MatFormFieldModule,
     MatTableModule,
     MatSortModule,
-
+    MatMenuModule,
     NavbarModule,
+    Ng2OrderModule,
+
 
     RouterModule.forRoot([
       {path: '',component:HomeComponent},
@@ -117,10 +128,13 @@ import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.compo
       {path: 'quetions',component:QuestionsComponent},
       {path: 'studentlogin',component:StudentLoginComponent},
       {path:'activity',component:ActivityComponent},
+      {path:'assignment',component:AssignmentComponent},
+      {path:'subject',component:SubjectComponent},
     ]),
     BrowserAnimationsModule,
     CommonModule,
     FormsModule,
+
     NgbModalModule,
     FlatpickrModule.forRoot(),
     CalendarModule.forRoot({
