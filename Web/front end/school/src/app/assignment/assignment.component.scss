@@ -1,0 +1,25 @@
+.assginment {
+    margin-top: 20px;
+    table {
+        th {
+            width: fit-content;
+        }
+        td {
+            width: fit-content;
+        }
+        .thead {
+            background-color: #53b1a2;
+            color: white;
+        }
+        button {
+            color: #b92f40;
+            border: 1px solid;
+            border-color: #b92f40;
+            border-radius: 5%;
+        }
+    }
+    ngb-pagination {
+        display: flex;
+        justify-content: center;
+    }
+}

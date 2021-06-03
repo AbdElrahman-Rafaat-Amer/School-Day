@@ -10,7 +10,7 @@ body {
     font-family: "Bauhaus93";
     font-size: large;
     padding-left: 100px;
-    margin: 0 -15px 0 -15px; // ****
+    // ****
 }
 
 .navbar a {
@@ -22,11 +22,6 @@ a.active {
     color: #b92f40;
     background-color: #b92f40;
     height: 42px;
-}
-
-.navbar .home {
-    width: 30px;
-    height: auto;
 }
 
 a.active img {
@@ -83,5 +78,40 @@ h5 {
     }
     .navbar .nav-item:hover .dropdown-menu {
         display: block;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .navbar {
+        height: auto;
+        padding: 0;
+        .navbar-toggler {
+            margin: auto;
+            color: #b92f40;
+            font-size: x-large;
+        }
+    }
+}
+
+@media (width:1024px) {
+    .navbar {
+        padding: 0;
+    }
+}
+
+@media(width:768px) {
+    .navbar {
+        margin: 0;
+        padding: 0;
+        a {
+            margin: auto 10px;
+            padding: 0;
+        }
+        a.active {
+            background-attachment: unset;
+        }
+        img {
+            display: none;
+        }
     }
 }
