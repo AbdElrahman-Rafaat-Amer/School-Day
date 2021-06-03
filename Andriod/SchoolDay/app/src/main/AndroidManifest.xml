@@ -15,7 +15,7 @@
         <activity android:name=".WelcomeActivity"></activity>
         <activity android:name=".student.MainActivity" />
         <activity android:name=".Signup2Activity" />
-        <activity android:name=".student.NotesEditActivity" />
+        <activity android:name=".student.notepackage.NotesEditActivity" />
         <activity android:name=".SignupActivity" />
         <activity android:name=".student.OnlineFriendsActivity" />
         <activity android:name=".student.EditActivity" />

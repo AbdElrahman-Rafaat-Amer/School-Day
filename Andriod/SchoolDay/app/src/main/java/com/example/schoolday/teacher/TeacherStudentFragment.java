@@ -14,7 +14,6 @@ import android.widget.Spinner;
 
 import com.example.schoolday.APIClient;
 import com.example.schoolday.R;
-import com.example.schoolday.student.NoteInterface;
 
 import org.json.JSONArray;
 import org.json.JSONException;
