@@ -12,13 +12,13 @@ import retrofit2.http.Path;
 
 public interface NoteInterface {
 
-    @GET("Note/ListNote")
+    @GET("Note/Note")
     Call<ArrayList<Notes>> getNote();
 
     @POST("Note/CreateNote")
     Call<NoteResponse> createNote(@Body  NoteRequest noteRequest);
 
-    @PUT("Note/UpdateNote")
+    @PUT("Note/Note")
     Call<Void> saveNote(@Body Notes notes);
 
     @DELETE("Note/id")
