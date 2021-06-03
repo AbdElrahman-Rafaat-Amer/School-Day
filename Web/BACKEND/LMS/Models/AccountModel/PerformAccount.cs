@@ -433,5 +433,11 @@ namespace LMS.Models.AccountModel
                          {message}"
             );
         }
+
+        public List<Account> GetListByFilter(Func<Account, bool> lamda)
+        {
+            var a = _context.Accounts.Where(lamda).ToList();
+            return a;
+        }
     }
 }

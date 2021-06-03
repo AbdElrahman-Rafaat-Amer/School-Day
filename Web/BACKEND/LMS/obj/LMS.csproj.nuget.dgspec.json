@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Courses\\Android\\ProjectTasks\\School-Day\\Web\\BACKEND\\LMS\\LMS.csproj": {}
+    "C:\\Users\\Nabil\\Documents\\GitHub\\School-Day\\Web\\BACKEND\\LMS\\LMS.csproj": {}
   },
   "projects": {
-    "D:\\Courses\\Android\\ProjectTasks\\School-Day\\Web\\BACKEND\\LMS\\LMS.csproj": {
+    "C:\\Users\\Nabil\\Documents\\GitHub\\School-Day\\Web\\BACKEND\\LMS\\LMS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Courses\\Android\\ProjectTasks\\School-Day\\Web\\BACKEND\\LMS\\LMS.csproj",
+        "projectUniqueName": "C:\\Users\\Nabil\\Documents\\GitHub\\School-Day\\Web\\BACKEND\\LMS\\LMS.csproj",
         "projectName": "LMS",
-        "projectPath": "D:\\Courses\\Android\\ProjectTasks\\School-Day\\Web\\BACKEND\\LMS\\LMS.csproj",
-        "packagesPath": "C:\\Users\\M E T R O\\.nuget\\packages\\",
-        "outputPath": "D:\\Courses\\Android\\ProjectTasks\\School-Day\\Web\\BACKEND\\LMS\\obj\\",
+        "projectPath": "C:\\Users\\Nabil\\Documents\\GitHub\\School-Day\\Web\\BACKEND\\LMS\\LMS.csproj",
+        "packagesPath": "C:\\Users\\Nabil\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nabil\\Documents\\GitHub\\School-Day\\Web\\BACKEND\\LMS\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\M E T R O\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Nabil\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -91,7 +91,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }
