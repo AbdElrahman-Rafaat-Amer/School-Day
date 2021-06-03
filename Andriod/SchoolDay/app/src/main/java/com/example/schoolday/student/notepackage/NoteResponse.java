@@ -1,4 +1,4 @@
-package com.example.schoolday.student;
+package com.example.schoolday.student.notepackage;
 
 public class NoteResponse {
     private int id;

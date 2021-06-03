@@ -1,4 +1,4 @@
-package com.example.schoolday.student;
+package com.example.schoolday.student.feespackage;
 
 import java.util.ArrayList;
 

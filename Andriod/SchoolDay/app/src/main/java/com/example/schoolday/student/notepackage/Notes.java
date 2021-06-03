@@ -1,4 +1,4 @@
-package com.example.schoolday.student;
+package com.example.schoolday.student.notepackage;
 
 public class Notes {
     private String title, text, date;

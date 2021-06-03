@@ -1,11 +1,10 @@
-package com.example.schoolday.student;
+package com.example.schoolday.student.feespackage;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 

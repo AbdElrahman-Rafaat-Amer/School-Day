@@ -1,4 +1,4 @@
-package com.example.schoolday.student;
+package com.example.schoolday.student.notepackage;
 
 import android.content.Context;
 import android.content.Intent;

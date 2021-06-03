@@ -1,6 +1,6 @@
 package com.example.schoolday;
 
-import com.example.schoolday.student.NoteInterface;
+import com.example.schoolday.student.notepackage.NoteInterface;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 

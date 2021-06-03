@@ -1,4 +1,4 @@
-package com.example.schoolday.student;
+package com.example.schoolday.student.feespackage;
 
 public class Fees {
     int id;
