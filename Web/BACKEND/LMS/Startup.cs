@@ -2,10 +2,14 @@ using ELearningAPI.Middleware;
 using LMS.Helpers;
 using LMS.Models;
 using LMS.Models.AccountModel;
+using LMS.Models.ClassModel;
 using LMS.Models.FeesModel;
 using LMS.Models.FolderModel;
 using LMS.Models.NoteBordModel;
+using LMS.Models.SectionModel;
 using LMS.Models.StudentModel;
+using LMS.Models.SubjectModel;
+using LMS.Models.YearModel;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -56,6 +60,11 @@ namespace LMS
             services.AddScoped<IStudentRepasitory<Student>, PerformStudent>();
             services.AddScoped<IFolderRepasitory<Folder>, PerformFolder>();
             services.AddScoped<IFeesRepasitory<Fees>,PerformFees>();
+            services.AddScoped<ISubjectRepasitory<Subject>, PerformSubject>();
+            services.AddScoped<IYearRepasitory<Year>, PerformYear>();
+            services.AddScoped<IClassRsepasitory<Class>, PerformClass>();
+            services.AddScoped<ISectionRepasitory<Section>, PerformSection>();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "LMS", Version = "v1" });

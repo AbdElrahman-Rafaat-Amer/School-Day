@@ -13,14 +13,14 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity android:name=".WelcomeActivity"></activity>
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".student.MainActivity" />
         <activity android:name=".Signup2Activity" />
         <activity android:name=".student.NotesEditActivity" />
         <activity android:name=".SignupActivity" />
         <activity android:name=".student.OnlineFriendsActivity" />
         <activity android:name=".student.EditActivity" />
         <activity
-            android:name=".student.MainActivity"
+            android:name=".LoginActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

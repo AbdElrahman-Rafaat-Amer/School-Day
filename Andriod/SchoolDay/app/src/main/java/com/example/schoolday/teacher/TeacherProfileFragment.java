@@ -30,7 +30,7 @@ public class TeacherProfileFragment extends Fragment {
         tabLayout = view.findViewById(R.id.tabslayoutteacher);
         viewPager = view.findViewById(R.id.viewpagerTeacher);
 
-        pageAdapter = new PageAdapterProfTeachear(getFragmentManager());
+        pageAdapter = new PageAdapterProfTeachear(getChildFragmentManager());
         viewPager.setAdapter(pageAdapter);
 
         tabLayout.addTab(tabLayout.newTab().setText("Assignment"));

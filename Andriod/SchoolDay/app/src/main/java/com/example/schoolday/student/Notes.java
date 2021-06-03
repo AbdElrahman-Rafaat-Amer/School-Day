@@ -1,17 +1,22 @@
 package com.example.schoolday.student;
 
-import java.util.Date;
-
 public class Notes {
-    private String title, text;//, dateAndTime;
+    private String title, text, date;
     private int id;
-    private Date dateAndTime;
 
-    public Notes(String title, String text, int id, Date dateAndTime) {
+    public Notes() {
         this.title = title;
         this.text = text;
         this.id = id;
-        this.dateAndTime = dateAndTime;
+        this.date = date;
+    }
+
+    public Notes(String title, String text, int id, String date) {
+
+        this.title = title;
+        this.text = text;
+        this.id = id;
+        this.date = date;
     }
 
     public Notes(String title, String text, int id) {
@@ -23,6 +28,12 @@ public class Notes {
     public Notes(String title, String text) {
         this.title = title;
         this.text = text;
+    }
+
+    public Notes(String title, String text, String date) {
+        this.title = title;
+        this.text = text;
+        this.date = date;
     }
 
     public String getTitle() {
@@ -41,12 +52,12 @@ public class Notes {
         this.text = text;
     }
 
-    public Date getDateAndTime() {
-        return dateAndTime;
+    public String getDate() {
+        return date;
     }
 
-    public void setDateAndTime(Date dateAndTime) {
-        this.dateAndTime = dateAndTime;
+    public void setDate(String date) {
+        this.date = date;
     }
 
     public int getId() {

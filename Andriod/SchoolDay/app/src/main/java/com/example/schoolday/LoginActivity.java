@@ -3,14 +3,22 @@ package com.example.schoolday;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.schoolday.student.NotesEditActivity;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -95,6 +103,36 @@ public class LoginActivity extends AppCompatActivity {
                     AlertDialog dialog = builder.create();
                     dialog.show();
                 }
+                    login();
+
+
+            }
+        });
+    }
+    public void login(){
+        LoginRequest loginRequest = new LoginRequest();
+        loginRequest.setEmail(email.getText().toString());
+        loginRequest.setPassword(password.getText().toString());
+
+        Call<LoginResponse> loginResponseCall = APIClient.getLoginService().userlogin(loginRequest);
+        loginResponseCall.enqueue(new Callback<LoginResponse>() {
+            @Override
+            public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
+                if (response.isSuccessful()) {
+                    Log.e("success", response.toString());
+                    Toast.makeText(LoginActivity.this, "Successful", Toast.LENGTH_SHORT).show();
+                    finish();
+                } else {
+                    Log.e("failed", response.toString());
+                    Toast.makeText(LoginActivity.this, "Failed", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<LoginResponse> call, Throwable t) {
+                Log.e("this onFailure", t.toString());
+                Toast.makeText(LoginActivity.this, "onFailure", Toast.LENGTH_SHORT).show();
+                finish();
             }
         });
     }

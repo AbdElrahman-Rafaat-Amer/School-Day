@@ -19,6 +19,21 @@ namespace LMS.Migrations
                 .HasAnnotation("ProductVersion", "5.0.4")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("AccountGroup", b =>
+                {
+                    b.Property<int>("GroupsId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("membersId")
+                        .HasColumnType("int");
+
+                    b.HasKey("GroupsId", "membersId");
+
+                    b.HasIndex("membersId");
+
+                    b.ToTable("AccountGroup");
+                });
+
             modelBuilder.Entity("BusDriver", b =>
                 {
                     b.Property<int>("BusesId")
@@ -128,6 +143,9 @@ namespace LMS.Migrations
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<int?>("StudentAccountId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Text")
                         .HasColumnType("nvarchar(max)");
 
@@ -137,6 +155,8 @@ namespace LMS.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("AccountId");
+
+                    b.HasIndex("StudentAccountId");
 
                     b.ToTable("Activities");
                 });
@@ -223,9 +243,14 @@ namespace LMS.Migrations
                     b.Property<string>("Status")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("StudentAccountId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("AccountId");
+
+                    b.HasIndex("StudentAccountId");
 
                     b.ToTable("Attendances");
                 });
@@ -352,11 +377,16 @@ namespace LMS.Migrations
                     b.Property<string>("Status")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("StudentAccountId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("AccountId");
 
                     b.HasIndex("ParentAccountId");
+
+                    b.HasIndex("StudentAccountId");
 
                     b.ToTable("Fees");
                 });
@@ -423,6 +453,9 @@ namespace LMS.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
+                    b.Property<int?>("StudentAccountId")
+                        .HasColumnType("int");
+
                     b.Property<int?>("TeacherAccountId")
                         .HasColumnType("int");
 
@@ -430,6 +463,8 @@ namespace LMS.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("StudentAccountId");
 
                     b.HasIndex("TeacherAccountId");
 
@@ -567,6 +602,9 @@ namespace LMS.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
+                    b.Property<int?>("StudentAccountId")
+                        .HasColumnType("int");
+
                     b.Property<int?>("SubjectId")
                         .HasColumnType("int");
 
@@ -582,6 +620,8 @@ namespace LMS.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("AccountId");
+
+                    b.HasIndex("StudentAccountId");
 
                     b.HasIndex("SubjectId");
 
@@ -671,8 +711,14 @@ namespace LMS.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
+                    b.Property<int?>("GroupId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Like")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("StudentAccountId")
+                        .HasColumnType("int");
 
                     b.Property<int?>("TeacherAccountId")
                         .HasColumnType("int");
@@ -683,6 +729,10 @@ namespace LMS.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("AccountId");
+
+                    b.HasIndex("GroupId");
+
+                    b.HasIndex("StudentAccountId");
 
                     b.HasIndex("TeacherAccountId");
 
@@ -957,12 +1007,17 @@ namespace LMS.Migrations
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<int?>("StudentAccountId")
+                        .HasColumnType("int");
+
                     b.Property<int?>("TeacherAccountId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("AccountId");
+
+                    b.HasIndex("StudentAccountId");
 
                     b.HasIndex("TeacherAccountId");
 
@@ -982,6 +1037,21 @@ namespace LMS.Migrations
                     b.HasIndex("YearsId");
 
                     b.ToTable("TeacherYear");
+                });
+
+            modelBuilder.Entity("AccountGroup", b =>
+                {
+                    b.HasOne("LMS.Models.GroupModel.Group", null)
+                        .WithMany()
+                        .HasForeignKey("GroupsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("LMS.Models.AccountModel.Account", null)
+                        .WithMany()
+                        .HasForeignKey("membersId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("BusDriver", b =>
@@ -1053,6 +1123,10 @@ namespace LMS.Migrations
                         .WithMany()
                         .HasForeignKey("AccountId");
 
+                    b.HasOne("LMS.Models.StudentModel.Student", null)
+                        .WithMany("Activities")
+                        .HasForeignKey("StudentAccountId");
+
                     b.Navigation("Account");
                 });
 
@@ -1079,6 +1153,10 @@ namespace LMS.Migrations
                     b.HasOne("LMS.Models.AccountModel.Account", "Account")
                         .WithMany()
                         .HasForeignKey("AccountId");
+
+                    b.HasOne("LMS.Models.StudentModel.Student", null)
+                        .WithMany("Attendances")
+                        .HasForeignKey("StudentAccountId");
 
                     b.Navigation("Account");
                 });
@@ -1126,6 +1204,10 @@ namespace LMS.Migrations
                         .WithMany("Fees")
                         .HasForeignKey("ParentAccountId");
 
+                    b.HasOne("LMS.Models.StudentModel.Student", null)
+                        .WithMany("Fees")
+                        .HasForeignKey("StudentAccountId");
+
                     b.Navigation("Account");
                 });
 
@@ -1149,6 +1231,10 @@ namespace LMS.Migrations
 
             modelBuilder.Entity("LMS.Models.GroupModel.Group", b =>
                 {
+                    b.HasOne("LMS.Models.StudentModel.Student", null)
+                        .WithMany("Groups")
+                        .HasForeignKey("StudentAccountId");
+
                     b.HasOne("LMS.Models.TeacherModel.Teacher", null)
                         .WithMany("Groups")
                         .HasForeignKey("TeacherAccountId");
@@ -1197,6 +1283,10 @@ namespace LMS.Migrations
                         .WithMany()
                         .HasForeignKey("AccountId");
 
+                    b.HasOne("LMS.Models.StudentModel.Student", null)
+                        .WithMany("NoteBoards")
+                        .HasForeignKey("StudentAccountId");
+
                     b.HasOne("LMS.Models.SubjectModel.Subject", "Subject")
                         .WithMany()
                         .HasForeignKey("SubjectId");
@@ -1244,6 +1334,14 @@ namespace LMS.Migrations
                     b.HasOne("LMS.Models.AccountModel.Account", "Account")
                         .WithMany()
                         .HasForeignKey("AccountId");
+
+                    b.HasOne("LMS.Models.GroupModel.Group", null)
+                        .WithMany("posts")
+                        .HasForeignKey("GroupId");
+
+                    b.HasOne("LMS.Models.StudentModel.Student", null)
+                        .WithMany("Posts")
+                        .HasForeignKey("StudentAccountId");
 
                     b.HasOne("LMS.Models.TeacherModel.Teacher", null)
                         .WithMany("Posts")
@@ -1353,6 +1451,10 @@ namespace LMS.Migrations
                         .WithMany()
                         .HasForeignKey("AccountId");
 
+                    b.HasOne("LMS.Models.StudentModel.Student", null)
+                        .WithMany("Zooms")
+                        .HasForeignKey("StudentAccountId");
+
                     b.HasOne("LMS.Models.TeacherModel.Teacher", null)
                         .WithMany("Zooms")
                         .HasForeignKey("TeacherAccountId");
@@ -1403,6 +1505,11 @@ namespace LMS.Migrations
                     b.Navigation("Files");
                 });
 
+            modelBuilder.Entity("LMS.Models.GroupModel.Group", b =>
+                {
+                    b.Navigation("posts");
+                });
+
             modelBuilder.Entity("LMS.Models.LibraryModel.BookModel.Book", b =>
                 {
                     b.Navigation("Borrows");
@@ -1434,6 +1541,23 @@ namespace LMS.Migrations
             modelBuilder.Entity("LMS.Models.QuestionModel.Question", b =>
                 {
                     b.Navigation("Answers");
+                });
+
+            modelBuilder.Entity("LMS.Models.StudentModel.Student", b =>
+                {
+                    b.Navigation("Activities");
+
+                    b.Navigation("Attendances");
+
+                    b.Navigation("Fees");
+
+                    b.Navigation("Groups");
+
+                    b.Navigation("NoteBoards");
+
+                    b.Navigation("Posts");
+
+                    b.Navigation("Zooms");
                 });
 
             modelBuilder.Entity("LMS.Models.TaskModel.Task", b =>

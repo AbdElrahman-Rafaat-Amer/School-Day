@@ -120,38 +120,5 @@ public class SignupActivity extends AppCompatActivity {
         });
 
     }
-    public UserRequest createRequest() {
-        UserRequest userRequest = new UserRequest();
-        userRequest.setName(name.getText().toString());
-        userRequest.setEmail(email.getText().toString());
-        userRequest.setPassword(password.getText().toString());
-        userRequest.setConfirmPassword(confirmPassword.getText().toString());
-        if (isParent==true){
-            userRequest.setGender(radioButtonParent);
-        }else if (isStudent==true){
-            userRequest.setGender(radioButtonStudent);
-        }else if (isTeacher==true){
-            userRequest.setGender(radioButtonTeacher);
-        }
 
-        return userRequest;
-    }
-    public void saveUser(UserRequest userRequest){
-        Call<UserResponse> userResponseCall = APIClient.getUserService().saveUser(userRequest);
-        userResponseCall.enqueue(new Callback<UserResponse>() {
-            @Override
-            public void onResponse(Call<UserResponse> call, Response<UserResponse> response) {
-                if (response.isSuccessful()){
-                    Toast.makeText(SignupActivity.this, "Successful", Toast.LENGTH_SHORT).show();
-                }else {
-                    Toast.makeText(SignupActivity.this, "Failed", Toast.LENGTH_SHORT).show();
-                }
-            }
-
-            @Override
-            public void onFailure(Call<UserResponse> call, Throwable t) {
-
-            }
-        });
-    }
 }

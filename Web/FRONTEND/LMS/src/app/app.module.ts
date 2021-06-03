@@ -1,4 +1,3 @@
-//import { ChatModule } from './chat/chat.module';
 import { NgModule, APP_INITIALIZER } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -11,7 +10,8 @@ import { AccountService } from './_services';
 import { AppComponent } from './app.component';
 import { AlertComponent } from './_components';
 import { HomeComponent } from './home';
-//import { ChatRoutingModule } from './chat/chat-routing.module';
+import { StudentComponent } from './student/student.component';
+import { TeacherComponent } from './teacher/teacher.component';
 
 @NgModule({
     imports: [
@@ -19,13 +19,14 @@ import { HomeComponent } from './home';
         ReactiveFormsModule,
         HttpClientModule,
         AppRoutingModule,
-        //ChatRoutingModule,
         FormsModule
     ],
     declarations: [
         AppComponent,
         AlertComponent,
-        HomeComponent
+        HomeComponent,
+        StudentComponent,
+        TeacherComponent
     ],
     providers: [
         { provide: APP_INITIALIZER, useFactory: appInitializer, multi: true, deps: [AccountService] },
