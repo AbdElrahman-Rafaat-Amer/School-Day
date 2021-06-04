@@ -11,7 +11,5 @@ namespace LMS.Models.ClassModel
         public string Name { get; set; }
         public YearModel.Year Year { get; set; }
         public ICollection<SectionModel.Section> Sections { get; set; }
-
-
     }
 }

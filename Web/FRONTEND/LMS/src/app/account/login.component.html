@@ -1,0 +1,41 @@
+﻿<div class="Login">
+    <div class="Left-Login">
+        <img src="assets/img/login_logo.jpg">
+    </div >
+    <div class="Right-Login">
+        <h3 class="text-center mt-3">Login</h3>
+        <div class="card-body mt-5">
+            <form class="row" [formGroup]="form" (ngSubmit)="onSubmit()">
+                <div class="row col-sm-12 m-0">
+                    <div class="form-group col-sm-12">
+                        <label>Email</label>
+                        <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                            <div *ngIf="f.email.errors.required">Email is required</div>
+                            <div *ngIf="f.email.errors.email">Email is invalid</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <label>Password</label>
+                        <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                            <div *ngIf="f.password.errors.required">Password is required</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row col-sm-12 m-0 mt-5 Login-button">
+                    <div class="form-group col-sm-6">
+                        <button [disabled]="loading" class="btn btn-primary">
+                            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                            Login
+                        </button>
+                        <a routerLink="../register" class="btn btn-link">Register</a>
+                    </div>
+                    <div class="form-group col-sm-6 text-right">
+                        <a routerLink="../forgot-password" class="btn btn-link pr-0">Forgot Password?</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

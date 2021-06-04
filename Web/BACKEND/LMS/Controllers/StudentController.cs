@@ -12,17 +12,38 @@ namespace LMS.Controllers
     [ApiController]
     public class StudentController : ControllerBase
     {
-        private readonly IStudentRepasitory<Student> student;
+        private readonly IStudentRepasitory<Student> _student;
 
         public StudentController(IStudentRepasitory<Student> student)
         {
-            this.student = student;
+            _student = student;
         }
-        [HttpGet]
+        [HttpGet("liststudent")]
         public ActionResult<List<Student>> ListStudent()
         {
-            var s = student.Students();
+            var s = _student.Students();
             return Ok(s);
+        }
+        [HttpPost("creatstudent")]
+        public ActionResult CreateStudent(Student student)
+        {
+            if (student!=null)
+            {
+                _student.CreateStudent(student);
+                return Ok("Created Successufly");
+            }
+            return BadRequest();
+        }
+        [HttpDelete("deleteStudent")]
+        public ActionResult DeleteStudent(int id)
+        {
+            var s = _student.Student(id);
+            if (s!=null)
+            {
+                _student.DeleteStudent(id);
+                return Ok();
+            }
+            return BadRequest();
         }
     }
 }

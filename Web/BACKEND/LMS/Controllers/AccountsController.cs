@@ -69,7 +69,7 @@ namespace LMS.Controllers
 
 
 
-        [HttpGet("verify-email")]
+        [HttpPost("verify-email")]
         public IActionResult VerifyEmail(string token)/*VerifyEmailRequest model*/
         {
             _accountService.VerifyEmail(token);
@@ -83,10 +83,10 @@ namespace LMS.Controllers
             return Ok(new { message = "Please check your email for password reset instructions" });
         }
 
-        [HttpGet("validate-reset-token")]
-        public IActionResult ValidateResetToken(string token)
+        [HttpPost("validate-reset-token")]
+        public IActionResult ValidateResetToken(ValidateResetTokenRequest model)
         {
-            _accountService.ValidateResetToken(token);
+            _accountService.ValidateResetToken(model);
             return Ok(new { message = "Token is valid" });
         }
 

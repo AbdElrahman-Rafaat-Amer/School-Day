@@ -1,0 +1,39 @@
+<div class="container-fluid assginment">
+    <div class="form-group row">
+        <label for="search" class="col-sm-2 col-form-label" style="text-align: right;">search</label>
+        <div class="col-sm-6">
+            <input type="text" [(ngModel)]="searchValue" class="form-control" id="search">
+        </div>
+    </div>
+    <!-- Table start -->
+
+    <table class="table">
+        <thead class="thead">
+            <tr>
+                <th (click)="sort('content')" scope="col">Content Title &nbsp;<i class="fa fa-sort"></i></th>
+                <th (click)="sort('date')" scope="col">Date &nbsp;<i class="fa fa-sort"></i></th>
+                <th scope="col">AvailableFor</th>
+                <th scope="col">Description</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr *ngFor="let a of Assginment  | slice: (page-1) * pageSize : page * pageSize |searchfilter:searchValue |orderBy:key:reverse   ">
+                <td scope="col">{{a.ContentTitle}} </td>
+                <td scope="col">{{a.Date}}</td>
+                <td scope="col">{{a.AvailableFor}}</td>
+                <td scope="col">{{a.Description}}</td>
+                <td scope="col" class="action">
+                    <button mat-button [matMenuTriggerFor]="beforeMenu">Select <i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+                    <mat-menu #beforeMenu="matMenu" xPosition="before">
+                        <button mat-menu-item>View</button>
+                        <button mat-menu-item>Download <i class="fa fa-download" aria-hidden="true"></i></button>
+                    </mat-menu>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="Assginment.length"></ngb-pagination>
+
+</div>

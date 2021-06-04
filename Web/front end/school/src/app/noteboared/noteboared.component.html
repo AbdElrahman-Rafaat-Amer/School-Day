@@ -1,0 +1,74 @@
+<div class="container-fluid bg-light ">
+    <div class="row">
+        <div class="col-3 creat-new">
+            <button class="btn bg-primary" (click)="createDivs()">+ New</button>
+            <div class="note" *ngFor="let div of div" id="div{{div}}">
+                <h4>Untitled</h4>
+                <p>{{date | date :'short'}}</p>
+            </div>
+        </div>
+
+        <div class="col-9 bg-light pt-3">
+            <div class="row  ">
+                <div class="col-sm-3 col-lg-2 wmd-left ">
+                    <button class="wmd-btn " onclick="document.execCommand('bold',false,null);">
+                        <i class="fa fa-bold" aria-hidden="true"></i>
+                    </button>
+                    <button class="wmd-btn " onclick="document.execCommand('italic',false,null);">
+                        <i class="fa fa-italic" aria-hidden="true"></i>
+                    </button>
+                    <button class="wmd-btn " onclick="document.execCommand('underline',false,null);">
+                        <i class="fa fa-underline" aria-hidden="true"></i>
+                    </button>
+                    <button class="wmd-btn " onclick="document.execCommand('foreColor',false,null);">
+                        <i class="fa fa-underline" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="col-sm-3 col-lg-2 wmd-center">
+                    <button class="wmd-btn" onclick="document.execCommand('justifyFull');">
+                        <i class="fa fa-align-justify" aria-hidden="true"></i>
+                    </button>
+                    <button class="wmd-btn " onclick="document.execCommand('justifyLeft');">
+                        <i class="fa fa-align-left" aria-hidden="true"></i>
+                    </button>
+                    <button class="wmd-btn " onclick="document.execCommand('justifyCenter');">
+                        <i class="fa fa-align-center" aria-hidden="true"></i>
+                    </button>
+                    <button class="wmd-btn " onclick="document.execCommand('justifyRight');">
+                        <i class="fa fa-align-right" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="col-sm-3 col-lg-2 wmd-right">
+                    <button class="wmd-btn " onclick="document.execCommand('insertUnorderedList');">
+                        <i class="fa fa-list-ul" aria-hidden="true"></i>
+                    </button>
+                    <button class="wmd-btn " onclick="document.execCommand('underline',false,null);">
+                        <i class="fa fa-list-ul" aria-hidden="true"></i>
+                    </button>
+                    <button class="wmd-btn " onclick="document.execCommand('');">
+                        <i class="fa fa-code" aria-hidden="true"></i>
+                    </button>
+                    <button class="wmd-btn " onclick="document.execCommand('insertImage');">
+                        <i class="fa fa-image" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="col ">
+                    <button class="btn " style="float:right;">
+                    share
+                </button>
+                </div>
+
+            </div>
+            <div class="row mt-3">
+                <h1 class="header" contenteditable="true"> </h1>
+
+                <div class="note-area" contenteditable="true">
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>

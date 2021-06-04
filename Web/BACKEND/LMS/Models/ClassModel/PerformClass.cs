@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace LMS.Models.ClassModel
 {
-    public class PerformClass : IClassRepasitory<Class>
+    public class PerformClass : IClassRsepasitory<Class>
     {
         private readonly AppDbContext context;
 
@@ -19,32 +20,32 @@ namespace LMS.Models.ClassModel
             return t;
         }
 
-        public List<Class> Classes()
+        public async Task<List<Class>> Classes()
         {
-            var t = context.Classes.ToList();
+            var t = await context.Classes.ToListAsync();
             return t;
         }
 
-        public void CreateClass(Class Class)
+        public async void CreateClass(Class Class)
         {
             context.Classes.Add(Class);
-            context.SaveChanges();
+            await context.SaveChangesAsync();
         }
 
-        public void DeleteClass(int Id)
+        public async void DeleteClass(int Id)
         {
             var t = context.Classes.Find(Id);
             if (t != null)
             {
                 context.Classes.Remove(t);
-                context.SaveChanges();
+                await context.SaveChangesAsync();
             }
         }
 
-        public void UpdateClass(Class Class)
+        public async void UpdateClass(Class Class)
         {
             context.Classes.Update(Class);
-            context.SaveChanges();
+            await context.SaveChangesAsync();
         }
     }
 }

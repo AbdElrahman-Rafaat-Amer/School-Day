@@ -23,6 +23,10 @@ namespace LMS.Models.AccountModel
     }
     public class Account
     {
+        public Account()
+        {
+            this.Groups = new HashSet<GroupModel.Group>();
+        }
         [Key]
         public int Id { get; set; }
         public string Fname { get; set; }
@@ -53,6 +57,7 @@ namespace LMS.Models.AccountModel
         public Parent Parent { get; set; }
         public Driver Driver { get; set; }
         public Admin Admin { get; set; }
+        public ICollection<GroupModel.Group> Groups { get; set; }
 
         public bool OwnsToken(string token)
         {

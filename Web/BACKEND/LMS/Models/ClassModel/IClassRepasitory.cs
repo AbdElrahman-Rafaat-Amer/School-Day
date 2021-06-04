@@ -5,12 +5,12 @@ using System.Threading.Tasks;
 
 namespace LMS.Models.ClassModel
 {
-  public interface IClassRepasitory<T>
+  public interface IClassRsepasitory<T>
     {
         void CreateClass(T Class);
         void UpdateClass(T Class);
         void DeleteClass(int Id);
         Task<Class> Class(int Id);
-        List<Class> Classes();
+        Task<List<Class>> Classes();
     }
 }

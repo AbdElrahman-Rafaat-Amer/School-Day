@@ -1,0 +1,83 @@
+.feeds {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.create-post {
+    border: 1px solid #ddd;
+    border-radius: 5%;
+    margin: 10px 0;
+    height: fit-content;
+    top: 50px; // <++ sticky-top
+    h1 {
+        margin: auto;
+        text-align: center;
+        color: #B92F40;
+    }
+    textarea {
+        margin: 50px auto;
+        border-radius: 20px;
+        color: #B92F40;
+        resize: none;
+        height: 125px;
+        width: 80%;
+    }
+     ::placeholder {
+        color: #B92F40;
+        padding-top: 20px;
+        text-align: center;
+        font-size: xx-large;
+    }
+    .upload {
+        display: grid;
+        grid-template-columns: 70% 30%;
+        button {
+            color: #B92F40;
+            margin: 49px -6px;
+        }
+        .img-show {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 50%;
+            height: 130px;
+            margin: 0px 47px;
+        }
+        .img-show img {
+            height: 100%;
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+    .choose-color {
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        button {
+            color: white;
+            margin: 10px;
+        }
+        .btn-1 {
+            background-color: #BD4F87;
+        }
+        .btn-2 {
+            background-color: #D1902A;
+        }
+        .btn-3 {
+            background-color: #A1C728;
+        }
+        .btn-4 {
+            background-color: #5854C7;
+        }
+        .btn-5 {
+            background-color: #B92F40;
+        }
+    }
+    .btn-post {
+        background-color: #B92F40;
+        color: #fff;
+        width: 80%;
+        margin: 30px 50px;
+        border-radius: 10px;
+        font-size: x-large;
+    }
+}

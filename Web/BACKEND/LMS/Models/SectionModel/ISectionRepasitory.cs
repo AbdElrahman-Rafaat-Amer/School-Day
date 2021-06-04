@@ -11,6 +11,6 @@ namespace LMS.Models.SectionModel
         void UpdateSection(T section);
         void DeleteSection(int Id);
         Task<Section> Section(int Id);
-        List<Section> Sections();
+        Task<List<Section>> Sections();
     }
 }

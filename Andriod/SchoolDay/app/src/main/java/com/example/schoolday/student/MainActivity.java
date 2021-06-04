@@ -1,8 +1,5 @@
 package com.example.schoolday.student;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -11,24 +8,26 @@ import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.example.schoolday.R;
 
 
 public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
-    MeowBottomNavigation meo;
     private final static int ID_HOME = 3;
     private final static int ID_FEEDS = 5;
     private final static int ID_MESSAGES = 2;
     private final static int ID_TIMETABLE = 1;
     private final static int ID_INFORMATION = 4;
+    MeowBottomNavigation meo;
     ImageView notificationImage, searchImage, goBackChat, editImage, optionMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
         goBackChat = findViewById(R.id.go_back_chat);
         notificationImage = findViewById(R.id.image_notification);
@@ -71,12 +70,14 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
             @Override
             public void onClickItem(MeowBottomNavigation.Model item) {
 
+
             }
         });
         meo.setOnShowListener(new MeowBottomNavigation.ShowListener() {
 
             @Override
             public void onShowItem(MeowBottomNavigation.Model item) {
+
 
                 switch (item.getId()) {
                     case ID_HOME:
@@ -125,8 +126,12 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
             @Override
             public void onReselectItem(MeowBottomNavigation.Model item) {
                 //this method for solving problem of double click on icon
+
+
             }
         });
+
+        meo.show(ID_HOME,true);
 
     }
 

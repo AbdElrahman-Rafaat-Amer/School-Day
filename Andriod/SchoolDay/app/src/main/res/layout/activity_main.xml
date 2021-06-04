@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     tools:context=".student.MainActivity">
 
 
@@ -76,7 +75,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         app:mbn_backgroundBottomColor="#fff"
-        app:mbn_circleColor="#B92F40"
+        app:mbn_circleColor="@color/mainColor"
         app:mbn_countBackgroundColor="#000"
         app:mbn_defaultIconColor="#636363"
         app:mbn_selectedIconColor="#fff"></com.etebarian.meowbottomnavigation.MeowBottomNavigation>

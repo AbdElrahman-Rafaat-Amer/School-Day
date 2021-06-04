@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace LMS.Models.SubjectModel
@@ -12,6 +13,7 @@ namespace LMS.Models.SubjectModel
         public DateTime DateOfUPload { get; set; }
         public string Photo { get; set; }
         public string Color { get; set; }
+        [JsonIgnore]
         public AccountModel.Account Account { get; set; }
 
     }

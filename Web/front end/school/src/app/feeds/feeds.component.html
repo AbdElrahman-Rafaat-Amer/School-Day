@@ -1,0 +1,39 @@
+<div class="container-fluid feeds">
+    <div class="row">
+        <div class=" col-md-8 ">
+            <posts></posts>
+        </div>
+
+        <div class=" col-md-4 create-post sticky-top">
+            <h1>Craete Post</h1>
+
+            <div class="form-group">
+                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Type your post here" rows="3"></textarea>
+            </div>
+
+            <div class=" upload">
+                <div class=" img-show">
+                    <img src={{url}}>
+                </div>
+                <div class="">
+                    <form>
+                        <div class="form-group">
+                            <button class="btn-ch-file" type="button" mat-raised-button (click)="fileInput.click()">
+                                Upload File
+                        </button>
+                            <input hidden #fileInput formControlName="file" id="file" type="file" class="form-control" (change)="onFileChanged($event)">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class=" choose-color ">
+                <button class="btn btn-1 ">A</button>
+                <button class="btn btn-2 ">E</button>
+                <button class="btn btn-3 ">M</button>
+                <button class="btn btn-4 ">P</button>
+                <button class="btn btn-5 ">G</button>
+            </div>
+            <button class="btn btn-post "> Post</button>
+        </div>
+    </div>
+</div>

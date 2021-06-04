@@ -1,0 +1,32 @@
+.teacher {
+    margin-top: 25px;
+}
+
+.list-group-item {
+    margin-top: 15px;
+    max-width: auto;
+    text-align: center;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: large;
+}
+
+.list-group-item.active {
+    background-color: #b92f40;
+    margin-top: 15px;
+    border-color: #53b1a2;
+}
+
+.sticky-top {
+    top: 20px;
+}
+
+mat-tab-group {
+    margin-top: 12px;
+}
+
+::ng-deep .mat-ink-bar {
+    background-color: #b92f40!important;
+}
+
+@media (max-width: 991.98px) {}
