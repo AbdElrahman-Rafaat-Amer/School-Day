@@ -1,4 +1,4 @@
-package com.example.schoolday;
+package com.example.schoolday.login;
 
 public class LoginRequest {
 

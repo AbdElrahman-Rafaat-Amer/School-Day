@@ -1,4 +1,4 @@
-package com.example.schoolday;
+package com.example.schoolday.login;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -13,6 +13,11 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.schoolday.APIClient;
+import com.example.schoolday.R;
+import com.example.schoolday.signup.SignupActivity;
+import com.example.schoolday.WelcomeActivity;
 
 import retrofit2.Call;
 import retrofit2.Callback;

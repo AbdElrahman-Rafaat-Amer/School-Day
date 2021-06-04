@@ -1,8 +1,9 @@
-package com.example.schoolday;
+package com.example.schoolday.signup;
 
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -14,9 +15,15 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.schoolday.APIClient;
+import com.example.schoolday.R;
+import com.example.schoolday.login.LoginActivity;
+import com.example.schoolday.login.LoginResponse;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import com.example.schoolday.signup.Signup2Activity;
 
 public class SignupActivity extends AppCompatActivity {
 
@@ -120,5 +127,35 @@ public class SignupActivity extends AppCompatActivity {
         });
 
     }
+        public void signup() {
+            SignupRequest signupRequest = new SignupRequest();
+            signupRequest.setFname(name.getText().toString());
+            signupRequest.setEmail(email.getText().toString());
+            signupRequest.setPassword(password.getText().toString());
+            signupRequest.setConfirmPassword(confirmPassword.getText().toString());
+            signupRequest.setRole(radioButtonParent.getText().toString());
+            Call<SignupResponse> signupResponseCall = APIClient.getSignupService().signupUser(signupRequest);
+            signupResponseCall.enqueue(new Callback<SignupResponse>() {
+                @Override
+                public void onResponse(Call<SignupResponse> call, Response<SignupResponse> response) {
+                    if (response.isSuccessful()) {
+                        Log.e("success", response.toString());
+                        Toast.makeText(SignupActivity.this, "Successful", Toast.LENGTH_SHORT).show();
+                        finish();
+                    } else {
+                        Log.e("failed", response.toString());
+                        Toast.makeText(SignupActivity.this, "Failed", Toast.LENGTH_SHORT).show();
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<SignupResponse> call, Throwable t) {
+                    Log.e("this onFailure", t.toString());
+                    Toast.makeText(SignupActivity.this, "onFailure", Toast.LENGTH_SHORT).show();
+                    finish();
+                }
+            });
+    }
+
 
 }
