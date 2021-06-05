@@ -1,13 +1,21 @@
+import { AccountService } from './../_services/account.service';
 import { Component, OnInit } from '@angular/core';
+import { account } from '@app/_models';
 
 @Component({
-  templateUrl: 'layout.component.html'
+  selector: 'app-layout',
+  templateUrl: './layout.component.html',
+  styleUrls: ['./layout.component.css']
 })
-export class LayoutComponent implements OnInit {
+export class LayoutComponent{
 
-  constructor() { }
+  account: account;
+  constructor(private accountService: AccountService) {
+    this.accountService.account.subscribe(x => this.account = x);
+  }
 
-  ngOnInit(): void {
+  logout() {
+      this.accountService.logout();
   }
 
 }

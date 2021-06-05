@@ -1,8 +1,8 @@
-import { DashboardComponent } from './../student/dashboard.component';
-import { LayoutComponent } from './../student/layout.component';
+import { DashboardComponent } from './dashboard.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { LayoutComponent } from './layout.component';
 
 
 const chatModule = () => import('./chat/chat.module').then(x=>x.ChatModule);
