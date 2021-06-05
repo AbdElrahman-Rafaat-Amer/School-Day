@@ -32,7 +32,6 @@
       "LMS/1.0.0": {
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.1",
-          "BCrypt.Net-Next": "4.0.2",
           "MailKit": "2.11.1",
           "Microsoft.EntityFrameworkCore": "5.0.4",
           "Microsoft.EntityFrameworkCore.Design": "5.0.4",
@@ -346,17 +345,6 @@
         },
         "compile": {
           "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
-        }
-      },
-      "BCrypt.Net-Next/4.0.2": {
-        "runtime": {
-          "lib/netcoreapp3.1/BCrypt.Net-Next.dll": {
-            "assemblyVersion": "4.0.2.0",
-            "fileVersion": "4.0.2.0"
-          }
-        },
-        "compile": {
-          "lib/netcoreapp3.1/BCrypt.Net-Next.dll": {}
         }
       },
       "Humanizer.Core/2.8.26": {},
@@ -3172,13 +3160,6 @@
       "sha512": "sha512-xSWoVzOipuDU4PeZcUfaZQ+xqXU8QmGv5jrdlxt3MYm9xaOmrefqcfzGQ3SQ+D+8wfBa/ZwSuL0qKOVj080inA==",
       "path": "automapper.extensions.microsoft.dependencyinjection/8.1.1",
       "hashPath": "automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512"
-    },
-    "BCrypt.Net-Next/4.0.2": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-LyNKpIpr4GraRD9+xlTviyxxbZpF6J4xJf7DvraC1mR8PSN/KonGc4rt8C/fjkD3vaEvgA7BcvsbHFCOjgczyQ==",
-      "path": "bcrypt.net-next/4.0.2",
-      "hashPath": "bcrypt.net-next.4.0.2.nupkg.sha512"
     },
     "Humanizer.Core/2.8.26": {
       "type": "package",

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Signup2Activity">
+    tools:context=".signup.Signup2Activity">
 
     <ImageView
         android:layout_width="130dp"
@@ -22,6 +22,37 @@
         android:text="@string/complete_signUp"
         android:textColor="#000"
         android:textSize="40sp"></TextView>
+    <EditText
+        android:id="@+id/signup_name2"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_input"
+        android:drawableLeft="@drawable/ic_user"
+        android:drawablePadding="10dp"
+        android:hint="@string/middleName"
+        android:inputType="textPersonName"
+        android:paddingStart="10dp"
+        android:paddingLeft="5dp"
+        android:textColorHint="#000"
+        android:textSize="20sp"></EditText>
+    <EditText
+        android:id="@+id/signup_name3"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_input"
+        android:drawableLeft="@drawable/ic_user"
+        android:drawablePadding="10dp"
+        android:hint="@string/last_name"
+        android:inputType="textPersonName"
+        android:paddingStart="10dp"
+        android:paddingLeft="5dp"
+        android:textColorHint="#000"
+        android:textSize="20sp"></EditText>
+
 
     <EditText
         android:id="@+id/first_phone_number_signup"
@@ -32,28 +63,15 @@
         android:background="@drawable/custom_input"
         android:drawableLeft="@drawable/ic_baseline_phone_24"
         android:drawablePadding="10dp"
-        android:hint="@string/first_phone_number"
+        android:hint="@string/phone_number"
         android:inputType="phone"
         android:paddingStart="10dp"
         android:paddingLeft="5dp"
         android:textColorHint="#000"
         android:textSize="20sp"></EditText>
 
-    <EditText
-        android:id="@+id/second_phone_number_signup"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/custom_input"
-        android:drawableLeft="@drawable/ic_baseline_phone_24"
-        android:drawablePadding="10dp"
-        android:hint="@string/second_phone_number"
-        android:inputType="phone"
-        android:paddingStart="10dp"
-        android:paddingLeft="5dp"
-        android:textColorHint="#000"
-        android:textSize="20sp"></EditText>
+
+
 
     <EditText
         android:id="@+id/national_identity_number_signUp"
@@ -72,15 +90,15 @@
         android:textSize="20sp"></EditText>
 
     <EditText
-        android:id="@+id/address_signup"
+        android:id="@+id/licence_id"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
         android:background="@drawable/custom_input"
-        android:drawableLeft="@drawable/ic_baseline_directions_24"
+        android:drawableLeft="@drawable/ic_baseline_call_to_action_24"
         android:drawablePadding="10dp"
-        android:hint="@string/address"
+        android:hint="@string/licence_id"
         android:inputType="textPostalAddress"
         android:paddingStart="10dp"
         android:paddingLeft="5dp"
@@ -90,7 +108,7 @@
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal">
 
@@ -125,7 +143,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/custom_button_signup"
         android:text="@string/signup"

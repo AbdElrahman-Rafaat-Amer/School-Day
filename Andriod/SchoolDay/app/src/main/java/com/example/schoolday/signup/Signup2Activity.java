@@ -1,4 +1,4 @@
-package com.example.schoolday;
+package com.example.schoolday.signup;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -12,17 +12,24 @@ import android.widget.RadioButton;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.schoolday.R;
+import com.example.schoolday.WelcomeActivity;
+
 public class Signup2Activity extends AppCompatActivity {
 
-    private EditText firstPhoneNumber, secondPhoneNumber, nationalID, address;
+    private EditText phoneNumber;
+    private EditText middleName;
+    private EditText nationalID;
+    private EditText lastName;
+    private EditText licenceId;
     private RadioButton radioButtonMale, radioButtonFemale;
     private Button signUp;
 
-    private String firstNumberValue, secondNumberValue, nationalIDValue, addressValue;
+    private String firstNumberValue, middleNameValue, nationalIDValue, lastNameValue,licenceIdValue;
     private boolean isMale, isFemale, isContinue;
 
-    private static boolean check(String firstNumber, String secondNumber, String nationalID, String address, boolean isMale, boolean isFemale) {
-        if (firstNumber.isEmpty() || secondNumber.isEmpty() || nationalID.isEmpty() || address.isEmpty())
+    private static boolean check(String middleName, String lastName, String nationalID, String phoneNumber,String licenceId, boolean isMale, boolean isFemale) {
+        if (middleName.isEmpty() || lastName.isEmpty() || nationalID.isEmpty() || phoneNumber.isEmpty() || licenceId.isEmpty())
             return false;
         else if (isMale == false && isFemale == false)
             return false;
@@ -36,10 +43,11 @@ public class Signup2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup2);
 
-        firstPhoneNumber = findViewById(R.id.first_phone_number_signup);
-        secondPhoneNumber = findViewById(R.id.second_phone_number_signup);
+        phoneNumber = findViewById(R.id.first_phone_number_signup);
+        middleName = findViewById(R.id.signup_name2);
         nationalID = findViewById(R.id.national_identity_number_signUp);
-        address = findViewById(R.id.address_signup);
+        lastName = findViewById(R.id.signup_name3);
+        licenceId = findViewById(R.id.licence_id);
         signUp = findViewById(R.id.signup_button);
         radioButtonMale = findViewById(R.id.radio_male);
         radioButtonFemale = findViewById(R.id.radio_female);
@@ -47,21 +55,21 @@ public class Signup2Activity extends AppCompatActivity {
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                firstNumberValue = firstPhoneNumber.getText().toString();
-                secondNumberValue = secondPhoneNumber.getText().toString();
+                firstNumberValue = phoneNumber.getText().toString();
+                middleNameValue = middleName.getText().toString();
                 nationalIDValue = nationalID.getText().toString();
-                addressValue = address.getText().toString();
+                lastNameValue = lastName.getText().toString();
+                licenceIdValue = licenceId.getText().toString();
                 isMale = radioButtonMale.isChecked();
                 isFemale = radioButtonFemale.isChecked();
 
                 //check if the fields empty or not
-                isContinue = check(firstNumberValue, secondNumberValue, nationalIDValue, addressValue, isFemale, isMale);
+                isContinue = check(firstNumberValue, middleNameValue, nationalIDValue, lastNameValue , licenceIdValue, isFemale, isMale);
 
                 if (isContinue == true) {
 
                     //check if the phone is right or not
-                    if (Patterns.PHONE.matcher(firstNumberValue).matches() && Patterns.PHONE.matcher(secondNumberValue).matches()
-                            && firstNumberValue.length() == 11 && secondNumberValue.length() == 11) {
+                    if (Patterns.PHONE.matcher(firstNumberValue).matches() && firstNumberValue.length() == 11 ) {
 
                         //check if the nationalID is right or not
                         if (nationalIDValue.length() == 18)

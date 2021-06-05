@@ -9,20 +9,13 @@ import { FormGroup, FormControl, Validators} from '@angular/forms';
   styleUrls: ['./feeds.component.scss']
 })
 export class FeedsComponent {
-  myForm = new FormGroup({
-  name: new FormControl('', [Validators.required, Validators.minLength(3)]),
-  file: new FormControl('', [Validators.required]),
-  fileSource: new FormControl('', [Validators.required])
-});
-message!: string;
+
+  message!: string;
   imagePath: any;
   url!: string | ArrayBuffer | null;
 
 constructor(private http: HttpClient) { }
 
-get f(){
-  return this.myForm.controls;
-}
 
 
 onFileChanged(event:any) {
@@ -46,14 +39,5 @@ onFileChanged(event:any) {
 }
 
 
-submit(){
-  const formData = new FormData();
-      formData.append('file', this.myForm.get('fileSource')?.value);
 
-  this.http.post(' ', formData)
-    .subscribe(res => {
-      console.log(res);
-      alert('Uploaded Successfully.');
-    })
-  }
 }

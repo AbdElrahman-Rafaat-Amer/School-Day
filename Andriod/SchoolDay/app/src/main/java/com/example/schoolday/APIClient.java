@@ -1,6 +1,8 @@
 package com.example.schoolday;
 
-import com.example.schoolday.student.NoteInterface;
+import com.example.schoolday.login.LoginInterface;
+import com.example.schoolday.signup.SignupInterface;
+import com.example.schoolday.student.notepackage.NoteInterface;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -24,7 +26,11 @@ public class APIClient {
         LoginInterface loginInterface = getRetrofit().create(LoginInterface.class);
         return loginInterface;
     }
+    public static SignupInterface getSignupService() {
 
+        SignupInterface signupInterface= getRetrofit().create(SignupInterface.class);
+        return signupInterface;
+    }
 
     public static NoteInterface getNoteService() {
         NoteInterface noteInterface = getRetrofit().create(NoteInterface.class);

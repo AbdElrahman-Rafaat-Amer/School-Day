@@ -2,14 +2,12 @@
     <div class="row">
         <div class="col-3 creat-new">
             <button class="btn bg-primary" (click)="createDivs()">+ New</button>
-
             <div class="note" *ngFor="let div of div" id="div{{div}}">
                 <h4>Untitled</h4>
                 <p>{{date | date :'short'}}</p>
             </div>
-
-
         </div>
+
         <div class="col-9 bg-light pt-3">
             <div class="row  ">
                 <div class="col-sm-3 col-lg-2 wmd-left ">
@@ -30,8 +28,6 @@
                     <button class="wmd-btn" onclick="document.execCommand('justifyFull');">
                         <i class="fa fa-align-justify" aria-hidden="true"></i>
                     </button>
-
-
                     <button class="wmd-btn " onclick="document.execCommand('justifyLeft');">
                         <i class="fa fa-align-left" aria-hidden="true"></i>
                     </button>

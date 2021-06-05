@@ -19,8 +19,10 @@ namespace LMS.Models.AccountModel
 
         IEnumerable<AccountResponse> GetAll();
         AccountResponse GetById(int id);
+        List<Account> GetListByFilter(Func<Account, bool> lamda);
         AccountResponse Create(CreateRequest model);
         AccountResponse Update(int id, UpdateRequest model);
         void Delete(int id);
+
     }
 }
