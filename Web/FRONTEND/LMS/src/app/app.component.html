@@ -1,5 +1,6 @@
 <div class="app-container" [ngClass]="{ 'bg-light': account }">
   <!-- main nav -->
+  <!--
   <nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="account">
       <div class="navbar-nav">
           <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-item nav-link">Home</a>
@@ -9,7 +10,7 @@
           <a [routerLink]="['/']" routerLinkActive="router-link-active" (click)="logout()" class="nav-item nav-link">Logout</a>
       </div>
   </nav>
-
+-->
   <!-- subnav router outlet -->
   <router-outlet name="subnav"></router-outlet>
   
@@ -18,4 +19,7 @@
 
   <!-- main router outlet -->
   <router-outlet></router-outlet>
+
+  <!-- global footer -->
+  <app-footer></app-footer>
 </div>

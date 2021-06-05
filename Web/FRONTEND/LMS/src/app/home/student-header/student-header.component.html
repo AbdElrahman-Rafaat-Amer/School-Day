@@ -1,0 +1,131 @@
+<div class="upper-bar">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm">
+                <span class="logo"><a class="nav-link"  routerLink="">
+                  <span>
+                    <img src="assets/img/home-page/LMS.png " alt=" " class="home">
+                </span></a>
+                </span>
+            </div>
+            <div class="col-sm " style="text-align: right;">
+                <a routerLink="/student/setting"> <i class="fa fa-cog  fa-lg"></i></a>
+                <a routerLink="/student"> <i class="fa fa-sitemap  fa-lg"></i></a>
+                <a routerLink="/student/quetions"> <i class="fa fa-question-circle  fa-lg"></i></a>
+                <a routerLink="/student/info"> <i class="fa fa-info-circle  fa-lg"></i></a>
+                <a [routerLink]="['/']" routerLinkActive="router-link-active" (click)="logout()"> <span class="student">Logout</span><i class="fa fa-graduation-cap  fa-lg"></i></a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="banner-area">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-lg">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                    <div class="collapse navbar-collapse" id="navbar">
+
+                        <ul class="navbar-nav mr-auto">
+
+                            <li class="nav-item ">
+                                <a class="nav-link" routerLinkActive="active" routerLink="/student/teacher">
+                                    <span class="img-bottom">
+                                      <img src="assets/img/home-page/teacher.svg " alt=" ">
+                              </span> Teacher
+                                    <span class="sr-only">(current)</span>
+                                </a>
+                            </li>
+
+                            <li ngbDropdown class="nav-item dropdown menu-area ">
+                                <a ngbDropdownToggle class="nav-link dropdown-toggle" id="mega-one" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="img-bottom">
+                                    <img src="assets/img/home-page/chalkboard-teacher-solid.svg " alt=" ">
+                              </span> Education Day
+                                </a>
+                                <div ngbDropdownMenu class="dropdown-menu mega-area" aria-labelledby="mega-one">
+                                    <div class="container-storage">
+                                        <div class="row">
+                                            <div class="com-sm-6 col-lg-3">
+                                                <a href="/student/subject" class="dropdown-iteam">subject</a>
+                                            </div>
+                                            <div class="com-sm-6 col-lg-3">
+                                                <a href="/student/assignment" class="dropdown-iteam">assignment</a>
+                                            </div>
+                                            <div class="com-sm-6 col-lg-3">
+                                                <a href="/student/online" class="dropdown-iteam">online</a>
+                                            </div>
+                                            <div class="com-sm-6 col-lg-3">
+                                                <a href="/student/attendance" class="dropdown-iteam">attendance</a>
+                                            </div>
+                                            <div class="com-sm-6 col-lg-3">
+                                                <a href="/student/timetable" class="dropdown-iteam">timetable</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li ngbDropdown class="nav-item dropdown menu-area ">
+                                <a ngbDropdownToggle class="nav-link dropdown-toggle" id="mega-one" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="img-bottom">
+                                    <img src="assets/img/home-page/laugh-beam-regular.svg " alt=" ">
+                            </span> free time
+                                </a>
+                                <div ngbDropdownMenu class="dropdown-menu mega-area" aria-labelledby="mega-one">
+                                    <div class="container-storage">
+                                        <div class="row">
+                                            <div class="com-sm-6 col-lg-3">
+                                                <a routerLink="/student/activity" class="dropdown-iteam">activity</a>
+                                            </div>
+                                            <div class="com-sm-6 col-lg-3">
+                                                <a href="#" class="dropdown-iteam">library</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </li>
+
+                            <li class="nav-item">
+
+                                <a class="nav-link" routerLinkActive="active" routerLink="/student/bus"><span class="img-bottom">
+                                  <img src="assets/img/home-page/bus-alt-solid.svg " alt=" ">
+                          </span>Bus</a>
+                            </li>
+                            <li class="nav-item">
+
+                                <a class="nav-link" routerLinkActive="active" routerLink="/student/downloads"><span class="img-bottom">
+                                  <img src="assets/img/home-page/downLoad-solid.svg " alt=" ">
+                          </span>Downloads</a>
+                            </li>
+                            <li class="nav-item">
+
+                                <a class="nav-link" routerLinkActive="active" routerLink="/student/fees">
+                                    <span class="img-bottom">
+                                  <img src="assets/img/home-page/bus-alt-solid.svg " alt=" ">
+                                </span>Fees</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" routerLinkActive="active" routerLink="/student/noteboard">
+                                    <span class="img-bottom">
+                                      <img src="assets/img/home-page/bus-alt-solid.svg " alt=" ">
+                                </span>noteboard</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" routerLinkActive="active" routerLink="/student/feeds"><span>                                <img src="assets/img/home-page/Feeds.svg " alt=" ">
+                                </span>Feeds</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>

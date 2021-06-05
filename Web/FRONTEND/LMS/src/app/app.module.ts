@@ -10,8 +10,19 @@ import { AccountService } from './_services';
 import { AppComponent } from './app.component';
 import { AlertComponent } from './_components';
 import { HomeComponent } from './home';
-import { StudentComponent } from './student/student.component';
 import { TeacherComponent } from './teacher/teacher.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { StudentHeaderComponent } from './home/student-header/student-header.component';
+import { FooterComponent } from './_shared/footer/footer.component';
+
+
+import { FullCalendarModule } from '@fullcalendar/angular'; 
+import dayGridPlugin from '@fullcalendar/daygrid'; 
+import interactionPlugin from '@fullcalendar/interaction'; 
+FullCalendarModule.registerPlugins([ 
+  dayGridPlugin,
+  interactionPlugin
+]);
 
 @NgModule({
     imports: [
@@ -19,14 +30,18 @@ import { TeacherComponent } from './teacher/teacher.component';
         ReactiveFormsModule,
         HttpClientModule,
         AppRoutingModule,
-        FormsModule
+        FormsModule,
+        BrowserAnimationsModule,
+        FullCalendarModule,
+        
     ],
     declarations: [
         AppComponent,
         AlertComponent,
         HomeComponent,
-        StudentComponent,
-        TeacherComponent
+        TeacherComponent,
+        StudentHeaderComponent,
+        FooterComponent
     ],
     providers: [
         { provide: APP_INITIALIZER, useFactory: appInitializer, multi: true, deps: [AccountService] },

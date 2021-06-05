@@ -1,0 +1,62 @@
+<div class="container-fluid">
+    <div class="row  Attendance-Percent">
+        <div class="col-1"></div>
+        <div class="col-md-2  col-sm-4 text-right">
+            <circle-progress
+                [percent]="85"
+                [radius]="100"
+                [outerStrokeWidth]="16"
+                [innerStrokeWidth]="8"
+                [outerStrokeColor]="'#B92F40'"
+                [innerStrokeColor]="'#C7E596'"
+                [animation]="true"
+                [animationDuration]="300"
+                [responsive]="true"
+                [showTitle]="true"
+                [titleFormat]="formattitle"
+                [titleFontSize]="30"
+                [titleFontWeight]="500"
+                [showSubtitle]="true"
+                [subtitleFormat]="formatsubtitle"
+                [subtitleFontSize]="18"
+                [showUnits]="false"
+            ></circle-progress>
+        </div>
+        <div class="col-md-2  col-sm-4 text-right">
+            <circle-progress
+                [percent]="75"
+                [radius]="100"
+                [outerStrokeWidth]="16"
+                [innerStrokeWidth]="8"
+                [outerStrokeColor]="'#B92F40'"
+                [innerStrokeColor]="'#C7E596'"
+                [animation]="true"
+                [animationDuration]="300"
+                [responsive]="true"
+                [titleFontSize]="40"
+                [titleFontWeight]="400"
+                [showSubtitle]="true"
+                [subtitleFormat]="FormatAttendance"
+                [subtitleFontSize]="18"
+                [unitsFontSize]="25"
+                [unitsFontWeight]="300"
+            ></circle-progress>
+        </div>
+        <div class="col-md-3 col-sm-12 Start-Time">
+            <div class="Content-Start-Time">
+                <h5>Started</h5>
+                <p style="font-size: 18px;font-weight: 600;">08:30 AM</p>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <h5>Scan By QR</h5>
+            <qr-code value="https://LMS.com/student/attendance?id=Wercss4553sDCV" size="200" errorCorrectionLevel="M"></qr-code>
+        </div>
+    </div>
+    <div class="row Attendance-Percent text-center">
+        <div class="col-1"></div>
+        <div class="col-10">
+        <full-calendar [options]="calendarOptions" ></full-calendar>
+        </div>
+    </div>
+</div>
