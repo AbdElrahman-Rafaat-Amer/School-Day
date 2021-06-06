@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_margin="@dimen/_12sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/bauhaus93"
+            android:text="@string/profile"
+            android:textSize="40sp"></TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="20sp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Father Name : "
+                android:textSize="20sp"></TextView>
+
+            <EditText
+                android:id="@+id/father_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:backgroundTint="#B92F40"
+                android:enabled="false"
+                android:text="Abdo"></EditText>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Job : "
+                android:textSize="20sp"></TextView>
+
+            <EditText
+                android:id="@+id/father_job"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:backgroundTint="#B92F40"
+                android:enabled="false"
+                android:text="Doctor"></EditText>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phone Number : "
+                android:textSize="20sp"></TextView>
+
+            <EditText
+                android:id="@+id/father_phone_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:backgroundTint="#B92F40"
+                android:enabled="false"
+                android:text="012311231231"></EditText>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mother Name: "
+                android:textSize="20sp"></TextView>
+
+            <EditText
+                android:id="@+id/mother_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:backgroundTint="#B92F40"
+                android:enabled="false"
+                android:text="nhf"></EditText>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Job : "
+                android:textSize="20sp"></TextView>
+
+            <EditText
+                android:id="@+id/mother_job"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:backgroundTint="#B92F40"
+                android:enabled="false"
+                android:text="Doctor"></EditText>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phone Number : "
+                android:textSize="20sp"></TextView>
+
+            <EditText
+                android:id="@+id/mother_phone_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:backgroundTint="#B92F40"
+                android:enabled="false"
+                android:text="012311231231"></EditText>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email Address: "
+                android:textSize="20sp"></TextView>
+
+            <EditText
+                android:id="@+id/parent_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:backgroundTint="#B92F40"
+                android:enabled="false"
+                android:text="dhddj@gmail.com"></EditText>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Relation With Guardian: "
+                android:textSize="20sp"></TextView>
+
+            <EditText
+                android:id="@+id/relation_with_guardian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:backgroundTint="#B92F40"
+                android:enabled="false"
+                android:text="Uncle - Mother - Father"></EditText>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Guardian Address: "
+                android:textSize="20sp"></TextView>
+
+            <EditText
+                android:id="@+id/guardin_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:backgroundTint="#B92F40"
+                android:enabled="false"
+                android:text="fffffff"></EditText>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Guardian Name: "
+                android:textSize="20sp"></TextView>
+
+            <EditText
+                android:id="@+id/guardin_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#B92F40"
+                android:enabled="false"
+                android:text="dhddj"></EditText>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
