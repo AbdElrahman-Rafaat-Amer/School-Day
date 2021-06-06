@@ -38,7 +38,7 @@ namespace LMS.Models.AccountModel
             IMapper mapper,
             IOptions<AppSettings> appSettings,
             IEmailService emailService)
-        {
+                {
             _context = context;
             _mapper = mapper;
             _appSettings = appSettings.Value;
@@ -186,7 +186,7 @@ namespace LMS.Models.AccountModel
 
         public void VerifyEmail(string token)
         {
-            var account = _context.Accounts.SingleOrDefault(x => x.VerificationToken == token);
+            var account = _context.Accounts.FirstOrDefault(x => x.VerificationToken == token);
 
             if (account == null) throw new AppException("Verification failed");
 

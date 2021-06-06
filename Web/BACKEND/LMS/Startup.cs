@@ -9,7 +9,9 @@ using LMS.Models.NoteBordModel;
 using LMS.Models.SectionModel;
 using LMS.Models.StudentModel;
 using LMS.Models.SubjectModel;
+using LMS.Models.TeacherModel;
 using LMS.Models.YearModel;
+using LMS.ViewModels.Teacher;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -64,6 +66,7 @@ namespace LMS
             services.AddScoped<IYearRepasitory<Year>, PerformYear>();
             services.AddScoped<IClassRsepasitory<Class>, PerformClass>();
             services.AddScoped<ISectionRepasitory<Section>, PerformSection>();
+            services.AddScoped<ITeacherRepasitory<Teacher, TeacherProfileVM>, PerformTeacher>();
 
             services.AddSwaggerGen(c =>
             {
