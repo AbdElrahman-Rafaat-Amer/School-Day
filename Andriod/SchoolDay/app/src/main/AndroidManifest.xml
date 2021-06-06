@@ -12,18 +12,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".WelcomeActivity"></activity>
+        <activity android:name=".parent.ParentBusActivity"></activity>
+        <activity android:name=".parent.ParentHomeActivity" />
+        <activity android:name=".WelcomeActivity" />
         <activity android:name=".student.MainActivity" />
-        <activity android:name=".Signup2Activity" />
-        <activity android:name=".student.NotesEditActivity" />
-        <activity android:name=".SignupActivity" />
+        <activity android:name=".signup.Signup2Activity" />
+        <activity android:name=".student.notepackage.NotesEditActivity" />
+        <activity android:name=".signup.SignupActivity" />
         <activity android:name=".student.OnlineFriendsActivity" />
         <activity android:name=".student.EditActivity" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".login.LoginActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

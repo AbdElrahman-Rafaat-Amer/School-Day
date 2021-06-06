@@ -1,0 +1,30 @@
+.container {
+    margin-top: 15px;
+}
+
+.bus-cont mat-card {
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 60%;
+    height: 20vh;
+}
+
+.bus-cont mat-card mat-card-title {
+    margin: 30px 0 35px 0;
+}
+
+.map-container {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+
+.map-container iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 85%;
+    position: absolute;
+}
