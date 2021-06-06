@@ -95,5 +95,8 @@
     <string name="middleName">Middle Name</string>
     <string name="phone_number">Phone Number</string>
     <string name="licence_id">License Id</string>
+    <string name="exam_last_resualt">Last Resualt</string>
+    <string name="exam_title">Exam Title</string>
+    <string name="exam_degree">Exam Degree</string>
 
 </resources>

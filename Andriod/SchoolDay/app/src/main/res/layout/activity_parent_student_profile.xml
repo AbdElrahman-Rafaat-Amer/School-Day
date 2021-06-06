@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginBottom="70dp"
+    android:layout_marginBottom="@dimen/_70sdp"
     android:orientation="vertical">
 
     <TextView
@@ -15,12 +15,12 @@
 
     <!-- this for tab layout and view pager -->
     <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tab_page"
+        android:id="@+id/parent_tab_page"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"></com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager.widget.ViewPager
-        android:id="@+id/view_page"
+        android:id="@+id/parent_view_page"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"></androidx.viewpager.widget.ViewPager>
 
