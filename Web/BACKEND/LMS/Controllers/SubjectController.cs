@@ -33,7 +33,7 @@ namespace LMS.Controllers
         }
 
         [HttpPost]
-        [Authorize(Role.Admin)]
+        [Authorize(Role.Admin ,Role.Teacher)]
         public ActionResult Post(Subject value)
         {
             if (value != null)
@@ -45,7 +45,7 @@ namespace LMS.Controllers
         }
 
         [HttpPut("{id}")]
-        [Authorize(Role.Admin)]
+        [Authorize(Role.Admin, Role.Teacher)]
         public ActionResult Put(int id, Subject value)
         {
             if (id == value.Id)
@@ -57,7 +57,7 @@ namespace LMS.Controllers
         }
 
         [HttpDelete("{id}")]
-        [Authorize(Role.Admin)]
+        [Authorize(Role.Admin, Role.Teacher)]
         public ActionResult Delete(int id)
         {
             service.DeleteSubject(id);

@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using LMS.ViewModels.Teacher;
+using LMS.ViewModels.TeacherVms;
 using System;
 using System.Collections.Generic;
 using System.Linq;

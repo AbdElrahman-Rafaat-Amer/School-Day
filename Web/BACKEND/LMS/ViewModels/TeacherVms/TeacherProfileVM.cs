@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace LMS.ViewModels.Teacher
+namespace LMS.ViewModels.TeacherVms
 {
     public class TeacherProfileVM
     {

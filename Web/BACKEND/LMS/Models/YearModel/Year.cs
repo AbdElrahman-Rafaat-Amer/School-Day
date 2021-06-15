@@ -12,7 +12,8 @@ namespace LMS.Models.YearModel
         public ICollection<ClassModel.Class> Classes { get; set; }
         public ICollection<StudentModel.Student> Students { get; set; }
         public ICollection<TeacherModel.Teacher> Teachers { get; set; }
-        
+        public ICollection<SubjectModel.Subject> Subjects { get; set; }
+
 
     }
 }

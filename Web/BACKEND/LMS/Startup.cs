@@ -11,7 +11,7 @@ using LMS.Models.StudentModel;
 using LMS.Models.SubjectModel;
 using LMS.Models.TeacherModel;
 using LMS.Models.YearModel;
-using LMS.ViewModels.Teacher;
+using LMS.ViewModels.TeacherVms;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;

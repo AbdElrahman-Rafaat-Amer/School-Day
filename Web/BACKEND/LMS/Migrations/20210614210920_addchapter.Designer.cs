@@ -4,14 +4,16 @@ using LMS.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace LMS.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210614210920_addchapter")]
+    partial class addchapter
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -282,9 +284,6 @@ namespace LMS.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("DateTime")
-                        .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
@@ -888,16 +887,11 @@ namespace LMS.Migrations
                     b.Property<string>("Photo")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("YearId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("AccountId");
 
                     b.HasIndex("ParentAccountId");
-
-                    b.HasIndex("YearId");
 
                     b.ToTable("Subjects");
                 });
@@ -1451,13 +1445,7 @@ namespace LMS.Migrations
                         .WithMany("Subjects")
                         .HasForeignKey("ParentAccountId");
 
-                    b.HasOne("LMS.Models.YearModel.Year", "Year")
-                        .WithMany("Subjects")
-                        .HasForeignKey("YearId");
-
                     b.Navigation("Account");
-
-                    b.Navigation("Year");
                 });
 
             modelBuilder.Entity("LMS.Models.TaskModel.Task", b =>
@@ -1633,8 +1621,6 @@ namespace LMS.Migrations
                     b.Navigation("Classes");
 
                     b.Navigation("Students");
-
-                    b.Navigation("Subjects");
                 });
 #pragma warning restore 612, 618
         }

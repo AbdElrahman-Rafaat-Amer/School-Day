@@ -1,5 +1,5 @@
 ﻿using LMS.Models.TeacherModel;
-using LMS.ViewModels.Teacher;
+using LMS.ViewModels.TeacherVms;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -22,8 +22,33 @@ namespace LMS.Controllers
         [HttpPost("addTeacher")]
         public ActionResult AddTeacher(Teacher teacher)
         {
+            if (teacher==null)
+            {
+                return BadRequest("data is null");
+            }
             _teacher.CreateTeacher(teacher);
             return Ok("added succesfully");
+        }
+        [HttpPost("updateTeacher")]
+        public ActionResult UpdateTeacher(Teacher teacher)
+        {
+            if (teacher==null)
+            {
+                return BadRequest("data is null");
+            }
+            _teacher.UpdateTeacher(teacher);
+            return Ok("Teacher is Updated");
+        }
+        [HttpDelete("DeleteTeacher")]
+        public ActionResult DeleteTeacher(int id)
+        {
+            var t = _teacher.Teatcher(id);
+            if (t!=null)
+            {
+                _teacher.DeleteTeacher(id);
+                return Ok("teacher is deleted ");
+            }
+            return BadRequest("not found to delete");
         }
     }
 }
