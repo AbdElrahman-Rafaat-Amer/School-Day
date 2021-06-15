@@ -10,6 +10,7 @@ using LMS.Models.SectionModel;
 using LMS.Models.StudentModel;
 using LMS.Models.SubjectModel;
 using LMS.Models.TeacherModel;
+using LMS.Models.TeacherPages.ShowSubject;
 using LMS.Models.YearModel;
 using LMS.ViewModels.TeacherVms;
 using Microsoft.AspNetCore.Builder;
@@ -67,6 +68,7 @@ namespace LMS
             services.AddScoped<IClassRsepasitory<Class>, PerformClass>();
             services.AddScoped<ISectionRepasitory<Section>, PerformSection>();
             services.AddScoped<ITeacherRepasitory<Teacher, TeacherProfileVM>, PerformTeacher>();
+            services.AddScoped<IAppRepo<Subject>, ShowSubjectService>();
 
             services.AddSwaggerGen(c =>
             {

@@ -1,4 +1,5 @@
-﻿using LMS.Models.SubjectModel;
+﻿using LMS.Models;
+using LMS.Models.SubjectModel;
 using LMS.ViewModels.TeacherVms;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -13,16 +14,16 @@ namespace LMS.Controllers.TeacherStackholder
     [ApiController]
     public class ShowSubjectController : ControllerBase
     {
-        private readonly ISubjectRepasitory<Subject> _subject;
+        private readonly IAppRepo<Subject> repo;
 
-        public ShowSubjectController(ISubjectRepasitory<Subject> subject)
+        public ShowSubjectController(IAppRepo<Subject> repo)
         {
-            _subject = subject;
+            this.repo = repo;
         }
         [HttpGet("ShowSubject")]
-        public ActionResult<List<ShowSubjectVM>> Show()
+        public ActionResult<List<Subject>> Show()
         {
-            return Ok();
+            return Ok(repo.List());
         }
     }
 }

@@ -32,14 +32,14 @@ namespace LMS.Controllers
             return Ok(result);
         }
 
-        [HttpPost]
-        [Authorize(Role.Admin ,Role.Teacher)]
+        [HttpPost("CreateSubject")]
+        //[Authorize(Role.Admin ,Role.Teacher)]
         public ActionResult Post(Subject value)
         {
             if (value != null)
             {
                 service.CreateSubject(value);
-                return Ok();
+                return Ok("dfgjkdfg");
             }
             return BadRequest();
         }
