@@ -54,10 +54,12 @@ import { ActivityComponent } from './activity/activity.component';
 import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.component';
 import { PostsComponent } from './feeds/posts/posts/posts.component';
 import { AssignmentComponent } from './assignment/assignment.component';
-
+import {MatSelectModule} from '@angular/material/select';
 import { SearchfilterPipe } from './pipes/searchfilter.pipe';
 import { Ng2OrderModule } from 'ng2-order-pipe';
 import {NgxPaginationModule } from 'ngx-pagination';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+
 
 @NgModule({
   declarations: [
@@ -113,7 +115,8 @@ import {NgxPaginationModule } from 'ngx-pagination';
     MatMenuModule,
     NavbarModule,
     Ng2OrderModule,
-
+    MatSelectModule,
+    MatDatepickerModule,
 
     RouterModule.forRoot([
       {path: '',component:HomeComponent},
