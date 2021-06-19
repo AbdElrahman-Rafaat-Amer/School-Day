@@ -5,11 +5,16 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './subject.component.html',
   styleUrls: ['./subject.component.scss']
 })
-export class SubjectComponent implements OnInit {
+export class SubjectComponent {
 
   constructor() { }
+  subject !:string;
 
-  ngOnInit(): void {
-  }
+  index=
+  [this.subject='c',
+  this.subject='A',
+  this.subject='B',
+      ];
+
 
 }
