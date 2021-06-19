@@ -10,8 +10,6 @@ using LMS.Models.DriverModel;
 using LMS.Models.ParentModel;
 using LMS.Models.AccountModel;
 using LMS.Models.AdminModel;
-using LMS.ViewModels.TeacherVms;
-using LMS.Models.SubjectModel;
 
 namespace LMS.Helpers
 {
@@ -50,7 +48,6 @@ namespace LMS.Helpers
             CreateMap<RegisterRequest, Teacher>();
             CreateMap<RegisterRequest, Driver>();
             CreateMap<RegisterRequest, Parent>();
-            CreateMap<ShowSubjectVM, Subject>();
 
         }
     }

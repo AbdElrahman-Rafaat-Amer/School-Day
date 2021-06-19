@@ -19,7 +19,6 @@ namespace LMS.Models.TeacherModel
         public string PDF_1 { get; set; }
         public string PDF_2 { get; set; }
         public string AddmitionNum { get; set; }
-        public double Rate { get; set; }
         public ICollection<ZoomModel.Zoom> Zooms { get; set; }
         public ICollection<GroupModel.Group> Groups { get; set; }
         //public ICollection<NoteBordModel.NoteBoard> NoteBoards { get; set; }
