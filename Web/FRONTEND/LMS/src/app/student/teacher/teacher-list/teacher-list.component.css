@@ -1,0 +1,17 @@
+.teacher-list{
+    border-radius:20px ;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(77, 77, 76);
+    border: 2px solid #444;
+}
+.teacher-list img{
+    border: 2px solid #126666;
+    border-radius: 50%;
+}
+
+.teacher-icon{
+    cursor: pointer;
+}

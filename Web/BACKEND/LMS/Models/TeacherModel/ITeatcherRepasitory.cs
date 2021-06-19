@@ -5,13 +5,15 @@ using System.Threading.Tasks;
 
 namespace LMS.Models.TeacherModel
 {
-  public interface ITeacherRepasitory<T>
+  public interface ITeacherRepasitory<T,TT>
     {
         
         void CreateTeacher(T Teacher);
         void UpdateTeacher(T Teacher);
         void DeleteTeacher(int Id);
-        Task<Teacher> Teatcher(int Id);
-        public List<Teacher> Teatchers();
+        Task<T> Teatcher(int Id);
+        public List<T> Teatchers();
+        public List<TT> Teachers();
+
     }
 }

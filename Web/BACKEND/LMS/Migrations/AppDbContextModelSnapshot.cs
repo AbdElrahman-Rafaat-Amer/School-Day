@@ -276,6 +276,35 @@ namespace LMS.Migrations
                     b.ToTable("Buses");
                 });
 
+            modelBuilder.Entity("LMS.Models.ChapterModel.Chapter", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("DateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Path")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Photo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("SubjectId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SubjectId");
+
+                    b.ToTable("Chapters");
+                });
+
             modelBuilder.Entity("LMS.Models.ClassModel.Class", b =>
                 {
                     b.Property<int>("Id")
@@ -859,11 +888,16 @@ namespace LMS.Migrations
                     b.Property<string>("Photo")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("YearId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("AccountId");
 
                     b.HasIndex("ParentAccountId");
+
+                    b.HasIndex("YearId");
 
                     b.ToTable("Subjects");
                 });
@@ -944,6 +978,9 @@ namespace LMS.Migrations
 
                     b.Property<string>("PDF_2")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("Rate")
+                        .HasColumnType("float");
 
                     b.Property<double>("Weight")
                         .HasColumnType("float");
@@ -1159,6 +1196,15 @@ namespace LMS.Migrations
                         .HasForeignKey("StudentAccountId");
 
                     b.Navigation("Account");
+                });
+
+            modelBuilder.Entity("LMS.Models.ChapterModel.Chapter", b =>
+                {
+                    b.HasOne("LMS.Models.SubjectModel.Subject", "Subject")
+                        .WithMany()
+                        .HasForeignKey("SubjectId");
+
+                    b.Navigation("Subject");
                 });
 
             modelBuilder.Entity("LMS.Models.ClassModel.Class", b =>
@@ -1405,7 +1451,13 @@ namespace LMS.Migrations
                         .WithMany("Subjects")
                         .HasForeignKey("ParentAccountId");
 
+                    b.HasOne("LMS.Models.YearModel.Year", "Year")
+                        .WithMany("Subjects")
+                        .HasForeignKey("YearId");
+
                     b.Navigation("Account");
+
+                    b.Navigation("Year");
                 });
 
             modelBuilder.Entity("LMS.Models.TaskModel.Task", b =>
@@ -1581,6 +1633,8 @@ namespace LMS.Migrations
                     b.Navigation("Classes");
 
                     b.Navigation("Students");
+
+                    b.Navigation("Subjects");
                 });
 #pragma warning restore 612, 618
         }

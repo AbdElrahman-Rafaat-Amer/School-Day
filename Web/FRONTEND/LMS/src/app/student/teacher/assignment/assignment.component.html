@@ -1,0 +1,12 @@
+
+<div *ngFor="let assignment of assignments" class="assignment-list row p-1 {{assignment[2]}}" >
+    <div class="col-2">
+        <img width="40px" height="40px" src="assets/img/web-images/angular.png" />
+    </div>
+    <div class="col-9">
+        <h5>{{assignment[1]}}</h5>
+    </div>
+    <div class="col-1 assignment-icon">
+        <i class="fas fa-link"></i>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/_70sdp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/bauhaus93"
+        android:text="@string/profile"
+        android:textSize="40sp"></TextView>
+
+    <!-- this for tab layout and view pager -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/parent_tab_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/parent_view_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></androidx.viewpager.widget.ViewPager>
+
+
+</LinearLayout>

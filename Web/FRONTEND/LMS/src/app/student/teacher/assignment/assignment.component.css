@@ -1,0 +1,32 @@
+.assignment-list{
+    border-radius:20px ;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: beige;
+}
+.assignment-list img{
+    border: 2px solid #126666;
+    border-radius: 50%;
+}
+
+.green{
+    background-color: green;
+}
+.blue{
+    background-color: blue;
+}
+.red{
+    background-color: red;
+}
+.yellow{
+    background-color: rgb(175, 164, 4);
+}
+.rose{
+    background-color: rosybrown;
+}
+
+.assignment-icon{
+    cursor: pointer;
+}
