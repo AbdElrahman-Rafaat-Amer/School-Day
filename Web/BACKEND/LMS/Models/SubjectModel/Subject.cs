@@ -13,6 +13,7 @@ namespace LMS.Models.SubjectModel
         public DateTime DateOfUPload { get; set; }
         public string Photo { get; set; }
         public string Color { get; set; }
+        public YearModel.Year Year { get; set; }
         [JsonIgnore]
         public AccountModel.Account Account { get; set; }
 

@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 teacher-list">
+            <div class="title-teacher-list">
+                <h5>List Of Teachers</h5>
+            </div>
+            <app-teacher-list></app-teacher-list>
+        </div>
+        <div class="col-md-6 teacher-subject-info">
+            <div class="row teacher-info">
+                <div class="col-md-12 teacher-info-image">
+                    <img width="130" height="130" src="assets/img/web-images/teacher.png"/>
+                </div>
+                <div class="col-12 teacher-info-name">
+                    <div class="name">
+                        <h5>Teacher Name</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 ">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                        <a  class="nav-link"  routerLink="/student/teacher/assignment" routerLinkActive="active"> Assignment </a>
+                        </li>
+                        <li class="nav-item">
+                        <a  class="nav-link"  routerLink="/student/teacher/timetable" routerLinkActive="active"> Time Table </a>
+                        </li>
+                        <li class="nav-item">
+                        <a  class="nav-link"  routerLink="/student/teacher/degrees" routerLinkActive="active"> Degrees </a>
+                        </li>
+                        <li class="nav-item">
+                        <a  class="nav-link"  routerLink="/student/teacher/info" routerLinkActive="active"> Personal Info </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 p-3">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+

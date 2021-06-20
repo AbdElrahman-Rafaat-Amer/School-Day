@@ -12,9 +12,9 @@ import { SettingComponent } from './setting/setting.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 const chatModule = () => import('./chat/chat.module').then(x => x.ChatModule);
+const teacherModule = () => import('./teacher/teacher.module').then(x => x.TeacherModule);
 
 const routes : Routes = [
   {
@@ -28,7 +28,8 @@ const routes : Routes = [
       {path:'bus', component:BusComponent},
       {path:'noteboard',component:NoteboardComponent},
       {path:'downloads', component:DownloadsComponent},
-      {path:'attendance', component:AttendanceComponent}
+      {path:'attendance', component:AttendanceComponent},
+      {path:'teacher',loadChildren:teacherModule}
     ]
   },{
     path: '**' , redirectTo: ''

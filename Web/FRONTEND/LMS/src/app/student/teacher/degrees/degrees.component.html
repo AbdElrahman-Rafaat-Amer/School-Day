@@ -1,0 +1,33 @@
+
+<div *ngFor="let degree of degrees" class="degrees-list row p-1 {{degree[2]}}" >
+    <div class="col-2">
+        <img width="40px" height="40px" src="assets/img/web-images/angular.png" />
+    </div>
+    <div class="col-8">
+        <h5>{{degree[1]}}</h5>
+    </div>
+    <div class="col-2">
+        {{ updatePercent(degree[3]) }}
+        <circle-progress
+                [percent]="percent"
+                [radius]="100"
+                [outerStrokeWidth]="16"
+                [innerStrokeWidth]="8"
+                [outerStrokeColor]="'#B92F40'"
+                [innerStrokeColor]="'#C7E596'"
+                [animation]="true"
+                [animationDuration]="300"
+                [responsive]="true"
+                [titleFontSize]="50"
+                [titleFontWeight]="400"
+                [titleColor]="'#fff'"
+                [unitsColor]="'#fff'"
+                [showSubtitle]="true"
+                [subtitleFormat]="FormatAttendance"
+                [subtitleFontSize]="30"
+                [subtitleColor]="'#fff'"
+                [unitsFontSize]="40"
+                [unitsFontWeight]="300"
+            ></circle-progress>
+    </div>
+</div>

@@ -3,27 +3,19 @@ package com.example.schoolday.signup;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.schoolday.APIClient;
 import com.example.schoolday.R;
 import com.example.schoolday.login.LoginActivity;
-import com.example.schoolday.login.LoginResponse;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import com.example.schoolday.signup.Signup2Activity;
 
 public class SignupActivity extends AppCompatActivity {
 
@@ -32,7 +24,7 @@ public class SignupActivity extends AppCompatActivity {
     private RadioButton radioButtonParent, radioButtonTeacher, radioButtonStudent;
     private Button completingInfo;
 
-    private String nameValue, emailValue, passwordValue, confirmPassValue;
+    private String nameValue, emailValue, passwordValue, confirmPassValue, role;
     private boolean isParent, isStudent, isTeacher, isContinue;
 
     private static boolean check(String name, String email, String password, String confirmPass, boolean isStudent, boolean isTeacher, boolean isParent) {
@@ -83,8 +75,22 @@ public class SignupActivity extends AppCompatActivity {
                 if (isContinue == true) {
                     if (passwordValue.equals(confirmPassValue) && passwordValue.length() > 7) {
                         if (Patterns.EMAIL_ADDRESS.matcher(emailValue).matches()) {
-                           // saveUser(createRequest());
-                            startActivity(new Intent(SignupActivity.this, Signup2Activity.class));
+                            Intent intent = new Intent(SignupActivity.this, Signup2Activity.class);
+                            intent.putExtra("signup_name", nameValue);
+                            intent.putExtra("signup_email", emailValue);
+                            intent.putExtra("signup_password", passwordValue);
+                            intent.putExtra("signup_confirm_password", nameValue);
+                            if (isStudent == true) {
+                                role = "student";
+                                intent.putExtra("signup_role", role);
+                            } else if (isParent == true) {
+                                role = "parent";
+                                intent.putExtra("signup_role", role);
+                            } else if (isTeacher == true) {
+                                role = "teacher";
+                                intent.putExtra("signup_role", role);
+                            }
+                            startActivity(intent);
                         } else {
                             AlertDialog.Builder builder = new AlertDialog.Builder(SignupActivity.this);
                             builder.setTitle(R.string.error)
@@ -126,35 +132,6 @@ public class SignupActivity extends AppCompatActivity {
             }
         });
 
-    }
-        public void signup() {
-            SignupRequest signupRequest = new SignupRequest();
-            signupRequest.setFname(name.getText().toString());
-            signupRequest.setEmail(email.getText().toString());
-            signupRequest.setPassword(password.getText().toString());
-            signupRequest.setConfirmPassword(confirmPassword.getText().toString());
-            signupRequest.setRole(radioButtonParent.getText().toString());
-            Call<SignupResponse> signupResponseCall = APIClient.getSignupService().signupUser(signupRequest);
-            signupResponseCall.enqueue(new Callback<SignupResponse>() {
-                @Override
-                public void onResponse(Call<SignupResponse> call, Response<SignupResponse> response) {
-                    if (response.isSuccessful()) {
-                        Log.e("success", response.toString());
-                        Toast.makeText(SignupActivity.this, "Successful", Toast.LENGTH_SHORT).show();
-                        finish();
-                    } else {
-                        Log.e("failed", response.toString());
-                        Toast.makeText(SignupActivity.this, "Failed", Toast.LENGTH_SHORT).show();
-                    }
-                }
-
-                @Override
-                public void onFailure(Call<SignupResponse> call, Throwable t) {
-                    Log.e("this onFailure", t.toString());
-                    Toast.makeText(SignupActivity.this, "onFailure", Toast.LENGTH_SHORT).show();
-                    finish();
-                }
-            });
     }
 
 
