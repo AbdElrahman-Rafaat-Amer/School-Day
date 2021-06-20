@@ -54,10 +54,15 @@ import { ActivityComponent } from './activity/activity.component';
 import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.component';
 import { PostsComponent } from './feeds/posts/posts/posts.component';
 import { AssignmentComponent } from './assignment/assignment.component';
-
+import {MatSelectModule} from '@angular/material/select';
 import { SearchfilterPipe } from './pipes/searchfilter.pipe';
 import { Ng2OrderModule } from 'ng2-order-pipe';
 import {NgxPaginationModule } from 'ngx-pagination';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { ChaptersComponent } from './chapters/chapters.component';
+import { OnlineAssignmentComponent } from './online-assignment/online-assignment.component';
+import { OnlineQuestionsComponent } from './online-questions/online-questions.component';
+
 
 @NgModule({
   declarations: [
@@ -86,6 +91,9 @@ import {NgxPaginationModule } from 'ngx-pagination';
     PostsComponent,
     AssignmentComponent,
     SearchfilterPipe,
+    ChaptersComponent,
+    OnlineAssignmentComponent,
+    OnlineQuestionsComponent,
   ],
   imports: [
     NgxPaginationModule,
@@ -113,7 +121,8 @@ import {NgxPaginationModule } from 'ngx-pagination';
     MatMenuModule,
     NavbarModule,
     Ng2OrderModule,
-
+    MatSelectModule,
+    MatDatepickerModule,
 
     RouterModule.forRoot([
       {path: '',component:HomeComponent},
@@ -130,6 +139,8 @@ import {NgxPaginationModule } from 'ngx-pagination';
       {path:'activity',component:ActivityComponent},
       {path:'assignment',component:AssignmentComponent},
       {path:'subject',component:SubjectComponent},
+      {path:'online',component:OnlineAssignmentComponent}, // $$$
+      {path:'attendance',component:OnlineQuestionsComponent}, // $$$
     ]),
     BrowserAnimationsModule,
     CommonModule,

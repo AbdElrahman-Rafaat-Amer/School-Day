@@ -29,7 +29,7 @@ import { QrCodeModule } from 'ng-qrcode';
     BusComponent,
     NoteboardComponent,
     DownloadsComponent,
-    AttendanceComponent
+    AttendanceComponent,
     
   ],
   imports: [

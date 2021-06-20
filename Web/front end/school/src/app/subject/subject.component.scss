@@ -1,14 +1,25 @@
-.teacher {
+:root {
+    --main-color: #53b1a2;
+    --secoundery-color: #b92f40;
+}
+
+.subject {
     margin-top: 25px;
 }
 
 .list-group-item {
-    margin-top: 15px;
-    max-width: auto;
+    margin: 15px auto;
+    width: 75%;
     text-align: center;
     border-radius: 20px;
+    border: none;
     font-weight: bold;
     font-size: large;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.list-group-item span {
+    font-size: medium;
 }
 
 .list-group-item.active {
@@ -21,12 +32,50 @@
     top: 20px;
 }
 
+// ++++++++++ //
 mat-tab-group {
     margin-top: 12px;
 }
 
-::ng-deep .mat-ink-bar {
+ ::ng-deep .mat-ink-bar {
     background-color: #b92f40!important;
+}
+
+.example-stretched-tabs {
+    width: 70%;
+}
+
+.time-table {
+    border: 1px solid #53b1a2;
+    border-radius: 20px;
+    background-color: #bd4f87;
+    color: white;
+    padding: 10px;
+    margin: 20px;
+}
+
+.time-table .name {
+    margin: auto;
+}
+
+.time-table .name p {
+    font-size: x-large;
+    text-align: center;
+}
+
+.time-table img {
+    border-radius: 50%;
+    max-width: 10vh;
+    max-height: 20vh;
+}
+
+.time-table .date {
+    margin: auto;
+}
+
+.time-table .date p {
+    float: right;
+    font-size: large;
 }
 
 @media (max-width: 991.98px) {}

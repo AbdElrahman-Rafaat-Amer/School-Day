@@ -32,20 +32,20 @@ namespace LMS.Controllers
             return Ok(result);
         }
 
-        [HttpPost("CreateSubject")]
-        //[Authorize(Role.Admin ,Role.Teacher)]
+        [HttpPost]
+        [Authorize(Role.Admin)]
         public ActionResult Post(Subject value)
         {
             if (value != null)
             {
                 service.CreateSubject(value);
-                return Ok("dfgjkdfg");
+                return Ok();
             }
             return BadRequest();
         }
 
         [HttpPut("{id}")]
-        [Authorize(Role.Admin, Role.Teacher)]
+        [Authorize(Role.Admin)]
         public ActionResult Put(int id, Subject value)
         {
             if (id == value.Id)
@@ -57,7 +57,7 @@ namespace LMS.Controllers
         }
 
         [HttpDelete("{id}")]
-        [Authorize(Role.Admin, Role.Teacher)]
+        [Authorize(Role.Admin)]
         public ActionResult Delete(int id)
         {
             service.DeleteSubject(id);
