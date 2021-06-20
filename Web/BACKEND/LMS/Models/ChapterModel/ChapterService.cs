@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using LMS.ViewModels.TeacherVms;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LMS.Models.ChapterModel
 {
-    public class ChapterService : IChapterRepo<Chapter>
+    public class ChapterService : IChapterRepo<AddChapterVM>
     {
         private readonly AppDbContext context;
 
@@ -26,9 +27,20 @@ namespace LMS.Models.ChapterModel
             return c;
         }
 
-        public void CreateChapter(Chapter chapter)
+        public void CreateChapter(AddChapterVM chapter)
         {
-            context.Add(chapter);
+            var sub=context.Subjects.Find(chapter.SubjectId);
+            var year = context.Years.Find(chapter.YearId);
+            Chapter ch = new Chapter
+            {
+                Name = chapter.ChapterName,
+                Path = chapter.ChapterPath,
+                Photo = chapter.ChapterPhoto,
+                DateTime = DateTime.Now,
+                Subject = sub,
+                Year=year
+            };
+            context.Add(ch);
             context.SaveChanges();
         }
 
@@ -39,9 +51,9 @@ namespace LMS.Models.ChapterModel
             context.SaveChanges();
         }
 
-        public void UpdateChapter(Chapter chapter)
+        public void UpdateChapter(AddChapterVM chapter)
         {
-            context.Chapters.Update(chapter);
+            //context.Chapters.Update(chapter);
             context.SaveChanges();
         }
     }

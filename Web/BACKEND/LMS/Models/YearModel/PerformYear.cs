@@ -14,10 +14,10 @@ namespace LMS.Models.YearModel
         {
             _context = context;
         }
-        public async void CreateYear(Year year)
+        public  void CreateYear(Year year)
         {
             _context.Add(year);
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
         }
 
         public async Task<Year> Year(int id)

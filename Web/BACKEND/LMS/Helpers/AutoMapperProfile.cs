@@ -50,7 +50,7 @@ namespace LMS.Helpers
             CreateMap<RegisterRequest, Teacher>();
             CreateMap<RegisterRequest, Driver>();
             CreateMap<RegisterRequest, Parent>();
-            CreateMap<ShowSubjectVM, Subject>();
+            CreateMap<List<Subject>, List<ShowSubjectVM>>();
 
         }
     }

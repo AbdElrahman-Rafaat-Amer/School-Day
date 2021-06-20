@@ -2,6 +2,7 @@ using ELearningAPI.Middleware;
 using LMS.Helpers;
 using LMS.Models;
 using LMS.Models.AccountModel;
+using LMS.Models.ChapterModel;
 using LMS.Models.ClassModel;
 using LMS.Models.FeesModel;
 using LMS.Models.FolderModel;
@@ -10,6 +11,7 @@ using LMS.Models.SectionModel;
 using LMS.Models.StudentModel;
 using LMS.Models.SubjectModel;
 using LMS.Models.TeacherModel;
+using LMS.Models.TeacherPages;
 using LMS.Models.TeacherPages.ShowSubject;
 using LMS.Models.YearModel;
 using LMS.ViewModels.TeacherVms;
@@ -68,8 +70,10 @@ namespace LMS
             services.AddScoped<IClassRsepasitory<Class>, PerformClass>();
             services.AddScoped<ISectionRepasitory<Section>, PerformSection>();
             services.AddScoped<ITeacherRepasitory<Teacher, TeacherProfileVM>, PerformTeacher>();
-            services.AddScoped<IAppRepo<Subject>, ShowSubjectService>();
-
+            services.AddScoped<IAppRepo<ShowSubjectVM>, ShowSubjectService>();
+            services.AddScoped<IChapterRepo<AddChapterVM>, ChapterService>();
+            services.AddScoped<IAppRepo<ListSubjectVM>, FillComboSubjectService>();
+            services.AddScoped<IAppRepo<ListYearsVM>, FillComboYearService>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "LMS", Version = "v1" });

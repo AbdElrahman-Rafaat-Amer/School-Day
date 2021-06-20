@@ -13,6 +13,6 @@ namespace LMS.Models.ChapterModel
         public string Path { get; set; }
         public DateTime DateTime { get; set; }
         public SubjectModel.Subject Subject { get; set; }
-
+        public YearModel.Year Year { get; set; }
     }
 }

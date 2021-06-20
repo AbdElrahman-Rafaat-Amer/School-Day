@@ -14,14 +14,14 @@ namespace LMS.Controllers.TeacherStackholder
     [ApiController]
     public class ShowSubjectController : ControllerBase
     {
-        private readonly IAppRepo<Subject> repo;
+        private readonly IAppRepo<ShowSubjectVM> repo;
 
-        public ShowSubjectController(IAppRepo<Subject> repo)
+        public ShowSubjectController(IAppRepo<ShowSubjectVM> repo)
         {
             this.repo = repo;
         }
         [HttpGet("ShowSubject")]
-        public ActionResult<List<Subject>> Show()
+        public ActionResult<List<ShowSubjectVM>> Show()
         {
             return Ok(repo.List());
         }

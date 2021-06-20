@@ -16,8 +16,19 @@ namespace LMS.Models.SubjectModel
 
         public void CreateSubject(Subject subject)
         {
+            if (subject.Account!=null)
+            {
+                var account = context.Accounts.Find(subject.Account.Id);
+                subject.Account = account;
+            }
+            if (subject.Year!=null)
+            {
+                var year = context.Years.Find(subject.Year.Id);
+                subject.Year = year;
+            }
+          
             context.Subjects.Add(subject);
-            context.SaveChangesAsync();
+            context.SaveChanges();
         }
 
         public void DeleteSubject(int Id)

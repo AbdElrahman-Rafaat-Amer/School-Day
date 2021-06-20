@@ -4,14 +4,16 @@ using LMS.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace LMS.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210618150111_fixvmerror")]
+    partial class fixvmerror
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -298,14 +300,9 @@ namespace LMS.Migrations
                     b.Property<int?>("SubjectId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("YearId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("SubjectId");
-
-                    b.HasIndex("YearId");
 
                     b.ToTable("Chapters");
                 });
@@ -1209,13 +1206,7 @@ namespace LMS.Migrations
                         .WithMany()
                         .HasForeignKey("SubjectId");
 
-                    b.HasOne("LMS.Models.YearModel.Year", "Year")
-                        .WithMany()
-                        .HasForeignKey("YearId");
-
                     b.Navigation("Subject");
-
-                    b.Navigation("Year");
                 });
 
             modelBuilder.Entity("LMS.Models.ClassModel.Class", b =>

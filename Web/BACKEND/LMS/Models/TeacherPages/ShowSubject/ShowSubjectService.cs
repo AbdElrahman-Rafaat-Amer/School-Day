@@ -9,22 +9,19 @@ using System.Threading.Tasks;
 
 namespace LMS.Models.TeacherPages.ShowSubject
 {
-    public class ShowSubjectService : IAppRepo<Subject>
+    public class ShowSubjectService : IAppRepo<ShowSubjectVM>
     {
         private readonly AppDbContext _context;
         private readonly IMapper _mapper;
 
-        public ShowSubjectService(AppDbContext context,IMapper mapper)
+        public ShowSubjectService(AppDbContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;
         }
-        public void Create(ShowSubjectVM table)
-        {
-            throw new NotImplementedException();
-        }
 
-        public void Create(Subject table)
+
+        public void Create(ShowSubjectVM table)
         {
             throw new NotImplementedException();
         }
@@ -39,12 +36,29 @@ namespace LMS.Models.TeacherPages.ShowSubject
             throw new NotImplementedException();
         }
 
-        public List<Subject> List()
+        public List<ShowSubjectVM> List()
         {
-            var subjects2 = _context.Subjects.ToList();
+            var subjects2 = _context.Subjects.FirstOrDefault();
             var subjects = _context.Subjects.Include(y => y.Year).ToList();
-            //var vM = _mapper.Map<List<Subject>, List<ShowSubjectVM>>(subjects);
-            return subjects;
+            List<ShowSubjectVM> Vm = new List<ShowSubjectVM>();
+            foreach (var s in subjects)
+            {
+
+                ShowSubjectVM ss = new ShowSubjectVM
+                {
+                    Name = s.Name,
+                    Photo = s.Photo,
+                    DateOfUPload = s.DateOfUPload.ToString("yyyy/MM/dd"),
+                    Year = "",
+                };
+                if (s.Year != null)
+                {
+                    ss.Year = s.Year.Name;
+
+                };
+                Vm.Add(ss);
+            }
+            return Vm;
         }
 
         public List<ShowSubjectVM> ListByFilter(Func<ShowSubjectVM, bool> lamda)
@@ -52,26 +66,20 @@ namespace LMS.Models.TeacherPages.ShowSubject
             throw new NotImplementedException();
         }
 
-        public List<Subject> ListByFilter(Func<Subject, bool> lamda)
-        {
-            throw new NotImplementedException();
-        }
+
 
         public void Update(ShowSubjectVM table)
         {
             throw new NotImplementedException();
         }
 
-        public void Update(Subject table)
+
+
+        Task<ShowSubjectVM> IAppRepo<ShowSubjectVM>.Find(int Id)
         {
             throw new NotImplementedException();
         }
 
-        Task<Subject> IAppRepo<Subject>.Find(int Id)
-        {
-            throw new NotImplementedException();
-        }
 
-      
     }
 }
