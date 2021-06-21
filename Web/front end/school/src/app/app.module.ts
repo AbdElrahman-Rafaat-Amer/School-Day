@@ -34,8 +34,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatTableModule} from '@angular/material/table';
 import { NavbarModule } from 'angular-bootstrap-md'
 import {MatMenuModule} from '@angular/material/menu';
-
-
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatSelectModule} from '@angular/material/select';
 import { MatInputModule }from '@angular/material/input';
 import { FooterComponent } from './footer/footer.component';
 import { CalenderComponent } from './calender/calender.component';
@@ -113,7 +113,8 @@ import {NgxPaginationModule } from 'ngx-pagination';
     MatMenuModule,
     NavbarModule,
     Ng2OrderModule,
-
+    MatSelectModule,
+    MatDatepickerModule,
 
     RouterModule.forRoot([
       {path: '',component:HomeComponent},
