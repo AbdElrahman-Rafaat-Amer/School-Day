@@ -15,6 +15,11 @@ namespace LMS.Models.ZoomModel
         }
         public void Add(Zoom zoom)
         {
+            var account = _context.Accounts.Find(zoom.Account.Id);
+            if (account!=null)
+            {
+                zoom.Account = account;
+            }
             _context.Add(zoom);
             _context.SaveChanges();
         }

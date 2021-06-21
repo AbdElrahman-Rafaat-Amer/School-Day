@@ -43,6 +43,7 @@ namespace LMS.Models
         public DbSet<AccountModel.Account> Accounts { get; set; }
         public DbSet<AdminModel.Admin> Admin { get; set; }
         public DbSet<ChapterModel.Chapter> Chapters { get; set; }
+        public DbSet<PostModel.Post> Posts { get; set; }
 
     }
 }

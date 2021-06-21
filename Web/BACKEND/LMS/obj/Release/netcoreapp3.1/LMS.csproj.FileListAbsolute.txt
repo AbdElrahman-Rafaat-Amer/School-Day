@@ -72,7 +72,6 @@ E:\work\School-Day\Web\BACKEND\LMS\obj\Release\netcoreapp3.1\LMS.csproj.CopyComp
 E:\work\School-Day\Web\BACKEND\LMS\obj\Release\netcoreapp3.1\LMS.dll
 E:\work\School-Day\Web\BACKEND\LMS\obj\Release\netcoreapp3.1\LMS.pdb
 E:\work\School-Day\Web\BACKEND\LMS\obj\Release\netcoreapp3.1\LMS.genruntimeconfig.cache
-C:\Users\Nabil\Documents\GitHub\School-Day\Web\BACKEND\LMS\obj\Release\netcoreapp3.1\LMS.csprojAssemblyReference.cache
 C:\Users\Nabil\Documents\GitHub\School-Day\Web\BACKEND\LMS\obj\Release\netcoreapp3.1\LMS.AssemblyInfoInputs.cache
 C:\Users\Nabil\Documents\GitHub\School-Day\Web\BACKEND\LMS\obj\Release\netcoreapp3.1\LMS.AssemblyInfo.cs
 C:\Users\Nabil\Documents\GitHub\School-Day\Web\BACKEND\LMS\obj\Release\netcoreapp3.1\LMS.csproj.CoreCompileInputs.cache
@@ -145,3 +144,4 @@ C:\Users\Nabil\Documents\GitHub\School-Day\Web\BACKEND\LMS\obj\Release\netcoreap
 C:\Users\Nabil\Documents\GitHub\School-Day\Web\BACKEND\LMS\obj\Release\netcoreapp3.1\LMS.RazorTargetAssemblyInfo.cache
 C:\Users\Nabil\Documents\GitHub\School-Day\Web\BACKEND\LMS\obj\Release\netcoreapp3.1\LMS.csproj.CopyComplete
 C:\Users\Nabil\Documents\GitHub\School-Day\Web\BACKEND\LMS\obj\Release\netcoreapp3.1\LMS.genruntimeconfig.cache
+C:\Users\Nabil\Documents\GitHub\School-Day\Web\BACKEND\LMS\obj\Release\netcoreapp3.1\LMS.csproj.AssemblyReference.cache
