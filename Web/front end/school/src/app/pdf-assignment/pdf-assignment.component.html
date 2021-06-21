@@ -1,0 +1,179 @@
+<div class="container-fluid upload-chapter">
+
+    <div class="row">
+        <div class="col-5">
+            <div id="accordion">
+                <div id="accordion" class="accor">
+                    <p>
+                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <img src="http://www.jquery-az.com/html/images/banana.jpg" alt="...">
+                        <p>Computer History</p>
+                    </button>
+                    </p>
+                    <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                        <div class="card card-body mb-2">
+                            <div class="container">
+                                <div class="row">
+                                    <img src="http://www.jquery-az.com/html/images/banana.jpg" alt="...">
+                                    <p>Chapter 1</p>
+                                    <a href="#"> Download</a>
+                                    <a href="#"> Read</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="accordion" class="accor">
+                    <p>
+                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                        <img src="http://www.jquery-az.com/html/images/banana.jpg" alt="...">
+                        <p>Computer History</p>
+                    </button>
+                    </p>
+                    <div id="collapseTwo" class="collapse show" data-parent="#accordion">
+                        <div class="card card-body mb-2">
+                            <div class="container">
+                                <div class="row">
+                                    <img src="http://www.jquery-az.com/html/images/banana.jpg" alt="...">
+                                    <p>Chapter 1</p>
+                                    <a href="#"> Download</a>
+                                    <a href="#"> Read</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="accordion" class="accor">
+                    <p>
+                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                        <img src="http://www.jquery-az.com/html/images/banana.jpg" alt="...">
+                        <p>Computer History</p>
+                    </button>
+                    </p>
+                    <div id="collapseThree" class="collapse show" data-parent="#accordion">
+                        <div class="card card-body mb-2">
+                            <div class="container">
+                                <div class="row">
+                                    <img src="http://www.jquery-az.com/html/images/banana.jpg" alt="...">
+                                    <p>Chapter 1</p>
+                                    <a href="#"> Download</a>
+                                    <a href="#"> Read</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card-body mb-2">
+                            <div class="container">
+                                <div class="row">
+                                    <img src="http://www.jquery-az.com/html/images/banana.jpg" alt="...">
+                                    <p>Chapter 1</p>
+                                    <a href="#"> Download</a>
+                                    <a href="#"> Read</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card-body mb-2">
+                            <div class="container">
+                                <div class="row">
+                                    <img src="http://www.jquery-az.com/html/images/banana.jpg" alt="...">
+                                    <p>Chapter 1</p>
+                                    <a href="#"> Download</a>
+                                    <a href="#"> Read</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <div class="col-7 upload-section">
+            <div class="container-fluid">
+                <div class="row first-row">
+                    <button type="button" mat-raised-button>PDF Assignment</button>
+                    <button type="button" mat-raised-button>Online Assignment</button>
+                </div>
+                <div class="row secound-row">
+                    <div class="mat-form">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Subject Name</mat-label>
+                            <mat-select>
+                                <mat-option *ngFor="let subject of subjectName" [value]="subject.value">
+                                    {{subject.viewValue}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="mat-form">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Subject Name</mat-label>
+                            <mat-select>
+                                <mat-option *ngFor="let subject of subjectName" [value]="subject.value">
+                                    {{subject.viewValue}}
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <div class="row upload">
+                    <div class="col">
+
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Assignment Name</mat-label>
+                            <input matInput placeholder="LOL" value="">
+                        </mat-form-field>
+
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Start Date</mat-label>
+                            <input matInput placeholder="LOL" value="">
+                        </mat-form-field>
+
+                        <mat-form-field class="example-full-width">
+                            <mat-label>Start Date</mat-label>
+                            <input matInput placeholder="LOL" value="">
+                        </mat-form-field>
+
+
+                    </div>
+
+                    <div class="col">
+                        <div class="upload-file">
+                            <button type="button" mat-raised-button (click)="fileInput.click()">Upload File</button>
+                            <input hidden #fileInput type="file" id="file">
+                        </div>
+                        <div class="upload-photo">
+                            <button type="button" mat-raised-button (click)="fileInput.click()">
+                        Upload Photo
+                        </button>
+                            <input hidden #fileInput type="file" id="file">
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="row upload-btn">
+                    <button class="btn "> Upload <div class="arrow-down"></div></button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -58,6 +58,9 @@ import { AssignmentComponent } from './assignment/assignment.component';
 import { SearchfilterPipe } from './pipes/searchfilter.pipe';
 import { Ng2OrderModule } from 'ng2-order-pipe';
 import {NgxPaginationModule } from 'ngx-pagination';
+import { PDFAssignmentComponent } from './pdf-assignment/pdf-assignment.component';
+import { ChaptersComponent } from './chapters/chapters.component';
+import { OnlineQustionsComponent } from './online-qustions/online-qustions.component';
 
 @NgModule({
   declarations: [
@@ -86,6 +89,9 @@ import {NgxPaginationModule } from 'ngx-pagination';
     PostsComponent,
     AssignmentComponent,
     SearchfilterPipe,
+    PDFAssignmentComponent,
+    ChaptersComponent,
+    OnlineQustionsComponent,
   ],
   imports: [
     NgxPaginationModule,
@@ -131,6 +137,8 @@ import {NgxPaginationModule } from 'ngx-pagination';
       {path:'activity',component:ActivityComponent},
       {path:'assignment',component:AssignmentComponent},
       {path:'subject',component:SubjectComponent},
+      {path:'online',component:PDFAssignmentComponent},
+      {path:'attendance',component:OnlineQustionsComponent},
     ]),
     BrowserAnimationsModule,
     CommonModule,
