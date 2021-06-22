@@ -15,7 +15,9 @@ using LMS.Models.TeacherModel;
 using LMS.Models.TeacherPages;
 using LMS.Models.TeacherPages.ShowSubject;
 using LMS.Models.YearModel;
+using LMS.Services;
 using LMS.ViewModels;
+using LMS.ViewModels.StudentVMs;
 using LMS.ViewModels.TeacherVms;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -77,6 +79,8 @@ namespace LMS
             services.AddScoped<IAppRepo<ListSubjectVM>, FillComboSubjectService>();
             services.AddScoped<IAppRepo<ListYearsVM>, FillComboYearService>();
             services.AddScoped<IPostRepasitory<FeedsVM>, PerformPost>();
+            services.AddScoped<IAppRepo<SubjectDownloadsVms>, SubjectDownloadService>();
+            services.AddScoped<IAppRepo<ChaptersInSubjectVMs>, ChapterDownlaodService>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "LMS", Version = "v1" });

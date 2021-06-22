@@ -24,7 +24,7 @@ namespace LMS.Models.PostModel
             p.Account = _context.Accounts.Find(post.AccountId);
             _context.Add(p);
             _context.SaveChanges();
-            if (post.Photo.Count!=0)
+            if (post.Photo==null)
             {
                 foreach (var item in post.Photo)
                 {

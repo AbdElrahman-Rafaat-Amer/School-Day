@@ -50,6 +50,11 @@ namespace LMS.Models.TeacherPages
             throw new NotImplementedException();
         }
 
+        public List<ListSubjectVM> ListFilterById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Update(ListSubjectVM table)
         {
             throw new NotImplementedException();

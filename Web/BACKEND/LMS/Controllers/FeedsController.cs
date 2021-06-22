@@ -11,7 +11,7 @@ namespace LMS.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    public class FeedsController : ControllerBase
+    public class FeedsController : BaseController
     {
         private readonly IPostRepasitory<FeedsVM> post;
 
@@ -25,6 +25,7 @@ namespace LMS.Controllers
         {
             if (feeds!=null)
             {
+                feeds.AccountId = Account.Id;
                 post.CreatePost(feeds);
                 return Ok("Add Succssuly");
 

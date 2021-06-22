@@ -13,5 +13,6 @@ namespace LMS.Models
         Task<T> Find(int Id);
         List<T> List();
         List<T> ListByFilter(Func<T, bool> lamda);
+        List<T> ListFilterById(int id);
     }
 }
