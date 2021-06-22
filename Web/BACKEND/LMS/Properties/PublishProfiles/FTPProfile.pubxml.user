@@ -8,7 +8,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzPFmxAGct0izViwPlR08AAAAAAACAAAAAAAQZgAAAAEAACAAAAAsV67EuVhGOhpGcETyZH6p0S9Ykrhp6LuNTQ8PiBig2AAAAAAOgAAAAAIAACAAAABK5bDk+kwXjuYx307SM/i+Ds1sApfbXhRQv2lCyMHENzAAAABha+kQBzT7O5556ecTxMrY63VWfLpU1H34tlnqUJWPZztaZhA6xhGX5oBiFK7m/WZAAAAAVW1cbIKT9yFo7HaJutHmMMHDEUoztAXnG1z1oadIdgPcJRdTMSMB/7qcY0CHsmLze6bWM8S5V3wTDVJvm71d6A==</EncryptedPassword>
     <_PublishTargetUrl>ftp://ftp.site4now.net/APILMS</_PublishTargetUrl>
-    <History>True|2021-06-21T21:17:54.3187041Z;False|2021-06-21T23:15:41.6271260+02:00;False|2021-06-21T22:57:59.1613060+02:00;False|2021-06-21T22:22:02.8681450+02:00;False|2021-06-21T22:17:56.1553756+02:00;False|2021-06-21T22:16:20.1565517+02:00;</History>
+    <History>True|2021-06-22T21:01:14.8044033Z;True|2021-06-22T22:43:27.1833800+02:00;True|2021-06-22T22:28:35.9785371+02:00;True|2021-06-22T22:20:16.4581130+02:00;True|2021-06-21T23:17:54.3187041+02:00;False|2021-06-21T23:15:41.6271260+02:00;False|2021-06-21T22:57:59.1613060+02:00;False|2021-06-21T22:22:02.8681450+02:00;False|2021-06-21T22:17:56.1553756+02:00;False|2021-06-21T22:16:20.1565517+02:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="appsettings.Development.json">
@@ -27,19 +27,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/19/2021 21:04:50</publishTime>
     </File>
     <File Include="LMS.deps.json">
-      <publishTime>06/21/2021 23:16:03</publishTime>
+      <publishTime>06/22/2021 23:00:08</publishTime>
     </File>
     <File Include="LMS.dll">
-      <publishTime>06/21/2021 23:16:03</publishTime>
+      <publishTime>06/22/2021 22:59:59</publishTime>
     </File>
     <File Include="LMS.exe">
-      <publishTime>06/21/2021 23:16:03</publishTime>
+      <publishTime>06/22/2021 22:59:59</publishTime>
     </File>
     <File Include="LMS.pdb">
-      <publishTime>06/21/2021 23:16:03</publishTime>
+      <publishTime>06/22/2021 22:59:59</publishTime>
     </File>
     <File Include="LMS.runtimeconfig.json">
-      <publishTime>06/20/2021 06:31:45</publishTime>
+      <publishTime>06/22/2021 22:17:56</publishTime>
     </File>
     <File Include="MailKit.dll">
       <publishTime>03/16/2021 17:15:52</publishTime>
@@ -180,7 +180,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/15/2019 08:37:42</publishTime>
     </File>
     <File Include="web.config">
-      <publishTime>06/21/2021 23:16:03</publishTime>
+      <publishTime>06/22/2021 23:00:08</publishTime>
     </File>
   </ItemGroup>
 </Project>

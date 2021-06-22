@@ -19,6 +19,7 @@ namespace LMS.Models.TaskModel
         public string UploadFile { get; set; }
         public AccountModel.Account Account { get; set; }
         public SubjectModel.Subject Subject { get; set; }
+        public YearModel.Year Year { get; set; }
         public ICollection<QuestionModel.Question> Questions { get; set; }
 
     }

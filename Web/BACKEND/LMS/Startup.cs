@@ -16,6 +16,7 @@ using LMS.Models.TeacherPages;
 using LMS.Models.TeacherPages.ShowSubject;
 using LMS.Models.YearModel;
 using LMS.Services;
+using LMS.Services.Assignement;
 using LMS.ViewModels;
 using LMS.ViewModels.StudentVMs;
 using LMS.ViewModels.TeacherVms;
@@ -81,6 +82,8 @@ namespace LMS
             services.AddScoped<IPostRepasitory<FeedsVM>, PerformPost>();
             services.AddScoped<IAppRepo<SubjectDownloadsVms>, SubjectDownloadService>();
             services.AddScoped<IAppRepo<ChaptersInSubjectVMs>, ChapterDownlaodService>();
+            services.AddScoped<IAppRepo<ShowAssignmentVms>, ShowAssignmentService>();
+            
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "LMS", Version = "v1" });
