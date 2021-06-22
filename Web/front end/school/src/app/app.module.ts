@@ -34,8 +34,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatTableModule} from '@angular/material/table';
 import { NavbarModule } from 'angular-bootstrap-md'
 import {MatMenuModule} from '@angular/material/menu';
-
-
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatSelectModule} from '@angular/material/select';
 import { MatInputModule }from '@angular/material/input';
 import { FooterComponent } from './footer/footer.component';
 import { CalenderComponent } from './calender/calender.component';
@@ -58,6 +58,9 @@ import { AssignmentComponent } from './assignment/assignment.component';
 import { SearchfilterPipe } from './pipes/searchfilter.pipe';
 import { Ng2OrderModule } from 'ng2-order-pipe';
 import {NgxPaginationModule } from 'ngx-pagination';
+import { PDFAssignmentComponent } from './pdf-assignment/pdf-assignment.component';
+import { ChaptersComponent } from './chapters/chapters.component';
+import { OnlineQustionsComponent } from './online-qustions/online-qustions.component';
 
 @NgModule({
   declarations: [
@@ -86,6 +89,9 @@ import {NgxPaginationModule } from 'ngx-pagination';
     PostsComponent,
     AssignmentComponent,
     SearchfilterPipe,
+    PDFAssignmentComponent,
+    ChaptersComponent,
+    OnlineQustionsComponent,
   ],
   imports: [
     NgxPaginationModule,
@@ -113,7 +119,8 @@ import {NgxPaginationModule } from 'ngx-pagination';
     MatMenuModule,
     NavbarModule,
     Ng2OrderModule,
-
+    MatSelectModule,
+    MatDatepickerModule,
 
     RouterModule.forRoot([
       {path: '',component:HomeComponent},
@@ -130,6 +137,8 @@ import {NgxPaginationModule } from 'ngx-pagination';
       {path:'activity',component:ActivityComponent},
       {path:'assignment',component:AssignmentComponent},
       {path:'subject',component:SubjectComponent},
+      {path:'online',component:PDFAssignmentComponent},
+      {path:'attendance',component:OnlineQustionsComponent},
     ]),
     BrowserAnimationsModule,
     CommonModule,

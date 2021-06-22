@@ -13,13 +13,13 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
   Tittle = ['Subject',
-  'Notice',
   'Exame',
-  'Online System',
+  'Online Exame',
+  'Attendance',
+  'Notice',
+  'Home Work',
   'Teachers',
-  'Issued Book',
-  'Pending Homework',
-  'Attendance'
+  'Issued Book'
   ];
 
 
