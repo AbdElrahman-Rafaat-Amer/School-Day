@@ -1,0 +1,59 @@
+.container-fluid {
+    background-color: #FFFAEB;
+    padding: 0 100px;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.title .header h2 {
+    margin: 0;
+    color: #d1902a;
+}
+
+.title .header span {
+    font-size: small;
+    color: rgb(141, 141, 141);
+}
+
+.title .btn {
+    color: #d1902a;
+    border: solid 1px #d1902a;
+    border-radius: 10%;
+    padding: 0 20px;
+}
+
+// +++ date
+.date {
+    display: flex;
+    margin: 20px 0 0;
+    border-bottom: solid 1px #ddd;
+}
+
+.date p {
+    margin-right: 60px;
+    font-size: large;
+}
+
+.date span {
+    opacity: .5;
+    font-size: small;
+}
+
+// ++++
+.holiday {
+    margin-top: 10px;
+}
+
+.holiday p {
+    color: #d1902a;
+    font-size: large;
+}
+
+.holiday span {
+    opacity: .5;
+    font-size: medium;
+}

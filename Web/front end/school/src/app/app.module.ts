@@ -61,6 +61,7 @@ import {NgxPaginationModule } from 'ngx-pagination';
 import { PDFAssignmentComponent } from './pdf-assignment/pdf-assignment.component';
 import { ChaptersComponent } from './chapters/chapters.component';
 import { OnlineQustionsComponent } from './online-qustions/online-qustions.component';
+import { UpComingEventsComponent } from './up-coming-events/up-coming-events.component';
 
 @NgModule({
   declarations: [
@@ -92,6 +93,7 @@ import { OnlineQustionsComponent } from './online-qustions/online-qustions.compo
     PDFAssignmentComponent,
     ChaptersComponent,
     OnlineQustionsComponent,
+    UpComingEventsComponent,
   ],
   imports: [
     NgxPaginationModule,
