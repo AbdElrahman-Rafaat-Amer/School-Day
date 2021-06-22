@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace LMS.Models.NoteBordModel
+namespace LMS.ViewModels.NoteBoard
 {
-    public class NoteBoard
+    public class ShowNoteBoardVM
     {
         public int Id { get; set; }
         public string Text { get; set; }
         public string Title { get; set; }
         public DateTime Date { get; set; }
-        public TaskModel.Task Task { get; set; }
-        public AccountModel.Account Account { get; set; }
-        public SubjectModel.Subject Subject { get; set; }
+        public string Photo { get; set; }
+        public string Color { get; set; }
+        public int Taskid { get; set; }
+        public int Subjectid { get; set; }
 
     }
 }

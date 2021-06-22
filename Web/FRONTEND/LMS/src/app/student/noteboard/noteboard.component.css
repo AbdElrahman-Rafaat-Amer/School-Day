@@ -46,10 +46,12 @@
 
 .note-area {
     width: 100%;
-    height: 64vh;
-    border: 1px solid lightblue;
+    height: 300px;
     border-top: none;
     background-color: white;
+    padding: 20px;
+    color:#777;
+    font-size: 18px;
 }
 
 .header {
@@ -72,13 +74,57 @@
 }
 
 .creat-new .note {
+    position: relative;
     border-bottom: 1px solid rgb(73, 72, 72);
-    width: 70%;
+    width: 100%;
     margin: auto;
+    background-color: rgb(70, 148, 184);
     cursor: pointer;
+    border-radius: 10px;
+    color: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
 }
 
-.creat-new .note p {
-    font-size: small;
-    opacity: .5;
+.delete-note-icon{
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
+
+.img-note-subject img{
+    border-radius:50%;
+}
+
+.creat-new  p {
+    font-size: small;
+    color:#fff
+}
+
+
+.Title{
+    outline: none;
+    border: 0px;
+    border-bottom: 1px solid #444;
+    color: #777;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.notboard-text{
+    background-color:rgb(255, 255, 255);
+    border:0px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 1px 1px 8px #444;
+    padding: 20px;
+    padding-top: 50px;
+}
+
+.btn-share{
+    position: absolute;
+    top: 15px;
+    right: 0px;
+    padding: 3px 6px 3px 6px !important;
+}
+

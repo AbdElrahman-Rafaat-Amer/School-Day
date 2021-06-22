@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using LMS.Models.AccountModel;
+using LMS.ViewModels.NoteBoard;
 
 namespace LMS.Controllers
 {
@@ -22,18 +23,18 @@ namespace LMS.Controllers
         {
             this.note = note;
         }
-        [HttpGet]
-        public ActionResult<List<NoteBoard>> ListNote()
+        [HttpGet("ListOfNotes")]
+        public ActionResult<List<ShowNoteBoardVM>> ListNote()
         {
-            return Ok(note.NotesByFiltter(n=>n.Account==Account));
+            return Ok(note.Notes(n => n.Account == Account));
         }
 
         [HttpPost("CreateNote")]
-
-        public IActionResult CreateNote(NoteBoard n)
+        public IActionResult CreateNote(NoteCreateRequest n)
         {
             if (n != null)
             {
+                n.Account = Account;
                 note.CreateNote(n);
                 return Ok();
             }
@@ -49,11 +50,31 @@ namespace LMS.Controllers
             }
             return NotFound();
         }
-        [HttpDelete("{id}")]
+        [HttpDelete("DeleteNote/{id}")]
         public IActionResult DeleteNote(int id)
         {
-            note.DeleteNote(id);
-            return Ok(" Note Deleted Successfully");
+            try
+            {
+                note.DeleteNote(id, Account);
+                return Ok();
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+            
+        }
+
+        [HttpGet("GetSubjects")]
+        public IActionResult GetSubject()
+        {
+            return Ok(note.SubjectInNote());
+        }
+
+        [HttpGet("GetSubjectById/{id}")]
+        public IActionResult GetSubject(int id)
+        {
+            return Ok(note.GetSubject(id));
         }
     }
 }

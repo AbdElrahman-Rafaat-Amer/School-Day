@@ -1,3 +1,4 @@
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
@@ -36,6 +37,8 @@ import { QrCodeModule } from 'ng-qrcode';
     CommonModule,
     StudentRoutingModule,
     FullCalendarModule,
+    FormsModule,
+    ReactiveFormsModule,
     QrCodeModule,
     NgCircleProgressModule.forRoot({
       // set defaults here
