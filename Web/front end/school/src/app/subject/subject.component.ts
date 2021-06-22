@@ -9,6 +9,13 @@ export class SubjectComponent implements OnInit {
 
   constructor() { }
 
+  // subject !:string;
+  // index=
+  // [this.subject='c',
+  // this.subject='A',
+  // this.subject='B',
+  //     ];
+
   ngOnInit(): void {
   }
 

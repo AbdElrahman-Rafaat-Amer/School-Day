@@ -1,5 +1,5 @@
 ﻿using LMS.Models.TeacherModel;
-using LMS.ViewModels.Teacher;
+using LMS.ViewModels.TeacherVms;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;

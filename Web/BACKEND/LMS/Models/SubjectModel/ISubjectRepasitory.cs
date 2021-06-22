@@ -10,8 +10,8 @@ namespace LMS.Models.SubjectModel
         void CreateSubject(T subject);
         void UpdateSubject(T subject);
         void DeleteSubject(int Id);
-        Task<Subject> Subject(int Id);
-        List<Subject> Subjects();
+        Task<T> Subject(int Id);
+        List<T> Subjects();
 
     }
 }

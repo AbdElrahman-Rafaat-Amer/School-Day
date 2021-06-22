@@ -353,7 +353,6 @@ D:\Courses\Android\ProjectTasks\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3
 D:\Courses\Android\ProjectTasks\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.dll
 D:\Courses\Android\ProjectTasks\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.pdb
 D:\Courses\Android\ProjectTasks\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.genruntimeconfig.cache
-C:\Users\Nabil\Documents\GitHub\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.csprojAssemblyReference.cache
 C:\Users\Nabil\Documents\GitHub\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.AssemblyInfoInputs.cache
 C:\Users\Nabil\Documents\GitHub\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.AssemblyInfo.cs
 C:\Users\Nabil\Documents\GitHub\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.csproj.CoreCompileInputs.cache
@@ -426,3 +425,4 @@ C:\Users\Nabil\Documents\GitHub\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3
 C:\Users\Nabil\Documents\GitHub\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.RazorTargetAssemblyInfo.cache
 C:\Users\Nabil\Documents\GitHub\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.csproj.CopyComplete
 C:\Users\Nabil\Documents\GitHub\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.genruntimeconfig.cache
+C:\Users\Nabil\Documents\GitHub\School-Day\Web\BACKEND\LMS\obj\Debug\netcoreapp3.1\LMS.csproj.AssemblyReference.cache
