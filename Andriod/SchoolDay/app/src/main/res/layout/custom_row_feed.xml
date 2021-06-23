@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="20dp"
+        app:cardCornerRadius="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#532AD1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name_of_teacher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:text="Nabil Helmay Mansour"
+                android:textColor="#ffffff"
+                android:textSize="12dp"></TextView>
+
+            <TextView
+                android:id="@+id/job_of_teacher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name_of_teacher"
+                android:layout_centerHorizontal="true"
+                android:text="3l2 El3lo2"
+                android:textColor="#ffffff"
+                android:textSize="12dp"></TextView>
+
+            <TextView
+                android:id="@+id/content_of_feed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/job_of_teacher"
+                android:layout_marginTop="2dp"
+                android:text="this is the sharmat team leader"
+                android:textColor="#ffffff"
+                android:textSize="12dp"></TextView>
+
+            <ImageView
+                android:id="@+id/image_of_feed"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:layout_below="@+id/content_of_feed"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/ic_teacher"></ImageView>
+
+            <ImageView
+                android:id="@+id/make_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_of_feed"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_comment_on_feed"></ImageView>
+
+            <TextView
+                android:id="@+id/number_of_likes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_of_feed"
+                android:layout_marginRight="30dp"
+                android:layout_toRightOf="@id/make_like"
+                android:text="1.5k"></TextView>
+
+            <ImageView
+                android:id="@+id/make_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_of_feed"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@id/number_of_likes"
+                android:src="@drawable/ic_comment_on_feed"></ImageView>
+
+            <TextView
+                android:id="@+id/number_of_comments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_of_feed"
+                android:layout_toRightOf="@id/make_comment"
+                android:text="300"></TextView>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
