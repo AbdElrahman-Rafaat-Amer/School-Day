@@ -83,6 +83,7 @@ namespace LMS
             services.AddScoped<IAppRepo<SubjectDownloadsVms>, SubjectDownloadService>();
             services.AddScoped<IAppRepo<ChaptersInSubjectVMs>, ChapterDownlaodService>();
             services.AddScoped<IAppRepo<ShowAssignmentVms>, ShowAssignmentService>();
+            services.AddScoped<IAppRepo<AddPdfAssignmentVms>, AddPDFAssignemntService>();
             
             services.AddSwaggerGen(c =>
             {

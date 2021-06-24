@@ -28,11 +28,13 @@ namespace LMS.Controllers.TeacherStackholder.Assignment
             this.addpdf = addpdf;
             _listYear = listYear;
         }
+        //  show assignment page 
         [HttpGet("ShowAssignment")]
         public ActionResult<List<ShowAssignmentVms>> ShowAssignment()
         {
             return Ok(_showAssignemt.List());
         }
+        //add Pdf assigment
         [HttpGet("Listsubject")]
         public ActionResult<List<ListSubjectVM>> ListSubject()
         {
