@@ -8,7 +8,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzPFmxAGct0izViwPlR08AAAAAAACAAAAAAAQZgAAAAEAACAAAAAsV67EuVhGOhpGcETyZH6p0S9Ykrhp6LuNTQ8PiBig2AAAAAAOgAAAAAIAACAAAABK5bDk+kwXjuYx307SM/i+Ds1sApfbXhRQv2lCyMHENzAAAABha+kQBzT7O5556ecTxMrY63VWfLpU1H34tlnqUJWPZztaZhA6xhGX5oBiFK7m/WZAAAAAVW1cbIKT9yFo7HaJutHmMMHDEUoztAXnG1z1oadIdgPcJRdTMSMB/7qcY0CHsmLze6bWM8S5V3wTDVJvm71d6A==</EncryptedPassword>
     <_PublishTargetUrl>ftp://ftp.site4now.net/APILMS</_PublishTargetUrl>
-    <History>True|2021-06-24T22:24:47.3474107Z;False|2021-06-25T00:23:10.0564984+02:00;True|2021-06-24T11:42:09.0228911+02:00;True|2021-06-24T02:05:15.1173439+02:00;False|2021-06-24T00:49:25.2193749+02:00;False|2021-06-24T00:47:57.9401634+02:00;True|2021-06-23T19:48:38.3832426+02:00;False|2021-06-23T19:47:00.6249659+02:00;False|2021-06-23T19:39:46.7309431+02:00;False|2021-06-23T19:34:58.8328338+02:00;True|2021-06-23T01:42:54.4254178+02:00;True|2021-06-23T00:49:30.6943224+02:00;True|2021-06-23T00:39:20.7438484+02:00;True|2021-06-22T23:01:14.8044033+02:00;True|2021-06-22T22:43:27.1833800+02:00;True|2021-06-22T22:28:35.9785371+02:00;True|2021-06-22T22:20:16.4581130+02:00;True|2021-06-21T23:17:54.3187041+02:00;False|2021-06-21T23:15:41.6271260+02:00;False|2021-06-21T22:57:59.1613060+02:00;False|2021-06-21T22:22:02.8681450+02:00;False|2021-06-21T22:17:56.1553756+02:00;False|2021-06-21T22:16:20.1565517+02:00;</History>
+    <History>True|2021-06-25T22:43:23.1281390Z;False|2021-06-26T00:40:53.8763597+02:00;True|2021-06-25T00:24:47.3474107+02:00;False|2021-06-25T00:23:10.0564984+02:00;True|2021-06-24T11:42:09.0228911+02:00;True|2021-06-24T02:05:15.1173439+02:00;False|2021-06-24T00:49:25.2193749+02:00;False|2021-06-24T00:47:57.9401634+02:00;True|2021-06-23T19:48:38.3832426+02:00;False|2021-06-23T19:47:00.6249659+02:00;False|2021-06-23T19:39:46.7309431+02:00;False|2021-06-23T19:34:58.8328338+02:00;True|2021-06-23T01:42:54.4254178+02:00;True|2021-06-23T00:49:30.6943224+02:00;True|2021-06-23T00:39:20.7438484+02:00;True|2021-06-22T23:01:14.8044033+02:00;True|2021-06-22T22:43:27.1833800+02:00;True|2021-06-22T22:28:35.9785371+02:00;True|2021-06-22T22:20:16.4581130+02:00;True|2021-06-21T23:17:54.3187041+02:00;False|2021-06-21T23:15:41.6271260+02:00;False|2021-06-21T22:57:59.1613060+02:00;False|2021-06-21T22:22:02.8681450+02:00;False|2021-06-21T22:17:56.1553756+02:00;False|2021-06-21T22:16:20.1565517+02:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="appsettings.Development.json">
@@ -27,16 +27,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/19/2021 21:04:50</publishTime>
     </File>
     <File Include="LMS.deps.json">
-      <publishTime>06/25/2021 00:23:41</publishTime>
+      <publishTime>06/26/2021 00:41:28</publishTime>
     </File>
     <File Include="LMS.dll">
-      <publishTime>06/25/2021 00:23:33</publishTime>
+      <publishTime>06/26/2021 00:41:12</publishTime>
     </File>
     <File Include="LMS.exe">
-      <publishTime>06/25/2021 00:23:33</publishTime>
+      <publishTime>06/26/2021 00:41:13</publishTime>
     </File>
     <File Include="LMS.pdb">
-      <publishTime>06/25/2021 00:23:33</publishTime>
+      <publishTime>06/26/2021 00:41:12</publishTime>
     </File>
     <File Include="LMS.runtimeconfig.json">
       <publishTime>06/22/2021 22:17:56</publishTime>
@@ -180,7 +180,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/15/2019 08:37:42</publishTime>
     </File>
     <File Include="web.config">
-      <publishTime>06/25/2021 00:23:41</publishTime>
+      <publishTime>06/26/2021 00:41:28</publishTime>
     </File>
   </ItemGroup>
 </Project>
