@@ -923,6 +923,9 @@ namespace LMS.Migrations
                     b.Property<DateTime>("EndData")
                         .HasColumnType("datetime2");
 
+                    b.Property<double>("GivenDegree")
+                        .HasColumnType("float");
+
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
@@ -930,6 +933,9 @@ namespace LMS.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("ParentAccountId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("QuestionNumber")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("StartDate")
@@ -941,11 +947,17 @@ namespace LMS.Migrations
                     b.Property<int?>("SubjectId")
                         .HasColumnType("int");
 
+                    b.Property<int>("TimeForExam")
+                        .HasColumnType("int");
+
                     b.Property<string>("Type")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UploadFile")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("YearId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -954,6 +966,8 @@ namespace LMS.Migrations
                     b.HasIndex("ParentAccountId");
 
                     b.HasIndex("SubjectId");
+
+                    b.HasIndex("YearId");
 
                     b.ToTable("Tasks");
                 });
@@ -1485,9 +1499,15 @@ namespace LMS.Migrations
                         .WithMany()
                         .HasForeignKey("SubjectId");
 
+                    b.HasOne("LMS.Models.YearModel.Year", "Year")
+                        .WithMany()
+                        .HasForeignKey("YearId");
+
                     b.Navigation("Account");
 
                     b.Navigation("Subject");
+
+                    b.Navigation("Year");
                 });
 
             modelBuilder.Entity("LMS.Models.TeacherModel.Teacher", b =>

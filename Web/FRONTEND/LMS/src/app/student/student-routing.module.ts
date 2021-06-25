@@ -15,6 +15,7 @@ import { NgModule } from '@angular/core';
 
 const chatModule = () => import('./chat/chat.module').then(x => x.ChatModule);
 const teacherModule = () => import('./teacher/teacher.module').then(x => x.TeacherModule);
+const feedsModule = () => import('./feeds/feeds.module').then(x => x.FeedsModule);
 
 const routes : Routes = [
   {
@@ -29,7 +30,8 @@ const routes : Routes = [
       {path:'noteboard',component:NoteboardComponent},
       {path:'downloads', component:DownloadsComponent},
       {path:'attendance', component:AttendanceComponent},
-      {path:'teacher',loadChildren:teacherModule}
+      {path:'teacher', loadChildren:teacherModule},
+      {path:'feeds', loadChildren:feedsModule}
     ]
   },{
     path: '**' , redirectTo: ''

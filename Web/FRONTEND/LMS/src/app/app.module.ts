@@ -18,7 +18,8 @@ import { FooterComponent } from './_shared/footer/footer.component';
 
 import { FullCalendarModule } from '@fullcalendar/angular'; 
 import dayGridPlugin from '@fullcalendar/daygrid'; 
-import interactionPlugin from '@fullcalendar/interaction'; 
+import interactionPlugin from '@fullcalendar/interaction';
+import { TeacherHeaderComponent } from './home/teacher-header/teacher-header.component'; 
 FullCalendarModule.registerPlugins([ 
   dayGridPlugin,
   interactionPlugin
@@ -41,7 +42,8 @@ FullCalendarModule.registerPlugins([
         HomeComponent,
         TeacherComponent,
         StudentHeaderComponent,
-        FooterComponent
+        FooterComponent,
+        TeacherHeaderComponent
     ],
     providers: [
         { provide: APP_INITIALIZER, useFactory: appInitializer, multi: true, deps: [AccountService] },
