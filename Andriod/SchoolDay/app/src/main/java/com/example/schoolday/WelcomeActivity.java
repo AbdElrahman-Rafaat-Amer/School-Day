@@ -6,7 +6,9 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.schoolday.student.FragmentHome;
 import com.example.schoolday.student.MainActivity;
+import com.example.schoolday.teacher.TeacherHomeFragment;
 
 public class WelcomeActivity extends AppCompatActivity {
     
@@ -18,9 +20,14 @@ public class WelcomeActivity extends AppCompatActivity {
         findViewById(R.id.welocome_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
-                intent.putExtra("from welcome to main student","Home");
-                startActivity(intent);
+               // Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
+             //   intent.putExtra("from welcome to main student","Home");
+             //   startActivity(intent);
+
+                Intent intent = new Intent(WelcomeActivity.this, MainActivityTeacher.class);
+                   intent.putExtra("from welcome to main student","Home");
+                   startActivity(intent);
+
             }
         });
     }

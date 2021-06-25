@@ -24,7 +24,7 @@ public class SignupActivity extends AppCompatActivity {
     private RadioButton radioButtonParent, radioButtonTeacher, radioButtonStudent;
     private Button completingInfo;
 
-    private String nameValue, emailValue, passwordValue, confirmPassValue, role;
+    private String nameValue, emailValue, passwordValue, confirmPassValue;
     private boolean isParent, isStudent, isTeacher, isContinue;
 
     private static boolean check(String name, String email, String password, String confirmPass, boolean isStudent, boolean isTeacher, boolean isParent) {
@@ -81,13 +81,13 @@ public class SignupActivity extends AppCompatActivity {
                             intent.putExtra("signup_password", passwordValue);
                             intent.putExtra("signup_confirm_password", nameValue);
                             if (isStudent == true) {
-                                role = "student";
+                              Role role = Role.student;
                                 intent.putExtra("signup_role", role);
                             } else if (isParent == true) {
-                                role = "parent";
+                                Role role = Role.parent;
                                 intent.putExtra("signup_role", role);
                             } else if (isTeacher == true) {
-                                role = "teacher";
+                                Role role = Role.teacher;
                                 intent.putExtra("signup_role", role);
                             }
                             startActivity(intent);
@@ -133,6 +133,10 @@ public class SignupActivity extends AppCompatActivity {
         });
 
     }
-
+enum Role {
+        parent,
+        student,
+        teacher
+    }
 
 }

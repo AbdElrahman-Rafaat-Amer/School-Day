@@ -1,4 +1,4 @@
-package com.example.schoolday.student;
+package com.example.schoolday.student.downloadspackage;
 
 import android.os.Bundle;
 
@@ -13,10 +13,6 @@ import android.widget.Toast;
 
 import com.example.schoolday.APIClient;
 import com.example.schoolday.R;
-import com.example.schoolday.student.feespackage.FeesInterface;
-import com.example.schoolday.student.feespackage.FeesRecyclerViewAdapter;
-import com.example.schoolday.student.notepackage.Notes;
-import com.example.schoolday.student.notepackage.NotesRecyclerViewAdapter;
 
 import java.util.ArrayList;
 

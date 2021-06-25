@@ -13,6 +13,7 @@ import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import com.example.schoolday.R;
+import com.example.schoolday.student.downloadspackage.DownloadFragment;
 import com.example.schoolday.student.feespackage.FragmentFees;
 import com.example.schoolday.student.notepackage.NotesFragment;
 

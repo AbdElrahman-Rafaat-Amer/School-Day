@@ -1,4 +1,4 @@
-package com.example.schoolday.student;
+package com.example.schoolday.student.downloadspackage;
 
 public class Downloads {
 int subjectId;

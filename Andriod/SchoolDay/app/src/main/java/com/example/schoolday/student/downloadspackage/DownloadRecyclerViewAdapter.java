@@ -1,4 +1,4 @@
-package com.example.schoolday.student;
+package com.example.schoolday.student.downloadspackage;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -12,18 +12,16 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.schoolday.R;
-import com.example.schoolday.student.feespackage.FeesRecyclerViewAdapter;
-import com.example.schoolday.student.notepackage.Notes;
-import com.example.schoolday.student.notepackage.NotesRecyclerViewAdapter;
 
 import java.util.ArrayList;
 
 public class DownloadRecyclerViewAdapter extends RecyclerView.Adapter<DownloadRecyclerViewAdapter.DownloadViewHolder> {
     Context context;
-    ArrayList<Downloads> download;
+    ArrayList<Downloads> download = new ArrayList<Downloads>();
 
     public DownloadRecyclerViewAdapter (Context context,ArrayList<Downloads>downloads){
         this.context=context;
+        this.download=downloads;
     }
 
     @NonNull
