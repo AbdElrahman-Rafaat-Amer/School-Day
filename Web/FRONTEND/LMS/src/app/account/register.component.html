@@ -98,13 +98,14 @@
                             <div *ngIf="f.role.errors.required">Title is required</div>
                         </div>
                     </div>
-                    <div *ngIf="!f.role.errors && f.role.value == 'Driver' " class="form-group col-sm-12 col-md-6">
+
+                    <!-- <div *ngIf="!f.role.errors && f.role.value == 'Driver' " class="form-group col-sm-12 col-md-6">
                         <label>License ID</label>
                         <input type="text" formControlName="LicenseID" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.LicenseID.errors }" />
                         <div *ngIf="submitted && f.LicenseID.errors" class="invalid-feedback">
                             <div *ngIf="f.LicenseID.errors.required">License Name is required</div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
                 <div class="form-group form-check">
