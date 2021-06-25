@@ -153,10 +153,10 @@ public class Signup2Activity extends AppCompatActivity {
         signupRequest.setPhone_1(firstNumberValue);
         signupRequest.setLicenseID(licenceIdValue);
         signupRequest.setNationalID(nationalIDValue);
-        Call<SignupResponse> signupResponseCall = APIClient.getSignupService().signupUser(signupRequest);
-        signupResponseCall.enqueue(new Callback<SignupResponse>() {
+        Call<Void> signupResponseCall = APIClient.getSignupService().signupUser(signupRequest);
+        signupResponseCall.enqueue(new Callback<Void>() {
             @Override
-            public void onResponse(Call<SignupResponse> call, Response<SignupResponse> response) {
+            public void onResponse(Call<Void> call, Response<Void> response) {
                 if (response.isSuccessful()) {
                     Log.e("success", response.toString());
                     Toast.makeText(Signup2Activity.this, "Successful", Toast.LENGTH_SHORT).show();
@@ -170,7 +170,7 @@ public class Signup2Activity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<SignupResponse> call, Throwable t) {
+            public void onFailure(Call<Void> call, Throwable t) {
                 Log.e("this onFailure", t.toString());
                 Toast.makeText(Signup2Activity.this, "onFailure", Toast.LENGTH_SHORT).show();
                 finish();

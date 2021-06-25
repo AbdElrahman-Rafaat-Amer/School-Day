@@ -8,7 +8,7 @@ import retrofit2.http.Body;
 import retrofit2.http.POST;
 
 public interface SignupInterface {
-    @POST("Accounts/register")
-    Call<SignupResponse> signupUser(@Body SignupRequest signupRequest);
+    @POST("/Accounts/register")
+    Call<Void> signupUser(@Body SignupRequest signupRequest);
 
 }

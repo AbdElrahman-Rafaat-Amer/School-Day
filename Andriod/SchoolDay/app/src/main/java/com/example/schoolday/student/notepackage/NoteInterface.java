@@ -11,7 +11,7 @@ import retrofit2.http.PUT;
 
 public interface NoteInterface {
 
-    @GET("Note/Note")
+    @GET("Note/ListOfNotes")
     Call<ArrayList<Notes>> getNote();
 
     @POST("Note/CreateNote")

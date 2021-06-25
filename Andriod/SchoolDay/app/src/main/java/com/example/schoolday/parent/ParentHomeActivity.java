@@ -6,13 +6,14 @@ import android.view.View;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import com.example.schoolday.R;
 
 
 public class ParentHomeActivity extends AppCompatActivity {
 
-    private ImageView parentProfile, studentProfile, exam, attendance, assignment, bus, fees;
+    private CardView parentProfile, studentProfile, exam, attendance, assignment, bus, fees;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

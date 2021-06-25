@@ -8,6 +8,11 @@ public class LoginResponse {
     String lname;
     String gender;
     String email;
+    String role;
+    String created;
+    Boolean isVerified;
+    String jwtToken;
+
 
     public int getId() {
         return id;
@@ -89,8 +94,5 @@ public class LoginResponse {
         this.jwtToken = jwtToken;
     }
 
-    String role;
-    String created;
-    Boolean isVerified;
-    String jwtToken;
+
 }

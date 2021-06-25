@@ -1,6 +1,4 @@
-package com.example.schoolday.student;
-
-import com.example.schoolday.student.notepackage.Notes;
+package com.example.schoolday.student.downloadspackage;
 
 import java.util.ArrayList;
 

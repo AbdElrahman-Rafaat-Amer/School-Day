@@ -12,7 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".parent.ParentBusActivity"></activity>
+        <activity android:name=".MainActivityTeacher"></activity>
+        <activity android:name=".parent.ParentBusActivity" />
+        <activity android:name=".parent.ParentAssignmentActivity" />
+        <activity android:name=".parent.ParentAttendanceActivity" />
+        <activity android:name=".parent.ParentExamActivity" />
+        <activity android:name=".parent.ParentFeesActivity" />
+        <activity android:name=".parent.ParentProfileActivity" />
+        <activity android:name=".parent.ParentStudentProfileActivity" />
         <activity android:name=".parent.ParentHomeActivity" />
         <activity android:name=".WelcomeActivity" />
         <activity android:name=".student.MainActivity" />

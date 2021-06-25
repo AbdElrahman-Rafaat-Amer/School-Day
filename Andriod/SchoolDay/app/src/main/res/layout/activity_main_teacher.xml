@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivityTeacher">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff">
+
+        <ImageView
+            android:id="@+id/image_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@string/notification"
+            android:paddingTop="12dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/ic_notifications"></ImageView>
+
+        <ImageView
+            android:id="@+id/image_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/image_notification"
+            android:contentDescription="@string/search"
+            android:paddingTop="12dp"
+            android:src="@drawable/ic_search"
+            android:visibility="invisible"></ImageView>
+
+        <ImageView
+            android:id="@+id/image_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/image_notification"
+            android:contentDescription="@string/edit"
+            android:paddingTop="12dp"
+            android:src="@drawable/ic_edit"
+            android:visibility="invisible"></ImageView>
+
+        <ImageView
+            android:id="@+id/go_back_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:contentDescription="@string/go_back"
+            android:paddingTop="12dp"
+            android:src="@drawable/ic_arrow_go_back"
+            android:visibility="invisible"></ImageView>
+
+        <ImageView
+            android:id="@+id/option_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:contentDescription="@string/moresetting"
+            android:paddingTop="12dp"
+            android:src="@drawable/ic_more_stting"
+            android:visibility="invisible"></ImageView>
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></FrameLayout>
+    </RelativeLayout>
+
+
+    <com.etebarian.meowbottomnavigation.MeowBottomNavigation
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:mbn_backgroundBottomColor="#fff"
+        app:mbn_circleColor="@color/mainColor"
+        app:mbn_countBackgroundColor="#000"
+        app:mbn_defaultIconColor="#636363"
+        app:mbn_selectedIconColor="#fff"></com.etebarian.meowbottomnavigation.MeowBottomNavigation>
+
+</RelativeLayout>

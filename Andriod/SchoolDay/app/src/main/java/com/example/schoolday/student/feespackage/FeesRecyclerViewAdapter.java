@@ -22,6 +22,7 @@ public class FeesRecyclerViewAdapter extends RecyclerView.Adapter<FeesRecyclerVi
     ArrayList<Fees> feess;
     public FeesRecyclerViewAdapter(Context context, ArrayList<Fees> fees) {
         this.context = context;
+        this.feess = fees;
     }
 
     @Override

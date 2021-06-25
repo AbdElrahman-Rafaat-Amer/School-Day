@@ -99,7 +99,7 @@
         android:drawableLeft="@drawable/ic_baseline_call_to_action_24"
         android:drawablePadding="10dp"
         android:hint="@string/licence_id"
-        android:inputType="textPostalAddress"
+        android:inputType="number"
         android:paddingStart="10dp"
         android:paddingLeft="5dp"
         android:textColorHint="#000"

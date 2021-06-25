@@ -25,7 +25,7 @@ import retrofit2.Response;
 public class NotesRecyclerViewAdapter extends RecyclerView.Adapter<NotesRecyclerViewAdapter.NoteViewHolder> {
 
     Context context;
-    ArrayList<Notes> notes;
+    ArrayList<Notes> notes = new ArrayList<Notes>();
 
     public NotesRecyclerViewAdapter(Context context, ArrayList<Notes> notes) {
         this.context = context;
