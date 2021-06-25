@@ -6295,26 +6295,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Nabil\\.nuget\\packages\\": {}
+    "C:\\Users\\AME\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nabil\\Documents\\GitHub\\School-Day\\Web\\BACKEND\\LMS\\LMS.csproj",
+      "projectUniqueName": "C:\\Users\\AME\\Documents\\GitHub\\School-Day\\Web\\BACKEND\\LMS\\LMS.csproj",
       "projectName": "LMS",
-      "projectPath": "C:\\Users\\Nabil\\Documents\\GitHub\\School-Day\\Web\\BACKEND\\LMS\\LMS.csproj",
-      "packagesPath": "C:\\Users\\Nabil\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Nabil\\Documents\\GitHub\\School-Day\\Web\\BACKEND\\LMS\\obj\\",
+      "projectPath": "C:\\Users\\AME\\Documents\\GitHub\\School-Day\\Web\\BACKEND\\LMS\\LMS.csproj",
+      "packagesPath": "C:\\Users\\AME\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\AME\\Documents\\GitHub\\School-Day\\Web\\BACKEND\\LMS\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Nabil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\AME\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -6384,7 +6383,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

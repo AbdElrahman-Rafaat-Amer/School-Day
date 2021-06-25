@@ -1,13 +1,26 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { posts } from '../posts';
 
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.scss']
 })
-export class PostComponent {
+export class PostComponent implements OnInit{
   
-  @Input()
-  Post : any[]
+  @Input() Post : posts;
+  findText:boolean = false;
+  findImage:boolean = false;
+  
+  constructor() {
+  }
+
+  ngOnInit(): void {
+    console.log(this.Post);
+    if(this.Post != undefined){
+      if(this.Post.text != ""){this.findText = true}
+      if(this.Post.photos.length != 0){this.findImage = true}
+    }
+  }
 
 }

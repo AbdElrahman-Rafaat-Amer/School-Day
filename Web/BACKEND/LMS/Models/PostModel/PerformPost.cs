@@ -1,5 +1,6 @@
 ﻿using LMS.Services;
 using LMS.ViewModels;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,7 +26,7 @@ namespace LMS.Models.PostModel
             p.Account = _context.Accounts.Find(post.AccountId);
             _context.Add(p);
             _context.SaveChanges();
-            if (post.Photo==null)
+            if (post.Photo!=null)
             {
                 foreach (var item in post.Photo)
                 {
@@ -48,9 +49,26 @@ namespace LMS.Models.PostModel
             throw new NotImplementedException();
         }
 
-        public List<Post> Posts()
+        public List<ShowFeedsVM> Posts()
         {
-            throw new NotImplementedException();
+            var listPosts = _context.Posts.Include(a => a.Account).ToList();
+            List<ShowFeedsVM> showFeeds = new List<ShowFeedsVM>();
+            foreach (var item in listPosts)
+            {
+                string username = item.Account.Fname +" "+ item.Account.Mname +" "+ item.Account.Lname;
+                showFeeds.Add(new ShowFeedsVM
+                {
+                    Text = item.Text,
+                    Date = item.Date,
+                    AccountId = item.Account.Id,
+                    Id = item.Id,
+                    Like = item.Like,
+                    Image = item.Account.Photo,
+                    Username = username,
+                    Photos = _context.Photos.Where(a => a.Post == item).Select(a => a._Photo).ToList()
+                });
+            }
+            return showFeeds;
         }
 
         public void UpdatePost(FeedsVM post)

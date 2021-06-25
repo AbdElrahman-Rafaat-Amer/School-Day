@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
 const routes: Routes =[
   {path:'',component:LayoutComponent,
     children:[
-      {path:'assignment', component:PostComponent},
+      {path:'', component:PostComponent},
     ]
   }
 ]

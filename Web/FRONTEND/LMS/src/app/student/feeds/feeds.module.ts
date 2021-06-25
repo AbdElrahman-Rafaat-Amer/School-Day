@@ -3,6 +3,9 @@ import { LayoutComponent } from './layout.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PostComponent } from './post/post.component';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 
@@ -14,7 +17,11 @@ import { PostComponent } from './post/post.component';
   ],
   imports: [
     CommonModule,
-    FeedsRoutingModule
+    FeedsRoutingModule,
+    //BrowserModule,
+    FormsModule,
+    ReactiveFormsModule
+    
   ]
 })
 export class FeedsModule { }

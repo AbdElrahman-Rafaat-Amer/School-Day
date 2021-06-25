@@ -21,7 +21,7 @@ namespace LMS.Controllers
         }
 
         [HttpPost("AddPost")]
-        public ActionResult AddPost(FeedsVM feeds)
+        public ActionResult AddPost([FromForm]FeedsVM feeds)
         {
             if (feeds!=null)
             {
@@ -31,6 +31,12 @@ namespace LMS.Controllers
 
             }
             return BadRequest("is null");
+        }
+
+        [HttpGet("GetAllPosts")]
+        public ActionResult<List<ShowFeedsVM>> GetPosts()
+        {
+            return Ok(post.Posts());
         }
 
     }
