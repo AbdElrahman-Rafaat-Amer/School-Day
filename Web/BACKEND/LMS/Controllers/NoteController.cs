@@ -13,7 +13,7 @@ namespace LMS.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    [Authorize(Role.Student, Role.Teacher, Role.Admin)]
+    //[Authorize(Role.Student, Role.Teacher, Role.Admin)]
 
     public class NoteController : BaseController
     {

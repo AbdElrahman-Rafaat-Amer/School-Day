@@ -1,4 +1,5 @@
-﻿using LMS.ViewModels;
+﻿using LMS.Services;
+using LMS.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,7 +30,7 @@ namespace LMS.Models.PostModel
                 foreach (var item in post.Photo)
                 {
                     PhotoModel.Photo photo = new PhotoModel.Photo();
-                    photo._Photo = item;
+                    photo._Photo = UploadFile.UploadedFile(item,"Postphotos");
                     photo.Post = _context.Posts.Find(p.Id);
                     _context.Photos.Add(photo);
                     _context.SaveChanges();

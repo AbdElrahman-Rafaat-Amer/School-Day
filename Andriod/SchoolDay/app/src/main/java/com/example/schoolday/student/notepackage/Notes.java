@@ -1,6 +1,6 @@
 package com.example.schoolday.student.notepackage;
 
-public class Notes {
+public class    Notes {
     private String title, text, date;
     private int id;
 
