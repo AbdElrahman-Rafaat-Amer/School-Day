@@ -1,4 +1,4 @@
-package com.example.schoolday.student.notepackage;
+package com.example.schoolday.student.feedpackage;
 
 import java.util.List;
 

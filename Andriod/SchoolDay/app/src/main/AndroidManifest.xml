@@ -3,6 +3,10 @@
     package="com.example.schoolday">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -12,7 +16,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".MainActivityTeacher"></activity>
+        <activity android:name=".student.feedpackage.AddFeedActivity"></activity>
+        <activity android:name=".MainActivityTeacher" />
         <activity android:name=".parent.ParentBusActivity" />
         <activity android:name=".parent.ParentAssignmentActivity" />
         <activity android:name=".parent.ParentAttendanceActivity" />
@@ -27,7 +32,7 @@
         <activity android:name=".student.notepackage.NotesEditActivity" />
         <activity android:name=".signup.SignupActivity" />
         <activity android:name=".student.OnlineFriendsActivity" />
-        <activity android:name=".student.EditActivity" />
+        <activity android:name=".student.FragmentAssignment$EditActivity" />
         <activity
             android:name=".login.LoginActivity"
             android:theme="@style/AppTheme.NoActionBar">

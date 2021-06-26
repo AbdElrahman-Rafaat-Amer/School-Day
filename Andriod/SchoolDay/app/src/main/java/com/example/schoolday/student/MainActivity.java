@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatDelegate;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.example.schoolday.R;
+import com.example.schoolday.student.feedpackage.FragmentFeed;
 
 
 public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
@@ -40,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
         editImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, EditActivity.class);
+                Intent intent = new Intent(MainActivity.this, FragmentAssignment.EditActivity.class);
                 startActivity(intent);
             }
         });

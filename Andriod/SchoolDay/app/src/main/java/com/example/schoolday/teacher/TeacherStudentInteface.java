@@ -5,9 +5,9 @@ import retrofit2.http.GET;
 
 public interface TeacherStudentInteface {
 
-    @GET("/StudentRate/selectYear")
+    @GET("StudentRate/selectYear")
     Call<String> getSelectYear();
 
-    @GET("/StudentRate/selectclass")
+    @GET("StudentRate/selectclass")
     Call<String> getSelectClass();
 }

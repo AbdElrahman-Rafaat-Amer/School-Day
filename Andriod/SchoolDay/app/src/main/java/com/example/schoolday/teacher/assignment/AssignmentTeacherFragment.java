@@ -6,12 +6,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.schoolday.APIClient;
+import com.example.schoolday.AssignmentTeacherFragment2;
 import com.example.schoolday.R;
+import com.example.schoolday.student.notepackage.NotesFragment;
 
 import java.util.ArrayList;
 
@@ -24,14 +27,21 @@ public class AssignmentTeacherFragment extends Fragment {
     ArrayList<AssignmentTeacher> assignmentTeachers = new ArrayList<>();
     AssignmentTeacherRecyclerViewAdapter adapter;
     RecyclerView recyclerView;
+    CardView pdfAssignment;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_assignment_teacher, container, false);
         recyclerView = view.findViewById(R.id.recyclerView_assignment_teacher);
-
-        AssignmentTeacherInterface assignmentTeacherInterface = APIClient.getRetrofit().create(AssignmentTeacherInterface.class);
+        pdfAssignment = view.findViewById(R.id.pdf_assignment);
+        pdfAssignment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AssignmentTeacherFragment2()).commit();
+            }
+        });
+      /*  AssignmentTeacherInterface assignmentTeacherInterface = APIClient.getRetrofit().create(AssignmentTeacherInterface.class);
         assignmentTeacherInterface.getAssignmentTeacher().enqueue(new Callback<ArrayList<AssignmentTeacher>>() {
             @Override
             public void onResponse(Call<ArrayList<AssignmentTeacher>> call, Response<ArrayList<AssignmentTeacher>> response) {
@@ -46,7 +56,7 @@ public class AssignmentTeacherFragment extends Fragment {
             public void onFailure(Call<ArrayList<AssignmentTeacher>> call, Throwable t) {
                 Toast.makeText(getContext(), "There is problem", Toast.LENGTH_SHORT).show();
             }
-        });
+        });*/
         return view;
     }
 }
