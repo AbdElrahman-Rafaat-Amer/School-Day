@@ -35,7 +35,7 @@ namespace LMS.Services.Assignement
             {
                 Answer answer = new Answer();
                 answer.Text = item.Text;
-                answer.UploadFile = UploadFile.UploadedFile(item.UploadFile, item.Text);
+                //answer.UploadFile = UploadFile.UploadedFile(item.UploadFile, item.Text);
                 answer.Question = q;
                 _context.Answers.Add(answer);
                 _context.SaveChanges();

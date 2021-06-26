@@ -12,6 +12,7 @@ namespace LMS.Models.PostModel
     public class PerformPost : IPostRepasitory<FeedsVM>
     {
         private readonly AppDbContext _context;
+        private readonly UploadFile _uploadFile;
 
         public PerformPost(AppDbContext context)
         {
@@ -30,8 +31,9 @@ namespace LMS.Models.PostModel
             {
                 foreach (var item in post.Photo)
                 {
+                    UploadFile _uploadFile = new UploadFile();
                     PhotoModel.Photo photo = new PhotoModel.Photo();
-                    photo._Photo = UploadFile.UploadedFile(item,"Postphotos");
+                    photo._Photo = _uploadFile.UploadedFile(item,"Postphotos");
                     photo.Post = _context.Posts.Find(p.Id);
                     _context.Photos.Add(photo);
                     _context.SaveChanges();

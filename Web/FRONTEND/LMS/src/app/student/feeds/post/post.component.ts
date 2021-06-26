@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import { posts } from '../posts';
 
 @Component({
@@ -16,7 +17,7 @@ export class PostComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    console.log(this.Post);
+    console.log(this.Post.photos);
     if(this.Post != undefined){
       if(this.Post.text != ""){this.findText = true}
       if(this.Post.photos.length != 0){this.findImage = true}

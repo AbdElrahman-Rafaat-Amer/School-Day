@@ -10,14 +10,25 @@ namespace LMS.Services
 {
     public  class UploadFile
     {
-        public static string UploadedFile(IFormFile formFile,string FileName)
+        private readonly IWebHostEnvironment _web;
+
+        public UploadFile(IWebHostEnvironment web)
+        {
+            _web = web;
+        }
+        public UploadFile()
+        {
+                
+        }
+        public string UploadedFile(IFormFile formFile,string FileName)
         {
             string uniqueFileName = null;
 
             if (formFile != null)
             {
-                string uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "Uploadfiles");
-                uniqueFileName = Guid.NewGuid().ToString() + "_" + FileName;
+                string uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot",
+                  "Uploadfiles");
+                uniqueFileName = Guid.NewGuid().ToString() + "_" + formFile.FileName;
                 string filePath = Path.Combine(uploadsFolder, uniqueFileName);
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {

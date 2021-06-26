@@ -81,3 +81,9 @@
         font-size: x-large;
     }
 }
+
+.post-container{
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}

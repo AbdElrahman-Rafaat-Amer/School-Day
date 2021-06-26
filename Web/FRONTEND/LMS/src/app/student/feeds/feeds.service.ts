@@ -1,3 +1,4 @@
+import { FeedsVM } from './post/postmodel';
 import { Observable } from 'rxjs';
 import { posts, createPost } from './posts';
 import { HttpClient, HttpEvent, HttpParams, HttpRequest } from '@angular/common/http';
@@ -18,7 +19,6 @@ export class FeedsService {
   }
 
   addPost(formData : FormData){
-    console.log(formData);
     return this.http.post<any>(`${baseURL}/AddPost`,formData);
   }
 }

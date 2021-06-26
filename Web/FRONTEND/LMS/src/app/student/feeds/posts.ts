@@ -2,7 +2,7 @@ export class posts{
     id:number;
     text:string;
     date:string;
-    photos:any[];
+    photos:File[];
     accountid:number;
     like:number;
     image:string;

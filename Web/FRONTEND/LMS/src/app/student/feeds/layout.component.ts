@@ -1,3 +1,5 @@
+import { AccountService } from '@app/_services';
+import { FeedsVM } from './post/postmodel';
 import { first } from 'rxjs/operators';
 import { posts } from './posts';
 import { FeedsService } from './feeds.service';
@@ -18,13 +20,17 @@ export class LayoutComponent implements OnInit {
 
   SelectedFile : File = null;
   Posts: posts[]
+  Image : File
 
-  constructor(private service:FeedsService, private formBuilder:FormBuilder) {}
+  constructor(
+    private service:FeedsService,
+    private accountService:AccountService
+  ) {}
 
   ngOnInit(): void {
-    // this.service.getAllPosts().pipe(first()).subscribe(
-    //   p => this.Posts = p
-    // )
+    this.service.getAllPosts().pipe(first()).subscribe(
+      p => this.Posts = p
+    )
 
     this.form = new FormGroup({
       text: new FormControl(null),
@@ -33,62 +39,62 @@ export class LayoutComponent implements OnInit {
     });
   }
 
-  onSubmit(data:any){
+  SendPost(){
     const formData = new FormData();
 
-    formData.append('Photo', this.form.get('photo').value);
-    formData.append('Text', data.text);
-    formData.append('AccountId', data.accountid);
+    formData.append('Photo', this.Image);
+    formData.append('Text', this.form.controls.text.value);
+    formData.append('AccountId', this.accountService.accountValue.id.toFixed());
 
     this.service.addPost(formData).subscribe(
-      //res => console.log(res),
-      //err => console.log(err)
+      res => console.log(res),
+      err => console.log(err)
     );
   }
 
-  onSelectFile(fileInput : any){
-    this.SelectedFile = <File>fileInput.target.files[0];
+
+  onSelectFile(event : any){
+    const files = event.target.files;
+    this.Image = event.target.files[0];
+    if (files.length === 0)
+        return;
+
+    const mimeType = files[0].type;
+    if (mimeType.match(/image\/*/) == null) {
+        this.message = "Only images are supported.";
+        return;
+    }
+
+
+    const reader = new FileReader();
+    this.imagePath = files;
+    reader.readAsDataURL(files[0]);
+    reader.onload = (_event) => {
+        this.url = reader.result;
+    }
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 
   onFileChanged(event:any) {
-    const files = event.target.files[0];
-    if (files.length == 0){
-      console.log("This file not good")
-      return;
-    }
-    console.log(files)
+    const files = event.target.files;
+    if (files.length === 0)
+        return;
 
-    // const mimeType = files[0].type;
-    // if (mimeType.match(/image\/*/) == null) {
-    //     this.message = "Only images are supported.";
-    //     return;
-    // }
-    // this.form.get('photo').setValue(files);
-    
-    // const reader = new FileReader();
-    // this.imagePath = files;
-    // reader.readAsDataURL(files[0]);
-    // reader.onload = (_event) => {
-    //     this.url = reader.result;
-    // }
+    const mimeType = files[0].type;
+    if (mimeType.match(/image\/*/) == null) {
+        this.message = "Only images are supported.";
+        return;
+    }
+
+
+    const reader = new FileReader();
+    this.imagePath = files;
+    reader.readAsDataURL(files[0]);
+    reader.onload = (_event) => {
+        this.url = reader.result;
+    }
   }
 
 

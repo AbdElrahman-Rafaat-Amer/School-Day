@@ -26,7 +26,7 @@ namespace LMS.Services.Assignement
                 task.Account = context.Accounts.Find(Account.Id);
                 task.StartDate = Convert.ToDateTime(table.StartDate);
                 task.EndData = Convert.ToDateTime(table.EndDate);
-                task.UploadFile = UploadFile.UploadedFile(table.AssignmentPath,table.AssignmentName);
+                //task.UploadFile = UploadFile.UploadedFile(table.AssignmentPath,table.AssignmentName);
                 task.Subject = context.Subjects.Find(table.SubjectId);
                 task.Year = context.Years.Find(table.YearId);
                 if (DateTime.Compare(DateTime.Now, task.StartDate) == 1)
