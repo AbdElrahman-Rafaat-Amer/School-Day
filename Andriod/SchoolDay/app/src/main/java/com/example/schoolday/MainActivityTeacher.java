@@ -12,13 +12,8 @@ import android.widget.PopupMenu;
 import android.widget.Toast;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
-import com.example.schoolday.student.EditActivity;
-import com.example.schoolday.student.FragmentFeed;
+import com.example.schoolday.student.FragmentAssignment;
 import com.example.schoolday.student.FragmentHome;
-import com.example.schoolday.student.FragmentInformation;
-import com.example.schoolday.student.FragmentMessage;
-import com.example.schoolday.student.FragmentTimetable;
-import com.example.schoolday.student.MainActivity;
 import com.example.schoolday.teacher.TeacherHomeFragment;
 
 public class MainActivityTeacher extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
@@ -42,7 +37,7 @@ public class MainActivityTeacher extends AppCompatActivity implements PopupMenu.
         editImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivityTeacher.this, EditActivity.class);
+                Intent intent = new Intent(MainActivityTeacher.this, FragmentAssignment.EditActivity.class);
                 startActivity(intent);
             }
         });

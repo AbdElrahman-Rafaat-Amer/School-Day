@@ -62,6 +62,9 @@ import { PDFAssignmentComponent } from './pdf-assignment/pdf-assignment.componen
 import { ChaptersComponent } from './chapters/chapters.component';
 import { OnlineQustionsComponent } from './online-qustions/online-qustions.component';
 import { UpComingEventsComponent } from './up-coming-events/up-coming-events.component';
+import { DegreeComponent } from './subject/degree/degree.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { SubjectAssignmentComponent } from './subject/subject-assignment/subject-assignment.component';
 
 @NgModule({
   declarations: [
@@ -94,6 +97,8 @@ import { UpComingEventsComponent } from './up-coming-events/up-coming-events.com
     ChaptersComponent,
     OnlineQustionsComponent,
     UpComingEventsComponent,
+    DegreeComponent,
+    SubjectAssignmentComponent,
   ],
   imports: [
     NgxPaginationModule,
@@ -123,6 +128,7 @@ import { UpComingEventsComponent } from './up-coming-events/up-coming-events.com
     Ng2OrderModule,
     MatSelectModule,
     MatDatepickerModule,
+    MatProgressSpinnerModule,
 
     RouterModule.forRoot([
       {path: '',component:HomeComponent},

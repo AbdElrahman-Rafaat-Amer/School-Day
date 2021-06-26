@@ -1,0 +1,78 @@
+.subject {
+    border: 1px solid #53b1a2;
+    border-radius: 20px;
+    background-color: #bd4f87;
+    color: white;
+    padding: 10px;
+    margin: 20px;
+}
+
+.subject .name {
+    margin: auto;
+}
+
+.subject .name p {
+    font-size: x-large;
+    text-align: center;
+}
+
+.subject img {
+    border-radius: 50%;
+    max-width: 10vh;
+    max-height: 20vh;
+}
+
+// +++ progress
+.progress {
+    background-color: #bd4f87;
+    justify-content: flex-end;
+    height: 67px;
+}
+
+.progress span {
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 325px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: small;
+    font-family: "Bauhaus93";
+}
+
+.mat-progress-spinner svg {
+    width: 75px !important;
+    height: 75px !important;
+}
+
+@media (max-width: 768px) {
+    .mat-progress-spinner {
+        margin-right: -18px;
+    }
+    .subject img {
+        max-width: 8vh;
+        max-height: 8vh;
+    }
+    .subject .name p {
+        font-size: medium;
+        text-align: center;
+    }
+    .progress span {
+        width: 117%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+    .progress span {
+        width: 118%;
+    }
+}
+
+@media (max-width:1440px) {
+    .progress span {
+        width: 150%;
+    }
+}

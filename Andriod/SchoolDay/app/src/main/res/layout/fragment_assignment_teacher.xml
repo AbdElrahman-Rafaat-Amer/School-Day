@@ -39,7 +39,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
                     android:text="@string/online_assignmet"
                     android:textColor="@color/black"
                     android:textSize="18sp"></TextView>

@@ -20,13 +20,13 @@ public class WelcomeActivity extends AppCompatActivity {
         findViewById(R.id.welocome_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               // Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
-             //   intent.putExtra("from welcome to main student","Home");
-             //   startActivity(intent);
+                Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
+                intent.putExtra("from welcome to main student","Home");
+               startActivity(intent);
 
-                Intent intent = new Intent(WelcomeActivity.this, MainActivityTeacher.class);
+             /*  Intent intent = new Intent(WelcomeActivity.this, MainActivityTeacher.class);
                    intent.putExtra("from welcome to main student","Home");
-                   startActivity(intent);
+                   startActivity(intent);*/
 
             }
         });
