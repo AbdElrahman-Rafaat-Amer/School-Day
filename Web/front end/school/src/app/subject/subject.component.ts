@@ -7,15 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SubjectComponent implements OnInit {
 
+  Subject = ['Math', 'Arabic'];
+
+
+
+
   constructor() { }
-
-  // subject !:string;
-  // index=
-  // [this.subject='c',
-  // this.subject='A',
-  // this.subject='B',
-  //     ];
-
   ngOnInit(): void {
   }
 
