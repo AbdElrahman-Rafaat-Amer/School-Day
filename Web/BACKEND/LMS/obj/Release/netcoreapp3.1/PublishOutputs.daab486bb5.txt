@@ -1,4 +1,10 @@
 C:\Users\Nabil\Documents\GitHub\School-Day\Web\BACKEND\LMS\obj\Release\netcoreapp3.1\PubTmp\Out\LMS.exe
+C:\Users\Nabil\Documents\GitHub\School-Day\Web\BACKEND\LMS\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploadfiles\13e03dec-a83e-4b33-81f6-4b9112ce753d_Postphotos
+C:\Users\Nabil\Documents\GitHub\School-Day\Web\BACKEND\LMS\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploadfiles\358792ae-0a83-426b-b037-060822868831_img.png
+C:\Users\Nabil\Documents\GitHub\School-Day\Web\BACKEND\LMS\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploadfiles\4a84403e-ffed-48e0-9df1-71aba7a2a52f_Trees.png
+C:\Users\Nabil\Documents\GitHub\School-Day\Web\BACKEND\LMS\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploadfiles\823949ff-df85-43ae-9ff8-73f76854aee6_img2.jpeg
+C:\Users\Nabil\Documents\GitHub\School-Day\Web\BACKEND\LMS\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploadfiles\dae28994-0bd5-485f-93a0-e0c8e4f026bf_Postphotos.jpeg
+C:\Users\Nabil\Documents\GitHub\School-Day\Web\BACKEND\LMS\obj\Release\netcoreapp3.1\PubTmp\Out\wwwroot\Uploadfiles\e73b8f77-2ca2-435c-a70d-9cd04a59df3b_img2.jpeg
 C:\Users\Nabil\Documents\GitHub\School-Day\Web\BACKEND\LMS\obj\Release\netcoreapp3.1\PubTmp\Out\appsettings.Development.json
 C:\Users\Nabil\Documents\GitHub\School-Day\Web\BACKEND\LMS\obj\Release\netcoreapp3.1\PubTmp\Out\appsettings.json
 C:\Users\Nabil\Documents\GitHub\School-Day\Web\BACKEND\LMS\obj\Release\netcoreapp3.1\PubTmp\Out\LMS.dll
