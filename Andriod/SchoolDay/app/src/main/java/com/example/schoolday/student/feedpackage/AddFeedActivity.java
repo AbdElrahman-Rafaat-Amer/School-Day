@@ -33,23 +33,20 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class 
+public class
 AddFeedActivity extends AppCompatActivity {
-EditText addText;
-CardView uploadFile;
-Button addPost;
-ImageView fileUploaded;
+    EditText addText;
+    CardView uploadFile;
+    Button addPost;
+    ImageView fileUploaded;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_feed);
-        addText=findViewById(R.id.add_post_text);
-        uploadFile=findViewById(R.id.upload_post_file);
-        addPost=findViewById(R.id.add_feed);
-        fileUploaded=findViewById(R.id.photo_uploaded);
-
-
+        addText = findViewById(R.id.add_post_text);
+        uploadFile = findViewById(R.id.upload_post_file);
+        addPost = findViewById(R.id.add_feed);
 
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && ContextCompat.checkSelfPermission(this,
@@ -61,12 +58,18 @@ ImageView fileUploaded;
             startActivity(intent);
             return;
         }
+        addPost.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                Intent i = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                startActivityForResult(i, 100);
+            }
+        });
         uploadFile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                startActivityForResult(i, 100);
+
             }
         });
 
@@ -80,9 +83,10 @@ ImageView fileUploaded;
         if (requestCode == 100 && resultCode == RESULT_OK && data != null) {
             //the image URI
             Uri selectedImage = data.getData();
-
+            uploadFile(selectedImage, "My Image");
         }
     }
+
 
     private void uploadFile(Uri fileUri, String desc) {
 
@@ -92,16 +96,10 @@ ImageView fileUploaded;
         //creating request body for file
         RequestBody requestFile = RequestBody.create(MediaType.parse(getContentResolver().getType(fileUri)), file);
         RequestBody descBody = RequestBody.create(MediaType.parse("text/plain"), desc);
-        AddPostRequest addPostRequest=new AddPostRequest();
-        addPostRequest.setText(addText.getText().toString());
-        //The gson builder
-        Gson gson = new GsonBuilder()
-                .setLenient()
-                .create();
 
 
         //creating retrofit object
-       FeedInterface feedInterface = APIClient.getRetrofit().create(FeedInterface.class);
+        FeedInterface feedInterface = APIClient.getFeedService();
 
         //creating a call and calling the upload image method
         Call<AddFeedResponse> call = feedInterface.addPost(requestFile, descBody);
@@ -118,13 +116,13 @@ ImageView fileUploaded;
             }
 
 
-
             @Override
             public void onFailure(Call<AddFeedResponse> call, Throwable t) {
                 Toast.makeText(getApplicationContext(), t.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
     }
+
     private String getRealPathFromURI(Uri contentUri) {
         String[] proj = {MediaStore.Images.Media.DATA};
         CursorLoader loader = new CursorLoader(this, contentUri, proj, null, null, null);
