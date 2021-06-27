@@ -33,7 +33,6 @@ namespace LMS.Services.Assignement
             task.Subject = context.Subjects.Find(online.SubjectId);
             context.Add(task);
             context.SaveChanges();
-            throw new NotImplementedException();
         }
 
         public void Delete(int Id)

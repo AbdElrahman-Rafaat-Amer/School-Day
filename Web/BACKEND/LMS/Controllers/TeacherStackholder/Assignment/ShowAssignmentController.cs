@@ -18,18 +18,21 @@ namespace LMS.Controllers.TeacherStackholder.Assignment
         private readonly IAppRepo<AddPdfAssignmentVms> addpdf;
         private readonly IAppRepo<ListYearsVM> _listYear;
         private readonly IAppRepo<AddQuestionVm> _addQuestionn;
+        private readonly IAppRepo<AddOnlineAssignmentVM> _addOnlineAssignment;
 
         public ShowAssignmentController(IAppRepo<ShowAssignmentVms> showAssignemt,
-            IAppRepo<ListSubjectVM> listsubject,
-            IAppRepo<AddPdfAssignmentVms> addpdf,
-            IAppRepo<ListYearsVM> listYear,
-            IAppRepo<AddQuestionVm> addQuestionn)
+                                        IAppRepo<ListSubjectVM> listsubject,
+                                        IAppRepo<AddPdfAssignmentVms> addpdf,
+                                        IAppRepo<ListYearsVM> listYear,
+                                        IAppRepo<AddQuestionVm> addQuestionn,
+                                        IAppRepo<AddOnlineAssignmentVM> addOnlineAssignment)
         {
             _showAssignemt = showAssignemt;
             this.listsubject = listsubject;
             this.addpdf = addpdf;
             _listYear = listYear;
             _addQuestionn = addQuestionn;
+            _addOnlineAssignment = addOnlineAssignment;
         }
         //  show assignment page 
         [HttpGet("ShowAssignment")]
@@ -60,6 +63,12 @@ namespace LMS.Controllers.TeacherStackholder.Assignment
 
         }
         //add online assignement'
+        [HttpPost("AddOnlineAssignment")]
+        public ActionResult AddOnlineAssignment(AddOnlineAssignmentVM addOnline)
+        {
+            _addOnlineAssignment.Create(addOnline);
+            return Ok();
+        }
         [HttpPost("AddpdfQuestions")]
         public ActionResult AddpdfQuestions(AddQuestionVm add)
         {

@@ -85,6 +85,7 @@ namespace LMS
             services.AddScoped<IAppRepo<ShowAssignmentVms>, ShowAssignmentService>();
             services.AddScoped<IAppRepo<AddPdfAssignmentVms>, AddPDFAssignemntService>();
             services.AddScoped<IAppRepo<AddQuestionVm>, AddpdfQuestionService>();
+            services.AddScoped<IAppRepo<AddOnlineAssignmentVM>, AddOnlineAssignmentService>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "LMS", Version = "v1" });
