@@ -1,0 +1,130 @@
+.container-fluid {
+    padding: 0;
+}
+
+.creat-new {
+    margin: 0 auto;
+}
+
+.creat-new .btn {
+    color: white;
+    margin: 25px 0 20px 0px;
+    width: 100px;
+}
+
+.wmd-left,
+.wmd-center,
+.wmd-right {
+    display: flex;
+}
+
+.wmd-left {
+    border-right: 1px solid #ddd;
+    padding: 0;
+}
+
+.wmd-center {
+    border-right: 1px solid #ddd;
+    padding: 0;
+    margin-left: 10px;
+}
+
+.wmd-right {
+    border-right: 1px solid #ddd;
+    padding: 0;
+    margin-left: 10px;
+}
+
+.wmd-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: large;
+    margin: auto 20px auto 0;
+    padding: 0;
+}
+
+.note-area {
+    width: 100%;
+    height: 300px;
+    border-top: none;
+    background-color: white;
+    padding: 20px;
+    color:#777;
+    font-size: 18px;
+}
+
+.header {
+    width: 100%;
+    height: 5vh;
+    border: 1px solid lightblue;
+    border-bottom: none;
+    background-color: white;
+    margin: 0%;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.header:focus {
+    outline: none;
+    color: black;
+}
+
+.note-area:focus {
+    outline: none;
+}
+
+.creat-new .note {
+    position: relative;
+    border-bottom: 1px solid rgb(73, 72, 72);
+    width: 100%;
+    margin: auto;
+    background-color: rgb(70, 148, 184);
+    cursor: pointer;
+    border-radius: 10px;
+    color: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.delete-note-icon{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.img-note-subject img{
+    border-radius:50%;
+}
+
+.creat-new  p {
+    font-size: small;
+    color:#fff
+}
+
+
+.Title{
+    outline: none;
+    border: 0px;
+    border-bottom: 1px solid #444;
+    color: #777;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.notboard-text{
+    background-color:rgb(255, 255, 255);
+    border:0px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 1px 1px 8px #444;
+    padding: 20px;
+    padding-top: 50px;
+}
+
+.btn-share{
+    position: absolute;
+    top: 15px;
+    right: 0px;
+    padding: 3px 6px 3px 6px !important;
+}
+

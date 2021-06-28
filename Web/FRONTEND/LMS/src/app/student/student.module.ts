@@ -1,3 +1,4 @@
+import { FeesComponent } from './fees/fees.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { BrowserModule } from '@angular/platform-browser';
@@ -15,7 +16,6 @@ import { NoteboardComponent } from './noteboard/noteboard.component';
 import { DownloadsComponent } from './downloads/downloads.component';
 import { AttendanceComponent } from './attendance/attendance.component';
 import { LayoutComponent } from './layout.component';
-
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { QrCodeModule } from 'ng-qrcode';
 
@@ -30,7 +30,8 @@ import { QrCodeModule } from 'ng-qrcode';
     BusComponent,
     NoteboardComponent,
     DownloadsComponent,
-    AttendanceComponent
+    AttendanceComponent,
+    FeesComponent
     
   ],
   imports: [

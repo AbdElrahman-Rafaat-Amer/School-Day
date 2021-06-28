@@ -1,0 +1,90 @@
+<div class="container bg-light ">
+    <div class="row">
+
+        <div class="col-3 creat-new pl-0">
+            <button class="btn bg-primary mt-2" (click)="newNote()">+ New</button>
+            <div class="note" *ngFor="let note of listNotes" id="div{{div}}" (click)="appearNote(note)">
+                <div class="delete-note-icon">
+                    <i class="fas fa-times" (click)="deleteNote(note.id)"></i>
+                </div>
+                <div class="col-sm-12 row">
+                    <div class="img-note-subject col-sm-4 pl-0 ml-0">
+                        <img width="50" height="50" src="../../../assets/img/web-images/angular.png"/>
+                    </div>
+                    <div class="title-note col-sm-8 pr-0">
+                        <h6>{{note.title}}</h6>
+                    </div>
+                </div>
+                <div class="text-note">
+                    <p>{{note.text.length > 50 ? note.text.substring(0,50)+"..." : note.text }}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-9 bg-light pt-3">
+            <div class="row  ">
+                <div class="col-sm-3 col-lg-2 wmd-left ">
+                    <button class="wmd-btn " onclick="document.execCommand('bold',false,null);">
+                        <i class="fa fa-bold" aria-hidden="true"></i>
+                    </button>
+                    <button class="wmd-btn " onclick="document.execCommand('italic',false,null);">
+                        <i class="fa fa-italic" aria-hidden="true"></i>
+                    </button>
+                    <button class="wmd-btn " onclick="document.execCommand('underline',false,null);">
+                        <i class="fa fa-underline" aria-hidden="true"></i>
+                    </button>
+                    <button class="wmd-btn " onclick="document.execCommand('foreColor',false,null);">
+                        <i class="fa fa-underline" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="col-sm-3 col-lg-2 wmd-center">
+                    <button class="wmd-btn" onclick="document.execCommand('justifyFull');">
+                        <i class="fa fa-align-justify" aria-hidden="true"></i>
+                    </button>
+
+
+                    <button class="wmd-btn " onclick="document.execCommand('justifyLeft');">
+                        <i class="fa fa-align-left" aria-hidden="true"></i>
+                    </button>
+                    <button class="wmd-btn " onclick="document.execCommand('justifyCenter');">
+                        <i class="fa fa-align-center" aria-hidden="true"></i>
+                    </button>
+                    <button class="wmd-btn " onclick="document.execCommand('justifyRight');">
+                        <i class="fa fa-align-right" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="col-sm-3 col-lg-2 wmd-right">
+                    <button class="wmd-btn " onclick="document.execCommand('insertUnorderedList');">
+                        <i class="fa fa-list-ul" aria-hidden="true"></i>
+                    </button>
+                    <button class="wmd-btn " onclick="document.execCommand('underline',false,null);">
+                        <i class="fa fa-list-ul" aria-hidden="true"></i>
+                    </button>
+                    <button class="wmd-btn " onclick="document.execCommand('');">
+                        <i class="fa fa-code" aria-hidden="true"></i>
+                    </button>
+                    <button class="wmd-btn " onclick="document.execCommand('insertImage');">
+                        <i class="fa fa-image" aria-hidden="true"></i>
+                    </button>
+                </div>
+                
+            </div>
+            <form [formGroup]="form"  (ngSubmit)="onSubmit()" class="row notboard-text mt-4">
+                <div class="col-sm-12 row pr-0">
+                    <div class="col-sm-6">
+                        <input  class="form-control" formControlName="title" class="Title" placeholder="Title">
+                    </div>
+                    <div class="col-sm-6 pr-0">
+                        <select formControlName="subjectid" class="form-control form-select form-select-lg">
+                            <option selected disabled>Select Subject</option>
+                            <option *ngFor="let subject of listSubject" value="{{subject.id}}">{{subject.name}}</option>
+                        </select>
+                    </div>
+                </div>
+                <textarea formControlName="text" placeholder="it`s empty here,lets write something..." class="form-control col-sm-12" rows="15"></textarea>
+                <!-- <div formControlName="Text" class="note-area mt-5" contenteditable="true"></div> -->
+                <input class="btn btn-info btn-share" type="submit" value="share">
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,3 +1,5 @@
+import { AccountService } from '@app/_services';
+import { account } from '@app/_models';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TeacherHeaderComponent implements OnInit {
 
-  constructor() { }
+  account: account;
+    constructor(private accountService: AccountService) { 
+        this.accountService.account.subscribe(x => this.account = x);
+    }
+    logout() {
+      this.accountService.logout();
+    }
 
   ngOnInit(): void {
   }

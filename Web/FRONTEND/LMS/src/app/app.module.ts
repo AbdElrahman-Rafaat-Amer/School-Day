@@ -10,12 +10,11 @@ import { AccountService } from './_services';
 import { AppComponent } from './app.component';
 import { AlertComponent } from './_components';
 import { HomeComponent } from './home';
-import { TeacherComponent } from './teacher/teacher.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StudentHeaderComponent } from './home/student-header/student-header.component';
 import { FooterComponent } from './_shared/footer/footer.component';
 
-
+import {MatCardModule} from '@angular/material/card'
 import { FullCalendarModule } from '@fullcalendar/angular'; 
 import dayGridPlugin from '@fullcalendar/daygrid'; 
 import interactionPlugin from '@fullcalendar/interaction';
@@ -34,16 +33,17 @@ FullCalendarModule.registerPlugins([
         FormsModule,
         BrowserAnimationsModule,
         FullCalendarModule,
+        MatCardModule
         
     ],
     declarations: [
         AppComponent,
         AlertComponent,
         HomeComponent,
-        TeacherComponent,
         StudentHeaderComponent,
         FooterComponent,
-        TeacherHeaderComponent
+        TeacherHeaderComponent,
+        
     ],
     providers: [
         { provide: APP_INITIALIZER, useFactory: appInitializer, multi: true, deps: [AccountService] },

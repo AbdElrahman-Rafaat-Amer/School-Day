@@ -1,3 +1,5 @@
+import { FeesComponent } from './fees/fees.component';
+import { ActivityComponent } from './activity/activity.component';
 import { AttendanceComponent } from './attendance/attendance.component';
 import { LayoutComponent } from './layout.component';
 import { DownloadsComponent } from './downloads/downloads.component';
@@ -31,7 +33,9 @@ const routes : Routes = [
       {path:'downloads', component:DownloadsComponent},
       {path:'attendance', component:AttendanceComponent},
       {path:'teacher', loadChildren:teacherModule},
-      {path:'feeds', loadChildren:feedsModule}
+      {path:'feeds', loadChildren:feedsModule},
+      {path:'activity',component:ActivityComponent},
+      {path:'fees',component:FeesComponent}
     ]
   },{
     path: '**' , redirectTo: ''

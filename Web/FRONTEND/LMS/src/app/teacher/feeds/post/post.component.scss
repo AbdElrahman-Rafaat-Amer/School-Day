@@ -1,0 +1,48 @@
+// .time {
+//     font-size: 9px !important
+// }
+
+// .socials i {
+//     margin-right: 14px;
+//     font-size: 17px;
+//     color: #d2c8c8;
+//     cursor: pointer
+// }
+
+// .feed-image img {
+//     width: 100%;
+//     height: auto
+// }
+
+.post {
+    background-color: #f1f1f1;
+    width: 105vh;
+    // height: 50vh;
+    background-color: #bd4f87;
+    border-radius: 20px;
+    margin: 50px auto;
+    color: white;
+    display: table; // <===
+    .personal-img img {
+        width: 135px;
+        height: 115px;
+        border-radius: 25px;
+        margin: -32px 0px 0px -40px;
+    }
+    .name {
+        margin-top: 30px;
+    }
+    .content {
+        margin: 20px 0 20px 50px;
+        img {
+            width: 90vh;
+            height: 250px;
+        }
+        p {
+            width: 90vh;
+        }
+    }
+    .likes {
+        margin: 5px 41px;
+    }
+}
