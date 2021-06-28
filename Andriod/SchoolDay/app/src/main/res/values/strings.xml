@@ -98,5 +98,6 @@
     <string name="exam_last_resualt">Last Resualt</string>
     <string name="exam_title">Exam Title</string>
     <string name="exam_degree">Exam Degree</string>
+    <string name="year">Year</string>
 
 </resources>

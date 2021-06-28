@@ -97,7 +97,7 @@ namespace LMS.Controllers
             return Ok(new { message = "Password reset successful, you can now login" });
         }
 
-        [Authorize(Role.Admin)]
+        //[Authorize(Role.Admin)]
         [HttpGet]
         public ActionResult<IEnumerable<AccountResponse>> GetAll()
         {

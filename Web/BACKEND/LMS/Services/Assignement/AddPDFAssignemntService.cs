@@ -12,30 +12,30 @@ namespace LMS.Services.Assignement
 {
     public class AddPDFAssignemntService :BaseController, IAppRepo<AddPdfAssignmentVms>
     {
-        private readonly AppDbContext context;
+        private readonly AppDbContext _context;
 
         public AddPDFAssignemntService(AppDbContext context)
         {
-            this.context = context;
+            _context = context;
         }
         public void Create(AddPdfAssignmentVms table)
         {
             if (table!=null)
             {
+                UploadFile uploadFile = new UploadFile();
                 Models.TaskModel.Task task = new Models.TaskModel.Task();
-                task.Account = context.Accounts.Find(Account.Id);
+                task.Account = _context.Accounts.Find(Account.Id);
                 task.StartDate = Convert.ToDateTime(table.StartDate);
                 task.EndData = Convert.ToDateTime(table.EndDate);
-                //task.UploadFile = UploadFile.UploadedFile(table.AssignmentPath,table.AssignmentName);
-                task.Subject = context.Subjects.Find(table.SubjectId);
-                task.Year = context.Years.Find(table.YearId);
+                task.UploadFile = uploadFile.UploadedFile(table.AssignmentPath, table.AssignmentPath.FileName);
+                task.Subject = _context.Subjects.Find(table.SubjectId);
+                task.Year = _context.Years.Find(table.YearId);
                 if (DateTime.Compare(DateTime.Now, task.StartDate) == 1)
                     task.Statuse = "Open";
                 else
                     task.Statuse = "Pennding";
-                context.Tasks.Add(task);
-                context.SaveChanges();
-
+                _context.Tasks.Add(task);
+                _context.SaveChanges();
             }
 
             throw new NotImplementedException();
