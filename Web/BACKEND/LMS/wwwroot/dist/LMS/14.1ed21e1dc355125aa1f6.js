@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[14],{Bne8:function(n,o,t){"use strict";t.r(o),t.d(o,"ChatModule",function(){return u});var e=t("erj/"),r=t("ofXK"),c=t("fXoL");let u=(()=>{class n{}return n.\u0275mod=c.Kb({type:n}),n.\u0275inj=c.Jb({factory:function(o){return new(o||n)},imports:[[r.c,e.a]]}),n})()}}]);

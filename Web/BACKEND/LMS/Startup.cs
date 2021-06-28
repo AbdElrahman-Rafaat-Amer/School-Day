@@ -119,7 +119,9 @@ namespace LMS
 
             // custom jwt auth middleware
             app.UseMiddleware<JwtMiddleware>();
+            app.UseDefaultFiles();
             app.UseStaticFiles();
+            
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
