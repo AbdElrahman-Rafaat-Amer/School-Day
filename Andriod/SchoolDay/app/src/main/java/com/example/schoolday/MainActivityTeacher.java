@@ -122,17 +122,6 @@ public class MainActivityTeacher extends AppCompatActivity implements PopupMenu.
                 Toast.makeText(MainActivityTeacher.this, "you pressed logout", Toast.LENGTH_SHORT).show();
                 return true;
 
-
-            case R.id.dark_mode:
-
-                if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-                } else {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-
-                }
-                return true;
-
         }
         return true;
     }

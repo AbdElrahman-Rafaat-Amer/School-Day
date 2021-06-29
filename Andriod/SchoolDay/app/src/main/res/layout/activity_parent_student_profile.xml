@@ -13,7 +13,6 @@
         android:text="@string/profile"
         android:textSize="40sp"></TextView>
 
-    <!-- this for tab layout and view pager -->
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/parent_tab_page"
         android:layout_width="match_parent"

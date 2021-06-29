@@ -1,4 +1,4 @@
-package com.example.schoolday.student.feespackage;
+package com.example.schoolday.parent.feespackage;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -20,7 +20,6 @@ public class FeesRecyclerViewAdapter extends RecyclerView.Adapter<FeesRecyclerVi
 
     Context context;
     ArrayList<Fees> feess = new ArrayList<Fees>();
-
     public FeesRecyclerViewAdapter(Context context, ArrayList<Fees> fees) {
         this.context = context;
         this.feess = fees;
@@ -29,17 +28,17 @@ public class FeesRecyclerViewAdapter extends RecyclerView.Adapter<FeesRecyclerVi
     @Override
     public FeesViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.custom_row_fees, parent, false);
-        FeesViewHolder feesViewHolder = new FeesViewHolder(view);
+            FeesViewHolder feesViewHolder = new FeesViewHolder(view);
         return feesViewHolder;
     }
 
     @Override
     public void onBindViewHolder(@NonNull FeesViewHolder holder, int position) {
-    //    final Fees fees = feess.get(position);
-    //    holder.amount.setText(fees.getAmount());
-       // holder.studentAdmissions.setText(fees.getName());
-     //   holder.expire.setText(fees.getDate());
-       /* holder.status.setActivated(true);
+     /*   final Fees fees = feess.get(position);
+        holder.amount.setText(fees.getAmount());
+        holder.studentAdmissions.setText(fees.getName());
+        holder.expire.setText(fees.getDate());
+        holder.status.setActivated(true);
 
         holder.cashOut.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,9 +62,9 @@ public class FeesRecyclerViewAdapter extends RecyclerView.Adapter<FeesRecyclerVi
     }
 
     public class FeesViewHolder extends RecyclerView.ViewHolder {
-        TextView amount, studentAdmissions, expire;
-        RadioButton status;
-        Button cashOut, cashOutAll;
+        TextView amount, studentAdmissions,expire;
+       RadioButton status;
+       Button cashOut,cashOutAll;
 
         public FeesViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -78,6 +77,8 @@ public class FeesRecyclerViewAdapter extends RecyclerView.Adapter<FeesRecyclerVi
             cashOutAll = itemView.findViewById(R.id.cashOutAll);
 
 
+
+
+
         }
-    }
-}
+    }}

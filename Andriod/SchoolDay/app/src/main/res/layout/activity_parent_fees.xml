@@ -10,7 +10,7 @@
         android:padding="30dp">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView_fees"
+            android:id="@+id/recyclerView_fees_parent"
             android:layout_width="match_parent"
             android:layout_height="match_parent"></androidx.recyclerview.widget.RecyclerView>
 

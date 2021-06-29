@@ -7,12 +7,6 @@
     android:layout_marginRight="@dimen/_30sdp"
     android:background="@drawable/events5">
 
-    <ImageView
-        android:id="@+id/delete_note"
-        android:layout_width="@dimen/_35sdp"
-        android:layout_height="@dimen/_35sdp"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/ic_baseline_clear_24"></ImageView>
 
     <ImageView
         android:id="@+id/edit_note"

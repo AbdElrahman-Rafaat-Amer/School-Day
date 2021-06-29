@@ -7,9 +7,9 @@ import retrofit2.http.GET;
 
 public interface AssignmentTeacherSpinnerInterface {
 
-    @GET("Chapters/ListYear")
+    @GET("api/ShowAssignment/ListYear")
     Call<ArrayList<AssignmentYearResponse>> getListYear();
-    @GET("Chapters/ListSubject")
+    @GET("api/ShowAssignment/Listsubject")
     Call<ArrayList<AssignmentSubjectResponse>> getListSubject();
 
 }

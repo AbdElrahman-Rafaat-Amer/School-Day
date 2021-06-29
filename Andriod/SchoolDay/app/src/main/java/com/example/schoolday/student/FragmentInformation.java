@@ -14,9 +14,9 @@ import androidx.viewpager.widget.ViewPager;
 import com.example.schoolday.R;
 import com.google.android.material.tabs.TabLayout;
 
-public class FragmentInformation extends Fragment  {
+public class FragmentInformation extends Fragment {
 
-    ImageView notification, edit, moreOption;
+
     TabLayout tabLayout;
     ViewPager viewPager;
     PageAdapterProfStudent pageAdapter;
@@ -56,55 +56,7 @@ public class FragmentInformation extends Fragment  {
             }
         });
 
-        /*
-        edit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getContext(), EditActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        moreOption.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                popupMenuShow(v);
-            }
-        });
-*/
         return view;
     }
 
-    /*
-    private void popupMenuShow(View v) {
-        PopupMenu popupMenu = new PopupMenu(getContext() , v);
-        popupMenu.setOnMenuItemClickListener(this);
-        popupMenu.inflate(R.menu.more_actions);
-        popupMenu.show();
-    }
-
-
-    @Override
-    public boolean onMenuItemClick(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.log_out:
-                Toast.makeText(getContext(), "you pressed logout", Toast.LENGTH_SHORT).show();
-                return true;
-
-
-            case R.id.dark_mode:
-
-                if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-                } else {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-
-                }
-                return true;
-
-        }
-        return true;
-    }
-    */
 }

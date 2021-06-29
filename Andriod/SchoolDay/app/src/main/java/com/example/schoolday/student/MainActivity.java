@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatDelegate;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import com.example.schoolday.R;
+import com.example.schoolday.login.LoginActivity;
 import com.example.schoolday.student.feedpackage.FragmentFeed;
 
 
@@ -149,19 +150,9 @@ public class MainActivity extends AppCompatActivity implements PopupMenu.OnMenuI
     public boolean onMenuItemClick(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.log_out:
-                Toast.makeText(MainActivity.this, "you pressed logout", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this, LoginActivity.class));
                 return true;
 
-
-            case R.id.dark_mode:
-
-                if (AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES) {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-                } else {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-
-                }
-                return true;
 
         }
         return true;

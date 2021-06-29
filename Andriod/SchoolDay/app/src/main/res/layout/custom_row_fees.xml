@@ -35,7 +35,7 @@
                     android:id="@+id/amount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
                     android:text="Amount"></TextView>
 
                 <RadioButton
@@ -43,14 +43,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/studentAdmissions"
-                    android:layout_alignParentLeft="true"></RadioButton>
+                    android:layout_alignParentStart="true"></RadioButton>
 
                 <TextView
                     android:id="@+id/expire"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/studentAdmissions"
-                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:layout_marginTop="15dp"
                     android:text="Expire Data"></TextView>

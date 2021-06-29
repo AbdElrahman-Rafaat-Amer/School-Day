@@ -64,17 +64,7 @@ public class NotesRecyclerViewAdapter extends RecyclerView.Adapter<NotesRecycler
 
                 context.startActivity(intent);
             }
-
         });
-        holder.deleteNote.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                int id = note.getId();
-               deleteNote(id);
-            }
-        });
-
-
 
     }
 
@@ -86,7 +76,7 @@ public class NotesRecyclerViewAdapter extends RecyclerView.Adapter<NotesRecycler
 
     public class NoteViewHolder extends RecyclerView.ViewHolder {
         TextView noteTitle, date;
-        ImageView editNote,deleteNote;
+        ImageView editNote;
 
         public NoteViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -94,37 +84,11 @@ public class NotesRecyclerViewAdapter extends RecyclerView.Adapter<NotesRecycler
             noteTitle = itemView.findViewById(R.id.note_title);
             date = itemView.findViewById(R.id.note_date_time);
             editNote = itemView.findViewById(R.id.edit_note);
-            deleteNote = itemView.findViewById(R.id.delete_note);
 
         }
 
 
     }
-    private void deleteNote(int id){
-        Call<Void> call = APIClient.getNoteService().deleteNote();
-        call.enqueue(new Callback<Void>() {
-            @Override
-            public void onResponse(Call<Void> call, Response<Void> response) {
-                if (response.isSuccessful()) {
-                    Log.e("success", response.toString());
-                    Toast.makeText(context, "Successful", Toast.LENGTH_SHORT).show();
 
-                } else {
-                    Log.e("failed", response.toString());
-                    Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show();
-                }
-            }
 
-            @Override
-            public void onFailure(Call<Void> call, Throwable t) {
-
-            }
-        });
-    }
-    public Notes deleteRequest(int id){
-        Notes noteRequest = new Notes();
-        noteRequest.setId(id);
-
-        return noteRequest;
-    }
 }

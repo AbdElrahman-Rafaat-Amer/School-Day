@@ -87,7 +87,8 @@
                     android:text="@string/profile"
                     android:textAlignment="center"
                     android:textColor="#000000"
-                    android:textSize="@dimen/_12sdp"></TextView>
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/_7sdp"></TextView>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -124,7 +125,8 @@
                     android:text="@string/student"
                     android:textAlignment="center"
                     android:textColor="#000000"
-                    android:textSize="@dimen/_12sdp"></TextView>
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/_7sdp"></TextView>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <!-- colaum 3  -->
@@ -160,7 +162,8 @@
                     android:text="@string/assignment"
                     android:textAlignment="center"
                     android:textColor="#000000"
-                    android:textSize="9sp"></TextView>
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/_7sdp"></TextView>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -196,7 +199,8 @@
                     android:text="@string/exams"
                     android:textAlignment="center"
                     android:textColor="#000000"
-                    android:textSize="14sp"></TextView>
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/_7sdp"></TextView>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -232,7 +236,8 @@
                     android:text="@string/attendance"
                     android:textAlignment="center"
                     android:textColor="#000000"
-                    android:textSize="9sp"></TextView>
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/_7sdp"></TextView>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <!-- colaum 2  -->
@@ -267,7 +272,8 @@
                     android:text="@string/bus"
                     android:textAlignment="center"
                     android:textColor="#000000"
-                    android:textSize="18sp"></TextView>
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/_7sdp"></TextView>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -303,10 +309,10 @@
                     android:text="@string/fees"
                     android:textAlignment="center"
                     android:textColor="#000000"
-                    android:textSize="18sp"></TextView>
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/_7sdp"></TextView>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
-
 
     </GridLayout>
 </LinearLayout>

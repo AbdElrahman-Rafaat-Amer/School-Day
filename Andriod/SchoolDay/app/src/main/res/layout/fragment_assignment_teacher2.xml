@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".teacher.assignment.AssignmentTeacherFragment2">
-
+    tools:context=".teacher.assignment.AssignmentTeacherFragment2"
+    android:padding="@dimen/_20sdp">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -76,13 +80,14 @@
             android:textColor="#000"
             android:textSize="@dimen/_14sdp"></TextView>
 
-        <TextView
-            android:id="@+id/assignment_name"
-            android:layout_width="wrap_content"
+
+        <EditText
+            android:id="@+id/assignment_namegggggggggggggggggggggg"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="#000"
-            android:textSize="@dimen/_14sdp"></TextView>
+            ></EditText>
     </LinearLayout>
 
     <LinearLayout
@@ -99,13 +104,13 @@
             android:textColor="#000"
             android:textSize="@dimen/_14sdp"></TextView>
 
-        <TextView
+        <EditText
             android:id="@+id/start_date"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="#000"
-            android:textSize="@dimen/_14sdp"></TextView>
+            android:textSize="@dimen/_14sdp"></EditText>
     </LinearLayout>
 
     <LinearLayout
@@ -122,13 +127,13 @@
             android:textColor="#000"
             android:textSize="@dimen/_14sdp"></TextView>
 
-        <TextView
+        <EditText
             android:id="@+id/end_date"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""
             android:textColor="#000"
-            android:textSize="@dimen/_14sdp"></TextView>
+            android:textSize="@dimen/_14sdp"></EditText>
     </LinearLayout>
 
     <LinearLayout
@@ -150,7 +155,7 @@
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="120dp"
+                    android:layout_height="100dp"
                     android:src="@drawable/ic_online"></ImageView>
 
                 <TextView
@@ -177,7 +182,7 @@
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="120dp"
+                    android:layout_height="100dp"
                     android:src="@drawable/ic_upload_cloud"></ImageView>
 
                 <TextView
@@ -186,6 +191,7 @@
                     android:layout_gravity="center_horizontal"
                     android:text="@string/PDFAssignmet"
                     android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/_10sdp"
                     android:textSize="18sp"></TextView>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -201,5 +207,7 @@
         android:background="@drawable/events4"
         android:text="upload"
         android:textColor="@color/white"
-        android:textSize="@dimen/_20sdp"></Button>
+        android:textSize="@dimen/_20sdp"
+        android:id="@+id/uploadButton"></Button>
 </LinearLayout>
+</ScrollView>

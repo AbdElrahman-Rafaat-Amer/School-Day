@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
@@ -26,6 +27,8 @@ public class FragmentHome extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home,container,false);
+
+
 
         studentImage = view.findViewById(R.id.student_profile_image);
         studentName = view.findViewById(R.id.student_name_home);
@@ -125,4 +128,5 @@ public class FragmentHome extends Fragment {
 
         return view;
     }
+
 }

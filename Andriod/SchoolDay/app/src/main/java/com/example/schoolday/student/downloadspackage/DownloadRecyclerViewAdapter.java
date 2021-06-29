@@ -19,9 +19,9 @@ public class DownloadRecyclerViewAdapter extends RecyclerView.Adapter<DownloadRe
     Context context;
     ArrayList<Downloads> download = new ArrayList<Downloads>();
 
-    public DownloadRecyclerViewAdapter (Context context,ArrayList<Downloads>downloads){
-        this.context=context;
-        this.download=downloads;
+    public DownloadRecyclerViewAdapter(Context context, ArrayList<Downloads> downloads) {
+        this.context = context;
+        this.download = downloads;
     }
 
     @NonNull
@@ -34,9 +34,9 @@ public class DownloadRecyclerViewAdapter extends RecyclerView.Adapter<DownloadRe
 
     @Override
     public void onBindViewHolder(@NonNull DownloadViewHolder holder, int position) {
-final Downloads downloads = download.get(position);
-holder.downloadName.setText(downloads.getSubjectName());
-holder.downlaodImg.setBackground(Drawable.createFromPath(downloads.photoPath));
+        final Downloads downloads = download.get(position);
+        holder.downloadName.setText(downloads.getSubjectName());
+        holder.downlaodImg.setBackground(Drawable.createFromPath(downloads.photoPath));
 
     }
 
@@ -45,7 +45,7 @@ holder.downlaodImg.setBackground(Drawable.createFromPath(downloads.photoPath));
         return download.size();
     }
 
-    public class DownloadViewHolder  extends RecyclerView.ViewHolder {
+    public class DownloadViewHolder extends RecyclerView.ViewHolder {
         TextView downloadName;
         ImageView downlaodImg;
 

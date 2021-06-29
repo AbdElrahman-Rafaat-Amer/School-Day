@@ -17,14 +17,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_margin="5dp"
+        android:layout_margin="@dimen/_5sdp"
         android:fontFamily="@font/bauhaus93"
         android:text="@string/congratulation"
-        android:textSize="55sp"></TextView>
+        android:textSize="@dimen/_40sdp"></TextView>
 
     <Button
         android:id="@+id/welocome_button"
-        android:layout_width="400dp"
+        android:layout_width="@dimen/_300sdp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginLeft="20dp"
@@ -33,5 +33,5 @@
         android:background="@drawable/custom_button_signup"
         android:text="@string/welcome"
         android:textColor="@android:color/white"
-        android:textSize="40sp"></Button>
+        android:textSize="@dimen/_30sdp"></Button>
 </LinearLayout>

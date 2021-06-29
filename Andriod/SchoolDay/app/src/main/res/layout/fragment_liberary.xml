@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/_40sdp">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical">
-    //head
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -14,8 +16,7 @@
         android:gravity="center"
         android:text="library"
         android:textColor="#636363"
-        android:textSize="40dp" />
-    //First card view
+        android:textSize="40sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,14 +28,12 @@
             android:layout_width="0dp"
             android:layout_height="130dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginLeft="30dp"
+            android:layout_marginStart="@dimen/_30sdp"
             android:layout_marginTop="20dp"
-            android:layout_marginRight="30dp"
             android:layout_marginBottom="20dp"
             android:layout_weight="1"
             app:cardCornerRadius="20dp"
             app:cardElevation="0dp">
-            //secound cardview
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -45,7 +44,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
+                    android:layout_gravity="center"
                     android:layout_marginTop="18dp"
                     android:text="Book Issued"
                     android:textColor="#fff"
@@ -67,9 +66,9 @@
             android:layout_width="0dp"
             android:layout_height="130dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="@dimen/_30sdp"
             android:layout_marginTop="20dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginRight="@dimen/_30sdp"
             android:layout_marginBottom="20dp"
             android:layout_weight="1"
             android:background="@drawable/library_text"
@@ -85,7 +84,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
+                    android:layout_gravity="center"
                     android:layout_marginTop="18dp"
                     android:text="Library Books"
                     android:textColor="#fff"
@@ -106,20 +105,17 @@
 
     </LinearLayout>
 
-    // textview ctegoures
-
     <TextView
         android:layout_width="200dp"
         android:layout_height="40dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
         android:background="@drawable/librarytextview1"
         android:paddingTop="10dp"
         android:shadowColor="#000000"
-        android:text="categires"
+        android:text="categories"
         android:textAlignment="center"
         android:textColor="#fff"
         android:textSize="18sp"></TextView>
-    //categories scroll
 
     <ScrollView
         android:layout_width="match_parent"
@@ -142,9 +138,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     app:cardCornerRadius="50dp"
-                    app:cardElevation="0dp"
-
-                    >
+                    app:cardElevation="0dp">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -163,9 +157,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     app:cardCornerRadius="20dp"
-                    app:cardElevation="0dp"
-
-                    >
+                    app:cardElevation="0dp">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -184,9 +176,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     app:cardCornerRadius="20dp"
-                    app:cardElevation="0dp"
-
-                    >
+                    app:cardElevation="0dp">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -205,9 +195,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     app:cardCornerRadius="20dp"
-                    app:cardElevation="0dp"
-
-                    >
+                    app:cardElevation="0dp">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -226,9 +214,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     app:cardCornerRadius="20dp"
-                    app:cardElevation="0dp"
-
-                    >
+                    app:cardElevation="0dp">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -242,12 +228,13 @@
             </LinearLayout>
         </HorizontalScrollView>
     </ScrollView>
-    // textview top rate
+
+
 
     <TextView
         android:layout_width="200dp"
         android:layout_height="40dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
         android:background="@drawable/librarytextview1"
         android:paddingTop="10dp"
         android:shadowColor="#000000"
@@ -256,8 +243,6 @@
         android:textColor="#fff"
         android:textSize="18sp"></TextView>
 
-
-    //top rate scroll
 
     <ScrollView
         android:layout_width="match_parent"
@@ -269,7 +254,7 @@
             android:layout_height="match_parent">
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="140dp"
                 android:orientation="horizontal">
 
@@ -280,9 +265,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     app:cardCornerRadius="50dp"
-                    app:cardElevation="0dp"
-
-                    >
+                    app:cardElevation="0dp">
 
                     <ImageView
                         android:layout_width="match_parent"
@@ -297,9 +280,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     app:cardCornerRadius="20dp"
-                    app:cardElevation="0dp"
-
-                    >
+                    app:cardElevation="0dp">
 
                     <ImageView
                         android:layout_width="match_parent"
@@ -314,9 +295,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     app:cardCornerRadius="20dp"
-                    app:cardElevation="0dp"
-
-                    >
+                    app:cardElevation="0dp">
 
                     <ImageView
                         android:layout_width="match_parent"
@@ -331,9 +310,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     app:cardCornerRadius="20dp"
-                    app:cardElevation="0dp"
-
-                    >
+                    app:cardElevation="0dp">
 
                     <ImageView
                         android:layout_width="match_parent"
@@ -348,9 +325,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     app:cardCornerRadius="20dp"
-                    app:cardElevation="0dp"
-
-                    >
+                    app:cardElevation="0dp">
 
                     <ImageView
                         android:layout_width="match_parent"
@@ -363,3 +338,4 @@
 
 
 </LinearLayout>
+</ScrollView>

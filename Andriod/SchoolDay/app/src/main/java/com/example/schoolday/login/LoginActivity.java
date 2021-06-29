@@ -69,7 +69,7 @@ public class LoginActivity extends AppCompatActivity {
                 if (isContinue == true) {
                     if (passwordValue.length() > 7) {
                         if (Patterns.EMAIL_ADDRESS.matcher(emailValue).matches()) {
-                            startActivity(new Intent(LoginActivity.this, WelcomeActivity.class));
+                            login();
                         } else {
                             AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
                             builder.setTitle(R.string.error)
@@ -106,7 +106,7 @@ public class LoginActivity extends AppCompatActivity {
                     AlertDialog dialog = builder.create();
                     dialog.show();
                 }
-                    login();
+
 
 
             }
@@ -124,6 +124,7 @@ public class LoginActivity extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     Log.e("success", response.toString());
                     Toast.makeText(LoginActivity.this, "Successful", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(LoginActivity.this, WelcomeActivity.class));
                     finish();
                 } else {
                     Log.e("failed", response.toString());
@@ -138,5 +139,10 @@ public class LoginActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }

@@ -30,7 +30,7 @@ public class DownloadFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-         View view = inflater.inflate(R.layout.fragment_download, container, false);
+        View view = inflater.inflate(R.layout.fragment_download, container, false);
 
         recyclerView = view.findViewById(R.id.recyclerView_download);
 
@@ -40,7 +40,7 @@ public class DownloadFragment extends Fragment {
             public void onResponse(Call<ArrayList<Downloads>> call, Response<ArrayList<Downloads>> response) {
                 downloads = response.body();
 
-                adapter = new DownloadRecyclerViewAdapter(getContext(),downloads);
+                adapter = new DownloadRecyclerViewAdapter(getContext(), downloads);
                 recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
                 recyclerView.setAdapter(adapter);
             }
@@ -52,7 +52,6 @@ public class DownloadFragment extends Fragment {
         });
 
 
-
-         return view;
+        return view;
     }
 }

@@ -10,11 +10,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.schoolday.APIClient;
 import com.example.schoolday.R;
+import com.example.schoolday.login.LoginActivity;
 import com.example.schoolday.teacher.assignment.AssignmentTeacherSpinnerInterface;
 import com.example.schoolday.teacher.AssignmentTeacherSubject;
 
@@ -36,6 +39,8 @@ public class AssignmentTeacherFragment2 extends Fragment {
     ArrayList<AssignmentYearResponse> getYearArr = new ArrayList<AssignmentYearResponse>();
     ArrayList<String> dropSubjects = new ArrayList<String>();
     ArrayList<AssignmentSubjectResponse> getSubjectArr = new ArrayList<AssignmentSubjectResponse>();
+    EditText assignmentName,assignmentStart,assignmentEnd;
+    Button upload;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -44,6 +49,10 @@ public class AssignmentTeacherFragment2 extends Fragment {
         View view = inflater.inflate(R.layout.fragment_assignment_teacher2, container, false);
         subjectName = view.findViewById(R.id.subjet_name_spinner);
         className = view.findViewById(R.id.select_class_spinner);
+        assignmentName = view.findViewById(R.id.assignment_name);
+        assignmentStart = view.findViewById(R.id.start_date);
+        assignmentEnd = view.findViewById(R.id.end_date);
+        upload = view.findViewById(R.id.uploadButton);
 
         AssignmentTeacherSpinnerInterface spinnerInterface = APIClient.getSpinnerService();
         spinnerInterface.getListYear().enqueue(new Callback<ArrayList<AssignmentYearResponse>>() {
@@ -121,6 +130,45 @@ public class AssignmentTeacherFragment2 extends Fragment {
             }
         });
 
+upload.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        upload();
+    }
+});
+
+
+
         return view;
+    }
+
+    public void upload(){
+        AssignmentTeacherFragmentRequest assignmentTeacherFragmentRequest = new AssignmentTeacherFragmentRequest();
+        assignmentTeacherFragmentRequest.setAssignmentName(assignmentName.getText().toString());
+        assignmentTeacherFragmentRequest.setStartDate(assignmentStart.getText().toString());
+        assignmentTeacherFragmentRequest.setEndDate(assignmentEnd.getText().toString());
+
+
+        Call<AssignmentTeacherFragmentResponse> assignmentTeacherFragmentResponseCall = APIClient.getAssignmentService().upload(assignmentTeacherFragmentRequest);
+        assignmentTeacherFragmentResponseCall.enqueue(new Callback<AssignmentTeacherFragmentResponse>() {
+            @Override
+            public void onResponse(Call<AssignmentTeacherFragmentResponse> call, Response<AssignmentTeacherFragmentResponse> response) {
+                if (response.isSuccessful()){
+                    Log.e("success", response.toString());
+                    Toast.makeText(getContext(), "Successful", Toast.LENGTH_SHORT).show();
+
+                }else{
+                    Log.e("failed", response.toString());
+                Toast.makeText(getContext(), "Failed", Toast.LENGTH_SHORT).show();
+
+            }}
+
+            @Override
+            public void onFailure(Call<AssignmentTeacherFragmentResponse> call, Throwable t) {
+                Log.e("this onFailure", t.toString());
+                Toast.makeText(getContext(), "onFailure", Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 }

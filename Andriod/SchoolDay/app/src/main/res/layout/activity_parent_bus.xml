@@ -6,11 +6,4 @@
     android:layout_height="match_parent"
     tools:context=".parent.ParentBusActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:layout_gravity="center"
-        android:textSize="@dimen/_200sdp"
-        android:text="BUS"></TextView>
 </LinearLayout>

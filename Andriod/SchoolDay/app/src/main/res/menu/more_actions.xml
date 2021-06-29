@@ -6,8 +6,4 @@
         android:icon="@drawable/ic_edit"
         ></item>
 
-    <item android:id="@+id/dark_mode"
-        android:title="Dark Mode"
-        android:icon="@drawable/ic_edit"
-        ></item>
 </menu>
